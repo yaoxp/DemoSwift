@@ -23,9 +23,6 @@ class MainTableViewController: UITableViewController {
 
         // Uncomment the following line to preserve selection between presentations
          self.clearsSelectionOnViewWillAppear = true
-
-        let nib = UINib(nibName: MainTableViewController.xibName, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: MainTableViewController.tableViewCellIdentifier)
         
     }
 

@@ -15,7 +15,6 @@
 		FF1858822058CAC400ADC0BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF1858802058CAC400ADC0BC /* LaunchScreen.storyboard */; };
 		FF18588D2058CAC400ADC0BC /* DemoSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF18588C2058CAC400ADC0BC /* DemoSwiftTests.swift */; };
 		FF1858982058D4E600ADC0BC /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1858972058D4E600ADC0BC /* MainTableViewController.swift */; };
-		FF18589C2058FBF600ADC0BC /* MainTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF18589B2058FBF600ADC0BC /* MainTableCell.xib */; };
 		FF18589E2059102300ADC0BC /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF18589D2059102300ADC0BC /* Demo.swift */; };
 		FFD056AB205912F300A6F5AE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD056AA205912F300A6F5AE /* UIColor+Extension.swift */; };
 		FFD056AE2059134200A6F5AE /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD056AD2059134200A6F5AE /* UIDevice+Extension.swift */; };
@@ -52,7 +51,6 @@
 		FF18588C2058CAC400ADC0BC /* DemoSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSwiftTests.swift; sourceTree = "<group>"; };
 		FF18588E2058CAC400ADC0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF1858972058D4E600ADC0BC /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
-		FF18589B2058FBF600ADC0BC /* MainTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableCell.xib; sourceTree = "<group>"; };
 		FF18589D2059102300ADC0BC /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
 		FFD056AA205912F300A6F5AE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		FFD056AD2059134200A6F5AE /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 				FF1858772058CAC400ADC0BC /* AppDelegate.swift */,
 				FF1858972058D4E600ADC0BC /* MainTableViewController.swift */,
 				FF18589D2059102300ADC0BC /* Demo.swift */,
-				FF18589B2058FBF600ADC0BC /* MainTableCell.xib */,
 				FF18587B2058CAC400ADC0BC /* Main.storyboard */,
 				FF18587E2058CAC400ADC0BC /* Assets.xcassets */,
 				FF1858802058CAC400ADC0BC /* LaunchScreen.storyboard */,
@@ -277,7 +274,6 @@
 				FFD056B1205913CA00A6F5AE /* AnimationViewController.xib in Resources */,
 				FF18587F2058CAC400ADC0BC /* Assets.xcassets in Resources */,
 				FF18587D2058CAC400ADC0BC /* Main.storyboard in Resources */,
-				FF18589C2058FBF600ADC0BC /* MainTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
