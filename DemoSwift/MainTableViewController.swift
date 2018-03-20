@@ -14,7 +14,8 @@ class MainTableViewController: UITableViewController {
     static let tableViewCellIdentifier = "MainTableCell"
     
     // MARK: - properties
-    let demos = [Demo.init(title: "动画", subTitle: "贝塞尔曲线，优酷播放按钮，引导页跳过按钮，打卡按钮", className: NSStringFromClass(AnimationViewController.self))]
+    let demos = [Demo.init(title: "动画", subTitle: "贝塞尔曲线，优酷播放按钮，引导页跳过按钮，打卡按钮", className: NSStringFromClass(AnimationViewController.self)),
+                 Demo.init(title: "买单吧", subTitle: "tableview上推，头像渐变到导航栏上", className: NSStringFromClass(PayTheBillViewController.self))]
     
     // MARK: - View Life Cycle
     

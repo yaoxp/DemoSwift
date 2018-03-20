@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="PXs-vX-uwC" customClass="PayTheBillHeaderView" customModule="DemoSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PayTheBill_headerImg" translatesAutoresizingMaskIntoConstraints="NO" id="alP-6y-bSh">
+                    <rect key="frame" x="15" y="80" width="60" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="Zus-OO-07h"/>
+                        <constraint firstAttribute="width" secondItem="alP-6y-bSh" secondAttribute="height" multiplier="1:1" id="tFI-x2-mMA"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4h-Gg-hRS" userLabel="name">
+                    <rect key="frame" x="95" y="100.5" width="60" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="27F-pi-t8O"/>
+                        <constraint firstAttribute="height" constant="20" id="MH8-lz-t98"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.11764705882352941" green="0.56470588235294117" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="0t2-NM-WYv" firstAttribute="bottom" secondItem="alP-6y-bSh" secondAttribute="bottom" constant="20" id="L8w-24-Y3C"/>
+                <constraint firstItem="m4h-Gg-hRS" firstAttribute="leading" secondItem="alP-6y-bSh" secondAttribute="trailing" constant="20" id="Ocr-ZB-wq0"/>
+                <constraint firstItem="m4h-Gg-hRS" firstAttribute="centerY" secondItem="alP-6y-bSh" secondAttribute="centerY" id="Rky-dI-fFX"/>
+                <constraint firstItem="alP-6y-bSh" firstAttribute="leading" secondItem="0t2-NM-WYv" secondAttribute="leading" constant="15" id="eeP-Kg-XAy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="0t2-NM-WYv"/>
+            <connections>
+                <outlet property="iconImgView" destination="alP-6y-bSh" id="Dfn-PI-bbw"/>
+                <outlet property="imgViewHeightAndWidth" destination="Zus-OO-07h" id="LJA-a8-HuK"/>
+                <outlet property="imgViewLeading" destination="eeP-Kg-XAy" id="Hf7-0o-Yns"/>
+                <outlet property="nameLabel" destination="m4h-Gg-hRS" id="GgX-WJ-22p"/>
+            </connections>
+            <point key="canvasLocation" x="-129.5" y="29"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="PayTheBill_headerImg" width="60" height="60"/>
+    </resources>
+</document>

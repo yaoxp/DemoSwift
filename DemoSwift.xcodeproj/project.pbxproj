@@ -16,6 +16,15 @@
 		FF18588D2058CAC400ADC0BC /* DemoSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF18588C2058CAC400ADC0BC /* DemoSwiftTests.swift */; };
 		FF1858982058D4E600ADC0BC /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1858972058D4E600ADC0BC /* MainTableViewController.swift */; };
 		FF18589E2059102300ADC0BC /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF18589D2059102300ADC0BC /* Demo.swift */; };
+		FF32FA8D205F58BC006889A3 /* PayTheBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32FA8B205F58BC006889A3 /* PayTheBillViewController.swift */; };
+		FF32FA8E205F58BC006889A3 /* PayTheBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32FA8C205F58BC006889A3 /* PayTheBillViewController.xib */; };
+		FF32FA90205F68E6006889A3 /* PayTheBillTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32FA8F205F68E6006889A3 /* PayTheBillTitleView.swift */; };
+		FF32FA92205F6944006889A3 /* PayTheBillTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32FA91205F6944006889A3 /* PayTheBillTitleView.xib */; };
+		FF32FA94205F8A91006889A3 /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32FA93205F8A91006889A3 /* UIKit+Extension.swift */; };
+		FF32FA96205F90C9006889A3 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32FA95205F90C9006889A3 /* UIImage+Extension.swift */; };
+		FF32FA98205F9784006889A3 /* PayTheBillHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32FA97205F9784006889A3 /* PayTheBillHeaderView.swift */; };
+		FF32FA9A205F9793006889A3 /* PayTheBillHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32FA99205F9793006889A3 /* PayTheBillHeaderView.xib */; };
+		FF32FA9C205FB1D0006889A3 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32FA9B205FB1D0006889A3 /* DispatchQueue+Extension.swift */; };
 		FFD056AB205912F300A6F5AE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD056AA205912F300A6F5AE /* UIColor+Extension.swift */; };
 		FFD056AE2059134200A6F5AE /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD056AD2059134200A6F5AE /* UIDevice+Extension.swift */; };
 		FFD056B1205913CA00A6F5AE /* AnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD056AF205913CA00A6F5AE /* AnimationViewController.xib */; };
@@ -52,6 +61,15 @@
 		FF18588E2058CAC400ADC0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF1858972058D4E600ADC0BC /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		FF18589D2059102300ADC0BC /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
+		FF32FA8B205F58BC006889A3 /* PayTheBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTheBillViewController.swift; sourceTree = "<group>"; };
+		FF32FA8C205F58BC006889A3 /* PayTheBillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayTheBillViewController.xib; sourceTree = "<group>"; };
+		FF32FA8F205F68E6006889A3 /* PayTheBillTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTheBillTitleView.swift; sourceTree = "<group>"; };
+		FF32FA91205F6944006889A3 /* PayTheBillTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayTheBillTitleView.xib; sourceTree = "<group>"; };
+		FF32FA93205F8A91006889A3 /* UIKit+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extension.swift"; sourceTree = "<group>"; };
+		FF32FA95205F90C9006889A3 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		FF32FA97205F9784006889A3 /* PayTheBillHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTheBillHeaderView.swift; sourceTree = "<group>"; };
+		FF32FA99205F9793006889A3 /* PayTheBillHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayTheBillHeaderView.xib; sourceTree = "<group>"; };
+		FF32FA9B205FB1D0006889A3 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
 		FFD056AA205912F300A6F5AE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		FFD056AD2059134200A6F5AE /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		FFD056AF205913CA00A6F5AE /* AnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimationViewController.xib; sourceTree = "<group>"; };
@@ -145,9 +163,23 @@
 			path = DemoSwiftTests;
 			sourceTree = "<group>";
 		};
+		FF55B25A20593EA7001145F9 /* PayTheBill */ = {
+			isa = PBXGroup;
+			children = (
+				FF32FA8B205F58BC006889A3 /* PayTheBillViewController.swift */,
+				FF32FA8C205F58BC006889A3 /* PayTheBillViewController.xib */,
+				FF32FA8F205F68E6006889A3 /* PayTheBillTitleView.swift */,
+				FF32FA91205F6944006889A3 /* PayTheBillTitleView.xib */,
+				FF32FA97205F9784006889A3 /* PayTheBillHeaderView.swift */,
+				FF32FA99205F9793006889A3 /* PayTheBillHeaderView.xib */,
+			);
+			path = PayTheBill;
+			sourceTree = "<group>";
+		};
 		FFD056A82059128C00A6F5AE /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FF55B25A20593EA7001145F9 /* PayTheBill */,
 				FFD056AC2059130B00A6F5AE /* Animation */,
 			);
 			path = Demo;
@@ -158,6 +190,9 @@
 			children = (
 				FFD056AA205912F300A6F5AE /* UIColor+Extension.swift */,
 				FFD056AD2059134200A6F5AE /* UIDevice+Extension.swift */,
+				FF32FA93205F8A91006889A3 /* UIKit+Extension.swift */,
+				FF32FA95205F90C9006889A3 /* UIImage+Extension.swift */,
+				FF32FA9B205FB1D0006889A3 /* DispatchQueue+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -271,9 +306,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF1858822058CAC400ADC0BC /* LaunchScreen.storyboard in Resources */,
+				FF32FA8E205F58BC006889A3 /* PayTheBillViewController.xib in Resources */,
 				FFD056B1205913CA00A6F5AE /* AnimationViewController.xib in Resources */,
 				FF18587F2058CAC400ADC0BC /* Assets.xcassets in Resources */,
 				FF18587D2058CAC400ADC0BC /* Main.storyboard in Resources */,
+				FF32FA9A205F9793006889A3 /* PayTheBillHeaderView.xib in Resources */,
+				FF32FA92205F6944006889A3 /* PayTheBillTitleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,10 +432,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF1858982058D4E600ADC0BC /* MainTableViewController.swift in Sources */,
+				FF32FA9C205FB1D0006889A3 /* DispatchQueue+Extension.swift in Sources */,
+				FF32FA98205F9784006889A3 /* PayTheBillHeaderView.swift in Sources */,
 				FF1858782058CAC400ADC0BC /* AppDelegate.swift in Sources */,
+				FF32FA8D205F58BC006889A3 /* PayTheBillViewController.swift in Sources */,
+				FF32FA96205F90C9006889A3 /* UIImage+Extension.swift in Sources */,
 				FF18589E2059102300ADC0BC /* Demo.swift in Sources */,
 				FFD056B2205913CA00A6F5AE /* AnimationViewController.swift in Sources */,
+				FF32FA90205F68E6006889A3 /* PayTheBillTitleView.swift in Sources */,
 				FFD056AE2059134200A6F5AE /* UIDevice+Extension.swift in Sources */,
+				FF32FA94205F8A91006889A3 /* UIKit+Extension.swift in Sources */,
 				FFD056B72059238A00A6F5AE /* ClockOffViewController.swift in Sources */,
 				FFD056B62059238A00A6F5AE /* ClockOffButton.swift in Sources */,
 				FFD056AB205912F300A6F5AE /* UIColor+Extension.swift in Sources */,
@@ -557,7 +601,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QSH988Q3LB;
 				INFOPLIST_FILE = DemoSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yaoxp.DemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -574,7 +618,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QSH988Q3LB;
 				INFOPLIST_FILE = DemoSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yaoxp.DemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";

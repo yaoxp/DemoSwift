@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIDevice {
-    public func isX() -> Bool {
+    class func isX() -> Bool {
         if UIScreen.main.bounds.height == 812 {
             return true
         }
