@@ -10,7 +10,6 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
     // MARK: - cell
-    static let xibName = "MainTableCell"
     static let tableViewCellIdentifier = "MainTableCell"
     
     // MARK: - properties
