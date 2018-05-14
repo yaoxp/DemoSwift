@@ -13,8 +13,9 @@ class MainTableViewController: UITableViewController {
     static let tableViewCellIdentifier = "MainTableCell"
     
     // MARK: - properties
-    let demos = [Demo.init(title: "动画", subTitle: "贝塞尔曲线，优酷播放按钮，引导页跳过按钮，打卡按钮", className: NSStringFromClass(AnimationViewController.self)),
-                 Demo.init(title: "买单吧", subTitle: "tableview上推，头像渐变到导航栏上", className: NSStringFromClass(PayTheBillViewController.self))]
+    let demos = [Demo(title: "动画", subTitle: "贝塞尔曲线，优酷播放按钮，引导页跳过按钮，打卡按钮", className: NSStringFromClass(AnimationViewController.self)),
+                 Demo(title: "买单吧", subTitle: "tableview上推，头像渐变到导航栏上", className: NSStringFromClass(PayTheBillViewController.self)),
+                 Demo(title: "跑马灯", subTitle: "支持富文本和图片", className: NSStringFromClass(MarqueeViewController.self))]
     
     // MARK: - View Life Cycle
     
@@ -59,10 +60,12 @@ class MainTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let demo = demos[indexPath.row]
-        let vcClass = NSClassFromString(demo.className) as? UIViewController.Type
-        if let vc = vcClass?.init() {
-            navigationController?.pushViewController(vc, animated: true)
+        
+        if let vcClass = NSClassFromString(demo.className) as? UIViewController.Type {
+            let vc = vcClass.init()
+            navigationController!.pushViewController(vc, animated: true)
         }
+
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

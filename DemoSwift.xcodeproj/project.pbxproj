@@ -16,6 +16,8 @@
 		FF18588D2058CAC400ADC0BC /* DemoSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF18588C2058CAC400ADC0BC /* DemoSwiftTests.swift */; };
 		FF1858982058D4E600ADC0BC /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1858972058D4E600ADC0BC /* MainTableViewController.swift */; };
 		FF18589E2059102300ADC0BC /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF18589D2059102300ADC0BC /* Demo.swift */; };
+		FF1A833720A96F19001A1DF1 /* MarqueeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A833620A96F19001A1DF1 /* MarqueeViewController.swift */; };
+		FF1A833920A96F40001A1DF1 /* MarqueeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A833820A96F40001A1DF1 /* MarqueeView.swift */; };
 		FF32FA8D205F58BC006889A3 /* PayTheBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32FA8B205F58BC006889A3 /* PayTheBillViewController.swift */; };
 		FF32FA8E205F58BC006889A3 /* PayTheBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32FA8C205F58BC006889A3 /* PayTheBillViewController.xib */; };
 		FF32FA90205F68E6006889A3 /* PayTheBillTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32FA8F205F68E6006889A3 /* PayTheBillTitleView.swift */; };
@@ -61,6 +63,8 @@
 		FF18588E2058CAC400ADC0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF1858972058D4E600ADC0BC /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		FF18589D2059102300ADC0BC /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
+		FF1A833620A96F19001A1DF1 /* MarqueeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeViewController.swift; sourceTree = "<group>"; };
+		FF1A833820A96F40001A1DF1 /* MarqueeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeView.swift; sourceTree = "<group>"; };
 		FF32FA8B205F58BC006889A3 /* PayTheBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTheBillViewController.swift; sourceTree = "<group>"; };
 		FF32FA8C205F58BC006889A3 /* PayTheBillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayTheBillViewController.xib; sourceTree = "<group>"; };
 		FF32FA8F205F68E6006889A3 /* PayTheBillTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTheBillTitleView.swift; sourceTree = "<group>"; };
@@ -163,6 +167,15 @@
 			path = DemoSwiftTests;
 			sourceTree = "<group>";
 		};
+		FF1A833520A96EEB001A1DF1 /* Marquee */ = {
+			isa = PBXGroup;
+			children = (
+				FF1A833620A96F19001A1DF1 /* MarqueeViewController.swift */,
+				FF1A833820A96F40001A1DF1 /* MarqueeView.swift */,
+			);
+			path = Marquee;
+			sourceTree = "<group>";
+		};
 		FF55B25A20593EA7001145F9 /* PayTheBill */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +192,7 @@
 		FFD056A82059128C00A6F5AE /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FF1A833520A96EEB001A1DF1 /* Marquee */,
 				FF55B25A20593EA7001145F9 /* PayTheBill */,
 				FFD056AC2059130B00A6F5AE /* Animation */,
 			);
@@ -228,7 +242,6 @@
 				FF1858712058CAC400ADC0BC /* Frameworks */,
 				FF1858722058CAC400ADC0BC /* Resources */,
 				FE30DB1FADB9EF40D93C20FF /* [CP] Embed Pods Frameworks */,
-				0E0CCF3462DCF46676C8DE8D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,8 +260,6 @@
 				FF1858842058CAC400ADC0BC /* Sources */,
 				FF1858852058CAC400ADC0BC /* Frameworks */,
 				FF1858862058CAC400ADC0BC /* Resources */,
-				34C96B2E506079B8E9136341 /* [CP] Embed Pods Frameworks */,
-				3741099998F7A7F0B499CB64 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -325,51 +336,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0E0CCF3462DCF46676C8DE8D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoSwift/Pods-DemoSwift-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		34C96B2E506079B8E9136341 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoSwiftTests/Pods-DemoSwiftTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3741099998F7A7F0B499CB64 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoSwiftTests/Pods-DemoSwiftTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C38A7E25F874D7E7C802A62F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -414,10 +380,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DemoSwift/Pods-DemoSwift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -436,7 +404,9 @@
 				FF32FA98205F9784006889A3 /* PayTheBillHeaderView.swift in Sources */,
 				FF1858782058CAC400ADC0BC /* AppDelegate.swift in Sources */,
 				FF32FA8D205F58BC006889A3 /* PayTheBillViewController.swift in Sources */,
+				FF1A833720A96F19001A1DF1 /* MarqueeViewController.swift in Sources */,
 				FF32FA96205F90C9006889A3 /* UIImage+Extension.swift in Sources */,
+				FF1A833920A96F40001A1DF1 /* MarqueeView.swift in Sources */,
 				FF18589E2059102300ADC0BC /* Demo.swift in Sources */,
 				FFD056B2205913CA00A6F5AE /* AnimationViewController.swift in Sources */,
 				FF32FA90205F68E6006889A3 /* PayTheBillTitleView.swift in Sources */,
