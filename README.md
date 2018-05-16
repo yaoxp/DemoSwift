@@ -7,3 +7,4 @@ Demo合集
 ![image](https://github.com/yaoxp/DemoSwift/blob/master/gif/pay.gif)
 
 ![image](https://github.com/yaoxp/DemoSwift/blob/master/gif/marquee.gif)
+![image](https://github.com/yaoxp/DemoSwift/blob/master/gif/peek_pop.gif)
