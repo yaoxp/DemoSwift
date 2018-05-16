@@ -8,12 +8,12 @@
 
 import UIKit
 
-class MainTableViewController: UITableViewController, UIViewControllerPreviewingDelegate {
+class MainTableViewController: UITableViewController, UIViewControllerPreviewingDelegate, ThreeTouchPreviewActionDelegate {
     // MARK: - cell
     static let tableViewCellIdentifier = "MainTableCell"
     
     // MARK: - properties
-    let demos = [Demo(title: "动画", subTitle: "贝塞尔曲线，优酷播放按钮，引导页跳过按钮，打卡按钮", className: NSStringFromClass(AnimationViewController.self)),
+    var demos = [Demo(title: "动画", subTitle: "贝塞尔曲线，优酷播放按钮，引导页跳过按钮，打卡按钮", className: NSStringFromClass(AnimationViewController.self)),
                  Demo(title: "买单吧", subTitle: "tableview上推，头像渐变到导航栏上", className: NSStringFromClass(PayTheBillViewController.self)),
                  Demo(title: "跑马灯", subTitle: "支持富文本和图片", className: NSStringFromClass(MarqueeViewController.self))]
     
@@ -100,11 +100,31 @@ extension MainTableViewController {
         previewingContext.sourceRect = cell.frame
         
         let demo = demos[indexPath.row]
-        if let vcClass = NSClassFromString(demo.className) as? UIViewController.Type {
-            return vcClass.init()
+        if let vcClass = NSClassFromString(demo.className) as? PeekViewController.Type {
+            let vc = vcClass.init()
+            vc.previewActionDelegate = self
+            vc.indexPath = indexPath
+            return vc
         }
 
         return nil
     }
     
+}
+
+// MARK: - ThreeTouchPreviewActionDelegate
+extension MainTableViewController {
+    func previewAction(setTop index: IndexPath?) {
+        guard index != nil && index!.row < demos.count else { return }
+        
+        demos.insert(demos.remove(at: index!.row), at: 0)
+        tableView.reloadData()
+    }
+    
+    func previewAction(delete index: IndexPath?) {
+        guard index != nil && index!.row < demos.count else { return }
+        
+        demos.remove(at: index!.row)
+        tableView.reloadData()
+    }
 }

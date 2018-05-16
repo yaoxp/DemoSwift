@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AnimationViewController: UIViewController {
+class AnimationViewController: PeekViewController {
 
     @IBOutlet weak var animationView: UIView!
     

@@ -27,6 +27,8 @@
 		FF32FA98205F9784006889A3 /* PayTheBillHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32FA97205F9784006889A3 /* PayTheBillHeaderView.swift */; };
 		FF32FA9A205F9793006889A3 /* PayTheBillHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32FA99205F9793006889A3 /* PayTheBillHeaderView.xib */; };
 		FF32FA9C205FB1D0006889A3 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32FA9B205FB1D0006889A3 /* DispatchQueue+Extension.swift */; };
+		FFA7004620AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7004520AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift */; };
+		FFA7004A20AC27C60073DBF5 /* PeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7004920AC27C60073DBF5 /* PeekViewController.swift */; };
 		FFD056AB205912F300A6F5AE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD056AA205912F300A6F5AE /* UIColor+Extension.swift */; };
 		FFD056AE2059134200A6F5AE /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD056AD2059134200A6F5AE /* UIDevice+Extension.swift */; };
 		FFD056B1205913CA00A6F5AE /* AnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD056AF205913CA00A6F5AE /* AnimationViewController.xib */; };
@@ -74,6 +76,8 @@
 		FF32FA97205F9784006889A3 /* PayTheBillHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTheBillHeaderView.swift; sourceTree = "<group>"; };
 		FF32FA99205F9793006889A3 /* PayTheBillHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayTheBillHeaderView.xib; sourceTree = "<group>"; };
 		FF32FA9B205FB1D0006889A3 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
+		FFA7004520AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeTouchPreviewActionDelegate.swift; sourceTree = "<group>"; };
+		FFA7004920AC27C60073DBF5 /* PeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekViewController.swift; sourceTree = "<group>"; };
 		FFD056AA205912F300A6F5AE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		FFD056AD2059134200A6F5AE /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		FFD056AF205913CA00A6F5AE /* AnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimationViewController.xib; sourceTree = "<group>"; };
@@ -145,10 +149,12 @@
 		FF1858762058CAC400ADC0BC /* DemoSwift */ = {
 			isa = PBXGroup;
 			children = (
+				FFA7004720AC276D0073DBF5 /* Base */,
 				FFD056A92059129200A6F5AE /* Extension */,
 				FFD056A82059128C00A6F5AE /* Demo */,
 				FF1858772058CAC400ADC0BC /* AppDelegate.swift */,
 				FF1858972058D4E600ADC0BC /* MainTableViewController.swift */,
+				FFA7004520AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift */,
 				FF18589D2059102300ADC0BC /* Demo.swift */,
 				FF18587B2058CAC400ADC0BC /* Main.storyboard */,
 				FF18587E2058CAC400ADC0BC /* Assets.xcassets */,
@@ -187,6 +193,22 @@
 				FF32FA99205F9793006889A3 /* PayTheBillHeaderView.xib */,
 			);
 			path = PayTheBill;
+			sourceTree = "<group>";
+		};
+		FFA7004720AC276D0073DBF5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FFA7004820AC27730073DBF5 /* ViewController */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FFA7004820AC27730073DBF5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FFA7004920AC27C60073DBF5 /* PeekViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		FFD056A82059128C00A6F5AE /* Demo */ = {
@@ -404,12 +426,14 @@
 				FF32FA98205F9784006889A3 /* PayTheBillHeaderView.swift in Sources */,
 				FF1858782058CAC400ADC0BC /* AppDelegate.swift in Sources */,
 				FF32FA8D205F58BC006889A3 /* PayTheBillViewController.swift in Sources */,
+				FFA7004A20AC27C60073DBF5 /* PeekViewController.swift in Sources */,
 				FF1A833720A96F19001A1DF1 /* MarqueeViewController.swift in Sources */,
 				FF32FA96205F90C9006889A3 /* UIImage+Extension.swift in Sources */,
 				FF1A833920A96F40001A1DF1 /* MarqueeView.swift in Sources */,
 				FF18589E2059102300ADC0BC /* Demo.swift in Sources */,
 				FFD056B2205913CA00A6F5AE /* AnimationViewController.swift in Sources */,
 				FF32FA90205F68E6006889A3 /* PayTheBillTitleView.swift in Sources */,
+				FFA7004620AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift in Sources */,
 				FFD056AE2059134200A6F5AE /* UIDevice+Extension.swift in Sources */,
 				FF32FA94205F8A91006889A3 /* UIKit+Extension.swift in Sources */,
 				FFD056B72059238A00A6F5AE /* ClockOffViewController.swift in Sources */,

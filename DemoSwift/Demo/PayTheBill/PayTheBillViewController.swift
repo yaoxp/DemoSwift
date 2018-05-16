@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class PayTheBillViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PayTheBillViewController: PeekViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewTopOffset: NSLayoutConstraint!
