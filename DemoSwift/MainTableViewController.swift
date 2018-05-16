@@ -84,15 +84,19 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
 // MARK: - UIViewControllerPreviewingDelegate
 extension MainTableViewController {
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        // 跳转到预览的viewController
         show(viewControllerToCommit, sender: self)
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        // previewingContext.sourceView 注册preview的view。本demo中是self.view
+        // registerForPreviewing(with: self, sourceView: view)
         let cellPoint = tableView.convert(location, from: previewingContext.sourceView)
         
         guard let indexPath = tableView.indexPathForRow(at: cellPoint),
                 let cell = tableView.cellForRow(at: indexPath) else { return nil }
         
+        // 不模糊的区域，其它区域会模糊处理。微信QQ都有此功能
         previewingContext.sourceRect = cell.frame
         
         let demo = demos[indexPath.row]

@@ -14,8 +14,10 @@ class MarqueeViewController: UIViewController {
     var right: MarqueeView?
     var blend: MarqueeView?
     
+    // 3D Touch peek 功能
     override open var previewActionItems: [UIPreviewActionItem] {
         get {
+            // preview时上滑时下面出来的选择条目
             let action1 = UIPreviewAction(title: "test", style: .default, handler: { (action: UIPreviewAction, previewVC: UIViewController) in
                 print("test action")
                 
