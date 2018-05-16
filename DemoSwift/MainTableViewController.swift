@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainTableViewController: UITableViewController {
+class MainTableViewController: UITableViewController, UIViewControllerPreviewingDelegate {
     // MARK: - cell
     static let tableViewCellIdentifier = "MainTableCell"
     
@@ -24,6 +24,10 @@ class MainTableViewController: UITableViewController {
 
         // Uncomment the following line to preserve selection between presentations
          self.clearsSelectionOnViewWillAppear = true
+        
+        if traitCollection.forceTouchCapability == .available {
+            registerForPreviewing(with: self, sourceView: view)
+        }
         
     }
 
@@ -75,4 +79,28 @@ class MainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.01;
     }
+}
+
+// MARK: - UIViewControllerPreviewingDelegate
+extension MainTableViewController {
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        show(viewControllerToCommit, sender: self)
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        let cellPoint = tableView.convert(location, from: previewingContext.sourceView)
+        
+        guard let indexPath = tableView.indexPathForRow(at: cellPoint),
+                let cell = tableView.cellForRow(at: indexPath) else { return nil }
+        
+        previewingContext.sourceRect = cell.frame
+        
+        let demo = demos[indexPath.row]
+        if let vcClass = NSClassFromString(demo.className) as? UIViewController.Type {
+            return vcClass.init()
+        }
+
+        return nil
+    }
+    
 }

@@ -14,6 +14,15 @@ class MarqueeViewController: UIViewController {
     var right: MarqueeView?
     var blend: MarqueeView?
     
+    override open var previewActionItems: [UIPreviewActionItem] {
+        get {
+            let action1 = UIPreviewAction(title: "test", style: .default, handler: { (action: UIPreviewAction, previewVC: UIViewController) in
+                print("test action")
+                
+            })
+            return [action1]
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

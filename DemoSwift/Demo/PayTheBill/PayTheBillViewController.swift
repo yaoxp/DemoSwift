@@ -40,21 +40,26 @@ class PayTheBillViewController: UIViewController, UITableViewDelegate, UITableVi
         // 设置titleview
         navigationItem.titleView = titleView
         titleView.headerImgView.isHidden = true
-        
-        navigationController!.navigationBar.insertSubview(navigationBarBackgroundView, at: 0)
-        navigationBarBackgroundView.frame = CGRect(x: 0, y: 0 - UIApplication.shared.statusBarFrame.height, width: navigationController!.navigationBar.bounds.size.width, height: navigationController!.navigationBar.bounds.size.height + UIApplication.shared.statusBarFrame.height)
-        navigationBarBackgroundView.alpha = 0;
-        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        barShadowImage = navigationController!.navigationBar.shadowImage
-        
-        navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController!.navigationBar.shadowImage = UIImage()
-        navigationController!.navigationBar.isTranslucent = true
+        // preview时没有navigationController
+        if let nc = navigationController {
+            nc.navigationBar.insertSubview(navigationBarBackgroundView, at: 0)
+            
+            navigationBarBackgroundView.frame = CGRect(x: 0, y: 0 - UIApplication.shared.statusBarFrame.height, width: nc.navigationBar.bounds.size.width, height: nc.navigationBar.bounds.size.height + UIApplication.shared.statusBarFrame.height)
+            navigationBarBackgroundView.alpha = 0;
+            
+            barShadowImage = nc.navigationBar.shadowImage
+            
+            nc.navigationBar.setBackgroundImage(UIImage(), for: .default)
+            nc.navigationBar.shadowImage = UIImage()
+            nc.navigationBar.isTranslucent = true
+        }
+    
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -80,10 +85,13 @@ class PayTheBillViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        navigationController!.navigationBar.setBackgroundImage(UIImage.createImage(color: UIColor.white), for: .default)
-        navigationController!.navigationBar.shadowImage = barShadowImage
-        navigationController!.navigationBar.isTranslucent = true
-        navigationBarBackgroundView.removeFromSuperview()
+        if let nc = navigationController {
+            nc.navigationBar.setBackgroundImage(UIImage.createImage(color: UIColor.white), for: .default)
+            nc.navigationBar.shadowImage = barShadowImage
+            nc.navigationBar.isTranslucent = true
+            navigationBarBackgroundView.removeFromSuperview()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
