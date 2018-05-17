@@ -29,6 +29,7 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
             registerForPreviewing(with: self, sourceView: view)
         }
         
+        NotificationCenter.default.addObserver(self, selector: #selector(headerNotification), name: Notification.Name("animation"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,6 +79,11 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.01;
+    }
+    
+    @objc func headerNotification(notification: Notification) {
+//        let vc = AnimationViewController()
+//        show(vc, sender: self)
     }
 }
 

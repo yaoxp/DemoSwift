@@ -10,12 +10,46 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    enum ShortcutIdentifier: String {
+        case first
+        case second
+        case third
+        
+        init?(fullType: String) {
+            guard let last = fullType.components(separatedBy: ".").last else {
+                return nil
+            }
+            
+            self.init(rawValue: last)
+        }
+        
+        var type: String {
+            return Bundle.main.bundleIdentifier! + ".\(self.rawValue)"
+        }
+        
+    }
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        if let shortcutItems = application.shortcutItems, shortcutItems.isEmpty {
+            let shortcut2 = UIApplicationShortcutItem(type: ShortcutIdentifier.second.type,
+                                                      localizedTitle: "买单吧",
+                                                      localizedSubtitle: nil,
+                                                      icon: UIApplicationShortcutIcon(type: .play),
+                                                      userInfo: nil)
+            let shortcut3 = UIApplicationShortcutItem(type: ShortcutIdentifier.third.type,
+                                                      localizedTitle: "跑马灯",
+                                                      localizedSubtitle: nil,
+                                                      icon: UIApplicationShortcutIcon(type: .pause),
+                                                      userInfo: nil)
+            application.shortcutItems = [shortcut2, shortcut3];
+        }
+
         return true
     }
 
@@ -41,6 +75,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "animation"), object: nil)
+        
+        guard ShortcutIdentifier(fullType: shortcutItem.type) != nil else {
+            completionHandler(false)
+            return
+        }
+        
+        guard let shortcutType = shortcutItem.type as String? else {
+            completionHandler(false)
+            return
+        }
+        
+        if let nc = window!.rootViewController as? UINavigationController {
+            switch shortcutType {
+            case ShortcutIdentifier.first.type:
+                completionHandler(true)
+                let vc = AnimationViewController()
+                nc.pushViewController(vc, animated: true)
+            
+            case ShortcutIdentifier.second.type:
+                completionHandler(true)
+                let vc = PayTheBillViewController()
+                nc.pushViewController(vc, animated: true)
+                
+            case ShortcutIdentifier.third.type:
+                completionHandler(true)
+                let vc = MarqueeViewController()
+                nc.pushViewController(vc, animated: true)
+            default:
+                completionHandler(false)
+                return
+            }
+            
+            
+        }
+        
+        completionHandler(false)
+    }
 }
 
