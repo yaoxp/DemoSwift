@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		268EDB40F43779811DA69F67 /* Pods_DemoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B041FB317087741D521495CA /* Pods_DemoSwift.framework */; };
 		7C96BE86BF4AA2163CE57712 /* Pods_DemoSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15DF14BAB5BD5307EA55039 /* Pods_DemoSwiftTests.framework */; };
+		FF044C1020C9112600EDE2B6 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF044C0F20C9112600EDE2B6 /* Date+Extension.swift */; };
 		FF1858782058CAC400ADC0BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1858772058CAC400ADC0BC /* AppDelegate.swift */; };
 		FF18587D2058CAC400ADC0BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF18587B2058CAC400ADC0BC /* Main.storyboard */; };
 		FF18587F2058CAC400ADC0BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF18587E2058CAC400ADC0BC /* Assets.xcassets */; };
@@ -27,6 +28,8 @@
 		FF32FA98205F9784006889A3 /* PayTheBillHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32FA97205F9784006889A3 /* PayTheBillHeaderView.swift */; };
 		FF32FA9A205F9793006889A3 /* PayTheBillHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32FA99205F9793006889A3 /* PayTheBillHeaderView.xib */; };
 		FF32FA9C205FB1D0006889A3 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32FA9B205FB1D0006889A3 /* DispatchQueue+Extension.swift */; };
+		FF36B58620BD011000ABF92C /* DatePickerDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF36B58420BD011000ABF92C /* DatePickerDemoViewController.swift */; };
+		FF36B58720BD011000ABF92C /* DatePickerDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF36B58520BD011000ABF92C /* DatePickerDemoViewController.xib */; };
 		FFA7004620AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7004520AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift */; };
 		FFA7004A20AC27C60073DBF5 /* PeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7004920AC27C60073DBF5 /* PeekViewController.swift */; };
 		FFD056AB205912F300A6F5AE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD056AA205912F300A6F5AE /* UIColor+Extension.swift */; };
@@ -35,6 +38,9 @@
 		FFD056B2205913CA00A6F5AE /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD056B0205913CA00A6F5AE /* AnimationViewController.swift */; };
 		FFD056B62059238A00A6F5AE /* ClockOffButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD056B42059238A00A6F5AE /* ClockOffButton.swift */; };
 		FFD056B72059238A00A6F5AE /* ClockOffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD056B52059238A00A6F5AE /* ClockOffViewController.swift */; };
+		FFE4A23720BB9B6300939E00 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE4A23620BB9B6300939E00 /* DatePickerView.swift */; };
+		FFE4A23920BBA71400939E00 /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE4A23820BBA71400939E00 /* DatePickerView.xib */; };
+		FFF763CE20CA786700E479B7 /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF763CD20CA786700E479B7 /* DateExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +60,7 @@
 		B041FB317087741D521495CA /* Pods_DemoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3244A00694BA58B5798D424 /* Pods-DemoSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSwiftTests/Pods-DemoSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E15DF14BAB5BD5307EA55039 /* Pods_DemoSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF044C0F20C9112600EDE2B6 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		FF1858742058CAC400ADC0BC /* DemoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF1858772058CAC400ADC0BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF18587C2058CAC400ADC0BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +83,8 @@
 		FF32FA97205F9784006889A3 /* PayTheBillHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTheBillHeaderView.swift; sourceTree = "<group>"; };
 		FF32FA99205F9793006889A3 /* PayTheBillHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayTheBillHeaderView.xib; sourceTree = "<group>"; };
 		FF32FA9B205FB1D0006889A3 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
+		FF36B58420BD011000ABF92C /* DatePickerDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDemoViewController.swift; sourceTree = "<group>"; };
+		FF36B58520BD011000ABF92C /* DatePickerDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerDemoViewController.xib; sourceTree = "<group>"; };
 		FFA7004520AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeTouchPreviewActionDelegate.swift; sourceTree = "<group>"; };
 		FFA7004920AC27C60073DBF5 /* PeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekViewController.swift; sourceTree = "<group>"; };
 		FFD056AA205912F300A6F5AE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -84,6 +93,9 @@
 		FFD056B0205913CA00A6F5AE /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		FFD056B42059238A00A6F5AE /* ClockOffButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockOffButton.swift; sourceTree = "<group>"; };
 		FFD056B52059238A00A6F5AE /* ClockOffViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockOffViewController.swift; sourceTree = "<group>"; };
+		FFE4A23620BB9B6300939E00 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		FFE4A23820BBA71400939E00 /* DatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerView.xib; sourceTree = "<group>"; };
+		FFF763CD20CA786700E479B7 /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +136,17 @@
 				E15DF14BAB5BD5307EA55039 /* Pods_DemoSwiftTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF0271C120BAA5DD0070FEC6 /* DatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				FFE4A23620BB9B6300939E00 /* DatePickerView.swift */,
+				FFE4A23820BBA71400939E00 /* DatePickerView.xib */,
+				FF36B58420BD011000ABF92C /* DatePickerDemoViewController.swift */,
+				FF36B58520BD011000ABF92C /* DatePickerDemoViewController.xib */,
+			);
+			path = DatePickerView;
 			sourceTree = "<group>";
 		};
 		FF18586B2058CAC400ADC0BC = {
@@ -169,6 +192,7 @@
 			children = (
 				FF18588C2058CAC400ADC0BC /* DemoSwiftTests.swift */,
 				FF18588E2058CAC400ADC0BC /* Info.plist */,
+				FFF763CD20CA786700E479B7 /* DateExtensionTests.swift */,
 			);
 			path = DemoSwiftTests;
 			sourceTree = "<group>";
@@ -214,6 +238,7 @@
 		FFD056A82059128C00A6F5AE /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FF0271C120BAA5DD0070FEC6 /* DatePickerView */,
 				FF1A833520A96EEB001A1DF1 /* Marquee */,
 				FF55B25A20593EA7001145F9 /* PayTheBill */,
 				FFD056AC2059130B00A6F5AE /* Animation */,
@@ -229,6 +254,7 @@
 				FF32FA93205F8A91006889A3 /* UIKit+Extension.swift */,
 				FF32FA95205F90C9006889A3 /* UIImage+Extension.swift */,
 				FF32FA9B205FB1D0006889A3 /* DispatchQueue+Extension.swift */,
+				FF044C0F20C9112600EDE2B6 /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -339,7 +365,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF1858822058CAC400ADC0BC /* LaunchScreen.storyboard in Resources */,
+				FF36B58720BD011000ABF92C /* DatePickerDemoViewController.xib in Resources */,
 				FF32FA8E205F58BC006889A3 /* PayTheBillViewController.xib in Resources */,
+				FFE4A23920BBA71400939E00 /* DatePickerView.xib in Resources */,
 				FFD056B1205913CA00A6F5AE /* AnimationViewController.xib in Resources */,
 				FF18587F2058CAC400ADC0BC /* Assets.xcassets in Resources */,
 				FF18587D2058CAC400ADC0BC /* Main.storyboard in Resources */,
@@ -429,7 +457,10 @@
 				FFA7004A20AC27C60073DBF5 /* PeekViewController.swift in Sources */,
 				FF1A833720A96F19001A1DF1 /* MarqueeViewController.swift in Sources */,
 				FF32FA96205F90C9006889A3 /* UIImage+Extension.swift in Sources */,
+				FFE4A23720BB9B6300939E00 /* DatePickerView.swift in Sources */,
+				FF36B58620BD011000ABF92C /* DatePickerDemoViewController.swift in Sources */,
 				FF1A833920A96F40001A1DF1 /* MarqueeView.swift in Sources */,
+				FF044C1020C9112600EDE2B6 /* Date+Extension.swift in Sources */,
 				FF18589E2059102300ADC0BC /* Demo.swift in Sources */,
 				FFD056B2205913CA00A6F5AE /* AnimationViewController.swift in Sources */,
 				FF32FA90205F68E6006889A3 /* PayTheBillTitleView.swift in Sources */,
@@ -447,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF18588D2058CAC400ADC0BC /* DemoSwiftTests.swift in Sources */,
+				FFF763CE20CA786700E479B7 /* DateExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,11 +659,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QSH988Q3LB;
 				INFOPLIST_FILE = DemoSwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yaoxp.DemoSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoSwift.app/DemoSwift";
@@ -644,11 +680,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QSH988Q3LB;
 				INFOPLIST_FILE = DemoSwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yaoxp.DemoSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoSwift.app/DemoSwift";

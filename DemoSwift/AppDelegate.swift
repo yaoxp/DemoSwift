@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         case first
         case second
         case third
+        case fourth
         
         init?(fullType: String) {
             guard let last = fullType.components(separatedBy: ".").last else {
@@ -47,7 +48,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                       localizedSubtitle: nil,
                                                       icon: UIApplicationShortcutIcon(type: .pause),
                                                       userInfo: nil)
-            application.shortcutItems = [shortcut2, shortcut3];
+            let shortCut4 = UIApplicationShortcutItem(type: ShortcutIdentifier.fourth.type,
+                                                      localizedTitle: "日期选择器",
+                                                      localizedSubtitle: nil,
+                                                      icon: UIApplicationShortcutIcon(type: .audio),
+                                                      userInfo: nil)
+            application.shortcutItems = [shortcut2, shortcut3, shortCut4];
         }
 
         return true
@@ -103,6 +109,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             case ShortcutIdentifier.third.type:
                 completionHandler(true)
                 let vc = MarqueeViewController()
+                nc.pushViewController(vc, animated: true)
+            case ShortcutIdentifier.fourth.type:
+                let vc = DatePickerDemoViewController()
                 nc.pushViewController(vc, animated: true)
             default:
                 completionHandler(false)

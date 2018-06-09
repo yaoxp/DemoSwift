@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerDemoViewController" customModule="DemoSwift" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonAll" destination="uRX-Xt-JeZ" id="qLi-hA-xOO"/>
+                <outlet property="buttonHMS" destination="hGl-k2-tlP" id="wBp-Uj-LeD"/>
+                <outlet property="buttonYMD" destination="Qad-ik-BPe" id="1K2-yJ-6Sh"/>
+                <outlet property="buttonYMDHM" destination="B9O-Do-QFE" id="T9U-Q7-Wi0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRX-Xt-JeZ">
+                    <rect key="frame" x="20" y="80" width="335" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="SWN-TC-N6f"/>
+                    </constraints>
+                    <state key="normal" title="ALL"/>
+                    <connections>
+                        <action selector="onButtonAllAction:" destination="-1" eventType="touchUpInside" id="A8x-Oy-GE2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qad-ik-BPe">
+                    <rect key="frame" x="20" y="130" width="335" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="fdp-eu-oXc"/>
+                    </constraints>
+                    <state key="normal" title="年月日"/>
+                    <connections>
+                        <action selector="onButtonYMDAction:" destination="-1" eventType="touchUpInside" id="b5E-dW-5LV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9O-Do-QFE">
+                    <rect key="frame" x="20" y="230" width="335" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="5Sc-gh-XTe"/>
+                    </constraints>
+                    <state key="normal" title="年月日时分"/>
+                    <connections>
+                        <action selector="onButtonYMDHMAction:" destination="-1" eventType="touchUpInside" id="940-G6-3ek"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGl-k2-tlP">
+                    <rect key="frame" x="20" y="180" width="335" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="l7g-pU-9H8"/>
+                    </constraints>
+                    <state key="normal" title="时分秒"/>
+                    <connections>
+                        <action selector="onButtonHMSAction:" destination="-1" eventType="touchUpInside" id="u76-RI-W9b"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="B9O-Do-QFE" firstAttribute="leading" secondItem="uRX-Xt-JeZ" secondAttribute="leading" id="1kM-n7-mAl"/>
+                <constraint firstItem="uRX-Xt-JeZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="1pD-nm-g4p"/>
+                <constraint firstItem="Qad-ik-BPe" firstAttribute="top" secondItem="uRX-Xt-JeZ" secondAttribute="bottom" constant="20" id="29v-EE-nic"/>
+                <constraint firstItem="B9O-Do-QFE" firstAttribute="trailing" secondItem="uRX-Xt-JeZ" secondAttribute="trailing" id="96P-Fj-aZh"/>
+                <constraint firstItem="Qad-ik-BPe" firstAttribute="trailing" secondItem="uRX-Xt-JeZ" secondAttribute="trailing" id="AaL-Ku-xKj"/>
+                <constraint firstItem="hGl-k2-tlP" firstAttribute="trailing" secondItem="uRX-Xt-JeZ" secondAttribute="trailing" id="Eq5-rU-GRV"/>
+                <constraint firstItem="hGl-k2-tlP" firstAttribute="leading" secondItem="uRX-Xt-JeZ" secondAttribute="leading" id="H8o-Ut-wp0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uRX-Xt-JeZ" secondAttribute="trailing" constant="20" id="Msg-1W-fWj"/>
+                <constraint firstItem="B9O-Do-QFE" firstAttribute="top" secondItem="hGl-k2-tlP" secondAttribute="bottom" constant="20" id="SeO-4E-voo"/>
+                <constraint firstItem="hGl-k2-tlP" firstAttribute="top" secondItem="Qad-ik-BPe" secondAttribute="bottom" constant="20" id="b4L-v6-rJg"/>
+                <constraint firstItem="uRX-Xt-JeZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="fKC-B6-GFV"/>
+                <constraint firstItem="Qad-ik-BPe" firstAttribute="leading" secondItem="uRX-Xt-JeZ" secondAttribute="leading" id="mVl-cW-iZU"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

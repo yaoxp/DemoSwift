@@ -569,7 +569,7 @@ class AnimationViewController: PeekViewController {
         let leftLineShape = CAShapeLayer()
         leftLineShape.path = leftLinePath.cgPath
         leftLineShape.lineWidth = 18
-        leftLineShape.strokeColor = UIColor.hexRGB(0x46A1FB).cgColor
+        leftLineShape.strokeColor = UIColor.hexRGB(0x46A1FB, 1.0).cgColor
         leftLineShape.fillColor = nil
         leftLineShape.lineCap = kCALineCapRound
         leftLineShape.lineJoin = kCALineJoinRound
@@ -583,7 +583,7 @@ class AnimationViewController: PeekViewController {
         let rightLineShape = CAShapeLayer()
         rightLineShape.path = rightLinePath.cgPath
         rightLineShape.lineWidth = 18
-        rightLineShape.strokeColor = UIColor.hexRGB(0x46A1FB).cgColor
+        rightLineShape.strokeColor = UIColor.hexRGB(0x46A1FB, 1.0).cgColor
         rightLineShape.fillColor = nil
         rightLineShape.lineCap = kCALineCapRound
         rightLineShape.lineJoin = kCALineJoinRound
@@ -600,7 +600,7 @@ class AnimationViewController: PeekViewController {
         let undersideCircleShape = CAShapeLayer()
         undersideCircleShape.path = undersideCirclePath.cgPath
         undersideCircleShape.fillColor = nil
-        undersideCircleShape.strokeColor = UIColor.hexRGB(0x5BBCF9).cgColor
+        undersideCircleShape.strokeColor = UIColor.hexRGB(0x5BBCF9, 1.0).cgColor
         undersideCircleShape.lineWidth = 18
         undersideCircleShape.lineCap = kCALineCapRound
         undersideCircleShape.lineJoin = kCALineJoinRound
@@ -614,7 +614,7 @@ class AnimationViewController: PeekViewController {
         let aboveCircleShape = CAShapeLayer()
         aboveCircleShape.path = aboveCirclePath.cgPath
         aboveCircleShape.fillColor = nil
-        aboveCircleShape.strokeColor = UIColor.hexRGB(0x5BBCF9).cgColor
+        aboveCircleShape.strokeColor = UIColor.hexRGB(0x5BBCF9, 1.0).cgColor
         aboveCircleShape.lineWidth = 18
         aboveCircleShape.lineCap = kCALineCapRound
         aboveCircleShape.lineJoin = kCALineJoinRound
@@ -632,7 +632,7 @@ class AnimationViewController: PeekViewController {
         let triangleLeftShape = CAShapeLayer()
         triangleLeftShape.path = triangleLeftLine.cgPath
         triangleLeftShape.fillColor = nil
-        triangleLeftShape.strokeColor = UIColor.hexRGB(0xE74F4C).cgColor
+        triangleLeftShape.strokeColor = UIColor.hexRGB(0xE74F4C, 1.0).cgColor
         triangleLeftShape.lineWidth = 18
         triangleLeftShape.lineCap = kCALineCapRound
         triangleLeftShape.lineJoin = kCALineCapRound
@@ -646,7 +646,7 @@ class AnimationViewController: PeekViewController {
         let triangleRightShape = CAShapeLayer()
         triangleRightShape.path = triangleRightLine.cgPath
         triangleRightShape.fillColor = nil
-        triangleRightShape.strokeColor = UIColor.hexRGB(0xE74F4C).cgColor
+        triangleRightShape.strokeColor = UIColor.hexRGB(0xE74F4C, 1.0).cgColor
         triangleRightShape.lineWidth = 18
         triangleRightShape.lineCap = kCALineCapRound
         triangleRightShape.lineJoin = kCALineCapRound

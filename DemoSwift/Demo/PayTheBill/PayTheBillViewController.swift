@@ -24,7 +24,7 @@ class PayTheBillViewController: PeekViewController, UITableViewDelegate, UITable
     private var originPoint = CGPoint(x: 0, y: 0) // 移动图片初始位置, 底线起点
     
     private let navigationBarBackgroundView: UIImageView = {
-        let imgView = UIImageView(image: UIImage.createImage(color: UIColor.hexRGB(0x1E90FF)))
+        let imgView = UIImageView(image: UIImage.createImage(color: UIColor.hexRGB(0x1E90FF, 1.0)))
         return imgView
     }()
     
