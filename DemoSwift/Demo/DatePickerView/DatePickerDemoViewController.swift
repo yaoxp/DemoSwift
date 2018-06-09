@@ -57,15 +57,18 @@ class DatePickerDemoViewController: PeekViewController {
     }
     
     @IBAction func onButtonHMSAction(_ sender: Any) {
+        
+        let dateFormatter = "HH:mm:ss"
+        
         let datePicker = DatePickerView.datePicker(style: .hourMinuteSecond, scrollToDate: Date()) { date in
             guard let date = date else { return }
             
-            let dateStr = date.toString("HH:mm:ss")
+            let dateStr = date.toString(dateFormatter)
             self.buttonHMS.setTitle(dateStr, for: .normal)
         }
         
-        let date = Date.date(buttonHMS.currentTitle!, formatter: "HH:mm:ss")
-        datePicker.scrollToDate = date == nil ? Date() : date!
+        let date = Date.date(buttonHMS.currentTitle!, formatter: dateFormatter)
+        datePicker.scrollToDate = date == nil ? Date.date(Date().toString(dateFormatter), formatter: dateFormatter)! : date!
         
         datePicker.show()
     }
