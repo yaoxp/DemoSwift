@@ -18,7 +18,7 @@ class ClockOffViewController: UIViewController {
         title = "打卡下班"
         let clockOffButton = ClockOffButton()
 
-        clockOffButton.setTitle("打卡 ", for: .normal)
+        clockOffButton.setTitle("长按", for: .normal)
         clockOffButton.setTitleColor(UIColor.blue, for: .normal)
         view.addSubview(clockOffButton)
         clockOffButton.snp.makeConstraints { (make) -> Void in
