@@ -55,9 +55,14 @@ class MarqueeViewController: PeekViewController {
         
         // MARK: - 文本图片混合滚动
         let label = UILabel()
-        label.text = "abcdefghijklmnopqrstuvwxyz"
+        label.text = "abcde"
         label.sizeToFit()
+        
         let imageView = UIImageView(image: #imageLiteral(resourceName: "PayTheBill_smallHeaderImg"))
+        
+        let label2 = UILabel()
+        label2.text = "fghijklmn"
+        label2.sizeToFit()
         
         let contentView = UIView()
         contentView.addSubview(label)
@@ -67,12 +72,19 @@ class MarqueeViewController: PeekViewController {
         }
         contentView.addSubview(imageView)
         imageView.snp.makeConstraints {
-            $0.top.bottom.trailing.equalToSuperview()
+            $0.top.bottom.equalToSuperview()
             $0.leading.equalTo(label.snp.trailing)
             $0.width.equalTo(20)
         }
+        contentView.addSubview(label2)
+        label2.snp.makeConstraints {
+            $0.top.bottom.equalToSuperview()
+            $0.leading.equalTo(imageView.snp.trailing)
+            $0.width.equalTo(label2.frame.size.width)
+            $0.trailing.equalToSuperview()
+        }
         
-        contentView.frame = CGRect(origin: .zero, size: CGSize(width: label.frame.size.width + 20, height: 20))
+        contentView.frame = CGRect(origin: .zero, size: CGSize(width: label.frame.size.width + 20 + label2.frame.size.width, height: 20))
         
         let marquee = MarqueeView(frame: .zero)
         marquee.contentView = contentView
