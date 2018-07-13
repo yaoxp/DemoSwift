@@ -10,10 +10,10 @@ import Foundation
 
 struct Demo {
     var title = "Demo"
-    var subTitle = "subTitle"
+    var subTitle: String?
     var className: String
     
-    init(title: String, subTitle: String, className: String) {
+    init(title: String, subTitle: String?, className: String) {
         self.title = title
         self.subTitle = subTitle
         self.className = className

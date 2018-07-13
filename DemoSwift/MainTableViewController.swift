@@ -16,7 +16,8 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
     var demos = [Demo(title: "动画", subTitle: "贝塞尔曲线，优酷播放按钮，引导页跳过按钮，打卡按钮", className: NSStringFromClass(AnimationViewController.self)),
                  Demo(title: "买单吧", subTitle: "tableview上推，头像渐变到导航栏上", className: NSStringFromClass(PayTheBillViewController.self)),
                  Demo(title: "跑马灯", subTitle: "支持富文本和图片", className: NSStringFromClass(MarqueeViewController.self)),
-                 Demo(title: "日期选择器", subTitle: "支持配置显示内容，背景水印", className: NSStringFromClass(DatePickerDemoViewController.self))]
+                 Demo(title: "日期选择器", subTitle: "支持配置显示内容，背景水印", className: NSStringFromClass(DatePickerDemoViewController.self)),
+                 Demo(title: "包含 Bundle 资源的 framework", subTitle: "主要看代码", className: NSStringFromClass(DynamicAndStaticViewController.self))]
     
     // MARK: - View Life Cycle
     
