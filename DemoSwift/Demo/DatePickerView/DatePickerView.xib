@@ -73,6 +73,7 @@
                 <constraint firstItem="Zbh-XM-EQl" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="270" id="9SI-WK-9PN"/>
                 <constraint firstItem="Zbh-XM-EQl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="NoH-yQ-ehr"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="bottomView" destination="Zbh-XM-EQl" id="HNs-GZ-1UF"/>

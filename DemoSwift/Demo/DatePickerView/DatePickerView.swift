@@ -144,6 +144,8 @@ class DatePickerView: UIView, NibLoadable, UIGestureRecognizerDelegate, UIPicker
         
         UIApplication.shared.keyWindow!.addSubview(self)
         
+        self.frame = UIScreen.main.bounds
+        
         UIView.animate(withDuration: 0.3, animations: {
             
             self.bottomViewBottom.constant = 0
