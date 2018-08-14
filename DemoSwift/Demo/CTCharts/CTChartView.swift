@@ -35,6 +35,8 @@ public struct CTChartViewData {
     var unit: String? = nil
     /// Y轴最大值，不设的话Y轴的最大值是所给数据最大值 * 1.2
     var yAxisMax: Double? = nil
+    /// Y轴最小值，比最小值小时按最小值计算
+    var yAxisMin: Double = 0
 }
 
 class CTChartView: UIView, NibLoadable {
@@ -49,6 +51,7 @@ class CTChartView: UIView, NibLoadable {
     var infoLableBackgroundColor = UIColor.rgb(233, 73, 28, 1.0)
     /// 点击表格出现的信息label的前景色
     var infoLabelForegroundColor = UIColor.white
+    
     // MARK: - 私有数据
     @IBOutlet private weak var buttonView: UIView!
     @IBOutlet private weak var chartView: UIView!
@@ -482,7 +485,11 @@ extension CTChartView {
         
         for (index, value) in item.yAxisData.enumerated() {
             var y = xAxisYPoint
-            if max != 0 {
+            if value < item.yAxisMin {
+                y = chartView.frame.height - chartEdgeInset.bottom
+            } else if value > max {
+                y = chartEdgeInset.top
+            } else if max != 0 {
                 y -= CGFloat(value / max) * tableHeight
             }
             
