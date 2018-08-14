@@ -27,8 +27,6 @@ public struct CTChartViewData {
     var yAxis = YAxisDependency.left
     /// y轴上的数据
     var yAxisData = [Double]()
-    /// x轴上的数据，所有数据x轴的坐标必须相同
-    var xAxisData = [String()]
     /// 曲线颜色
     var lineColor = UIColor.black
     /// 单位
@@ -43,6 +41,8 @@ class CTChartView: UIView, NibLoadable {
     // MARK: - 对外数据
     /// 要展示的数据
     var data: Array<CTChartViewData>?
+    /// x轴上的数据
+    var xAxisData = [String]()
     /// 表格中线条的颜色
     var tableShapLayerLineColor = UIColor.rgb(210, 210, 210, 1.0)
     /// 表格中文字的颜色
@@ -122,8 +122,10 @@ class CTChartView: UIView, NibLoadable {
         }
     }
 
-    /// 点击图表时，十字线和显示信息的layer
-    private var tapLayer = [CAShapeLayer]()
+    /// 点击图表时，十字线
+    private var tapShapeLayer = [CAShapeLayer]()
+    /// 点击图表时，显示信息的layer
+    private var tapTextLayer = [CATextLayer]()
     /// 上次点击的 point
     private var lastTapPoint: CGPoint?
     
@@ -157,7 +159,7 @@ extension CTChartView {
         guard let data = self.data else { return }
         deinitData()
         
-        xAxisScaleData = [data[0].xAxisData.first!, data[0].xAxisData.last!]
+        xAxisScaleData = [xAxisData.first!, xAxisData.last!]
         
         var yLeftMax: Double = 0
         var yRightMax: Double = 0
@@ -248,10 +250,15 @@ extension CTChartView {
         
         allLinesPoints = [[CGPoint]]()
         
-        for layer in tapLayer {
+        for layer in tapShapeLayer {
             layer.removeFromSuperlayer()
         }
-        tapLayer = [CAShapeLayer]()
+        tapShapeLayer = [CAShapeLayer]()
+        
+        for layer in tapTextLayer {
+            layer.removeFromSuperlayer()
+        }
+        tapTextLayer = [CATextLayer]()
     }
 }
 
@@ -615,6 +622,11 @@ extension CTChartView {
     }
     
     private func actionOnPoint(point: CGPoint) {
+        for layer in tapTextLayer {
+            layer.removeFromSuperlayer()
+        }
+        tapTextLayer = [CATextLayer]()
+        
         /// 是否有显示的曲线，如果没有 点击不处理
         let showedCurveIndexs = showedOfCurve()
         guard showedCurveIndexs.count > 0 else { return }
@@ -622,6 +634,29 @@ extension CTChartView {
         guard let nearestIndex = nearestPointIndex(to: point, in: showedCurveIndexs) else { return }
         guard let point = nearestPoint(to: point, Curvers: showedCurveIndexs, index: nearestIndex) else { return }
         drawCrossLineOn(point: point)
+        
+        guard xAxisData.count > nearestIndex else { return }
+        let time = xAxisData[nearestIndex]
+        drawTimeStamp(time: time, touchPoint: point)
+        
+        guard let info = showInfoOfShowCurve(showCurve: showedCurveIndexs, index: nearestIndex) else { return }
+        var str = ""
+        var widthMax: CGFloat = 0
+        var lineSpaceCount = 0
+        for (index, text) in info.enumerated() {
+            let width = widthFor(text: text, height: 17, font: UIFont.systemFont(ofSize: 12))
+            widthMax = widthMax > width ? widthMax : width
+            if index == 0 {
+                str = text
+            } else {
+                str = str + "\n" + text
+                lineSpaceCount += 1
+            }
+        }
+        var height = heightFor(text: str, width: widthMax, font: UIFont.systemFont(ofSize: 12))
+        height += CGFloat(4 * lineSpaceCount)
+        drawInfoLabel(text: str, size: CGSize(width: widthMax, height: height), tapPoint: point)
+        
     }
     
     /// 获取显示的曲线index的集合
@@ -679,10 +714,10 @@ extension CTChartView {
 
     /// 以某一点画十字线
     private func drawCrossLineOn(point: CGPoint) {
-        for layer in tapLayer {
+        for layer in tapShapeLayer {
             layer.removeFromSuperlayer()
         }
-        tapLayer = [CAShapeLayer]()
+        tapShapeLayer = [CAShapeLayer]()
         
         /// 水平线
         let startPointH = CGPoint(x: chartEdgeInset.left, y: point.y)
@@ -701,7 +736,7 @@ extension CTChartView {
         shapeLayerH.fillColor = nil
         shapeLayerH.lineDashPattern = [2, 2]
         chartView.layer.addSublayer(shapeLayerH)
-        tapLayer.append(shapeLayerH)
+        tapShapeLayer.append(shapeLayerH)
         
         /// 垂直线
         let startPointV = CGPoint(x: point.x, y: chartEdgeInset.top)
@@ -720,6 +755,100 @@ extension CTChartView {
         shapeLayerV.fillColor = nil
         shapeLayerV.lineDashPattern = [2, 2]
         chartView.layer.addSublayer(shapeLayerV)
-        tapLayer.append(shapeLayerV)
+        tapShapeLayer.append(shapeLayerV)
+    }
+    
+    /// 点击时在顶部显示X轴的值
+    private func drawTimeStamp(time: String, touchPoint: CGPoint) {
+        let textWidth = widthFor(text: time, height: 17, font: UIFont.systemFont(ofSize: 12))
+        
+        /// 要显示内容CGRect的x原点
+        var orignX: CGFloat = 0
+        /// x中点
+        let midX = ((chartView.frame.width - chartEdgeInset.right) + chartEdgeInset.left) / 2.0
+        if touchPoint.x < midX {
+            orignX = chartEdgeInset.left
+            orignX += ((touchPoint.x - orignX) > textWidth) ? (touchPoint.x - textWidth) : 0
+        } else {
+            orignX = ((chartView.frame.width - chartEdgeInset.right - touchPoint.x) > textWidth) ? touchPoint.x : (chartView.frame.width - chartEdgeInset.right - textWidth)
+        }
+        
+        let rect = CGRect(x: orignX, y: chartEdgeInset.top - 17, width: textWidth, height: 17)
+        let layer = drawTapPointInfoLabel(text: time, rect: rect)
+        chartView.layer.addSublayer(layer)
+        tapTextLayer.append(layer)
+    }
+    
+    /// 显示Y点的信息，隐藏的曲线Y轴信息不显示
+    private func drawInfoLabel(text: String, size: CGSize, tapPoint: CGPoint) {
+        /// 要显示内容CGRect的原点
+        var orignX: CGFloat = 0
+        var orignY: CGFloat = 0
+        /// x中点
+        let midX = ((chartView.frame.width - chartEdgeInset.right) + chartEdgeInset.left) / 2.0
+        if tapPoint.x > midX {
+            orignX = chartEdgeInset.left
+        } else {
+            orignX = chartView.frame.width - chartEdgeInset.right - size.width
+        }
+        
+        /// y点
+        orignY = tapPoint.y - (size.height / 2.0)
+        if orignY < chartEdgeInset.top {
+            orignY = chartEdgeInset.top
+        } else if orignY > (chartView.frame.height - chartEdgeInset.bottom - size.height) {
+            orignY = chartView.frame.height - chartEdgeInset.bottom - size.height
+        }
+        
+        let rect = CGRect(x: orignX, y: orignY, width: size.width, height: size.height)
+        let layer = drawTapPointInfoLabel(text: text, rect: rect)
+        chartView.layer.addSublayer(layer)
+        tapTextLayer.append(layer)
+    }
+    
+    /// 要显示的数据信息
+    private func showInfoOfShowCurve(showCurve: Array<Int>, index: Int) -> Array<String>? {
+        guard let data = self.data else { return nil }
+        var result = [String]()
+        
+        for dataIndex in showCurve {
+            guard data.count > dataIndex else { continue }
+            let item = data[dataIndex]
+            guard item.yAxisData.count > index else { continue }
+            result.append(item.name + ": " + String(item.yAxisData[index]))
+        }
+        return result
+    }
+    
+    private func drawTapPointInfoLabel(text: String, rect: CGRect) -> CATextLayer {
+        let textLayer = CATextLayer()
+        textLayer.string = text
+        textLayer.backgroundColor = infoLableBackgroundColor.cgColor
+        textLayer.foregroundColor = infoLabelForegroundColor.cgColor
+        let font = UIFont.systemFont(ofSize: 12)
+        textLayer.font = CGFont(font.fontName as CFString)
+        textLayer.fontSize = font.pointSize
+        textLayer.contentsScale = UIScreen.main.scale
+        textLayer.alignmentMode = kCAAlignmentLeft
+        textLayer.frame = rect
+        return textLayer
+    }
+    
+
+}
+
+// MARK: - 工具
+extension CTChartView {
+    /// 字符串的宽度
+    private func widthFor(text: String, height: CGFloat, font: UIFont) -> CGFloat {
+        let textStr = NSString(string: text)
+        let rect = textStr.boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: height), options: .usesLineFragmentOrigin, attributes: [.font : font], context: nil)
+        return rect.width
+    }
+    
+    private func heightFor(text: String, width: CGFloat, font: UIFont) -> CGFloat {
+        let textStr = NSString(string: text)
+        let rect = textStr.boundingRect(with: CGSize(width:width , height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [.font : font], context: nil)
+        return rect.height
     }
 }
