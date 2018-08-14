@@ -17,7 +17,8 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
                  Demo(title: "买单吧", subTitle: "tableview上推，头像渐变到导航栏上", className: NSStringFromClass(PayTheBillViewController.self)),
                  Demo(title: "跑马灯", subTitle: "支持富文本和图片", className: NSStringFromClass(MarqueeViewController.self)),
                  Demo(title: "日期选择器", subTitle: "支持配置显示内容，背景水印", className: NSStringFromClass(DatePickerDemoViewController.self)),
-                 Demo(title: "包含 Bundle 资源的 framework", subTitle: "主要看代码", className: NSStringFromClass(DynamicAndStaticViewController.self))]
+                 Demo(title: "包含 Bundle 资源的 framework", subTitle: "主要看代码", className: NSStringFromClass(DynamicAndStaticViewController.self)),
+                 Demo(title: "双Y轴表格", subTitle: "主要看代码", className: NSStringFromClass(CTChartDemoViewController.self))]
     
     // MARK: - View Life Cycle
     

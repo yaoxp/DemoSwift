@@ -30,6 +30,10 @@
 		FF32FA9C205FB1D0006889A3 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32FA9B205FB1D0006889A3 /* DispatchQueue+Extension.swift */; };
 		FF36B58620BD011000ABF92C /* DatePickerDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF36B58420BD011000ABF92C /* DatePickerDemoViewController.swift */; };
 		FF36B58720BD011000ABF92C /* DatePickerDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF36B58520BD011000ABF92C /* DatePickerDemoViewController.xib */; };
+		FF59B15D2121618D00BD693E /* CTChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF59B15C2121618D00BD693E /* CTChartView.swift */; };
+		FF59B15F2121636A00BD693E /* CTChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF59B15E2121636A00BD693E /* CTChartView.xib */; };
+		FF59B162212169E900BD693E /* CTChartDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF59B160212169E900BD693E /* CTChartDemoViewController.swift */; };
+		FF59B163212169E900BD693E /* CTChartDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF59B161212169E900BD693E /* CTChartDemoViewController.xib */; };
 		FF7A645520F88C1F002AFBC0 /* DynamicAndStaticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7A645420F88C1F002AFBC0 /* DynamicAndStaticViewController.swift */; };
 		FF7A645F20F88D3E002AFBC0 /* DynamicFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = FF7A645D20F88D3E002AFBC0 /* DynamicFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF7A646220F88D3E002AFBC0 /* DynamicFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7A645B20F88D3E002AFBC0 /* DynamicFramework.framework */; };
@@ -127,6 +131,10 @@
 		FF32FA9B205FB1D0006889A3 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
 		FF36B58420BD011000ABF92C /* DatePickerDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDemoViewController.swift; sourceTree = "<group>"; };
 		FF36B58520BD011000ABF92C /* DatePickerDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerDemoViewController.xib; sourceTree = "<group>"; };
+		FF59B15C2121618D00BD693E /* CTChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTChartView.swift; sourceTree = "<group>"; };
+		FF59B15E2121636A00BD693E /* CTChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTChartView.xib; sourceTree = "<group>"; };
+		FF59B160212169E900BD693E /* CTChartDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTChartDemoViewController.swift; sourceTree = "<group>"; };
+		FF59B161212169E900BD693E /* CTChartDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTChartDemoViewController.xib; sourceTree = "<group>"; };
 		FF7A645420F88C1F002AFBC0 /* DynamicAndStaticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicAndStaticViewController.swift; sourceTree = "<group>"; };
 		FF7A645B20F88D3E002AFBC0 /* DynamicFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF7A645D20F88D3E002AFBC0 /* DynamicFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicFramework.h; sourceTree = "<group>"; };
@@ -294,6 +302,17 @@
 			path = PayTheBill;
 			sourceTree = "<group>";
 		};
+		FF59B15B2121615D00BD693E /* CTCharts */ = {
+			isa = PBXGroup;
+			children = (
+				FF59B15C2121618D00BD693E /* CTChartView.swift */,
+				FF59B15E2121636A00BD693E /* CTChartView.xib */,
+				FF59B160212169E900BD693E /* CTChartDemoViewController.swift */,
+				FF59B161212169E900BD693E /* CTChartDemoViewController.xib */,
+			);
+			path = CTCharts;
+			sourceTree = "<group>";
+		};
 		FF7A645320F88BE4002AFBC0 /* DynamicAndStaticFramework */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +364,7 @@
 		FFD056A82059128C00A6F5AE /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FF59B15B2121615D00BD693E /* CTCharts */,
 				FF7A645320F88BE4002AFBC0 /* DynamicAndStaticFramework */,
 				FF0271C120BAA5DD0070FEC6 /* DatePickerView */,
 				FF1A833520A96EEB001A1DF1 /* Marquee */,
@@ -548,7 +568,9 @@
 				FFE4A23920BBA71400939E00 /* DatePickerView.xib in Resources */,
 				FFD056B1205913CA00A6F5AE /* AnimationViewController.xib in Resources */,
 				FF18587F2058CAC400ADC0BC /* Assets.xcassets in Resources */,
+				FF59B15F2121636A00BD693E /* CTChartView.xib in Resources */,
 				FF18587D2058CAC400ADC0BC /* Main.storyboard in Resources */,
+				FF59B163212169E900BD693E /* CTChartDemoViewController.xib in Resources */,
 				FF32FA9A205F9793006889A3 /* PayTheBillHeaderView.xib in Resources */,
 				FF32FA92205F6944006889A3 /* PayTheBillTitleView.xib in Resources */,
 			);
@@ -647,6 +669,7 @@
 				FF32FA9C205FB1D0006889A3 /* DispatchQueue+Extension.swift in Sources */,
 				FF32FA98205F9784006889A3 /* PayTheBillHeaderView.swift in Sources */,
 				FF1858782058CAC400ADC0BC /* AppDelegate.swift in Sources */,
+				FF59B15D2121618D00BD693E /* CTChartView.swift in Sources */,
 				FF32FA8D205F58BC006889A3 /* PayTheBillViewController.swift in Sources */,
 				FFA7004A20AC27C60073DBF5 /* PeekViewController.swift in Sources */,
 				FF1A833720A96F19001A1DF1 /* MarqueeViewController.swift in Sources */,
@@ -657,6 +680,7 @@
 				FF044C1020C9112600EDE2B6 /* Date+Extension.swift in Sources */,
 				FF7A645520F88C1F002AFBC0 /* DynamicAndStaticViewController.swift in Sources */,
 				FF18589E2059102300ADC0BC /* Demo.swift in Sources */,
+				FF59B162212169E900BD693E /* CTChartDemoViewController.swift in Sources */,
 				FFD056B2205913CA00A6F5AE /* AnimationViewController.swift in Sources */,
 				FF32FA90205F68E6006889A3 /* PayTheBillTitleView.swift in Sources */,
 				FFA7004620AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift in Sources */,
