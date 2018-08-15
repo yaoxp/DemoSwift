@@ -551,7 +551,7 @@ extension CTChartView {
         for (index, item) in data.enumerated() {
             let button = UIButton(type: .custom)
             button.isHighlighted = false
-            button.contentHorizontalAlignment = .leading
+            button.contentHorizontalAlignment = .left
             button.tag = index
             button.isSelected = true
             button.backgroundColor = UIColor.rgb(244, 244, 244, 1.0)
