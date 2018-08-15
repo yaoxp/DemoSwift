@@ -22,7 +22,7 @@ class CTChartDemoViewController: UIViewController {
         // Do any additional setup after loading the view.
         let chartView = CTChartView.loadViewFromNib()
         cellView.addSubview(chartView)
-//        cellView.backgroundColor = UIColor.lightGray
+        chartView.xAxisData = ["0:00", "1:00", "2.00", "3:00", "4:00", "5:00", "6:00", "7:00", "8.00", "9:00", "10:00", "11:00"]
         chartView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
@@ -30,15 +30,13 @@ class CTChartDemoViewController: UIViewController {
         var data1 = CTChartViewData()
         data1.name = "影响用户数"
         data1.yAxis = .left
-        data1.yAxisData = [723, 321, 19, 456, 765, 423, 666]
-        data1.xAxisData = ["8:00", "9:00", "10.00", "11:00", "12:00", "13:00", "14:00"]
+        data1.yAxisData = [723, 821, 19, 456, 765, 423, 666, 234, 567, 124, 890, 711]
         data1.lineColor = color1
         
         var data2 = CTChartViewData()
         data2.name = "用户数"
         data2.yAxis = .right
-        data2.yAxisData = [234, 421, 159, 756, 1000, 523, 266]
-        data2.xAxisData = ["8:00", "9:00", "10.00", "11:00", "12:00", "13:00", "14:00"]
+        data2.yAxisData = [234, 421, 159, 756, 1000, 523, 266, 098, 456, 528, 109, 199]
         data2.lineColor = color2
         
         var data3 = CTChartViewData()
@@ -46,8 +44,7 @@ class CTChartDemoViewController: UIViewController {
         data3.yAxis = .none
         data3.unit = "%"
         data3.yAxisMax = 100
-        data3.yAxisData = [82, 31, 100, 45, 36, 42, 66]
-        data3.xAxisData = ["8:00", "9:00", "10.00", "11:00", "12:00", "13:00", "14:00"]
+        data3.yAxisData = [82, 31, 100, 45, 36, -42, 66, 45, 68, 90, 90, 29]
         data3.lineColor = color3
         
         chartView.data = [data1, data2, data3]
