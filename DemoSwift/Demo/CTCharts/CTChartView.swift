@@ -136,6 +136,10 @@ class CTChartView: UIView, NibLoadable {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureRecognizerHandle(tapGesture:)))
         tapGesture.numberOfTapsRequired = 1
         addGestureRecognizer(tapGesture)
+        
+        let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(longGestureRecognizerHandle(longGesture:)))
+        longGesture.minimumPressDuration = 0.3
+        addGestureRecognizer(longGesture)
     }
     
     private func showCharts() {
@@ -259,6 +263,8 @@ extension CTChartView {
             layer.removeFromSuperlayer()
         }
         tapTextLayer = [CATextLayer]()
+        
+        lastTapPoint = nil
     }
 }
 
@@ -835,6 +841,23 @@ extension CTChartView {
     }
     
 
+}
+
+// MARK: - 长按图表滑动
+extension CTChartView {
+    @objc func longGestureRecognizerHandle(longGesture: UILongPressGestureRecognizer) {
+        let point = longGesture.location(in: self)
+        
+        if lastTapPoint != nil {
+            if fabs(Double(point.x - lastTapPoint!.x)) < 3 && fabs(Double(point.y - lastTapPoint!.y)) < 3 {
+                // x,y移动距离均小于3时不处理
+                return
+            }
+        }
+        
+        lastTapPoint = point
+        actionOnPoint(point: point)
+    }
 }
 
 // MARK: - 工具
