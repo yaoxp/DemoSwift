@@ -44,7 +44,7 @@ class CTChartView: UIView, NibLoadable {
     /// x轴上的数据
     var xAxisData = [String]()
     /// 表格中线条的颜色
-    var tableShapLayerLineColor = UIColor.rgb(210, 210, 210, 1.0)
+    var tableShapLayerLineColor = UIColor.lightGray
     /// 表格中文字的颜色
     var textLayersTextColor = UIColor.rgb(78, 78, 78, 1.0)
     /// 点击表格出现的十字线和信息label的背景色
@@ -339,7 +339,7 @@ extension CTChartView {
         shapeLayer.position = CGPoint.zero
         shapeLayer.anchorPoint = CGPoint.zero
         // 线的宽度
-        shapeLayer.lineWidth = 1.0
+        shapeLayer.lineWidth = 0.5
         // 线终点式样
         shapeLayer.lineCap = kCALineCapRound
         // 线的颜色
@@ -735,7 +735,7 @@ extension CTChartView {
         shapeLayerH.bounds = chartView.bounds
         shapeLayerH.position = CGPoint.zero
         shapeLayerH.anchorPoint = CGPoint.zero
-        shapeLayerH.lineWidth = 1.0
+        shapeLayerH.lineWidth = 0.5
         shapeLayerH.lineCap = kCALineCapRound
         shapeLayerH.strokeColor = infoLableBackgroundColor.cgColor
         shapeLayerH.path = bezierPathH.cgPath
@@ -754,7 +754,7 @@ extension CTChartView {
         shapeLayerV.bounds = chartView.bounds
         shapeLayerV.position = CGPoint.zero
         shapeLayerV.anchorPoint = CGPoint.zero
-        shapeLayerV.lineWidth = 1.0
+        shapeLayerV.lineWidth = 0.5
         shapeLayerV.lineCap = kCALineCapRound
         shapeLayerV.strokeColor = infoLableBackgroundColor.cgColor
         shapeLayerV.path = bezierPathV.cgPath
