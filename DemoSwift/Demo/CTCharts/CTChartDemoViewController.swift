@@ -44,7 +44,7 @@ class CTChartDemoViewController: UIViewController {
         data3.yAxis = .none
         data3.unit = "%"
         data3.yAxisMax = 100
-        data3.yAxisData = [82, 31, 100, 45, 36, -42, 66, 45, 68, 90, 90, 29]
+        data3.yAxisData = [82, 31.4, 100, 45.1, 36.8, -42, 66, 45.2, 68.4, 90, 90.3, 29.8]
         data3.lineColor = color3
         
         chartView.data = [data1, data2, data3]

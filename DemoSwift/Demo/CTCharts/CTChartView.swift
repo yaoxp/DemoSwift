@@ -291,12 +291,12 @@ extension CTChartView {
             
             if isShowYLeftAxis {
                 // 给左边y轴加 text
-                addYLeftAxisLabel(point: startPoint, text: String(yLeftAxisScaleData[index]))
+                addYLeftAxisLabel(point: startPoint, text: String(Int(yLeftAxisScaleData[index])))
             }
             
             if isShowYRightAxis {
                 // 给右边y轴加 text
-                addYRightAxisLabel(point: endPoint, text: String(yRightAxisScaleData[index]))
+                addYRightAxisLabel(point: endPoint, text: String(Int(yRightAxisScaleData[index])))
             }
             
             index += 1
@@ -449,13 +449,13 @@ extension CTChartView {
         
         for (index, point) in points.enumerated() {
             if index == 0 {
-                bezierPath.addArc(withCenter: point, radius: 2, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+//                bezierPath.addArc(withCenter: point, radius: 2, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
                 continue
             }
             let midPoint = midPointBetween(point1: prePoint, point2: point)
             bezierPath.addQuadCurve(to: midPoint, controlPoint: controlPointBetween(point1: midPoint, point2: prePoint))
             bezierPath.addQuadCurve(to: point, controlPoint: controlPointBetween(point1: midPoint, point2: point))
-            bezierPath.addArc(withCenter: point, radius: 2, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+//            bezierPath.addArc(withCenter: point, radius: 2, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
             prePoint = point
         }
         
@@ -815,7 +815,7 @@ extension CTChartView {
             guard data.count > dataIndex else { continue }
             let item = data[dataIndex]
             guard item.yAxisData.count > index else { continue }
-            var str = item.name + ": " + String(item.yAxisData[index])
+            var str = item.name + ": " + String(Int(item.yAxisData[index]))
             if item.unit != nil {
                 str = str + item.unit!
             }
