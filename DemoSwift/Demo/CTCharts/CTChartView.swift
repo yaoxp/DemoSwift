@@ -815,7 +815,11 @@ extension CTChartView {
             guard data.count > dataIndex else { continue }
             let item = data[dataIndex]
             guard item.yAxisData.count > index else { continue }
-            result.append(item.name + ": " + String(item.yAxisData[index]))
+            var str = item.name + ": " + String(item.yAxisData[index])
+            if item.unit != nil {
+                str = str + item.unit!
+            }
+            result.append(str)
         }
         return result
     }
