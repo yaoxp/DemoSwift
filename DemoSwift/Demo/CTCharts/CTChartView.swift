@@ -309,13 +309,7 @@ extension CTChartView {
             let pointX = width * CGFloat(index) + chartEdgeInset.left
             let startPoint = CGPoint(x: pointX, y: chartEdgeInset.bottom)
             let endPoint = CGPoint(x: pointX, y: chartView.frame.height - chartEdgeInset.top)
-            if isShowYLeftAxis && index == 0 {
-                drawTableShapLayer(point: startPoint, point: endPoint, isDottedLine: false)
-            } else if isShowYRightAxis && index == verticalLineNumber - 1 {
-                drawTableShapLayer(point: startPoint, point: endPoint, isDottedLine: false)
-            } else {
-                drawTableShapLayer(point: startPoint, point: endPoint, isDottedLine: true)
-            }
+            drawTableShapLayer(point: startPoint, point: endPoint, isDottedLine: true)
             
             index += 1
         }
