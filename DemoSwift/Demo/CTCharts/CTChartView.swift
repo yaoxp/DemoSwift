@@ -830,7 +830,7 @@ extension CTChartView {
         let orignX = centerXPoint.x - (width / 2.0)
         let orignY = chartEdgeInset.top
         
-        maskBarLay = drawOneBar(rect: CGRect(x: orignX, y: orignY, width: width, height: height), fillColor: UIColor.rgb(0, 0, 0, 0.3))
+        maskBarLay = drawOneBar(rect: CGRect(x: orignX, y: orignY, width: width, height: height), fillColor: UIColor.rgb(0, 0, 0, 0.1))
         chartView.layer.addSublayer(maskBarLay)
         
         return CGPoint(x: (orignX + width) / 2.0, y: (orignY + height) / 2.0)
