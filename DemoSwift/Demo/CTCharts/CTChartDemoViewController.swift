@@ -36,13 +36,13 @@ class CTChartDemoViewController: UIViewController {
         }
         
         var data1 = CTChartViewData()
-        data1.name = "影响用户数"
+        data1.name = "女性"
         data1.yAxis = .left
         data1.yAxisData = [723, 821, 19, 456, 765]
         data1.lineColor = color1
         
         var data2 = CTChartViewData()
-        data2.name = "用户数"
+        data2.name = "男性"
         data2.yAxis = .right
         data2.yAxisData = [234, 421, 159, 756, 1000]
         data2.lineColor = color2
@@ -59,19 +59,19 @@ class CTChartDemoViewController: UIViewController {
         }
         
         var data1 = CTChartViewData()
-        data1.name = "影响用户数"
+        data1.name = "男性"
         data1.yAxis = .left
         data1.yAxisData = [723, 821, 19, 456, 765, 423, 666, 234, 567, 124, 890, 711]
         data1.lineColor = color1
         
         var data2 = CTChartViewData()
-        data2.name = "用户数"
+        data2.name = "女性"
         data2.yAxis = .right
         data2.yAxisData = [234, 421, 159, 756, 1000, 523, 266, 098, 456, 528, 109, 199]
         data2.lineColor = color2
         
         var data3 = CTChartViewData()
-        data3.name = "影响占比"
+        data3.name = "中年人占比"
         data3.yAxis = .none
         data3.unit = "%"
         data3.yAxisMax = 100
