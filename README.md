@@ -19,3 +19,6 @@ Demo合集
 
 ## 日期时间选择器
 ![image](https://github.com/yaoxp/DemoSwift/blob/master/gif/datePicker.gif)
+
+## 图表
+![image](https://github.com/yaoxp/DemoSwift/blob/master/gif/charts.gif)
