@@ -13,11 +13,19 @@ import UIKit
 /// - left: 左边的Y轴
 /// - right: 右边的Y轴
 /// - none: 无
-public enum YAxisDependency: Int
-{
+public enum YAxisDependency: Int {
     case left
     case right
     case none
+}
+
+/// 图表类型
+///
+/// - curve: 曲线图
+/// - bar: 柱状图
+public enum CTChartType: Int {
+    case curve
+    case bar
 }
 
 public struct CTChartViewData {
@@ -39,6 +47,17 @@ public struct CTChartViewData {
 
 class CTChartView: UIView, NibLoadable {
     // MARK: - 对外数据
+    /// 图表类型
+    var type: CTChartType = .curve {
+        didSet {
+            switch type {
+            case .curve:
+                verticalLineNumber = 4
+            case .bar:
+                verticalLineNumber = 2
+            }
+        }
+    }
     /// 要展示的数据
     var data: Array<CTChartViewData>?
     /// x轴上的数据
@@ -66,13 +85,13 @@ class CTChartView: UIView, NibLoadable {
     private var isShowYLeftAxis = false
     /// 是否显示右边y轴刻度
     private var isShowYRightAxis = false
-    /// 和左右刻度均无关的曲线最大值
+    /// 和左右刻度均无关的隐形刻度最大值
     private var yAxisNoneMax: Double = 0
-    /// 曲线图到view的边距
+    /// 图表到view的边距
     private let chartEdgeInset = UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 10)
     
     /// 垂直方向4条线，最左边一条是y轴，是实线，其它是虚线
-    private let verticalLineNumber = 4
+    private var verticalLineNumber = 4
     /// 水平方向5条线，最下边一枚是x轴，是实线，其它是虚线
     private let horizontalLineNumber = 5
     
@@ -84,11 +103,16 @@ class CTChartView: UIView, NibLoadable {
     private var yRightAxisScaleLayer = [CATextLayer]()
     /// X轴的刻度layer
     private var xAxisScaleLayer = [CATextLayer]()
-    /// 所有曲线的layer。和data的顺序一致
-    private var curvesLayer = [CAShapeLayer]()
-    /// 所有曲线点的集合
+    /// 所有曲线/柱状图的layer。和data的顺序一致
+    private var curvesAndBarsLayers = [[CAShapeLayer]]()
+
+    /// 所有曲线点的集合/所有柱状图x轴上中间的点
     private var allLinesPoints = [[CGPoint]]()
-    
+    /// 文字的大小
+    private var textFont = UIFont.systemFont(ofSize: 12)
+    /// 柱状图的宽度
+    private let barWidth: CGFloat = 12
+    lazy private var maskBarLay = CAShapeLayer()
     /// 与左边Y轴刻度关联的曲线条件。为0时不显示左边的刻度
     private var yLeftAxisCurveCount = 0 {
         didSet {
@@ -163,7 +187,13 @@ extension CTChartView {
         guard let data = self.data else { return }
         deinitData()
         
-        xAxisScaleData = [xAxisData.first!, xAxisData.last!]
+        switch type {
+        case .curve:
+            xAxisScaleData = [xAxisData.first!, xAxisData.last!]
+        case .bar:
+            xAxisScaleData = xAxisData
+        }
+        
         
         var yLeftMax: Double = 0
         var yRightMax: Double = 0
@@ -247,10 +277,12 @@ extension CTChartView {
         }
         xAxisScaleLayer = [CATextLayer]()
         
-        for layer in curvesLayer {
-            layer.removeFromSuperlayer()
+        for layers in curvesAndBarsLayers {
+            for layer in layers {
+                layer.removeFromSuperlayer()
+            }
         }
-        curvesLayer = [CAShapeLayer]()
+        curvesAndBarsLayers = [[CAShapeLayer]]()
         
         allLinesPoints = [[CGPoint]]()
         
@@ -265,6 +297,8 @@ extension CTChartView {
         tapTextLayer = [CATextLayer]()
         
         lastTapPoint = nil
+        
+        maskBarLay.removeFromSuperlayer()
     }
 }
 
@@ -272,7 +306,12 @@ extension CTChartView {
 extension CTChartView {
     private func drawChart() {
         drawTable()
-        drawCurves()
+        switch type {
+        case .curve:
+            drawCurves()
+        case .bar:
+            drawBars()
+        }
     }
     
 }
@@ -313,8 +352,9 @@ extension CTChartView {
             
             index += 1
         }
-        addXAxisLabel(leftText: xAxisScaleData[0], rightText: xAxisScaleData[1])
         
+        addXAxisLabel(texts: xAxisScaleData)
+ 
     }
     
     private func drawTableShapLayer(point from: CGPoint, point to: CGPoint, isDottedLine: Bool) {
@@ -354,66 +394,83 @@ extension CTChartView {
     /// 给左边y轴加 text
     private func addYLeftAxisLabel(point: CGPoint, text: String) {
         let width = (chartView.frame.width - chartEdgeInset.left - chartEdgeInset.right) / CGFloat(verticalLineNumber - 1)
-        let textLayer = CATextLayer()
-        textLayer.string = text
-        textLayer.backgroundColor = UIColor.clear.cgColor
-        textLayer.foregroundColor = textLayersTextColor.cgColor
-        let font = UIFont.systemFont(ofSize: 12)
-        textLayer.font = CGFont(font.fontName as CFString)
-        textLayer.fontSize = font.pointSize
-        textLayer.contentsScale = UIScreen.main.scale
-        textLayer.alignmentMode = kCAAlignmentLeft
-
-        textLayer.frame = CGRect(x: point.x + 1, y: point.y - 15, width: width - 2, height: 14)
+        let rect = CGRect(x: point.x + 1, y: point.y - 15, width: width - 2, height: 14)
+        let textLayer = drawTextLayer(text: text, rect: rect, alignmentModel: kCAAlignmentLeft)
+        
         chartView.layer.addSublayer(textLayer)
         yLeftAxisScaleLayer.append(textLayer)
+        
+        
     }
     /// 给右边y轴加 text
     private func addYRightAxisLabel(point: CGPoint, text: String) {
         let width = (chartView.frame.width - chartEdgeInset.left - chartEdgeInset.right) / CGFloat(verticalLineNumber - 1)
-        let textLayer = CATextLayer()
-        textLayer.string = text
-        textLayer.backgroundColor = UIColor.clear.cgColor
-        textLayer.foregroundColor = textLayersTextColor.cgColor
-        let font = UIFont.systemFont(ofSize: 12)
-        textLayer.font = CGFont(font.fontName as CFString)
-        textLayer.fontSize = font.pointSize
-        textLayer.contentsScale = UIScreen.main.scale
-        textLayer.alignmentMode = kCAAlignmentRight
-        
-        textLayer.frame = CGRect(x: point.x - width, y: point.y - 15, width: width - 1, height: 14)
+        let rect = CGRect(x: point.x - width, y: point.y - 15, width: width - 1, height: 14)
+        let textLayer = drawTextLayer(text: text, rect: rect, alignmentModel: kCAAlignmentRight)
         chartView.layer.addSublayer(textLayer)
         yRightAxisScaleLayer.append(textLayer)
     }
     /// 给x轴加 text
-    private func addXAxisLabel(leftText: String, rightText: String) {
-        let width = (chartView.frame.width - chartEdgeInset.left - chartEdgeInset.right) / CGFloat(verticalLineNumber - 1)
-        let leftTextLayer = CATextLayer()
-        leftTextLayer.string = leftText
-        leftTextLayer.backgroundColor = UIColor.clear.cgColor
-        leftTextLayer.foregroundColor = textLayersTextColor.cgColor
-        let font = UIFont.systemFont(ofSize: 12)
-        leftTextLayer.font = CGFont(font.fontName as CFString)
-        leftTextLayer.fontSize = font.pointSize
-        leftTextLayer.contentsScale = UIScreen.main.scale
-        leftTextLayer.alignmentMode = kCAAlignmentLeft
+    private func addXAxisLabel(texts: Array<String>) {
+        guard texts.count > 0 else { return }
+        let height: CGFloat = 14
+        let originY = chartView.frame.size.height - chartEdgeInset.bottom
         
-        leftTextLayer.frame = CGRect(x: chartEdgeInset.left, y: chartView.frame.size.height - chartEdgeInset.bottom, width: width - 1, height: 14)
-        chartView.layer.addSublayer(leftTextLayer)
-        xAxisScaleLayer.append(leftTextLayer)
+        switch type {
+        case .curve:
+            if texts.count == 1 {
+                let width = widthFor(text: texts[0], height: height, font: textFont) + 1
+                let centerX = chartView.frame.width / 2.0
+                let rect = CGRect(x: centerX - (width / 2.0), y: originY, width: width, height: height)
+                let textLayer = drawTextLayer(text: texts[0], rect: rect, alignmentModel: kCAAlignmentCenter)
+                chartView.layer.addSublayer(textLayer)
+                xAxisScaleLayer.append(textLayer)
+                allLinesPoints.append([CGPoint(x: centerX, y: originY)])
+            } else {
+                let spacing = (chartView.frame.width - chartEdgeInset.left - chartEdgeInset.right) / CGFloat(texts.count - 1)
+                for (index, value) in texts.enumerated() {
+                    var textLayer: CATextLayer
+                    let width = widthFor(text: value, height: height, font: textFont) + 1
+                    if index == 0 {
+                        let rect = CGRect(x: chartEdgeInset.left, y: originY, width: width, height: height)
+                        textLayer = drawTextLayer(text: value, rect: rect, alignmentModel: kCAAlignmentLeft)
+                    } else if index == texts.count - 1 {
+                        let rect = CGRect(x: chartView.frame.width - chartEdgeInset.right - width, y: originY, width: width, height: height)
+                        textLayer = drawTextLayer(text: value, rect: rect, alignmentModel: kCAAlignmentRight)
+                    } else {
+                        let rect = CGRect(x: spacing * CGFloat(index) - (width / 2.0), y: originY, width: width, height: height)
+                        textLayer = drawTextLayer(text: value, rect: rect, alignmentModel: kCAAlignmentCenter)
+                    }
+                    chartView.layer.addSublayer(textLayer)
+                    xAxisScaleLayer.append(textLayer)
+                }
+            }
+        case .bar:
+            let spacing = (chartView.frame.width - chartEdgeInset.left - chartEdgeInset.right) / CGFloat(texts.count + 1)
+            for (index, value) in texts.enumerated() {
+                let width = widthFor(text: value, height: height, font: textFont) + 1
+                let rect = CGRect(x: spacing * CGFloat(index + 1) - (width / 2.0), y: originY, width: width, height: height)
+                let textLayer = drawTextLayer(text: value, rect: rect, alignmentModel: kCAAlignmentCenter)
+                chartView.layer.addSublayer(textLayer)
+                xAxisScaleLayer.append(textLayer)
+                allLinesPoints.append([CGPoint(x: spacing * CGFloat(index + 1), y: originY)])
+            }
+
+        }
         
-        let rightTextLayer = CATextLayer()
-        rightTextLayer.string = rightText
-        rightTextLayer.backgroundColor = UIColor.clear.cgColor
-        rightTextLayer.foregroundColor = textLayersTextColor.cgColor
-        rightTextLayer.font = CGFont(font.fontName as CFString)
-        rightTextLayer.fontSize = font.pointSize
-        rightTextLayer.contentsScale = UIScreen.main.scale
-        rightTextLayer.alignmentMode = kCAAlignmentRight
-        
-        rightTextLayer.frame = CGRect(x: chartView.frame.size.width - chartEdgeInset.right - width, y: chartView.frame.size.height - chartEdgeInset.bottom, width: width - 1, height: 14)
-        chartView.layer.addSublayer(rightTextLayer)
-        xAxisScaleLayer.append(rightTextLayer)
+    }
+    
+    private func drawTextLayer(text: String, rect: CGRect, alignmentModel: String) -> CATextLayer {
+        let textLayer = CATextLayer()
+        textLayer.string = text
+        textLayer.backgroundColor = UIColor.clear.cgColor
+        textLayer.foregroundColor = textLayersTextColor.cgColor
+        textLayer.font = CGFont(textFont.fontName as CFString)
+        textLayer.fontSize = textFont.pointSize
+        textLayer.contentsScale = UIScreen.main.scale
+        textLayer.alignmentMode = alignmentModel
+        textLayer.frame = rect
+        return textLayer
     }
 }
 
@@ -435,7 +492,7 @@ extension CTChartView {
             shapeLayer.path = lineInfo.bezierPath.cgPath
             shapeLayer.fillColor = nil
             chartView.layer.addSublayer(shapeLayer)
-            curvesLayer.append(shapeLayer)
+            curvesAndBarsLayers.append([shapeLayer])
             allLinesPoints.append(lineInfo.points)
         }
     }
@@ -531,6 +588,57 @@ extension CTChartView {
     }
 }
 
+// MARK: - 画柱状图
+extension CTChartView {
+    private func drawBars() {
+        guard let data = self.data, data.count > 0 else { return }
+        
+        /// x轴的y坐标
+        let xAxisY = chartView.frame.size.height - chartEdgeInset.bottom
+        
+        for (i, item) in data.enumerated() {
+            for (j, value) in item.yAxisData.enumerated() {
+                let centerXPoint = allLinesPoints[j][0]
+                let orignX = centerXPoint.x - (CGFloat(data.count) / 2.0 - CGFloat(i)) * barWidth
+                var height: CGFloat = 0
+                switch item.yAxis {
+                case .left:
+                    height = (chartView.frame.height - chartEdgeInset.top - chartEdgeInset.bottom) * (CGFloat(value) / CGFloat(yLeftAxisScaleData.last!))
+                    
+                case .right:
+                    height = (chartView.frame.height - chartEdgeInset.top - chartEdgeInset.bottom) * (CGFloat(value) / CGFloat(yRightAxisScaleData.last!))
+                    
+                default:
+                    break
+                    
+                }
+                let rect = CGRect(x: orignX, y: xAxisY - height, width: barWidth, height: height)
+                let shapeLayer = drawOneBar(rect: rect, fillColor: item.lineColor)
+                if i >= curvesAndBarsLayers.count {
+                    curvesAndBarsLayers.append([shapeLayer])
+                } else {
+                    curvesAndBarsLayers[i] = curvesAndBarsLayers[i] + [shapeLayer]
+                }
+                
+                chartView.layer.addSublayer(shapeLayer)
+            }
+        }
+    }
+    
+    private func drawOneBar(rect: CGRect, fillColor: UIColor) -> CAShapeLayer {
+        let path = UIBezierPath.init(rect: rect)
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = path.cgPath
+        shapeLayer.fillColor = fillColor.cgColor
+        shapeLayer.strokeColor = UIColor.clear.cgColor
+        shapeLayer.lineWidth = 0
+        shapeLayer.bounds = chartView.bounds
+        shapeLayer.position = CGPoint.zero
+        shapeLayer.anchorPoint = CGPoint.zero
+        return shapeLayer
+    }
+}
+
 // MARK: - 底部button
 extension CTChartView {
 
@@ -595,14 +703,16 @@ extension CTChartView {
             break
         }
         
-        guard sender.tag < curvesLayer.count else { return }
-        let layer = curvesLayer[sender.tag]
-        if sender.isSelected {
-            if layer.superlayer == nil {
-                chartView.layer.addSublayer(layer)
+        guard sender.tag < curvesAndBarsLayers.count else { return }
+        let layers = curvesAndBarsLayers[sender.tag]
+        for layer in layers {
+            if sender.isSelected {
+                if layer.superlayer == nil {
+                    chartView.layer.addSublayer(layer)
+                }
+            } else {
+                layer.removeFromSuperlayer()
             }
-        } else {
-            layer.removeFromSuperlayer()
         }
         
         if let point = lastTapPoint {
@@ -627,14 +737,23 @@ extension CTChartView {
         }
         tapTextLayer = [CATextLayer]()
         
-        /// 是否有显示的曲线，如果没有 点击不处理
+        /// 是否有显示的曲线/柱状图，如果没有 点击不处理
         let showedCurveIndexs = showedOfCurve()
         guard showedCurveIndexs.count > 0 else { return }
         
         guard let nearestIndex = nearestPointIndex(to: point, in: showedCurveIndexs) else { return }
-        guard let point = nearestPoint(to: point, Curvers: showedCurveIndexs, index: nearestIndex) else { return }
-        drawCrossLineOn(point: point)
         
+        var nearPoint: CGPoint
+        
+        switch type {
+        case .curve:
+            guard let pointTmp = nearestPoint(to: point, Curvers: showedCurveIndexs, index: nearestIndex) else { return }
+            nearPoint = pointTmp
+            drawCrossLineOn(point: nearPoint)
+        case .bar:
+            nearPoint = barCenterPoint(index: nearestIndex)
+        }
+
         guard xAxisData.count > nearestIndex else { return }
         let time = xAxisData[nearestIndex]
         drawTimeStamp(time: time, touchPoint: point)
@@ -662,8 +781,8 @@ extension CTChartView {
     /// 获取显示的曲线index的集合
     private func showedOfCurve() -> Array<Int> {
         var result = [Int]()
-        for (index, layer) in curvesLayer.enumerated() {
-            if layer.superlayer != nil {
+        for (index, layers) in curvesAndBarsLayers.enumerated() {
+            if let layer = layers.first, layer.superlayer != nil {
                 result.append(index)
             }
         }
@@ -674,7 +793,16 @@ extension CTChartView {
     private func nearestPointIndex(to point: CGPoint, in Curvers: Array<Int>) -> Int? {
         guard Curvers.count > 0 else { return nil}
         
-        let points = allLinesPoints[Curvers[0]]
+        var points = [CGPoint]()
+        switch type {
+        case .curve:
+            points = allLinesPoints[Curvers[0]]
+
+        case .bar:
+            for barPoints in allLinesPoints {
+                points.append(barPoints.first!)
+            }
+        }
         
         /// 找到第一个比point.x大的index。如果没找到，返回最后一个index
         guard let firstIndex = points.index(where: { $0.x > point.x }) else { return points.count - 1 }
@@ -692,6 +820,20 @@ extension CTChartView {
             return preIndex
         }
 
+    }
+    
+    private func barCenterPoint(index: Int) -> CGPoint {
+        maskBarLay.removeFromSuperlayer()
+        let centerXPoint = allLinesPoints[index].first!
+        let width = barWidth * CGFloat(data!.count + 1)
+        let height = chartView.frame.height - chartEdgeInset.top - chartEdgeInset.bottom
+        let orignX = centerXPoint.x - (width / 2.0)
+        let orignY = chartEdgeInset.top
+        
+        maskBarLay = drawOneBar(rect: CGRect(x: orignX, y: orignY, width: width, height: height), fillColor: UIColor.rgb(0, 0, 0, 0.3))
+        chartView.layer.addSublayer(maskBarLay)
+        
+        return CGPoint(x: (orignX + width) / 2.0, y: (orignY + height) / 2.0)
     }
     
     /// 找到距离点击处最近的显示的数据点的point。即确定y点

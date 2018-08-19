@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CTChartDemoViewController" customModule="DemoSwift" customModuleProvider="target">
             <connections>
+                <outlet property="barGraph" destination="wfE-3g-8Od" id="FBH-oC-zBB"/>
                 <outlet property="cellView" destination="3Qq-um-31Q" id="np7-BN-6Ee"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,20 +22,31 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Qq-um-31Q">
-                    <rect key="frame" x="0.0" y="242.5" width="375" height="202"/>
+                    <rect key="frame" x="0.0" y="141" width="375" height="205"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="202" id="uK5-B4-C5y"/>
+                        <constraint firstAttribute="height" constant="205" id="uK5-B4-C5y"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfE-3g-8Od">
+                    <rect key="frame" x="0.0" y="361" width="375" height="205"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="205" id="4Kv-e3-Bqu"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="3Qq-um-31Q" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="Rq8-dC-pXS"/>
+                <constraint firstItem="wfE-3g-8Od" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0z5-iA-dEG"/>
+                <constraint firstItem="3Qq-um-31Q" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="-100" id="Rq8-dC-pXS"/>
                 <constraint firstItem="3Qq-um-31Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Xrg-2z-fbd"/>
+                <constraint firstItem="wfE-3g-8Od" firstAttribute="top" secondItem="3Qq-um-31Q" secondAttribute="bottom" constant="15" id="jnb-Zb-2kF"/>
                 <constraint firstItem="3Qq-um-31Q" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="tX4-wU-pn8"/>
+                <constraint firstItem="wfE-3g-8Od" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="zW5-w6-qjw"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
 </document>

@@ -16,10 +16,41 @@ class CTChartDemoViewController: UIViewController {
     
     @IBOutlet weak var cellView: UIView!
     
+    @IBOutlet weak var barGraph: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        drawCurveChart()
+        drawBarChart()
+    }
+    
+    func drawBarChart() {
+        let chartView = CTChartView.loadViewFromNib()
+        chartView.type = .bar
+        barGraph.addSubview(chartView)
+        chartView.xAxisData = ["江苏", "上海", "安徽", "浙江", "北京"]
+        chartView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        
+        var data1 = CTChartViewData()
+        data1.name = "影响用户数"
+        data1.yAxis = .left
+        data1.yAxisData = [723, 821, 19, 456, 765]
+        data1.lineColor = color1
+        
+        var data2 = CTChartViewData()
+        data2.name = "用户数"
+        data2.yAxis = .right
+        data2.yAxisData = [234, 421, 159, 756, 1000]
+        data2.lineColor = color2
+
+        chartView.data = [data1, data2]
+    }
+
+    func drawCurveChart() {
         let chartView = CTChartView.loadViewFromNib()
         cellView.addSubview(chartView)
         chartView.xAxisData = ["0:00", "1:00", "2.00", "3:00", "4:00", "5:00", "6:00", "7:00", "8.00", "9:00", "10:00", "11:00"]
@@ -49,7 +80,7 @@ class CTChartDemoViewController: UIViewController {
         
         chartView.data = [data1, data2, data3]
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
