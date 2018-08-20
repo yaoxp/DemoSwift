@@ -73,7 +73,7 @@ class CTChartView: UIView, NibLoadable {
     /// 是否显示底部按钮
     var isShowBottomButtons = true {
         didSet {
-            buttonView.isHidden = isShowBottomButtons
+            buttonView.isHidden = !isShowBottomButtons
             buttonViewHeight.constant = isShowBottomButtons ? 30 : 0
         }
     }
@@ -184,7 +184,7 @@ class CTChartView: UIView, NibLoadable {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        print(self.frame)
+        
         guard self.data != nil else { return }
         showCharts()
     }
@@ -218,7 +218,10 @@ extension CTChartView {
                     break
                 }
                 
-                let max = value.yAxisData.sorted(by: >).first!
+                var max: Double = 0
+                if let first = value.yAxisData.sorted(by: >).first {
+                    max = first
+                }
                 yLeftMax = (yLeftMax < max) ? max : yLeftMax
                 
             case .right:
@@ -229,7 +232,10 @@ extension CTChartView {
                     break
                 }
                 
-                let max = value.yAxisData.sorted(by: >).first!
+                var max: Double = 0
+                if let first = value.yAxisData.sorted(by: >).first {
+                    max = first
+                }
                 yRightMax = (yRightMax < max) ? max : yRightMax
                 
             case .none:
@@ -237,8 +243,10 @@ extension CTChartView {
                     yNonoMax = max
                     break
                 }
-                
-                let max = value.yAxisData.sorted(by: >).first!
+                var max: Double = 0
+                if let first = value.yAxisData.sorted(by: >).first {
+                    max = first
+                }
                 yNonoMax = (yNonoMax < max) ? max : yNonoMax
 
             }
@@ -607,7 +615,9 @@ extension CTChartView {
         let xAxisY = chartView.frame.size.height - chartEdgeInset.bottom
         
         for (i, item) in data.enumerated() {
+            var tmpLayers = [CAShapeLayer]()
             for (j, value) in item.yAxisData.enumerated() {
+                guard allLinesPoints.count > j else { return }
                 let centerXPoint = allLinesPoints[j][0]
                 let orignX = centerXPoint.x - (CGFloat(data.count) / 2.0 - CGFloat(i)) * barWidth
                 var height: CGFloat = 0
@@ -624,14 +634,10 @@ extension CTChartView {
                 }
                 let rect = CGRect(x: orignX, y: xAxisY - height, width: barWidth, height: height)
                 let shapeLayer = drawOneBar(rect: rect, fillColor: item.lineColor)
-                if i >= curvesAndBarsLayers.count {
-                    curvesAndBarsLayers.append([shapeLayer])
-                } else {
-                    curvesAndBarsLayers[i] = curvesAndBarsLayers[i] + [shapeLayer]
-                }
-                
+                tmpLayers.append(shapeLayer)
                 chartView.layer.addSublayer(shapeLayer)
             }
+            curvesAndBarsLayers.append(tmpLayers)
         }
     }
     
