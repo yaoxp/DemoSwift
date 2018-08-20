@@ -41,6 +41,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="buttonView" destination="Cka-OK-HaT" id="2Ia-Bl-iND"/>
+                <outlet property="buttonViewHeight" destination="jGV-Nw-qHf" id="oPo-ZP-1k7"/>
                 <outlet property="chartView" destination="RlC-kc-82M" id="cvp-5v-Uzh"/>
             </connections>
             <point key="canvasLocation" x="68.5" y="235.5"/>

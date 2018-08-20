@@ -29,6 +29,7 @@ class CTChartDemoViewController: UIViewController {
     func drawBarChart() {
         let chartView = CTChartView.loadViewFromNib()
         chartView.type = .bar
+        chartView.isShowBottomButtons = false
         barGraph.addSubview(chartView)
         chartView.xAxisData = ["江苏", "上海", "安徽", "浙江", "北京"]
         chartView.snp.makeConstraints {
@@ -36,17 +37,22 @@ class CTChartDemoViewController: UIViewController {
         }
         
         var data1 = CTChartViewData()
-        data1.name = "女性"
+        data1.name = "异常次数"
         data1.yAxis = .left
         data1.yAxisData = [723, 821, 19, 456, 765]
         data1.lineColor = color1
         
         var data2 = CTChartViewData()
-        data2.name = "男性"
+        data2.name = "异常人次"
         data2.yAxis = .right
         data2.yAxisData = [234, 421, 159, 756, 1000]
         data2.lineColor = color2
 
+        chartView.extensionInfo = [["阻塞" : ["1", "2", "3", "4", "5"]],
+                                   ["严重" : ["10", "20", "30", "40", "50"]],
+                                   ["一般" : ["11", "21", "31", "41", "51"]],
+                                   ["无影响" : ["12", "22", "32", "42", "52"]]]
+        
         chartView.data = [data1, data2]
     }
 

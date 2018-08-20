@@ -70,10 +70,20 @@ class CTChartView: UIView, NibLoadable {
     var infoLableBackgroundColor = UIColor.rgb(233, 73, 28, 1.0)
     /// 点击表格出现的信息label的前景色
     var infoLabelForegroundColor = UIColor.white
+    /// 是否显示底部按钮
+    var isShowBottomButtons = true {
+        didSet {
+            buttonView.isHidden = isShowBottomButtons
+            buttonViewHeight.constant = isShowBottomButtons ? 30 : 0
+        }
+    }
+    /// 点击图表时需要额外显示的信息
+    var extensionInfo: Array<Dictionary<String, Array<String>>>?
     
     // MARK: - 私有数据
     @IBOutlet private weak var buttonView: UIView!
     @IBOutlet private weak var chartView: UIView!
+    @IBOutlet weak var buttonViewHeight: NSLayoutConstraint!
     
     /// x轴上的刻度。只有左右两头各一个
     private var xAxisScaleData = [String]()
@@ -643,6 +653,7 @@ extension CTChartView {
 extension CTChartView {
 
     private func showButtons() {
+        guard isShowBottomButtons == true else { return }
         guard let data = self.data else { return }
         
         for view in buttonView.subviews {
@@ -963,6 +974,17 @@ extension CTChartView {
             }
             result.append(str)
         }
+        
+        /// 添加额外信息
+        if let extensionInfo = extensionInfo {
+            for info in extensionInfo {
+                if let key = info.keys.first, info[key]!.count > index {
+                    let str = key + ": " + String(info[key]![index])
+                    result.append(str)
+                }
+            }
+        }
+        
         return result
     }
     
