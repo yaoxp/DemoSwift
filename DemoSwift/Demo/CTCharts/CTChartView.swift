@@ -59,7 +59,11 @@ class CTChartView: UIView, NibLoadable {
         }
     }
     /// 要展示的数据
-    var data: Array<CTChartViewData>?
+    var data: Array<CTChartViewData>? {
+        didSet {
+            setNeedsLayout()
+        }
+    }
     /// x轴上的数据
     var xAxisData = [String]()
     /// 表格中线条的颜色
