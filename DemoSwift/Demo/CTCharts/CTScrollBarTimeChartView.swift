@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct CTScrollBarChartPointInfo {
+public struct CTScrollBarTimeChartPointInfo {
     /// 开始时间
     var startTime = Date()
     /// 结束时间
@@ -19,9 +19,9 @@ public struct CTScrollBarChartPointInfo {
     var extensionInfo = [String]()
 }
 
-public struct CTScrollBarChartViewData {
+public struct CTScrollBarTimeChartViewData {
     /// y轴上的数据
-    var yAxisData = [CTScrollBarChartPointInfo]()
+    var yAxisData = [CTScrollBarTimeChartPointInfo]()
     /// 柱状颜色
     var barColor = UIColor.hexRGB(0xFF5E00, 1.0)
     /// x轴开始时间
@@ -30,12 +30,12 @@ public struct CTScrollBarChartViewData {
     var endTime = Date()
 }
 
-class CTScrollBarChartView: UIScrollView {
+class CTScrollBarTimeChartView: UIScrollView {
     // MARK: - 对外公开属性
     /// 要显示的数据
-    var data: CTScrollBarChartViewData? {
+    var data: CTScrollBarTimeChartViewData? {
         didSet {
-            setNeedsLayout()
+            showCharts()
         }
     }
     /// 要展示的视觉宽度，默认是屏幕宽度
@@ -97,16 +97,7 @@ class CTScrollBarChartView: UIScrollView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        guard self.data != nil else {
-            deinitData()
-            return
-        }
-        showCharts()
-    }
+
     
     private func setupTapGesture() {
         /// 点击柱状图时的处理
@@ -117,7 +108,7 @@ class CTScrollBarChartView: UIScrollView {
 }
 
 // MARK: - 数据处理
-extension CTScrollBarChartView {
+extension CTScrollBarTimeChartView {
     private func showCharts() {
         deinitData()
         initData()
@@ -136,7 +127,14 @@ extension CTScrollBarChartView {
         let timeInterval = minTimeIntervalBetweenBarMid()
         let totalTimeInterval = data.endTime.timeIntervalSince(data.startTime)
         let width = CGFloat(totalTimeInterval / timeInterval * (barWidth + minSapcing))
-        contentWidth = contentWidth > width ? contentWidth : width
+//        contentWidth = contentWidth > width ? contentWidth : width
+        
+        if contentWidth < width {
+            contentWidth = width
+            showsHorizontalScrollIndicator = true
+        } else {
+            showsHorizontalScrollIndicator = false
+        }
         
         /*
          * 计算Y轴上的刻度和Y轴最大值,Y轴上从0开始显示5个刻度
@@ -210,7 +208,7 @@ extension CTScrollBarChartView {
 }
 
 // MARK: - 画背景表格
-extension CTScrollBarChartView {
+extension CTScrollBarTimeChartView {
     /// 绘制表格
     private func drawTable() {
         guard let data = data else { return }
@@ -307,7 +305,7 @@ extension CTScrollBarChartView {
 }
 
 // MARK: - 绘制柱状图
-extension CTScrollBarChartView {
+extension CTScrollBarTimeChartView {
     private func drawBars() {
         guard let data = data else { return }
         
@@ -332,7 +330,7 @@ extension CTScrollBarChartView {
 }
 
 // MARK: - 点击柱状图的处理
-extension CTScrollBarChartView {
+extension CTScrollBarTimeChartView {
     @objc func tapGestureRecognizerHandle(tapGesture: UITapGestureRecognizer) {
         let tapPoint = tapGesture.location(in: self)
 
