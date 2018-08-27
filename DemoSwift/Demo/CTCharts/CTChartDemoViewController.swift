@@ -92,7 +92,11 @@ class CTChartDemoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func onScrollChartButton(_ sender: Any) {
+        let vc = CTScrollChartDemoViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -35,10 +35,23 @@
                         <constraint firstAttribute="height" constant="205" id="4Kv-e3-Bqu"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opf-0V-N9L">
+                    <rect key="frame" x="20" y="586" width="78" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="78" id="R7a-JF-RY3"/>
+                        <constraint firstAttribute="height" constant="30" id="o92-dm-TD8"/>
+                    </constraints>
+                    <state key="normal" title="滚动chart"/>
+                    <connections>
+                        <action selector="onScrollChartButton:" destination="-1" eventType="touchUpInside" id="aot-fU-Qad"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="wfE-3g-8Od" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0z5-iA-dEG"/>
+                <constraint firstItem="Opf-0V-N9L" firstAttribute="top" secondItem="wfE-3g-8Od" secondAttribute="bottom" constant="20" id="GXq-tF-URg"/>
+                <constraint firstItem="Opf-0V-N9L" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="NCw-rK-peR"/>
                 <constraint firstItem="3Qq-um-31Q" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="-100" id="Rq8-dC-pXS"/>
                 <constraint firstItem="3Qq-um-31Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Xrg-2z-fbd"/>
                 <constraint firstItem="wfE-3g-8Od" firstAttribute="top" secondItem="3Qq-um-31Q" secondAttribute="bottom" constant="15" id="jnb-Zb-2kF"/>

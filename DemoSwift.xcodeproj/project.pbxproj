@@ -19,6 +19,7 @@
 		FF18589E2059102300ADC0BC /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF18589D2059102300ADC0BC /* Demo.swift */; };
 		FF1A833720A96F19001A1DF1 /* MarqueeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A833620A96F19001A1DF1 /* MarqueeViewController.swift */; };
 		FF1A833920A96F40001A1DF1 /* MarqueeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A833820A96F40001A1DF1 /* MarqueeView.swift */; };
+		FF1B312E212FEEF70030A5D0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1B312D212FEEF70030A5D0 /* String+Extension.swift */; };
 		FF32FA8D205F58BC006889A3 /* PayTheBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32FA8B205F58BC006889A3 /* PayTheBillViewController.swift */; };
 		FF32FA8E205F58BC006889A3 /* PayTheBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32FA8C205F58BC006889A3 /* PayTheBillViewController.xib */; };
 		FF32FA90205F68E6006889A3 /* PayTheBillTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32FA8F205F68E6006889A3 /* PayTheBillTitleView.swift */; };
@@ -34,6 +35,9 @@
 		FF59B15F2121636A00BD693E /* CTChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF59B15E2121636A00BD693E /* CTChartView.xib */; };
 		FF59B162212169E900BD693E /* CTChartDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF59B160212169E900BD693E /* CTChartDemoViewController.swift */; };
 		FF59B163212169E900BD693E /* CTChartDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF59B161212169E900BD693E /* CTChartDemoViewController.xib */; };
+		FF707215212EABF70024C22C /* CTScrollChartDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF707213212EABF70024C22C /* CTScrollChartDemoViewController.swift */; };
+		FF707216212EABF70024C22C /* CTScrollChartDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF707214212EABF70024C22C /* CTScrollChartDemoViewController.xib */; };
+		FF707218212EAC680024C22C /* CTScrollBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF707217212EAC680024C22C /* CTScrollBarChartView.swift */; };
 		FF7A645520F88C1F002AFBC0 /* DynamicAndStaticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7A645420F88C1F002AFBC0 /* DynamicAndStaticViewController.swift */; };
 		FF7A645F20F88D3E002AFBC0 /* DynamicFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = FF7A645D20F88D3E002AFBC0 /* DynamicFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF7A646220F88D3E002AFBC0 /* DynamicFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7A645B20F88D3E002AFBC0 /* DynamicFramework.framework */; };
@@ -120,6 +124,7 @@
 		FF18589D2059102300ADC0BC /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
 		FF1A833620A96F19001A1DF1 /* MarqueeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeViewController.swift; sourceTree = "<group>"; };
 		FF1A833820A96F40001A1DF1 /* MarqueeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeView.swift; sourceTree = "<group>"; };
+		FF1B312D212FEEF70030A5D0 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		FF32FA8B205F58BC006889A3 /* PayTheBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTheBillViewController.swift; sourceTree = "<group>"; };
 		FF32FA8C205F58BC006889A3 /* PayTheBillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayTheBillViewController.xib; sourceTree = "<group>"; };
 		FF32FA8F205F68E6006889A3 /* PayTheBillTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTheBillTitleView.swift; sourceTree = "<group>"; };
@@ -135,6 +140,9 @@
 		FF59B15E2121636A00BD693E /* CTChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTChartView.xib; sourceTree = "<group>"; };
 		FF59B160212169E900BD693E /* CTChartDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTChartDemoViewController.swift; sourceTree = "<group>"; };
 		FF59B161212169E900BD693E /* CTChartDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTChartDemoViewController.xib; sourceTree = "<group>"; };
+		FF707213212EABF70024C22C /* CTScrollChartDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTScrollChartDemoViewController.swift; sourceTree = "<group>"; };
+		FF707214212EABF70024C22C /* CTScrollChartDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTScrollChartDemoViewController.xib; sourceTree = "<group>"; };
+		FF707217212EAC680024C22C /* CTScrollBarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTScrollBarChartView.swift; sourceTree = "<group>"; };
 		FF7A645420F88C1F002AFBC0 /* DynamicAndStaticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicAndStaticViewController.swift; sourceTree = "<group>"; };
 		FF7A645B20F88D3E002AFBC0 /* DynamicFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF7A645D20F88D3E002AFBC0 /* DynamicFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicFramework.h; sourceTree = "<group>"; };
@@ -309,6 +317,9 @@
 				FF59B15E2121636A00BD693E /* CTChartView.xib */,
 				FF59B160212169E900BD693E /* CTChartDemoViewController.swift */,
 				FF59B161212169E900BD693E /* CTChartDemoViewController.xib */,
+				FF707213212EABF70024C22C /* CTScrollChartDemoViewController.swift */,
+				FF707214212EABF70024C22C /* CTScrollChartDemoViewController.xib */,
+				FF707217212EAC680024C22C /* CTScrollBarChartView.swift */,
 			);
 			path = CTCharts;
 			sourceTree = "<group>";
@@ -383,6 +394,7 @@
 				FF32FA95205F90C9006889A3 /* UIImage+Extension.swift */,
 				FF32FA9B205FB1D0006889A3 /* DispatchQueue+Extension.swift */,
 				FF044C0F20C9112600EDE2B6 /* Date+Extension.swift */,
+				FF1B312D212FEEF70030A5D0 /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -570,6 +582,7 @@
 				FF18587F2058CAC400ADC0BC /* Assets.xcassets in Resources */,
 				FF59B15F2121636A00BD693E /* CTChartView.xib in Resources */,
 				FF18587D2058CAC400ADC0BC /* Main.storyboard in Resources */,
+				FF707216212EABF70024C22C /* CTScrollChartDemoViewController.xib in Resources */,
 				FF59B163212169E900BD693E /* CTChartDemoViewController.xib in Resources */,
 				FF32FA9A205F9793006889A3 /* PayTheBillHeaderView.xib in Resources */,
 				FF32FA92205F6944006889A3 /* PayTheBillTitleView.xib in Resources */,
@@ -670,6 +683,7 @@
 				FF32FA98205F9784006889A3 /* PayTheBillHeaderView.swift in Sources */,
 				FF1858782058CAC400ADC0BC /* AppDelegate.swift in Sources */,
 				FF59B15D2121618D00BD693E /* CTChartView.swift in Sources */,
+				FF707218212EAC680024C22C /* CTScrollBarChartView.swift in Sources */,
 				FF32FA8D205F58BC006889A3 /* PayTheBillViewController.swift in Sources */,
 				FFA7004A20AC27C60073DBF5 /* PeekViewController.swift in Sources */,
 				FF1A833720A96F19001A1DF1 /* MarqueeViewController.swift in Sources */,
@@ -683,7 +697,9 @@
 				FF59B162212169E900BD693E /* CTChartDemoViewController.swift in Sources */,
 				FFD056B2205913CA00A6F5AE /* AnimationViewController.swift in Sources */,
 				FF32FA90205F68E6006889A3 /* PayTheBillTitleView.swift in Sources */,
+				FF1B312E212FEEF70030A5D0 /* String+Extension.swift in Sources */,
 				FFA7004620AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift in Sources */,
+				FF707215212EABF70024C22C /* CTScrollChartDemoViewController.swift in Sources */,
 				FFD056AE2059134200A6F5AE /* UIDevice+Extension.swift in Sources */,
 				FF32FA94205F8A91006889A3 /* UIKit+Extension.swift in Sources */,
 				FFD056B72059238A00A6F5AE /* ClockOffViewController.swift in Sources */,
