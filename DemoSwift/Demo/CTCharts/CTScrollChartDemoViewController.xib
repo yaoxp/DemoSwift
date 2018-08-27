@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CTScrollChartDemoViewController" customModule="DemoSwift" customModuleProvider="target">
             <connections>
                 <outlet property="midView" destination="Y7b-Ln-uMZ" id="hgP-yJ-upS"/>
+                <outlet property="scrollChartSupView" destination="kyL-Ln-qak" id="2yl-gt-Rjy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,12 +28,22 @@
                         <constraint firstAttribute="height" constant="205" id="Gnv-lW-lK9"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kyL-Ln-qak">
+                    <rect key="frame" x="0.0" y="335" width="375" height="205"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="205" id="c1F-AK-kU0"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="kyL-Ln-qak" firstAttribute="top" secondItem="Y7b-Ln-uMZ" secondAttribute="bottom" constant="10" id="8Nb-Gd-rHQ"/>
                 <constraint firstItem="Y7b-Ln-uMZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="DQx-X7-kH2"/>
                 <constraint firstItem="Y7b-Ln-uMZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IrG-Xm-OeJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kyL-Ln-qak" secondAttribute="trailing" id="chY-Gl-qdA"/>
                 <constraint firstItem="Y7b-Ln-uMZ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="uEh-D8-75a"/>
+                <constraint firstItem="kyL-Ln-qak" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vq2-oR-1Ab"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="24.5" y="51.5"/>

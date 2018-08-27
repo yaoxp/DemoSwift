@@ -38,6 +38,7 @@
 		FF707215212EABF70024C22C /* CTScrollChartDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF707213212EABF70024C22C /* CTScrollChartDemoViewController.swift */; };
 		FF707216212EABF70024C22C /* CTScrollChartDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF707214212EABF70024C22C /* CTScrollChartDemoViewController.xib */; };
 		FF707218212EAC680024C22C /* CTScrollBarTimeChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF707217212EAC680024C22C /* CTScrollBarTimeChartView.swift */; };
+		FF7A5B132133A46A008D6DEC /* CTScrollBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7A5B122133A46A008D6DEC /* CTScrollBarChartView.swift */; };
 		FF7A645520F88C1F002AFBC0 /* DynamicAndStaticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7A645420F88C1F002AFBC0 /* DynamicAndStaticViewController.swift */; };
 		FF7A645F20F88D3E002AFBC0 /* DynamicFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = FF7A645D20F88D3E002AFBC0 /* DynamicFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF7A646220F88D3E002AFBC0 /* DynamicFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7A645B20F88D3E002AFBC0 /* DynamicFramework.framework */; };
@@ -143,6 +144,7 @@
 		FF707213212EABF70024C22C /* CTScrollChartDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTScrollChartDemoViewController.swift; sourceTree = "<group>"; };
 		FF707214212EABF70024C22C /* CTScrollChartDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTScrollChartDemoViewController.xib; sourceTree = "<group>"; };
 		FF707217212EAC680024C22C /* CTScrollBarTimeChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTScrollBarTimeChartView.swift; sourceTree = "<group>"; };
+		FF7A5B122133A46A008D6DEC /* CTScrollBarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTScrollBarChartView.swift; sourceTree = "<group>"; };
 		FF7A645420F88C1F002AFBC0 /* DynamicAndStaticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicAndStaticViewController.swift; sourceTree = "<group>"; };
 		FF7A645B20F88D3E002AFBC0 /* DynamicFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF7A645D20F88D3E002AFBC0 /* DynamicFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicFramework.h; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 				FF707213212EABF70024C22C /* CTScrollChartDemoViewController.swift */,
 				FF707214212EABF70024C22C /* CTScrollChartDemoViewController.xib */,
 				FF707217212EAC680024C22C /* CTScrollBarTimeChartView.swift */,
+				FF7A5B122133A46A008D6DEC /* CTScrollBarChartView.swift */,
 			);
 			path = CTCharts;
 			sourceTree = "<group>";
@@ -683,6 +686,7 @@
 				FF32FA98205F9784006889A3 /* PayTheBillHeaderView.swift in Sources */,
 				FF1858782058CAC400ADC0BC /* AppDelegate.swift in Sources */,
 				FF59B15D2121618D00BD693E /* CTChartView.swift in Sources */,
+				FF7A5B132133A46A008D6DEC /* CTScrollBarChartView.swift in Sources */,
 				FF707218212EAC680024C22C /* CTScrollBarTimeChartView.swift in Sources */,
 				FF32FA8D205F58BC006889A3 /* PayTheBillViewController.swift in Sources */,
 				FFA7004A20AC27C60073DBF5 /* PeekViewController.swift in Sources */,
