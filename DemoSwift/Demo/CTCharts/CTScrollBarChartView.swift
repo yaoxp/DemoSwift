@@ -40,6 +40,8 @@ class CTScrollBarChartView: UIScrollView {
     }
     /// 要展示的视觉宽度，默认是屏幕宽度
     var viewWidth: CGFloat = UIScreen.main.bounds.width
+    /// 点击柱子时的回调
+    var selectedCallBack: ((_ index: Int) -> Void)?
     
     // MARK: - 私有属性
     /// 柱子之前最小间距
@@ -323,7 +325,7 @@ extension CTScrollBarChartView {
             layer.removeFromSuperlayer()
         }
         tapTextLayer = [CATextLayer]()
-        
+        selectedCallBack?(index)
         drawMaskBarLayer(index)
         drawExtensionInfoLayer(index, tapPoint: point)
     }
