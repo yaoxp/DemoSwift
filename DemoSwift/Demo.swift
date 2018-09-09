@@ -9,13 +9,7 @@
 import Foundation
 
 struct Demo {
-    var title = "Demo"
-    var subTitle: String?
-    var className: String
-    
-    init(title: String, subTitle: String?, className: String) {
-        self.title = title
-        self.subTitle = subTitle
-        self.className = className
-    }
+    let title: String
+    let subtitle: String
+    let `class`: AnyClass
 }

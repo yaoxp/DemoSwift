@@ -13,12 +13,24 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
     static let tableViewCellIdentifier = "MainTableCell"
 
     // MARK: - properties
-    var demos = [Demo(title: "动画", subTitle: "贝塞尔曲线，优酷播放按钮，引导页跳过按钮，打卡按钮", className: NSStringFromClass(AnimationViewController.self)),
-                 Demo(title: "买单吧", subTitle: "tableview上推，头像渐变到导航栏上", className: NSStringFromClass(PayTheBillViewController.self)),
-                 Demo(title: "跑马灯", subTitle: "支持富文本和图片", className: NSStringFromClass(MarqueeViewController.self)),
-                 Demo(title: "日期选择器", subTitle: "支持配置显示内容，背景水印", className: NSStringFromClass(DatePickerDemoViewController.self)),
-                 Demo(title: "包含 Bundle 资源的 framework", subTitle: "主要看代码", className: NSStringFromClass(DynamicAndStaticViewController.self)),
-                 Demo(title: "双Y轴表格", subTitle: "主要看代码", className: NSStringFromClass(CTChartDemoViewController.self))]
+    var demos = [Demo(title: "动画",
+                      subtitle: "贝塞尔曲线，优酷播放按钮，引导页跳过按钮，打卡按钮",
+                      class: AnimationViewController.self),
+                 Demo(title: "买单吧",
+                      subtitle: "tableview上推，头像渐变到导航栏上",
+                      class: PayTheBillViewController.self),
+                 Demo(title: "跑马灯",
+                      subtitle: "支持富文本和图片",
+                      class: MarqueeViewController.self),
+                 Demo(title: "日期选择器",
+                      subtitle: "支持配置显示内容，背景水印",
+                      class: DatePickerDemoViewController.self),
+                 Demo(title: "包含 Bundle 资源的 framework",
+                      subtitle: "主要看代码",
+                      class: DynamicAndStaticViewController.self),
+                 Demo(title: "双Y轴表格",
+                      subtitle: "主要看代码",
+                      class: CTChartDemoViewController.self)]
     
     // MARK: - View Life Cycle
     
@@ -56,7 +68,7 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
         // Configure the cell...
         let demo = demos[indexPath.row]
         cell.textLabel!.text = demo.title
-        cell.detailTextLabel!.text = demo.subTitle
+        cell.detailTextLabel!.text = demo.subtitle
         return cell
     }
     
@@ -69,7 +81,7 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let demo = demos[indexPath.row]
         
-        if let vcClass = NSClassFromString(demo.className) as? UIViewController.Type {
+        if let vcClass = demo.class as? UIViewController.Type {
             let vc = vcClass.init()
             navigationController!.pushViewController(vc, animated: true)
         }
@@ -109,7 +121,7 @@ extension MainTableViewController {
         previewingContext.sourceRect = cell.frame
         
         let demo = demos[indexPath.row]
-        if let vcClass = NSClassFromString(demo.className) as? PeekViewController.Type {
+        if let vcClass = demo.class as? PeekViewController.Type {
             let vc = vcClass.init()
             vc.previewActionDelegate = self
             vc.indexPath = indexPath
