@@ -10,6 +10,11 @@
 		268EDB40F43779811DA69F67 /* Pods_DemoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B041FB317087741D521495CA /* Pods_DemoSwift.framework */; };
 		7C96BE86BF4AA2163CE57712 /* Pods_DemoSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15DF14BAB5BD5307EA55039 /* Pods_DemoSwiftTests.framework */; };
 		FF044C1020C9112600EDE2B6 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF044C0F20C9112600EDE2B6 /* Date+Extension.swift */; };
+		FF05DE242148C60F00E3D5EA /* OriginImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05DE222148C60F00E3D5EA /* OriginImageViewController.swift */; };
+		FF05DE252148C60F00E3D5EA /* OriginImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF05DE232148C60F00E3D5EA /* OriginImageViewController.xib */; };
+		FF05DE272148E35200E3D5EA /* BigImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05DE262148E35200E3D5EA /* BigImageTests.swift */; };
+		FF05DE2A2148FDCB00E3D5EA /* ImageIOBigImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05DE282148FDCB00E3D5EA /* ImageIOBigImageViewController.swift */; };
+		FF05DE2B2148FDCB00E3D5EA /* ImageIOBigImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF05DE292148FDCB00E3D5EA /* ImageIOBigImageViewController.xib */; };
 		FF1858782058CAC400ADC0BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1858772058CAC400ADC0BC /* AppDelegate.swift */; };
 		FF18587D2058CAC400ADC0BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF18587B2058CAC400ADC0BC /* Main.storyboard */; };
 		FF18587F2058CAC400ADC0BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF18587E2058CAC400ADC0BC /* Assets.xcassets */; };
@@ -31,10 +36,18 @@
 		FF32FA9C205FB1D0006889A3 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32FA9B205FB1D0006889A3 /* DispatchQueue+Extension.swift */; };
 		FF36B58620BD011000ABF92C /* DatePickerDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF36B58420BD011000ABF92C /* DatePickerDemoViewController.swift */; };
 		FF36B58720BD011000ABF92C /* DatePickerDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF36B58520BD011000ABF92C /* DatePickerDemoViewController.xib */; };
+		FF395D602144C53E002D3C28 /* IMG_001.png in Resources */ = {isa = PBXBuildFile; fileRef = FF395D5F2144C53E002D3C28 /* IMG_001.png */; };
+		FF395D622144C569002D3C28 /* BigImageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF395D612144C569002D3C28 /* BigImageTableViewController.swift */; };
+		FF395D662144C64A002D3C28 /* UIKitBigImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF395D642144C64A002D3C28 /* UIKitBigImageViewController.swift */; };
+		FF395D672144C64A002D3C28 /* UIKitBigImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF395D652144C64A002D3C28 /* UIKitBigImageViewController.xib */; };
+		FF395D6A2144CA7F002D3C28 /* CoreGraphicsBigImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF395D682144CA7F002D3C28 /* CoreGraphicsBigImageViewController.swift */; };
+		FF395D6B2144CA7F002D3C28 /* CoreGraphicsBigImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF395D692144CA7F002D3C28 /* CoreGraphicsBigImageViewController.xib */; };
 		FF59B15D2121618D00BD693E /* CTChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF59B15C2121618D00BD693E /* CTChartView.swift */; };
 		FF59B15F2121636A00BD693E /* CTChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF59B15E2121636A00BD693E /* CTChartView.xib */; };
 		FF59B162212169E900BD693E /* CTChartDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF59B160212169E900BD693E /* CTChartDemoViewController.swift */; };
 		FF59B163212169E900BD693E /* CTChartDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF59B161212169E900BD693E /* CTChartDemoViewController.xib */; };
+		FF6AA7E4214657B100BA1F51 /* CoreImageBigImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6AA7E2214657B100BA1F51 /* CoreImageBigImageViewController.swift */; };
+		FF6AA7E5214657B100BA1F51 /* CoreImageBigImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF6AA7E3214657B100BA1F51 /* CoreImageBigImageViewController.xib */; };
 		FF707215212EABF70024C22C /* CTScrollChartDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF707213212EABF70024C22C /* CTScrollChartDemoViewController.swift */; };
 		FF707216212EABF70024C22C /* CTScrollChartDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF707214212EABF70024C22C /* CTScrollChartDemoViewController.xib */; };
 		FF707218212EAC680024C22C /* CTScrollBarTimeChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF707217212EAC680024C22C /* CTScrollBarTimeChartView.swift */; };
@@ -112,6 +125,11 @@
 		D3244A00694BA58B5798D424 /* Pods-DemoSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSwiftTests/Pods-DemoSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E15DF14BAB5BD5307EA55039 /* Pods_DemoSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF044C0F20C9112600EDE2B6 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		FF05DE222148C60F00E3D5EA /* OriginImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginImageViewController.swift; sourceTree = "<group>"; };
+		FF05DE232148C60F00E3D5EA /* OriginImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OriginImageViewController.xib; sourceTree = "<group>"; };
+		FF05DE262148E35200E3D5EA /* BigImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigImageTests.swift; sourceTree = "<group>"; };
+		FF05DE282148FDCB00E3D5EA /* ImageIOBigImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIOBigImageViewController.swift; sourceTree = "<group>"; };
+		FF05DE292148FDCB00E3D5EA /* ImageIOBigImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageIOBigImageViewController.xib; sourceTree = "<group>"; };
 		FF1858742058CAC400ADC0BC /* DemoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF1858772058CAC400ADC0BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF18587C2058CAC400ADC0BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,10 +155,18 @@
 		FF32FA9B205FB1D0006889A3 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
 		FF36B58420BD011000ABF92C /* DatePickerDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDemoViewController.swift; sourceTree = "<group>"; };
 		FF36B58520BD011000ABF92C /* DatePickerDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerDemoViewController.xib; sourceTree = "<group>"; };
+		FF395D5F2144C53E002D3C28 /* IMG_001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_001.png; sourceTree = "<group>"; };
+		FF395D612144C569002D3C28 /* BigImageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigImageTableViewController.swift; sourceTree = "<group>"; };
+		FF395D642144C64A002D3C28 /* UIKitBigImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitBigImageViewController.swift; sourceTree = "<group>"; };
+		FF395D652144C64A002D3C28 /* UIKitBigImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIKitBigImageViewController.xib; sourceTree = "<group>"; };
+		FF395D682144CA7F002D3C28 /* CoreGraphicsBigImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsBigImageViewController.swift; sourceTree = "<group>"; };
+		FF395D692144CA7F002D3C28 /* CoreGraphicsBigImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoreGraphicsBigImageViewController.xib; sourceTree = "<group>"; };
 		FF59B15C2121618D00BD693E /* CTChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTChartView.swift; sourceTree = "<group>"; };
 		FF59B15E2121636A00BD693E /* CTChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTChartView.xib; sourceTree = "<group>"; };
 		FF59B160212169E900BD693E /* CTChartDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTChartDemoViewController.swift; sourceTree = "<group>"; };
 		FF59B161212169E900BD693E /* CTChartDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTChartDemoViewController.xib; sourceTree = "<group>"; };
+		FF6AA7E2214657B100BA1F51 /* CoreImageBigImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImageBigImageViewController.swift; sourceTree = "<group>"; };
+		FF6AA7E3214657B100BA1F51 /* CoreImageBigImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoreImageBigImageViewController.xib; sourceTree = "<group>"; };
 		FF707213212EABF70024C22C /* CTScrollChartDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTScrollChartDemoViewController.swift; sourceTree = "<group>"; };
 		FF707214212EABF70024C22C /* CTScrollChartDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTScrollChartDemoViewController.xib; sourceTree = "<group>"; };
 		FF707217212EAC680024C22C /* CTScrollBarTimeChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTScrollBarTimeChartView.swift; sourceTree = "<group>"; };
@@ -286,6 +312,7 @@
 				FF18588C2058CAC400ADC0BC /* DemoSwiftTests.swift */,
 				FF18588E2058CAC400ADC0BC /* Info.plist */,
 				FFF763CD20CA786700E479B7 /* DateExtensionTests.swift */,
+				FF05DE262148E35200E3D5EA /* BigImageTests.swift */,
 			);
 			path = DemoSwiftTests;
 			sourceTree = "<group>";
@@ -297,6 +324,25 @@
 				FF1A833820A96F40001A1DF1 /* MarqueeView.swift */,
 			);
 			path = Marquee;
+			sourceTree = "<group>";
+		};
+		FF395D5E2144C50C002D3C28 /* BigImage */ = {
+			isa = PBXGroup;
+			children = (
+				FF395D5F2144C53E002D3C28 /* IMG_001.png */,
+				FF395D612144C569002D3C28 /* BigImageTableViewController.swift */,
+				FF05DE222148C60F00E3D5EA /* OriginImageViewController.swift */,
+				FF05DE232148C60F00E3D5EA /* OriginImageViewController.xib */,
+				FF395D642144C64A002D3C28 /* UIKitBigImageViewController.swift */,
+				FF395D652144C64A002D3C28 /* UIKitBigImageViewController.xib */,
+				FF395D682144CA7F002D3C28 /* CoreGraphicsBigImageViewController.swift */,
+				FF395D692144CA7F002D3C28 /* CoreGraphicsBigImageViewController.xib */,
+				FF6AA7E2214657B100BA1F51 /* CoreImageBigImageViewController.swift */,
+				FF6AA7E3214657B100BA1F51 /* CoreImageBigImageViewController.xib */,
+				FF05DE282148FDCB00E3D5EA /* ImageIOBigImageViewController.swift */,
+				FF05DE292148FDCB00E3D5EA /* ImageIOBigImageViewController.xib */,
+			);
+			path = BigImage;
 			sourceTree = "<group>";
 		};
 		FF55B25A20593EA7001145F9 /* PayTheBill */ = {
@@ -378,6 +424,7 @@
 		FFD056A82059128C00A6F5AE /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FF395D5E2144C50C002D3C28 /* BigImage */,
 				FF59B15B2121615D00BD693E /* CTCharts */,
 				FF7A645320F88BE4002AFBC0 /* DynamicAndStaticFramework */,
 				FF0271C120BAA5DD0070FEC6 /* DatePickerView */,
@@ -536,7 +583,7 @@
 					};
 					FF1858872058CAC400ADC0BC = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = FF1858732058CAC400ADC0BC;
 					};
 					FF7A645A20F88D3E002AFBC0 = {
@@ -578,17 +625,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF1858822058CAC400ADC0BC /* LaunchScreen.storyboard in Resources */,
+				FF395D602144C53E002D3C28 /* IMG_001.png in Resources */,
 				FF36B58720BD011000ABF92C /* DatePickerDemoViewController.xib in Resources */,
+				FF6AA7E5214657B100BA1F51 /* CoreImageBigImageViewController.xib in Resources */,
 				FF32FA8E205F58BC006889A3 /* PayTheBillViewController.xib in Resources */,
+				FF395D672144C64A002D3C28 /* UIKitBigImageViewController.xib in Resources */,
 				FFE4A23920BBA71400939E00 /* DatePickerView.xib in Resources */,
 				FFD056B1205913CA00A6F5AE /* AnimationViewController.xib in Resources */,
 				FF18587F2058CAC400ADC0BC /* Assets.xcassets in Resources */,
 				FF59B15F2121636A00BD693E /* CTChartView.xib in Resources */,
 				FF18587D2058CAC400ADC0BC /* Main.storyboard in Resources */,
+				FF05DE252148C60F00E3D5EA /* OriginImageViewController.xib in Resources */,
 				FF707216212EABF70024C22C /* CTScrollChartDemoViewController.xib in Resources */,
 				FF59B163212169E900BD693E /* CTChartDemoViewController.xib in Resources */,
 				FF32FA9A205F9793006889A3 /* PayTheBillHeaderView.xib in Resources */,
+				FF395D6B2144CA7F002D3C28 /* CoreGraphicsBigImageViewController.xib in Resources */,
 				FF32FA92205F6944006889A3 /* PayTheBillTitleView.xib in Resources */,
+				FF05DE2B2148FDCB00E3D5EA /* ImageIOBigImageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,16 +736,21 @@
 			files = (
 				FF1858982058D4E600ADC0BC /* MainTableViewController.swift in Sources */,
 				FF32FA9C205FB1D0006889A3 /* DispatchQueue+Extension.swift in Sources */,
+				FF6AA7E4214657B100BA1F51 /* CoreImageBigImageViewController.swift in Sources */,
+				FF05DE2A2148FDCB00E3D5EA /* ImageIOBigImageViewController.swift in Sources */,
 				FF32FA98205F9784006889A3 /* PayTheBillHeaderView.swift in Sources */,
 				FF1858782058CAC400ADC0BC /* AppDelegate.swift in Sources */,
 				FF59B15D2121618D00BD693E /* CTChartView.swift in Sources */,
+				FF05DE242148C60F00E3D5EA /* OriginImageViewController.swift in Sources */,
 				FF7A5B132133A46A008D6DEC /* CTScrollBarChartView.swift in Sources */,
 				FF707218212EAC680024C22C /* CTScrollBarTimeChartView.swift in Sources */,
+				FF395D6A2144CA7F002D3C28 /* CoreGraphicsBigImageViewController.swift in Sources */,
 				FF32FA8D205F58BC006889A3 /* PayTheBillViewController.swift in Sources */,
 				FFA7004A20AC27C60073DBF5 /* PeekViewController.swift in Sources */,
 				FF1A833720A96F19001A1DF1 /* MarqueeViewController.swift in Sources */,
 				FF32FA96205F90C9006889A3 /* UIImage+Extension.swift in Sources */,
 				FFE4A23720BB9B6300939E00 /* DatePickerView.swift in Sources */,
+				FF395D622144C569002D3C28 /* BigImageTableViewController.swift in Sources */,
 				FF36B58620BD011000ABF92C /* DatePickerDemoViewController.swift in Sources */,
 				FF1A833920A96F40001A1DF1 /* MarqueeView.swift in Sources */,
 				FF044C1020C9112600EDE2B6 /* Date+Extension.swift in Sources */,
@@ -704,6 +762,7 @@
 				FF1B312E212FEEF70030A5D0 /* String+Extension.swift in Sources */,
 				FFA7004620AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift in Sources */,
 				FF707215212EABF70024C22C /* CTScrollChartDemoViewController.swift in Sources */,
+				FF395D662144C64A002D3C28 /* UIKitBigImageViewController.swift in Sources */,
 				FFD056AE2059134200A6F5AE /* UIDevice+Extension.swift in Sources */,
 				FF32FA94205F8A91006889A3 /* UIKit+Extension.swift in Sources */,
 				FFD056B72059238A00A6F5AE /* ClockOffViewController.swift in Sources */,
@@ -716,6 +775,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF05DE272148E35200E3D5EA /* BigImageTests.swift in Sources */,
 				FF18588D2058CAC400ADC0BC /* DemoSwiftTests.swift in Sources */,
 				FFF763CE20CA786700E479B7 /* DateExtensionTests.swift in Sources */,
 			);
@@ -892,6 +952,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QSH988Q3LB;
 				INFOPLIST_FILE = DemoSwift/Info.plist;
@@ -899,6 +960,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yaoxp.DemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -910,6 +973,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QSH988Q3LB;
 				INFOPLIST_FILE = DemoSwift/Info.plist;
@@ -917,6 +981,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yaoxp.DemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -929,13 +995,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = QSH988Q3LB;
 				INFOPLIST_FILE = DemoSwiftTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yaoxp.DemoSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -950,13 +1017,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = QSH988Q3LB;
 				INFOPLIST_FILE = DemoSwiftTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yaoxp.DemoSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

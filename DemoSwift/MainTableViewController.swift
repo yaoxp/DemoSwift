@@ -30,7 +30,10 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
                       class: DynamicAndStaticViewController.self),
                  Demo(title: "双Y轴表格",
                       subtitle: "主要看代码",
-                      class: CTChartDemoViewController.self)]
+                      class: CTChartDemoViewController.self),
+                 Demo(title: "大图片缩小处理",
+                      subtitle: "对高精度图片的缩略对比",
+                      class: BigImageTableViewController.self)]
     
     // MARK: - View Life Cycle
     
