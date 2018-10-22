@@ -33,7 +33,10 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
                       class: CTChartDemoViewController.self),
                  Demo(title: "大图片缩小处理",
                       subtitle: "对高精度图片的缩略对比",
-                      class: BigImageTableViewController.self)]
+                      class: BigImageTableViewController.self),
+                 Demo(title: "离屏渲染",
+                      subtitle: "优化圆角的y离屏渲染",
+                      class: OffScreenViewController.self)]
     
     // MARK: - View Life Cycle
     

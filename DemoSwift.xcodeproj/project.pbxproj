@@ -65,6 +65,9 @@
 		FF7A648220F88DBE002AFBC0 /* StaticFramework.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FF7A647F20F88DBE002AFBC0 /* StaticFramework.bundle */; };
 		FF7A648320F88DBE002AFBC0 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7A648020F88DBE002AFBC0 /* UIImage+Extension.swift */; };
 		FF7A648420F88DBE002AFBC0 /* StaticFrameworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7A648120F88DBE002AFBC0 /* StaticFrameworkView.swift */; };
+		FF824772217D6C7D00B2F334 /* OffScreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF824771217D6C7D00B2F334 /* OffScreenTableViewController.swift */; };
+		FF824774217D6C9B00B2F334 /* OffScreenTableViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF824773217D6C9B00B2F334 /* OffScreenTableViewControllerCell.swift */; };
+		FF82E7B921798A9E00646650 /* OffScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82E7B821798A9E00646650 /* OffScreenViewController.swift */; };
 		FFA7004620AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7004520AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift */; };
 		FFA7004A20AC27C60073DBF5 /* PeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7004920AC27C60073DBF5 /* PeekViewController.swift */; };
 		FFD056AB205912F300A6F5AE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD056AA205912F300A6F5AE /* UIColor+Extension.swift */; };
@@ -184,6 +187,9 @@
 		FF7A647F20F88DBE002AFBC0 /* StaticFramework.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StaticFramework.bundle; sourceTree = "<group>"; };
 		FF7A648020F88DBE002AFBC0 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		FF7A648120F88DBE002AFBC0 /* StaticFrameworkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticFrameworkView.swift; sourceTree = "<group>"; };
+		FF824771217D6C7D00B2F334 /* OffScreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffScreenTableViewController.swift; sourceTree = "<group>"; };
+		FF824773217D6C9B00B2F334 /* OffScreenTableViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffScreenTableViewControllerCell.swift; sourceTree = "<group>"; };
+		FF82E7B821798A9E00646650 /* OffScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffScreenViewController.swift; sourceTree = "<group>"; };
 		FFA7004520AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeTouchPreviewActionDelegate.swift; sourceTree = "<group>"; };
 		FFA7004920AC27C60073DBF5 /* PeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekViewController.swift; sourceTree = "<group>"; };
 		FFD056AA205912F300A6F5AE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -405,6 +411,16 @@
 			path = StaticFramework;
 			sourceTree = "<group>";
 		};
+		FF82E7B721798A3F00646650 /* 离屏渲染 */ = {
+			isa = PBXGroup;
+			children = (
+				FF82E7B821798A9E00646650 /* OffScreenViewController.swift */,
+				FF824771217D6C7D00B2F334 /* OffScreenTableViewController.swift */,
+				FF824773217D6C9B00B2F334 /* OffScreenTableViewControllerCell.swift */,
+			);
+			path = "离屏渲染";
+			sourceTree = "<group>";
+		};
 		FFA7004720AC276D0073DBF5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +440,7 @@
 		FFD056A82059128C00A6F5AE /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FF82E7B721798A3F00646650 /* 离屏渲染 */,
 				FF395D5E2144C50C002D3C28 /* BigImage */,
 				FF59B15B2121615D00BD693E /* CTCharts */,
 				FF7A645320F88BE4002AFBC0 /* DynamicAndStaticFramework */,
@@ -739,6 +756,7 @@
 				FF6AA7E4214657B100BA1F51 /* CoreImageBigImageViewController.swift in Sources */,
 				FF05DE2A2148FDCB00E3D5EA /* ImageIOBigImageViewController.swift in Sources */,
 				FF32FA98205F9784006889A3 /* PayTheBillHeaderView.swift in Sources */,
+				FF82E7B921798A9E00646650 /* OffScreenViewController.swift in Sources */,
 				FF1858782058CAC400ADC0BC /* AppDelegate.swift in Sources */,
 				FF59B15D2121618D00BD693E /* CTChartView.swift in Sources */,
 				FF05DE242148C60F00E3D5EA /* OriginImageViewController.swift in Sources */,
@@ -748,6 +766,7 @@
 				FF32FA8D205F58BC006889A3 /* PayTheBillViewController.swift in Sources */,
 				FFA7004A20AC27C60073DBF5 /* PeekViewController.swift in Sources */,
 				FF1A833720A96F19001A1DF1 /* MarqueeViewController.swift in Sources */,
+				FF824772217D6C7D00B2F334 /* OffScreenTableViewController.swift in Sources */,
 				FF32FA96205F90C9006889A3 /* UIImage+Extension.swift in Sources */,
 				FFE4A23720BB9B6300939E00 /* DatePickerView.swift in Sources */,
 				FF395D622144C569002D3C28 /* BigImageTableViewController.swift in Sources */,
@@ -766,6 +785,7 @@
 				FFD056AE2059134200A6F5AE /* UIDevice+Extension.swift in Sources */,
 				FF32FA94205F8A91006889A3 /* UIKit+Extension.swift in Sources */,
 				FFD056B72059238A00A6F5AE /* ClockOffViewController.swift in Sources */,
+				FF824774217D6C9B00B2F334 /* OffScreenTableViewControllerCell.swift in Sources */,
 				FFD056B62059238A00A6F5AE /* ClockOffButton.swift in Sources */,
 				FFD056AB205912F300A6F5AE /* UIColor+Extension.swift in Sources */,
 			);
@@ -956,7 +976,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QSH988Q3LB;
 				INFOPLIST_FILE = DemoSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yaoxp.DemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -977,7 +997,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QSH988Q3LB;
 				INFOPLIST_FILE = DemoSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yaoxp.DemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -998,7 +1018,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = QSH988Q3LB;
 				INFOPLIST_FILE = DemoSwiftTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yaoxp.DemoSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1020,7 +1040,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = QSH988Q3LB;
 				INFOPLIST_FILE = DemoSwiftTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yaoxp.DemoSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1049,7 +1069,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DynamicFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdd.DynamicFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1079,7 +1099,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DynamicFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdd.DynamicFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1108,7 +1128,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = StaticFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdd.StaticFramework;
@@ -1139,7 +1159,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = StaticFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdd.StaticFramework;
