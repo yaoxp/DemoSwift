@@ -67,6 +67,10 @@
 		FF7A648420F88DBE002AFBC0 /* StaticFrameworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7A648120F88DBE002AFBC0 /* StaticFrameworkView.swift */; };
 		FF824772217D6C7D00B2F334 /* OffScreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF824771217D6C7D00B2F334 /* OffScreenTableViewController.swift */; };
 		FF824774217D6C9B00B2F334 /* OffScreenTableViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF824773217D6C9B00B2F334 /* OffScreenTableViewControllerCell.swift */; };
+		FF824779217ECA2400B2F334 /* ResponderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF824778217ECA2400B2F334 /* ResponderViewController.swift */; };
+		FF82477D217F009000B2F334 /* ResponderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82477C217F009000B2F334 /* ResponderDetailViewController.swift */; };
+		FF824781217F099600B2F334 /* BigTouchLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF824780217F099600B2F334 /* BigTouchLabel.swift */; };
+		FF824783217F09AE00B2F334 /* IgnoreTouchLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF824782217F09AE00B2F334 /* IgnoreTouchLabel.swift */; };
 		FF82E7B921798A9E00646650 /* OffScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82E7B821798A9E00646650 /* OffScreenViewController.swift */; };
 		FFA7004620AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7004520AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift */; };
 		FFA7004A20AC27C60073DBF5 /* PeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7004920AC27C60073DBF5 /* PeekViewController.swift */; };
@@ -189,6 +193,10 @@
 		FF7A648120F88DBE002AFBC0 /* StaticFrameworkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticFrameworkView.swift; sourceTree = "<group>"; };
 		FF824771217D6C7D00B2F334 /* OffScreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffScreenTableViewController.swift; sourceTree = "<group>"; };
 		FF824773217D6C9B00B2F334 /* OffScreenTableViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffScreenTableViewControllerCell.swift; sourceTree = "<group>"; };
+		FF824778217ECA2400B2F334 /* ResponderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponderViewController.swift; sourceTree = "<group>"; };
+		FF82477C217F009000B2F334 /* ResponderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponderDetailViewController.swift; sourceTree = "<group>"; };
+		FF824780217F099600B2F334 /* BigTouchLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigTouchLabel.swift; sourceTree = "<group>"; };
+		FF824782217F09AE00B2F334 /* IgnoreTouchLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreTouchLabel.swift; sourceTree = "<group>"; };
 		FF82E7B821798A9E00646650 /* OffScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffScreenViewController.swift; sourceTree = "<group>"; };
 		FFA7004520AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeTouchPreviewActionDelegate.swift; sourceTree = "<group>"; };
 		FFA7004920AC27C60073DBF5 /* PeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekViewController.swift; sourceTree = "<group>"; };
@@ -411,6 +419,17 @@
 			path = StaticFramework;
 			sourceTree = "<group>";
 		};
+		FF824775217EC99900B2F334 /* 响应链及事件传递 */ = {
+			isa = PBXGroup;
+			children = (
+				FF824778217ECA2400B2F334 /* ResponderViewController.swift */,
+				FF82477C217F009000B2F334 /* ResponderDetailViewController.swift */,
+				FF824780217F099600B2F334 /* BigTouchLabel.swift */,
+				FF824782217F09AE00B2F334 /* IgnoreTouchLabel.swift */,
+			);
+			path = "响应链及事件传递";
+			sourceTree = "<group>";
+		};
 		FF82E7B721798A3F00646650 /* 离屏渲染 */ = {
 			isa = PBXGroup;
 			children = (
@@ -440,6 +459,7 @@
 		FFD056A82059128C00A6F5AE /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FF824775217EC99900B2F334 /* 响应链及事件传递 */,
 				FF82E7B721798A3F00646650 /* 离屏渲染 */,
 				FF395D5E2144C50C002D3C28 /* BigImage */,
 				FF59B15B2121615D00BD693E /* CTCharts */,
@@ -754,6 +774,7 @@
 				FF1858982058D4E600ADC0BC /* MainTableViewController.swift in Sources */,
 				FF32FA9C205FB1D0006889A3 /* DispatchQueue+Extension.swift in Sources */,
 				FF6AA7E4214657B100BA1F51 /* CoreImageBigImageViewController.swift in Sources */,
+				FF824781217F099600B2F334 /* BigTouchLabel.swift in Sources */,
 				FF05DE2A2148FDCB00E3D5EA /* ImageIOBigImageViewController.swift in Sources */,
 				FF32FA98205F9784006889A3 /* PayTheBillHeaderView.swift in Sources */,
 				FF82E7B921798A9E00646650 /* OffScreenViewController.swift in Sources */,
@@ -770,14 +791,17 @@
 				FF32FA96205F90C9006889A3 /* UIImage+Extension.swift in Sources */,
 				FFE4A23720BB9B6300939E00 /* DatePickerView.swift in Sources */,
 				FF395D622144C569002D3C28 /* BigImageTableViewController.swift in Sources */,
+				FF824783217F09AE00B2F334 /* IgnoreTouchLabel.swift in Sources */,
 				FF36B58620BD011000ABF92C /* DatePickerDemoViewController.swift in Sources */,
 				FF1A833920A96F40001A1DF1 /* MarqueeView.swift in Sources */,
 				FF044C1020C9112600EDE2B6 /* Date+Extension.swift in Sources */,
 				FF7A645520F88C1F002AFBC0 /* DynamicAndStaticViewController.swift in Sources */,
 				FF18589E2059102300ADC0BC /* Demo.swift in Sources */,
 				FF59B162212169E900BD693E /* CTChartDemoViewController.swift in Sources */,
+				FF82477D217F009000B2F334 /* ResponderDetailViewController.swift in Sources */,
 				FFD056B2205913CA00A6F5AE /* AnimationViewController.swift in Sources */,
 				FF32FA90205F68E6006889A3 /* PayTheBillTitleView.swift in Sources */,
+				FF824779217ECA2400B2F334 /* ResponderViewController.swift in Sources */,
 				FF1B312E212FEEF70030A5D0 /* String+Extension.swift in Sources */,
 				FFA7004620AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift in Sources */,
 				FF707215212EABF70024C22C /* CTScrollChartDemoViewController.swift in Sources */,

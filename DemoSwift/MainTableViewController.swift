@@ -36,7 +36,10 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
                       class: BigImageTableViewController.self),
                  Demo(title: "离屏渲染",
                       subtitle: "优化圆角的y离屏渲染",
-                      class: OffScreenViewController.self)]
+                      class: OffScreenViewController.self),
+                 Demo(title: "UI事件传递和响应链",
+                      subtitle: "",
+                      class: ResponderViewController.self)]
     
     // MARK: - View Life Cycle
     
