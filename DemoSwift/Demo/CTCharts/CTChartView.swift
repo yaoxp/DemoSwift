@@ -68,8 +68,12 @@ class CTChartView: UIView, NibLoadable {
     var xAxisData = [String]()
     /// 表格中线条的颜色
     var tableShapLayerLineColor = UIColor.lightGray
-    /// 表格中文字的颜色
+    /// X轴表格中文字的颜色
     var textLayersTextColor = UIColor.rgb(78, 78, 78, 1.0)
+    /// 左边y轴刻度颜色
+    var yLeftAxisTextColor = UIColor.rgb(78, 78, 78, 1.0)
+    /// 右边y轴刻度颜色
+    var yRightAxisTextColor = UIColor.rgb(78, 78, 78, 1.0)
     /// 点击表格出现的十字线和信息label的背景色
     var infoLableBackgroundColor = UIColor.rgb(233, 73, 28, 1.0)
     /// 点击表格出现的信息label的前景色
@@ -227,7 +231,7 @@ extension CTChartView {
                     max = first
                 }
                 yLeftMax = (yLeftMax < max) ? max : yLeftMax
-                
+                yLeftAxisTextColor = value.lineColor
             case .right:
                 yRightAxisCurveCount += 1
                 isShowYRightAxis = true
@@ -241,7 +245,7 @@ extension CTChartView {
                     max = first
                 }
                 yRightMax = (yRightMax < max) ? max : yRightMax
-                
+                yRightAxisTextColor = value.lineColor
             case .none:
                 if let max = value.yAxisMax {
                     yNonoMax = max
@@ -259,6 +263,10 @@ extension CTChartView {
         yLeftMax = yLeftMax * 1.2
         yRightMax = yRightMax * 1.2
         yAxisNoneMax = (yNonoMax * 1.2 > 100) ? 100 : yNonoMax * 1.2
+        
+        // 如果左右刻度最大值是0，改成100
+        yLeftMax = yLeftMax == 0 ? 100 : yLeftMax
+        yRightMax = yRightMax == 0 ? 100 : yRightMax
         
         var index = 0
         while index < horizontalLineNumber {
@@ -278,6 +286,8 @@ extension CTChartView {
         yRightAxisScaleData = [Double]()
         isShowYLeftAxis = false
         isShowYRightAxis = false
+        yLeftAxisCurveCount = 0
+        yRightAxisCurveCount = 0
         yAxisNoneMax = 0
         for layer in tableShapLayer {
             layer.removeFromSuperlayer()
@@ -350,16 +360,18 @@ extension CTChartView {
             let endPoint = CGPoint(x: chartView.frame.width - chartEdgeInset.right, y: pointY)
             drawTableShapLayer(point: startPoint, point: endPoint, isDottedLine: index != 0)
             
-            if isShowYLeftAxis {
-                // 给左边y轴加 text
-                addYLeftAxisLabel(point: startPoint, text: String(Int(yLeftAxisScaleData[index])))
+            if index == 0 || index == horizontalLineNumber - 1 {
+                if isShowYLeftAxis {
+                    // 给左边y轴加 text
+                    addYLeftAxisLabel(point: startPoint, text: String(Int(yLeftAxisScaleData[index])))
+                }
+                
+                if isShowYRightAxis {
+                    // 给右边y轴加 text
+                    addYRightAxisLabel(point: endPoint, text: String(Int(yRightAxisScaleData[index])))
+                }
             }
-            
-            if isShowYRightAxis {
-                // 给右边y轴加 text
-                addYRightAxisLabel(point: endPoint, text: String(Int(yRightAxisScaleData[index])))
-            }
-            
+
             index += 1
         }
         
@@ -417,7 +429,7 @@ extension CTChartView {
     private func addYLeftAxisLabel(point: CGPoint, text: String) {
         let width = (chartView.frame.width - chartEdgeInset.left - chartEdgeInset.right) / CGFloat(verticalLineNumber - 1)
         let rect = CGRect(x: point.x + 1, y: point.y - 15, width: width - 2, height: 14)
-        let textLayer = drawTextLayer(text: text, rect: rect, alignmentModel: kCAAlignmentLeft)
+        let textLayer = drawTextLayer(text: text, textColor: yLeftAxisTextColor, rect: rect, alignmentModel: kCAAlignmentLeft)
         
         chartView.layer.addSublayer(textLayer)
         yLeftAxisScaleLayer.append(textLayer)
@@ -428,7 +440,7 @@ extension CTChartView {
     private func addYRightAxisLabel(point: CGPoint, text: String) {
         let width = (chartView.frame.width - chartEdgeInset.left - chartEdgeInset.right) / CGFloat(verticalLineNumber - 1)
         let rect = CGRect(x: point.x - width, y: point.y - 15, width: width - 1, height: 14)
-        let textLayer = drawTextLayer(text: text, rect: rect, alignmentModel: kCAAlignmentRight)
+        let textLayer = drawTextLayer(text: text, textColor: yRightAxisTextColor, rect: rect, alignmentModel: kCAAlignmentRight)
         chartView.layer.addSublayer(textLayer)
         yRightAxisScaleLayer.append(textLayer)
     }
@@ -482,11 +494,11 @@ extension CTChartView {
         
     }
     
-    private func drawTextLayer(text: String, rect: CGRect, alignmentModel: String) -> CATextLayer {
+    private func drawTextLayer(text: String, textColor: UIColor = UIColor.rgb(78, 78, 78, 1.0), rect: CGRect, alignmentModel: String) -> CATextLayer {
         let textLayer = CATextLayer()
         textLayer.string = text
         textLayer.backgroundColor = UIColor.clear.cgColor
-        textLayer.foregroundColor = textLayersTextColor.cgColor
+        textLayer.foregroundColor = textColor.cgColor
         textLayer.font = CGFont(textFont.fontName as CFString)
         textLayer.fontSize = textFont.pointSize
         textLayer.contentsScale = UIScreen.main.scale
@@ -523,22 +535,30 @@ extension CTChartView {
         guard let points = allPointsOfLine(item: item) else { return nil}
         
         let bezierPath = UIBezierPath()
-        var prePoint = points[0]
-        bezierPath.move(to: prePoint)
         
-        for (index, point) in points.enumerated() {
-            if index == 0 {
-//                bezierPath.addArc(withCenter: point, radius: 2, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
-                continue
+        /// 如果只有一个点，就显示一条直线
+        if points.count == 1 {
+            let startPoint = CGPoint(x: chartEdgeInset.left, y: points[0].y)
+            let endPoint = CGPoint(x: frame.width - chartEdgeInset.right, y: points[0].y)
+            bezierPath.move(to: startPoint)
+            bezierPath.addLine(to: endPoint)
+            return (points, bezierPath)
+        } else {
+            var prePoint = points[0]
+            bezierPath.move(to: prePoint)
+            
+            for (index, point) in points.enumerated() {
+                if index == 0 {
+                    continue
+                }
+                let midPoint = midPointBetween(point1: prePoint, point2: point)
+                bezierPath.addQuadCurve(to: midPoint, controlPoint: controlPointBetween(point1: midPoint, point2: prePoint))
+                bezierPath.addQuadCurve(to: point, controlPoint: controlPointBetween(point1: midPoint, point2: point))
+                prePoint = point
             }
-            let midPoint = midPointBetween(point1: prePoint, point2: point)
-            bezierPath.addQuadCurve(to: midPoint, controlPoint: controlPointBetween(point1: midPoint, point2: prePoint))
-            bezierPath.addQuadCurve(to: point, controlPoint: controlPointBetween(point1: midPoint, point2: point))
-//            bezierPath.addArc(withCenter: point, radius: 2, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
-            prePoint = point
+            
+            return (points, bezierPath)
         }
-        
-        return (points, bezierPath)
     }
     
     /// 计算一条线上所有的点
@@ -683,7 +703,7 @@ extension CTChartView {
             button.contentHorizontalAlignment = .left
             button.tag = index
             button.isSelected = true
-            button.backgroundColor = UIColor.rgb(244, 244, 244, 1.0)
+            button.backgroundColor = UIColor.hexRGB(0xBBBBBB, 0.15)// UIColor.rgb(244, 244, 244, 1.0)
             button.setTitle(item.name, for: .normal)
             button.setTitleColor(titleColor, for: .normal)
             button.setTitleColor(selectedTitleColor, for: .selected)
@@ -864,7 +884,7 @@ extension CTChartView {
         var offsetY = [Double]()
         for indexCurver in Curvers {
             let points = allLinesPoints[indexCurver]
-            guard points.count > indexCurver else { return nil}
+//            guard points.count > indexCurver else { return nil}
             offsetY.append(Double(fabs(point.y - points[index].y)))
         }
         
@@ -978,7 +998,13 @@ extension CTChartView {
             guard data.count > dataIndex else { continue }
             let item = data[dataIndex]
             guard item.yAxisData.count > index else { continue }
-            var str = item.name + ": " + String(Int(item.yAxisData[index]))
+            var str = ""
+            if item.name == "影响占比"{
+                str = item.name + ": " + String(Int(item.yAxisData[index])) + "%"
+            }else{
+                str = item.name + ": " + String(Int(item.yAxisData[index]))
+            }
+            
             if item.unit != nil {
                 str = str + item.unit!
             }

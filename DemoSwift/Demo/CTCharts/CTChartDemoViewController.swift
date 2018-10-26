@@ -59,6 +59,7 @@ class CTChartDemoViewController: UIViewController {
     func drawCurveChart() {
         let chartView = CTChartView.loadViewFromNib()
         cellView.addSubview(chartView)
+//        chartView.xAxisData = ["0:00"]
         chartView.xAxisData = ["0:00", "1:00", "2.00", "3:00", "4:00", "5:00", "6:00", "7:00", "8.00", "9:00", "10:00", "11:00"]
         chartView.snp.makeConstraints {
             $0.edges.equalToSuperview()
@@ -67,12 +68,14 @@ class CTChartDemoViewController: UIViewController {
         var data1 = CTChartViewData()
         data1.name = "男性"
         data1.yAxis = .left
+//        data1.yAxisData = [723]
         data1.yAxisData = [723, 821, 19, 456, 765, 423, 666, 234, 567, 124, 890, 711]
         data1.lineColor = color1
         
         var data2 = CTChartViewData()
         data2.name = "女性"
         data2.yAxis = .right
+//        data2.yAxisData = [234]
         data2.yAxisData = [234, 421, 159, 756, 1000, 523, 266, 098, 456, 528, 109, 199]
         data2.lineColor = color2
         
@@ -81,6 +84,7 @@ class CTChartDemoViewController: UIViewController {
         data3.yAxis = .none
         data3.unit = "%"
         data3.yAxisMax = 100
+//        data3.yAxisData = [82]
         data3.yAxisData = [82, 31.4, 100, 45.1, 36.8, -42, 66, 45.2, 68.4, 90, 90.3, 29.8]
         data3.lineColor = color3
         
