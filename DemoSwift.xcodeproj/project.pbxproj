@@ -47,6 +47,7 @@
 		FF59B15F2121636A00BD693E /* CTChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF59B15E2121636A00BD693E /* CTChartView.xib */; };
 		FF59B162212169E900BD693E /* CTChartDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF59B160212169E900BD693E /* CTChartDemoViewController.swift */; };
 		FF59B163212169E900BD693E /* CTChartDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF59B161212169E900BD693E /* CTChartDemoViewController.xib */; };
+		FF64280021AE8D82003DF725 /* NetworkDependDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6427FF21AE8D82003DF725 /* NetworkDependDemoVC.swift */; };
 		FF6AA7E4214657B100BA1F51 /* CoreImageBigImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6AA7E2214657B100BA1F51 /* CoreImageBigImageViewController.swift */; };
 		FF6AA7E5214657B100BA1F51 /* CoreImageBigImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF6AA7E3214657B100BA1F51 /* CoreImageBigImageViewController.xib */; };
 		FF707215212EABF70024C22C /* CTScrollChartDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF707213212EABF70024C22C /* CTScrollChartDemoViewController.swift */; };
@@ -174,6 +175,7 @@
 		FF59B15E2121636A00BD693E /* CTChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTChartView.xib; sourceTree = "<group>"; };
 		FF59B160212169E900BD693E /* CTChartDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTChartDemoViewController.swift; sourceTree = "<group>"; };
 		FF59B161212169E900BD693E /* CTChartDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTChartDemoViewController.xib; sourceTree = "<group>"; };
+		FF6427FF21AE8D82003DF725 /* NetworkDependDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDependDemoVC.swift; sourceTree = "<group>"; };
 		FF6AA7E2214657B100BA1F51 /* CoreImageBigImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImageBigImageViewController.swift; sourceTree = "<group>"; };
 		FF6AA7E3214657B100BA1F51 /* CoreImageBigImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoreImageBigImageViewController.xib; sourceTree = "<group>"; };
 		FF707213212EABF70024C22C /* CTScrollChartDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTScrollChartDemoViewController.swift; sourceTree = "<group>"; };
@@ -389,6 +391,14 @@
 			path = CTCharts;
 			sourceTree = "<group>";
 		};
+		FF6427FE21AE8CBD003DF725 /* 网络请求依赖 */ = {
+			isa = PBXGroup;
+			children = (
+				FF6427FF21AE8D82003DF725 /* NetworkDependDemoVC.swift */,
+			);
+			path = "网络请求依赖";
+			sourceTree = "<group>";
+		};
 		FF7A645320F88BE4002AFBC0 /* DynamicAndStaticFramework */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +471,7 @@
 		FFD056A82059128C00A6F5AE /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FF6427FE21AE8CBD003DF725 /* 网络请求依赖 */,
 				FF824775217EC99900B2F334 /* 响应链及事件传递 */,
 				FF82E7B721798A3F00646650 /* 离屏渲染 */,
 				FF395D5E2144C50C002D3C28 /* BigImage */,
@@ -619,7 +630,7 @@
 				TargetAttributes = {
 					FF1858732058CAC400ADC0BC = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					FF1858872058CAC400ADC0BC = {
 						CreatedOnToolsVersion = 9.2;
@@ -795,6 +806,7 @@
 				FF32FA96205F90C9006889A3 /* UIImage+Extension.swift in Sources */,
 				FFE4A23720BB9B6300939E00 /* DatePickerView.swift in Sources */,
 				FF395D622144C569002D3C28 /* BigImageTableViewController.swift in Sources */,
+				FF64280021AE8D82003DF725 /* NetworkDependDemoVC.swift in Sources */,
 				FF824783217F09AE00B2F334 /* IgnoreTouchLabel.swift in Sources */,
 				FF36B58620BD011000ABF92C /* DatePickerDemoViewController.swift in Sources */,
 				FF1A833920A96F40001A1DF1 /* MarqueeView.swift in Sources */,
@@ -1001,15 +1013,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QSH988Q3LB;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 7U4X6K5PDJ;
 				INFOPLIST_FILE = DemoSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yaoxp.DemoSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mdd.DemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = MDDTest;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1022,15 +1034,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QSH988Q3LB;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 7U4X6K5PDJ;
 				INFOPLIST_FILE = DemoSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yaoxp.DemoSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mdd.DemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = MDDTest;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1044,7 +1056,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = QSH988Q3LB;
+				DEVELOPMENT_TEAM = G39XBUQ8NC;
 				INFOPLIST_FILE = DemoSwiftTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1066,7 +1078,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = QSH988Q3LB;
+				DEVELOPMENT_TEAM = G39XBUQ8NC;
 				INFOPLIST_FILE = DemoSwiftTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

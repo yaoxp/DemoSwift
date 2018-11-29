@@ -39,7 +39,10 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
                       class: OffScreenViewController.self),
                  Demo(title: "UI事件传递和响应链",
                       subtitle: "",
-                      class: ResponderViewController.self)]
+                      class: ResponderViewController.self),
+                 Demo(title: "网络请求依赖",
+                      subtitle: "当一个接口的请求需要依赖于另一个网络请求的结果,怎么解决",
+                      class: NetworkDependDemovc.self)]
     
     // MARK: - View Life Cycle
     
@@ -54,6 +57,10 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(headerNotification), name: Notification.Name("animation"), object: nil)
+        
+        print(Bundle.main.bundlePath)
+        print(Bundle.main.resourcePath!)
+        print(Bundle.main.executablePath!)
     }
 
     override func didReceiveMemoryWarning() {
