@@ -155,9 +155,9 @@ class NetworkDependDemovc: UIViewController {
                 print("收到数据 \(i)")
                 count += 1
                 if count == 10 {
-                    
+                    semaphore.signal()
                 }
-                semaphore.signal()
+                
             }
         }
         
