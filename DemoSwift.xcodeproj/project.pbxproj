@@ -133,6 +133,7 @@
 		B041FB317087741D521495CA /* Pods_DemoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3244A00694BA58B5798D424 /* Pods-DemoSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSwiftTests/Pods-DemoSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E15DF14BAB5BD5307EA55039 /* Pods_DemoSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF00784921C37E0A001F367D /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FF044C0F20C9112600EDE2B6 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		FF05DE222148C60F00E3D5EA /* OriginImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginImageViewController.swift; sourceTree = "<group>"; };
 		FF05DE232148C60F00E3D5EA /* OriginImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OriginImageViewController.xib; sourceTree = "<group>"; };
@@ -320,6 +321,7 @@
 				FF18587E2058CAC400ADC0BC /* Assets.xcassets */,
 				FF1858802058CAC400ADC0BC /* LaunchScreen.storyboard */,
 				FF1858832058CAC400ADC0BC /* Info.plist */,
+				FF00784921C37E0A001F367D /* MyPlayground.playground */,
 			);
 			path = DemoSwift;
 			sourceTree = "<group>";
