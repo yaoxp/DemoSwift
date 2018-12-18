@@ -43,6 +43,7 @@
 		FF395D672144C64A002D3C28 /* UIKitBigImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF395D652144C64A002D3C28 /* UIKitBigImageViewController.xib */; };
 		FF395D6A2144CA7F002D3C28 /* CoreGraphicsBigImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF395D682144CA7F002D3C28 /* CoreGraphicsBigImageViewController.swift */; };
 		FF395D6B2144CA7F002D3C28 /* CoreGraphicsBigImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF395D692144CA7F002D3C28 /* CoreGraphicsBigImageViewController.xib */; };
+		FF58A08121C39DB80051CE8F /* LockBenchmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF58A08021C39DB80051CE8F /* LockBenchmarkViewController.swift */; };
 		FF59B15D2121618D00BD693E /* CTChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF59B15C2121618D00BD693E /* CTChartView.swift */; };
 		FF59B15F2121636A00BD693E /* CTChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF59B15E2121636A00BD693E /* CTChartView.xib */; };
 		FF59B162212169E900BD693E /* CTChartDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF59B160212169E900BD693E /* CTChartDemoViewController.swift */; };
@@ -74,6 +75,7 @@
 		FF824781217F099600B2F334 /* BigTouchLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF824780217F099600B2F334 /* BigTouchLabel.swift */; };
 		FF824783217F09AE00B2F334 /* IgnoreTouchLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF824782217F09AE00B2F334 /* IgnoreTouchLabel.swift */; };
 		FF82E7B921798A9E00646650 /* OffScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82E7B821798A9E00646650 /* OffScreenViewController.swift */; };
+		FF9E86FE21C8979000D87C69 /* OCLockBenchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9E86FD21C8979000D87C69 /* OCLockBenchmark.m */; };
 		FFA7004620AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7004520AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift */; };
 		FFA7004A20AC27C60073DBF5 /* PeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7004920AC27C60073DBF5 /* PeekViewController.swift */; };
 		FFD056AB205912F300A6F5AE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD056AA205912F300A6F5AE /* UIColor+Extension.swift */; };
@@ -172,6 +174,7 @@
 		FF395D652144C64A002D3C28 /* UIKitBigImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIKitBigImageViewController.xib; sourceTree = "<group>"; };
 		FF395D682144CA7F002D3C28 /* CoreGraphicsBigImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsBigImageViewController.swift; sourceTree = "<group>"; };
 		FF395D692144CA7F002D3C28 /* CoreGraphicsBigImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoreGraphicsBigImageViewController.xib; sourceTree = "<group>"; };
+		FF58A08021C39DB80051CE8F /* LockBenchmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockBenchmarkViewController.swift; sourceTree = "<group>"; };
 		FF59B15C2121618D00BD693E /* CTChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTChartView.swift; sourceTree = "<group>"; };
 		FF59B15E2121636A00BD693E /* CTChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTChartView.xib; sourceTree = "<group>"; };
 		FF59B160212169E900BD693E /* CTChartDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTChartDemoViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +206,9 @@
 		FF824780217F099600B2F334 /* BigTouchLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigTouchLabel.swift; sourceTree = "<group>"; };
 		FF824782217F09AE00B2F334 /* IgnoreTouchLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreTouchLabel.swift; sourceTree = "<group>"; };
 		FF82E7B821798A9E00646650 /* OffScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffScreenViewController.swift; sourceTree = "<group>"; };
+		FF9E86F821C8970600D87C69 /* DemoSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		FF9E86FC21C8979000D87C69 /* OCLockBenchmark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCLockBenchmark.h; sourceTree = "<group>"; };
+		FF9E86FD21C8979000D87C69 /* OCLockBenchmark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCLockBenchmark.m; sourceTree = "<group>"; };
 		FFA7004520AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeTouchPreviewActionDelegate.swift; sourceTree = "<group>"; };
 		FFA7004920AC27C60073DBF5 /* PeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekViewController.swift; sourceTree = "<group>"; };
 		FFD056AA205912F300A6F5AE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -378,6 +384,17 @@
 			path = PayTheBill;
 			sourceTree = "<group>";
 		};
+		FF58A07F21C39D650051CE8F /* iOS lock benchmark */ = {
+			isa = PBXGroup;
+			children = (
+				FF58A08021C39DB80051CE8F /* LockBenchmarkViewController.swift */,
+				FF9E86FC21C8979000D87C69 /* OCLockBenchmark.h */,
+				FF9E86FD21C8979000D87C69 /* OCLockBenchmark.m */,
+				FF9E86F821C8970600D87C69 /* DemoSwift-Bridging-Header.h */,
+			);
+			path = "iOS lock benchmark";
+			sourceTree = "<group>";
+		};
 		FF59B15B2121615D00BD693E /* CTCharts */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,6 +453,7 @@
 		FF824775217EC99900B2F334 /* 响应链及事件传递 */ = {
 			isa = PBXGroup;
 			children = (
+				FF82E7B721798A3F00646650 /* 离屏渲染 */,
 				FF824778217ECA2400B2F334 /* ResponderViewController.swift */,
 				FF82477C217F009000B2F334 /* ResponderDetailViewController.swift */,
 				FF824780217F099600B2F334 /* BigTouchLabel.swift */,
@@ -473,9 +491,9 @@
 		FFD056A82059128C00A6F5AE /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FF58A07F21C39D650051CE8F /* iOS lock benchmark */,
 				FF6427FE21AE8CBD003DF725 /* 网络请求依赖 */,
 				FF824775217EC99900B2F334 /* 响应链及事件传递 */,
-				FF82E7B721798A3F00646650 /* 离屏渲染 */,
 				FF395D5E2144C50C002D3C28 /* BigImage */,
 				FF59B15B2121615D00BD693E /* CTCharts */,
 				FF7A645320F88BE4002AFBC0 /* DynamicAndStaticFramework */,
@@ -632,6 +650,7 @@
 				TargetAttributes = {
 					FF1858732058CAC400ADC0BC = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Manual;
 					};
 					FF1858872058CAC400ADC0BC = {
@@ -792,6 +811,7 @@
 				FF32FA9C205FB1D0006889A3 /* DispatchQueue+Extension.swift in Sources */,
 				FF6AA7E4214657B100BA1F51 /* CoreImageBigImageViewController.swift in Sources */,
 				FF824781217F099600B2F334 /* BigTouchLabel.swift in Sources */,
+				FF58A08121C39DB80051CE8F /* LockBenchmarkViewController.swift in Sources */,
 				FF05DE2A2148FDCB00E3D5EA /* ImageIOBigImageViewController.swift in Sources */,
 				FF32FA98205F9784006889A3 /* PayTheBillHeaderView.swift in Sources */,
 				FF82E7B921798A9E00646650 /* OffScreenViewController.swift in Sources */,
@@ -825,6 +845,7 @@
 				FF707215212EABF70024C22C /* CTScrollChartDemoViewController.swift in Sources */,
 				FF395D662144C64A002D3C28 /* UIKitBigImageViewController.swift in Sources */,
 				FFD056AE2059134200A6F5AE /* UIDevice+Extension.swift in Sources */,
+				FF9E86FE21C8979000D87C69 /* OCLockBenchmark.m in Sources */,
 				FF32FA94205F8A91006889A3 /* UIKit+Extension.swift in Sources */,
 				FFD056B72059238A00A6F5AE /* ClockOffViewController.swift in Sources */,
 				FF824774217D6C9B00B2F334 /* OffScreenTableViewControllerCell.swift in Sources */,
@@ -1014,6 +1035,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7U4X6K5PDJ;
@@ -1024,6 +1046,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = MDDTest;
+				SWIFT_OBJC_BRIDGING_HEADER = "DemoSwift/Demo/iOS lock benchmark/DemoSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1035,6 +1059,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7U4X6K5PDJ;
@@ -1045,6 +1070,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = MDDTest;
+				SWIFT_OBJC_BRIDGING_HEADER = "DemoSwift/Demo/iOS lock benchmark/DemoSwift-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1058,7 +1084,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = G39XBUQ8NC;
+				DEVELOPMENT_TEAM = 7U4X6K5PDJ;
 				INFOPLIST_FILE = DemoSwiftTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1080,7 +1106,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = G39XBUQ8NC;
+				DEVELOPMENT_TEAM = 7U4X6K5PDJ;
 				INFOPLIST_FILE = DemoSwiftTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
