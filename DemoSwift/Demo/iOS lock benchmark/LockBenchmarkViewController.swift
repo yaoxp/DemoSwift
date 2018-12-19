@@ -14,9 +14,9 @@ class LockBenchmarkViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         // Do any additional setup after loading the view.
-        for i in 0...4 {
+        for index in 0...4 {
             let button = UIButton(type: .custom)
-            button.tag = Int(pow(10, Double(i + 3)))
+            button.tag = Int(pow(10, Double(index + 3)))
             button.setTitleColor(.red, for: .normal)
             button.setTitle("run (\(button.tag))", for: .normal)
             button.addTarget(self, action: #selector(tap(sender:)), for: .touchUpInside)
@@ -26,9 +26,8 @@ class LockBenchmarkViewController: UIViewController {
                 $0.centerX.equalToSuperview()
                 $0.width.equalTo(200)
                 $0.height.equalTo(50)
-                $0.top.equalToSuperview().offset(i * 60 + 160)
+                $0.top.equalToSuperview().offset(index * 60 + 160)
             }
-            
         }
     }
     

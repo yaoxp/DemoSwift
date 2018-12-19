@@ -9,20 +9,20 @@
 import UIKit
 
 enum CustomCellRenderType: Int {
-    case CornerRadiusOffScreenRender = 0
-    case CornerRadiusOnScreenRender = 1
-    case ShadowOffScreenRender = 2
-    case ShadowOnScreenRender = 3
+    case cornerRadiusOffScreenRender = 0
+    case cornerRadiusOnScreenRender = 1
+    case shadowOffScreenRender = 2
+    case shadowOnScreenRender = 3
     
     var description: String {
         switch self {
-        case .CornerRadiusOffScreenRender:
+        case .cornerRadiusOffScreenRender:
             return "圆角-离屏渲染"
-        case .CornerRadiusOnScreenRender:
+        case .cornerRadiusOnScreenRender:
             return "圆角-非离屏渲染"
-        case .ShadowOffScreenRender:
+        case .shadowOffScreenRender:
             return "阴影-离屏渲染"
-        case .ShadowOnScreenRender:
+        case .shadowOnScreenRender:
             return "阴影-非离屏渲染"
         }
     }
@@ -48,7 +48,7 @@ class OffScreenTableViewControllerCell: UITableViewCell {
     
     func fillCell(renderType: CustomCellRenderType) {
         switch renderType {
-        case .CornerRadiusOffScreenRender:
+        case .cornerRadiusOffScreenRender:
             cornerLabel1.text = "abc";
             cornerLabel1.frame = CGRect(x: 100, y: 10, width: 30, height: 20)
             cornerLabel1.textColor = UIColor.black
@@ -68,7 +68,7 @@ class OffScreenTableViewControllerCell: UITableViewCell {
             cornerLabel2.layer.borderWidth = 1
             cornerLabel2.layer.masksToBounds = true
             contentView.addSubview(cornerLabel2)
-        case .CornerRadiusOnScreenRender:
+        case .cornerRadiusOnScreenRender:
             cornerLabel1.text = "abc";
             cornerLabel1.frame = CGRect(x: 100, y: 10, width: 30, height: 20)
             cornerLabel1.textColor = UIColor.black
@@ -86,7 +86,7 @@ class OffScreenTableViewControllerCell: UITableViewCell {
             cornerLabel2.layer.borderColor = UIColor.green.cgColor
             cornerLabel2.layer.borderWidth = 1
             contentView.addSubview(cornerLabel2)
-        case .ShadowOffScreenRender:
+        case .shadowOffScreenRender:
             shadowView1.frame = CGRect(x: 100, y: 10, width: 30, height: 20)
             shadowView1.layer.backgroundColor = UIColor.green.cgColor
             shadowView1.layer.shadowColor = UIColor.black.cgColor
@@ -102,7 +102,7 @@ class OffScreenTableViewControllerCell: UITableViewCell {
             shadowView2.layer.shadowRadius = 5
             shadowView2.layer.shadowOffset = CGSize(width: 5, height: 5)
             contentView.addSubview(shadowView2)
-        case .ShadowOnScreenRender:
+        case .shadowOnScreenRender:
             shadowView1.frame = CGRect(x: 100, y: 10, width: 30, height: 20)
             shadowView1.layer.backgroundColor = UIColor.green.cgColor
             shadowView1.layer.shadowColor = UIColor.black.cgColor

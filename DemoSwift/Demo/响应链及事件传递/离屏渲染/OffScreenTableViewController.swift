@@ -12,7 +12,7 @@ class OffScreenTableViewController: UIViewController {
 
     let tableView = UITableView(frame: CGRect(origin: .zero, size: UIScreen.main.bounds.size))
     let cellID = "tableviewcell"
-    var cellType: CustomCellRenderType = .CornerRadiusOffScreenRender {
+    var cellType: CustomCellRenderType = .cornerRadiusOffScreenRender {
         didSet {
             title = cellType.description
         }
