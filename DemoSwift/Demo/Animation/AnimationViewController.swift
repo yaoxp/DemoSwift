@@ -94,7 +94,7 @@ class AnimationViewController: PeekViewController {
         // 线终点式样
 //        shapeLayer.lineCap = kCALineCapSquare
 //        shapeLayer.lineCap = kCALineCapButt
-        shapeLayer.lineCap = kCALineCapRound
+        shapeLayer.lineCap = CAShapeLayerLineCap.round
         
         // 线的颜色
         shapeLayer.strokeColor = UIColor.orange.cgColor
@@ -150,7 +150,7 @@ class AnimationViewController: PeekViewController {
         // 线拐点式样
 //        shapeLayer.lineJoin = kCALineJoinBevel
 //        shapeLayer.lineJoin = kCALineJoinMiter
-        shapeLayer.lineJoin = kCALineJoinRound
+        shapeLayer.lineJoin = CAShapeLayerLineJoin.round
         
         // 线的路径
         shapeLayer.path = linePath.cgPath
@@ -571,8 +571,8 @@ class AnimationViewController: PeekViewController {
         leftLineShape.lineWidth = 18
         leftLineShape.strokeColor = UIColor.hexRGB(0x46A1FB, 1.0).cgColor
         leftLineShape.fillColor = nil
-        leftLineShape.lineCap = kCALineCapRound
-        leftLineShape.lineJoin = kCALineJoinRound
+        leftLineShape.lineCap = CAShapeLayerLineCap.round
+        leftLineShape.lineJoin = CAShapeLayerLineJoin.round
         
         // 右边竖线
         let rightLineEndPoint = CGPoint.init(x: 130, y: 140)
@@ -585,8 +585,8 @@ class AnimationViewController: PeekViewController {
         rightLineShape.lineWidth = 18
         rightLineShape.strokeColor = UIColor.hexRGB(0x46A1FB, 1.0).cgColor
         rightLineShape.fillColor = nil
-        rightLineShape.lineCap = kCALineCapRound
-        rightLineShape.lineJoin = kCALineJoinRound
+        rightLineShape.lineCap = CAShapeLayerLineCap.round
+        rightLineShape.lineJoin = CAShapeLayerLineJoin.round
         
         
         // 圆弧的圆点和半径
@@ -602,8 +602,8 @@ class AnimationViewController: PeekViewController {
         undersideCircleShape.fillColor = nil
         undersideCircleShape.strokeColor = UIColor.hexRGB(0x5BBCF9, 1.0).cgColor
         undersideCircleShape.lineWidth = 18
-        undersideCircleShape.lineCap = kCALineCapRound
-        undersideCircleShape.lineJoin = kCALineJoinRound
+        undersideCircleShape.lineCap = CAShapeLayerLineCap.round
+        undersideCircleShape.lineJoin = CAShapeLayerLineJoin.round
         undersideCircleShape.strokeEnd = 0
         
         // 上边的圆弧
@@ -616,8 +616,8 @@ class AnimationViewController: PeekViewController {
         aboveCircleShape.fillColor = nil
         aboveCircleShape.strokeColor = UIColor.hexRGB(0x5BBCF9, 1.0).cgColor
         aboveCircleShape.lineWidth = 18
-        aboveCircleShape.lineCap = kCALineCapRound
-        aboveCircleShape.lineJoin = kCALineJoinRound
+        aboveCircleShape.lineCap = CAShapeLayerLineCap.round
+        aboveCircleShape.lineJoin = CAShapeLayerLineJoin.round
         aboveCircleShape.strokeEnd = 0
 
         // 红色三角形
@@ -634,8 +634,8 @@ class AnimationViewController: PeekViewController {
         triangleLeftShape.fillColor = nil
         triangleLeftShape.strokeColor = UIColor.hexRGB(0xE74F4C, 1.0).cgColor
         triangleLeftShape.lineWidth = 18
-        triangleLeftShape.lineCap = kCALineCapRound
-        triangleLeftShape.lineJoin = kCALineCapRound
+        triangleLeftShape.lineCap = CAShapeLayerLineCap.round
+        triangleLeftShape.lineJoin = CAShapeLayerLineJoin.round
         triangleLeftShape.opacity = 0
         baseLayer.addSublayer(triangleLeftShape)
         
@@ -648,8 +648,8 @@ class AnimationViewController: PeekViewController {
         triangleRightShape.fillColor = nil
         triangleRightShape.strokeColor = UIColor.hexRGB(0xE74F4C, 1.0).cgColor
         triangleRightShape.lineWidth = 18
-        triangleRightShape.lineCap = kCALineCapRound
-        triangleRightShape.lineJoin = kCALineCapRound
+        triangleRightShape.lineCap = CAShapeLayerLineCap.round
+        triangleRightShape.lineJoin = CAShapeLayerLineJoin.round
         triangleRightShape.opacity = 0
         baseLayer.addSublayer(triangleRightShape)
         
@@ -753,7 +753,7 @@ extension AnimationViewController {
         animation.toValue = toValue
         
         //这两个属性设定保证在动画执行之后不自动还原
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         animation.isRemovedOnCompletion = false
         
         layer.add(animation, forKey: nil)
@@ -765,7 +765,7 @@ extension AnimationViewController {
         animation.fromValue = frome
         animation.toValue = to
         
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         animation.isRemovedOnCompletion = false
         animation.setValue("animation", forKey: "animationName")
         
@@ -784,7 +784,7 @@ extension AnimationViewController {
         roateAnimation.fromValue = start
         roateAnimation.toValue = end
         roateAnimation.duration = CFTimeInterval.init(duration)
-        roateAnimation.fillMode = kCAFillModeForwards;
+        roateAnimation.fillMode = CAMediaTimingFillMode.forwards;
         roateAnimation.isRemovedOnCompletion = false;
         roateAnimation.setValue("roateAnimation", forKey: "animationName")
         layer.add(roateAnimation, forKey: nil)

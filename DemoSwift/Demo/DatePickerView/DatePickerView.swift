@@ -348,27 +348,27 @@ extension DatePickerView {
             return
         }
         
-        if let yearIndex = componentsArray[0][yearKey]?.index(of: date.year) {
+        if let yearIndex = componentsArray[0][yearKey]?.firstIndex(of: date.year) {
             pickerView.selectRow(yearIndex, inComponent: 0, animated: true)
         }
         
-        if let monthIndex = componentsArray[1][monthKey]?.index(of: date.month) {
+        if let monthIndex = componentsArray[1][monthKey]?.firstIndex(of: date.month) {
             pickerView.selectRow(monthIndex, inComponent: 1, animated: true)
         }
         
-        if let dayIndex = componentsArray[2][dayKey]?.index(of: date.day) {
+        if let dayIndex = componentsArray[2][dayKey]?.firstIndex(of: date.day) {
             pickerView.selectRow(dayIndex, inComponent: 2, animated: true)
         }
         
-        if let hourIndex = componentsArray[3][hourKey]?.index(of: date.hour) {
+        if let hourIndex = componentsArray[3][hourKey]?.firstIndex(of: date.hour) {
             pickerView.selectRow(hourIndex, inComponent: 3, animated: true)
         }
         
-        if let minuteIndex = componentsArray[4][minuteKey]?.index(of: date.minute) {
+        if let minuteIndex = componentsArray[4][minuteKey]?.firstIndex(of: date.minute) {
             pickerView.selectRow(minuteIndex, inComponent: 4, animated: true)
         }
         
-        if let secondIndex = componentsArray[5][secondKey]?.index(of: date.second) {
+        if let secondIndex = componentsArray[5][secondKey]?.firstIndex(of: date.second) {
             pickerView.selectRow(secondIndex, inComponent: 5, animated: true)
         }
     }
@@ -379,15 +379,15 @@ extension DatePickerView {
             return
         }
         
-        if let yearIndex = componentsArray[0][yearKey]?.index(of: date.year) {
+        if let yearIndex = componentsArray[0][yearKey]?.firstIndex(of: date.year) {
             pickerView.selectRow(yearIndex, inComponent: 0, animated: true)
         }
         
-        if let monthIndex = componentsArray[1][monthKey]?.index(of: date.month) {
+        if let monthIndex = componentsArray[1][monthKey]?.firstIndex(of: date.month) {
             pickerView.selectRow(monthIndex, inComponent: 1, animated: true)
         }
         
-        if let dayIndex = componentsArray[2][dayKey]?.index(of: date.day) {
+        if let dayIndex = componentsArray[2][dayKey]?.firstIndex(of: date.day) {
             pickerView.selectRow(dayIndex, inComponent: 2, animated: true)
         }
     }
@@ -398,15 +398,15 @@ extension DatePickerView {
             return
         }
         
-        if let hourIndex = componentsArray[0][hourKey]?.index(of: date.hour) {
+        if let hourIndex = componentsArray[0][hourKey]?.firstIndex(of: date.hour) {
             pickerView.selectRow(hourIndex, inComponent: 0, animated: true)
         }
         
-        if let minuteIndex = componentsArray[1][minuteKey]?.index(of: date.minute) {
+        if let minuteIndex = componentsArray[1][minuteKey]?.firstIndex(of: date.minute) {
             pickerView.selectRow(minuteIndex, inComponent: 1, animated: true)
         }
         
-        if let secondIndex = componentsArray[2][secondKey]?.index(of: date.second) {
+        if let secondIndex = componentsArray[2][secondKey]?.firstIndex(of: date.second) {
             pickerView.selectRow(secondIndex, inComponent: 2, animated: true)
         }
     }
@@ -417,23 +417,23 @@ extension DatePickerView {
             return
         }
         
-        if let yearIndex = componentsArray[0][yearKey]?.index(of: date.year) {
+        if let yearIndex = componentsArray[0][yearKey]?.firstIndex(of: date.year) {
             pickerView.selectRow(yearIndex, inComponent: 0, animated: true)
         }
         
-        if let monthIndex = componentsArray[1][monthKey]?.index(of: date.month) {
+        if let monthIndex = componentsArray[1][monthKey]?.firstIndex(of: date.month) {
             pickerView.selectRow(monthIndex, inComponent: 1, animated: true)
         }
         
-        if let dayIndex = componentsArray[2][dayKey]?.index(of: date.day) {
+        if let dayIndex = componentsArray[2][dayKey]?.firstIndex(of: date.day) {
             pickerView.selectRow(dayIndex, inComponent: 2, animated: true)
         }
         
-        if let hourIndex = componentsArray[3][hourKey]?.index(of: date.hour) {
+        if let hourIndex = componentsArray[3][hourKey]?.firstIndex(of: date.hour) {
             pickerView.selectRow(hourIndex, inComponent: 3, animated: true)
         }
         
-        if let minuteIndex = componentsArray[4][minuteKey]?.index(of: date.minute) {
+        if let minuteIndex = componentsArray[4][minuteKey]?.firstIndex(of: date.minute) {
             pickerView.selectRow(minuteIndex, inComponent: 4, animated: true)
         }
 

@@ -228,11 +228,11 @@ extension CTScrollBarTimeChartView {
         let leftText = data.startTime.toString(dateFormatter)
         let leftTextWidth = leftText.width(height: 14, font: UIFont.systemFont(ofSize: 12))
         let leftTextRect = CGRect(x: chartEdgeInset.left, y: frame.height - chartEdgeInset.bottom - 1, width: leftTextWidth, height: 14)
-        drawTextLayer(text: leftText, rect: leftTextRect, alignmentModel: kCAAlignmentLeft)
+        drawTextLayer(text: leftText, rect: leftTextRect, alignmentModel: convertFromCATextLayerAlignmentMode(CATextLayerAlignmentMode.left))
         let rightText = data.endTime.toString(dateFormatter)
         let rightTextWidth = rightText.width(height: 14, font: UIFont.systemFont(ofSize: 12))
         let rightTextRect = CGRect(x: contentWidth - chartEdgeInset.right - rightTextWidth, y: frame.height - chartEdgeInset.bottom - 1, width: rightTextWidth, height: 14)
-        drawTextLayer(text: rightText, rect: rightTextRect, alignmentModel: kCAAlignmentRight)
+        drawTextLayer(text: rightText, rect: rightTextRect, alignmentModel: convertFromCATextLayerAlignmentMode(CATextLayerAlignmentMode.right))
         
         /// 水平线和Y刻度
         let leftX = chartEdgeInset.left
@@ -248,7 +248,7 @@ extension CTScrollBarTimeChartView {
             let textHeight: CGFloat = 14
             let textWidth = String(value).width(height: textHeight, font: UIFont.systemFont(ofSize: 12))
             let textRect = CGRect(x: leftX, y: y - textHeight - 1, width: textWidth, height: textHeight)
-            drawTextLayer(text: String(value), rect: textRect, alignmentModel: kCAAlignmentLeft)
+            drawTextLayer(text: String(value), rect: textRect, alignmentModel: convertFromCATextLayerAlignmentMode(CATextLayerAlignmentMode.left))
         }
 
     }
@@ -271,7 +271,7 @@ extension CTScrollBarTimeChartView {
         // 线的宽度
         shapeLayer.lineWidth = 0.5
         // 线终点式样
-        shapeLayer.lineCap = kCALineCapRound
+        shapeLayer.lineCap = CAShapeLayerLineCap.round
         // 线的颜色
         shapeLayer.strokeColor = UIColor.lightGray.cgColor
         // 线的路径
@@ -296,7 +296,7 @@ extension CTScrollBarTimeChartView {
         textLayer.font = CGFont(textFont.fontName as CFString)
         textLayer.fontSize = textFont.pointSize
         textLayer.contentsScale = UIScreen.main.scale
-        textLayer.alignmentMode = alignmentModel
+        textLayer.alignmentMode = convertToCATextLayerAlignmentMode(alignmentModel)
         textLayer.frame = rect
         
         layer.addSublayer(textLayer)
@@ -366,7 +366,7 @@ extension CTScrollBarTimeChartView {
             return nil
         }
         
-        if let index = intervals.index(where: { $0 == min }) {
+        if let index = intervals.firstIndex(where: { $0 == min }) {
             return index
         }
         
@@ -390,7 +390,7 @@ extension CTScrollBarTimeChartView {
         let dateFormatter = "yyyy-MM-dd HH:mm:ss"
         let stamp = item.startTime.toString(dateFormatter) + " - " + item.endTime.toString(dateFormatter)
         let stampRect = timeStampRect(tapPoint, stamp: stamp)
-        drawExtensionInfoTextLayer(text: stamp, rect: stampRect, alignmentModel: kCAAlignmentLeft)
+        drawExtensionInfoTextLayer(text: stamp, rect: stampRect, alignmentModel: convertFromCATextLayerAlignmentMode(CATextLayerAlignmentMode.left))
         drawExtensionInfo(tapPoint, info: item.extensionInfo)
     }
     
@@ -439,7 +439,7 @@ extension CTScrollBarTimeChartView {
             orignX = contentOffset.x + frame.width - chartEdgeInset.right - widthMax
         }
         let rect = CGRect(x: orignX, y: frame.height - chartEdgeInset.bottom - height, width: widthMax, height: height)
-        drawExtensionInfoTextLayer(text: str, rect: rect, alignmentModel: kCAAlignmentLeft)
+        drawExtensionInfoTextLayer(text: str, rect: rect, alignmentModel: convertFromCATextLayerAlignmentMode(CATextLayerAlignmentMode.left))
     }
     
     private func drawMaskBar(rect: CGRect, fillColor: UIColor) {
@@ -467,7 +467,7 @@ extension CTScrollBarTimeChartView {
         textLayer.font = CGFont(textFont.fontName as CFString)
         textLayer.fontSize = textFont.pointSize
         textLayer.contentsScale = UIScreen.main.scale
-        textLayer.alignmentMode = alignmentModel
+        textLayer.alignmentMode = convertToCATextLayerAlignmentMode(alignmentModel)
         textLayer.frame = rect
         
         layer.addSublayer(textLayer)
@@ -475,3 +475,13 @@ extension CTScrollBarTimeChartView {
     }
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromCATextLayerAlignmentMode(_ input: CATextLayerAlignmentMode) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToCATextLayerAlignmentMode(_ input: String) -> CATextLayerAlignmentMode {
+	return CATextLayerAlignmentMode(rawValue: input)
+}

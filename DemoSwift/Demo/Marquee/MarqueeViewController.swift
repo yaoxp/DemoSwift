@@ -120,7 +120,7 @@ class MarqueeViewController: PeekViewController {
         restartBtn.addTarget(self, action: #selector(restartAnimation), for: .touchUpInside)
         
         let stackView = UIStackView()
-        stackView.alignment = UIStackViewAlignment.fill
+        stackView.alignment = UIStackView.Alignment.fill
         stackView.axis = .horizontal
         stackView.distribution = .equalSpacing
         stackView.addArrangedSubview(startBtn)

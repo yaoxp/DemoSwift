@@ -87,7 +87,7 @@ extension MarqueeView {
             } else {
                 link.frameInterval = frameInterval
             }
-            link.add(to: RunLoop.main, forMode: .commonModes)
+            link.add(to: RunLoop.main, forMode: RunLoop.Mode.common)
         }
     }
     

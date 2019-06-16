@@ -34,7 +34,7 @@ class PayTheBillViewController: PeekViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
         
         tableViewTopOffset.constant = 0 - (UIApplication.shared.statusBarFrame.size.height + 44)
-        tableView.contentInset = UIEdgeInsetsMake(0 - (UIApplication.shared.statusBarFrame.size.height + 44), 0, -44, 0)
+        tableView.contentInset = UIEdgeInsets.init(top: 0 - (UIApplication.shared.statusBarFrame.size.height + 44), left: 0, bottom: -44, right: 0)
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "PayTheBillViewControllerCell")
         // 设置titleview

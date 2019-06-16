@@ -94,7 +94,7 @@ extension UIImage {
     }
     
     func resizeIO(_ size: CGSize) -> UIImage? {
-        guard let data = UIImagePNGRepresentation(self) else { return nil }
+        guard let data = self.pngData() else { return nil }
         
         let scale = UIScreen.main.scale
         let maxPixelSize = max(size.width, size.height) * scale
@@ -127,7 +127,7 @@ extension UIImage {
         
         guard let outputImage = filter.value(forKey: kCIOutputImageKey) as? CIImage else { return nil}
         
-        let context = CIContext(options: [kCIContextUseSoftwareRenderer: false])
+        let context = CIContext(options: convertToOptionalCIContextOptionDictionary([convertFromCIContextOption(CIContextOption.useSoftwareRenderer): false]))
         
         let resizedImage = context.createCGImage(outputImage, from: outputImage.extent).flatMap {
             UIImage(cgImage: $0)
@@ -135,4 +135,15 @@ extension UIImage {
         return resizedImage
     }
 
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalCIContextOptionDictionary(_ input: [String: Any]?) -> [CIContextOption: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (CIContextOption(rawValue: key), value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromCIContextOption(_ input: CIContextOption) -> String {
+	return input.rawValue
 }

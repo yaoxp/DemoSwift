@@ -23,11 +23,11 @@ class ClockOffButton: UIButton {
         shapeLayer.fillColor = UIColor.red.cgColor
         shapeLayer.strokeColor = UIColor.clear.cgColor
         shapeLayer.lineWidth = 8
-        shapeLayer.lineCap = kCALineCapRound
+        shapeLayer.lineCap = CAShapeLayerLineCap.round
         layer.addSublayer(shapeLayer)
 
-        addTarget(self, action: #selector(touchDown), for: UIControlEvents.touchDown)
-        addTarget(self, action: #selector(touchUp), for: UIControlEvents.touchUpInside)
+        addTarget(self, action: #selector(touchDown), for: UIControl.Event.touchDown)
+        addTarget(self, action: #selector(touchUp), for: UIControl.Event.touchUpInside)
     }
 
     
