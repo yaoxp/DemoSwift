@@ -885,7 +885,7 @@ extension CTChartView {
         for indexCurver in Curvers {
             let points = allLinesPoints[indexCurver]
 //            guard points.count > indexCurver else { return nil}
-            offsetY.append(Double(fabs(point.y - points[index].y)))
+            offsetY.append(Double(abs(point.y - points[index].y)))
         }
         
         guard let min = offsetY.min() else { return nil }
