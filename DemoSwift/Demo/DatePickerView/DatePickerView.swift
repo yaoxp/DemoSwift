@@ -71,6 +71,8 @@ class DatePickerView: UIView, NibLoadable, UIGestureRecognizerDelegate, UIPicker
                 scrollToDate = minLimitDate
                 
             }
+
+            yearLabel.text = String(scrollToDate.year)
         }
     }
     
