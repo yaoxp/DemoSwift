@@ -453,7 +453,6 @@
 		FF824775217EC99900B2F334 /* 响应链及事件传递 */ = {
 			isa = PBXGroup;
 			children = (
-				FF82E7B721798A3F00646650 /* 离屏渲染 */,
 				FF824778217ECA2400B2F334 /* ResponderViewController.swift */,
 				FF82477C217F009000B2F334 /* ResponderDetailViewController.swift */,
 				FF824780217F099600B2F334 /* BigTouchLabel.swift */,
@@ -493,6 +492,7 @@
 			children = (
 				FF58A07F21C39D650051CE8F /* iOS lock benchmark */,
 				FF6427FE21AE8CBD003DF725 /* 网络请求依赖 */,
+				FF82E7B721798A3F00646650 /* 离屏渲染 */,
 				FF824775217EC99900B2F334 /* 响应链及事件传递 */,
 				FF395D5E2144C50C002D3C28 /* BigImage */,
 				FF59B15B2121615D00BD693E /* CTCharts */,
