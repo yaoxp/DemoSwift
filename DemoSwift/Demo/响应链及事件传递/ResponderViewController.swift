@@ -37,9 +37,14 @@ class ResponderViewController: UIViewController {
         }
         button2.addTarget(self, action: #selector(onButtonAction(sender:)), for: .touchUpInside)
         
+        let button3 = UIButton(type: .system)
+        button3.setTitle("3. 学习事件传递和响应链", for: .normal)
+        button3.addTarget(self, action: #selector(onButtonThreeAction(sender:)), for: .touchUpInside)
+        
         view.addSubview(button0)
         view.addSubview(button1)
         view.addSubview(button2)
+        view.addSubview(button3)
         
         button0.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -58,6 +63,11 @@ class ResponderViewController: UIViewController {
             $0.top.equalTo(button1.snp.bottom).offset(30)
         }
         
+        button3.snp.makeConstraints {
+            $0.centerX.width.height.equalTo(button0)
+            $0.top.equalTo(button2.snp.bottom).offset(30)
+        }
+        
         let textView = UITextView()
         view.addSubview(textView)
         textView.snp.makeConstraints {
@@ -66,9 +76,10 @@ class ResponderViewController: UIViewController {
         }
         
         textView.text = """
-        1. label2正常响应点击事件
-        2. label3忽略点击事件
-        3. label4响应点击事件的范围大于label4的frame
+        0. label2正常响应点击事件
+        1. label3忽略点击事件
+        2. label4响应点击事件的范围大于label4的frame
+        3. 学习事件传递和响应链
 """
     }
 
@@ -78,6 +89,11 @@ class ResponderViewController: UIViewController {
         if let responseType = ResponderDetailViewType(rawValue: sender.tag) {
             vc.responseType = responseType
         }
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func onButtonThreeAction(sender: UIButton) {
+        let vc = ResponderDetailTwoViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 }
