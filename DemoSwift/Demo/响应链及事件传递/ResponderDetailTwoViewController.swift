@@ -2,7 +2,7 @@
 //  ResponderDetailTwoViewController.swift
 //  DemoSwift
 //
-//  Created by jiangnan on 2019/10/28.
+//  Created by yaoxinpan on 2019/10/28.
 //  Copyright © 2019 yaoxp. All rights reserved.
 //
 
