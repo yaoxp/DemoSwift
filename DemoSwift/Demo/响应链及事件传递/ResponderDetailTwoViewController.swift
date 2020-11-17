@@ -28,14 +28,14 @@ class ResponderDetailTwoViewController: UIViewController {
 
         initUI()
     }
-    
+
     // MARK: - UI
     func initUI() {
         view.addSubview(whiteView)
         whiteView.snp.makeConstraints {
             $0.edges.equalTo(view.safeAreaLayoutGuide.snp.edges)
         }
-        
+
         whiteView.addSubview(redView)
         whiteView.addSubview(greenView)
         whiteView.addSubview(yellowView)
@@ -51,7 +51,7 @@ class ResponderDetailTwoViewController: UIViewController {
             $0.leading.trailing.bottom.equalToSuperview()
             $0.height.equalToSuperview().multipliedBy(0.2)
         }
-        
+
         greenView.addSubview(blueView)
         greenView.addSubview(blackView)
         blueView.snp.makeConstraints {
@@ -67,8 +67,7 @@ class ResponderDetailTwoViewController: UIViewController {
             $0.leading.equalTo(greenView.snp.centerX).offset(20)
         }
     }
-    
-// MARK: -property
+    // MARK: - property
     let whiteView: CustomView = {
         let view = CustomView()
         view.backgroundColor = .white

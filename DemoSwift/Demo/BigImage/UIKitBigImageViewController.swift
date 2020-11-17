@@ -18,15 +18,15 @@ import UIKit
 class UIKitBigImageViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let path = Bundle.main.bundlePath + "/IMG_001.png"
         let image = UIImage(contentsOfFile: path)
-        
+
         let newImage = image?.resizeUI(imageView.frame.size)
-        
+
         imageView.image = newImage
         print("UIKit: \(newImage!.size)")
     }
@@ -35,7 +35,6 @@ class UIKitBigImageViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

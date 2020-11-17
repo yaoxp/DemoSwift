@@ -9,25 +9,25 @@
 import UIKit
 
 class MarqueeViewController: PeekViewController {
-    
+
     var left: MarqueeView?
     var right: MarqueeView?
     var blend: MarqueeView?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor.lightGray
-        
+
         // MARK: - 文本，向左滚动
         let leftText = UILabel()
         leftText.text = "abcdefghijklmnopqrstuvwxyz"
-        
+
         let leftMarqueeText = MarqueeView.init(frame: .zero)
         leftMarqueeText.contentView = leftText
         leftMarqueeText.backgroundColor = UIColor.yellow
-        
+
         view.addSubview(leftMarqueeText)
         leftMarqueeText.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -36,7 +36,7 @@ class MarqueeViewController: PeekViewController {
             $0.height.equalTo(20)
         }
         leftMarqueeText.startAnimation()
-        
+
         // MARK: - 文本，向右滚动
         let rightText = UILabel()
         rightText.text = "abcdefghijklmnopqrstuvwxyz"
@@ -52,18 +52,18 @@ class MarqueeViewController: PeekViewController {
             $0.height.equalTo(20)
         }
         rightMarqueeText.startAnimation()
-        
+
         // MARK: - 文本图片混合滚动
         let label = UILabel()
         label.text = "abcde"
         label.sizeToFit()
-        
+
         let imageView = UIImageView(image: #imageLiteral(resourceName: "PayTheBill_smallHeaderImg"))
-        
+
         let label2 = UILabel()
         label2.text = "fghijklmn"
         label2.sizeToFit()
-        
+
         let contentView = UIView()
         contentView.addSubview(label)
         label.snp.makeConstraints {
@@ -83,9 +83,9 @@ class MarqueeViewController: PeekViewController {
             $0.width.equalTo(label2.frame.size.width)
             $0.trailing.equalToSuperview()
         }
-        
+
         contentView.frame = CGRect(origin: .zero, size: CGSize(width: label.frame.size.width + 20 + label2.frame.size.width, height: 20))
-        
+
         let marquee = MarqueeView(frame: .zero)
         marquee.contentView = contentView
         marquee.backgroundColor = UIColor.yellow
@@ -97,28 +97,27 @@ class MarqueeViewController: PeekViewController {
             $0.height.equalTo(20)
         }
         marquee.startAnimation()
-        
+
         left = leftMarqueeText
         right = rightMarqueeText
         blend = marquee
-        
-        
+
         let startBtn = UIButton(type: .system)
         startBtn.setTitle("start", for: .normal)
         startBtn.addTarget(self, action: #selector(startAnimation), for: .touchUpInside)
-        
+
         let stopBtn = UIButton(type: .system)
         stopBtn.setTitle("stop", for: .normal)
         stopBtn.addTarget(self, action: #selector(stopAnimation), for: .touchUpInside)
-        
+
         let pauseBtn = UIButton(type: .system)
         pauseBtn.setTitle("pause", for: .normal)
         pauseBtn.addTarget(self, action: #selector(pauseAnimation), for: .touchUpInside)
-        
+
         let restartBtn = UIButton(type: .system)
         restartBtn.setTitle("restart", for: .normal)
         restartBtn.addTarget(self, action: #selector(restartAnimation), for: .touchUpInside)
-        
+
         let stackView = UIStackView()
         stackView.alignment = UIStackView.Alignment.fill
         stackView.axis = .horizontal
@@ -127,7 +126,7 @@ class MarqueeViewController: PeekViewController {
         stackView.addArrangedSubview(pauseBtn)
         stackView.addArrangedSubview(restartBtn)
         stackView.addArrangedSubview(stopBtn)
-        
+
         view.addSubview(stackView)
         stackView.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(20)
@@ -141,25 +140,25 @@ class MarqueeViewController: PeekViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     @objc func startAnimation() {
         left?.startAnimation()
         right?.startAnimation()
         blend?.startAnimation()
     }
-    
+
     @objc func stopAnimation() {
         left?.stopAnimation()
         right?.stopAnimation()
         blend?.stopAnimation()
     }
-    
+
     @objc func pauseAnimation() {
         left?.pauseAnimation()
         right?.pauseAnimation()
         blend?.pauseAnimation()
     }
-    
+
     @objc func restartAnimation() {
         left?.restartAnimation()
         right?.restartAnimation()

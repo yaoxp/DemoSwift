@@ -16,7 +16,7 @@ enum ResponderDetailViewType: Int {
     case ignore = 1
     /// 点击的范围超过view也可以处理
     case big = 2
-    
+
     var description: String {
         switch self {
         case .normal:
@@ -72,29 +72,29 @@ class ResponderDetailViewController: UIViewController {
         label.alpha = 0.5
         return label
     }()
-    
+
     let textView: UITextView = {
         let textView = UITextView()
         textView.scrollsToTop = false
         textView.backgroundColor = UIColor.lightGray
         return textView
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         view.backgroundColor = .green
-        
+
         label1.backgroundColor = .red
         label1.text = "label1"
         label1.textAlignment = .center
         label1.alpha = 0.5
         label1.frame = CGRect(x: 50, y: 100, width: 150, height: 150)
         view.addSubview(label1)
-        
+
         var firstResponseView: UIView
-        
+
         switch responseType {
         case .normal:
             firstResponseView = label2
@@ -103,19 +103,19 @@ class ResponderDetailViewController: UIViewController {
         case .big:
             firstResponseView = label4
         }
-        
+
         firstResponseView.backgroundColor = .blue
         firstResponseView.alpha = 0.5
         firstResponseView.frame = CGRect(x: 170, y: 220, width: 200, height: 200)
         view.addSubview(firstResponseView)
-        
+
         view.addSubview(textView)
         textView.snp.makeConstraints {
             $0.leading.bottom.trailing.equalToSuperview()
             $0.height.equalTo(180)
         }
     }
-    
+
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             if let hitView = view.hitTest(touch.location(in: view), with: event) {
@@ -138,9 +138,9 @@ class ResponderDetailViewController: UIViewController {
 
 extension ResponderDetailViewController {
     private func log(_ logInfo: String) {
-        textView.text = textView.text + (textView.text.lengthOfBytes(using: .utf8) == 0 ? "" : "\n") + logInfo
-        
-        let bottom = NSMakeRange(textView.text.count - 1, 1)
+        textView.text += (textView.text.lengthOfBytes(using: .utf8) == 0 ? "" : "\n") + logInfo
+
+        let bottom = NSRange(location: textView.text.count - 1, length: 1)
         textView.scrollRangeToVisible(bottom)
     }
 }

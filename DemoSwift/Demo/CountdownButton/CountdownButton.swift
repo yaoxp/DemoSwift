@@ -17,7 +17,7 @@ class CountdownButton: UIButton {
     /// 倒计时结束时的回调
     var endHandler: ((Int) -> Void)?
     private var timer: CountDownTimer?
-    
+
     // MARK: - life cycle
     convenience init() {
         self.init(frame: .zero)
@@ -26,7 +26,7 @@ class CountdownButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

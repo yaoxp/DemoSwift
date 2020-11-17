@@ -13,7 +13,7 @@ enum CustomCellRenderType: Int {
     case cornerRadiusOnScreenRender = 1
     case shadowOffScreenRender = 2
     case shadowOnScreenRender = 3
-    
+
     var description: String {
         switch self {
         case .cornerRadiusOffScreenRender:
@@ -34,7 +34,7 @@ class OffScreenTableViewControllerCell: UITableViewCell {
     lazy var shadowView2 = UIView()
     lazy var cornerLabel1 = UILabel()
     lazy var cornerLabel2 = UILabel()
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -45,11 +45,11 @@ class OffScreenTableViewControllerCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func fillCell(renderType: CustomCellRenderType) {
         switch renderType {
         case .cornerRadiusOffScreenRender:
-            cornerLabel1.text = "abc";
+            cornerLabel1.text = "abc"
             cornerLabel1.frame = CGRect(x: 100, y: 10, width: 30, height: 20)
             cornerLabel1.textColor = UIColor.black
             cornerLabel1.textAlignment = .center
@@ -58,8 +58,8 @@ class OffScreenTableViewControllerCell: UITableViewCell {
             cornerLabel1.layer.borderWidth = 1
             cornerLabel1.layer.masksToBounds = true
             contentView.addSubview(cornerLabel1)
-            
-            cornerLabel2.text = "abc";
+
+            cornerLabel2.text = "abc"
             cornerLabel2.frame = CGRect(x: 200, y: 10, width: 30, height: 20)
             cornerLabel2.textColor = UIColor.black
             cornerLabel2.textAlignment = .center
@@ -69,7 +69,7 @@ class OffScreenTableViewControllerCell: UITableViewCell {
             cornerLabel2.layer.masksToBounds = true
             contentView.addSubview(cornerLabel2)
         case .cornerRadiusOnScreenRender:
-            cornerLabel1.text = "abc";
+            cornerLabel1.text = "abc"
             cornerLabel1.frame = CGRect(x: 100, y: 10, width: 30, height: 20)
             cornerLabel1.textColor = UIColor.black
             cornerLabel1.textAlignment = .center
@@ -77,8 +77,8 @@ class OffScreenTableViewControllerCell: UITableViewCell {
             cornerLabel1.layer.borderColor = UIColor.green.cgColor
             cornerLabel1.layer.borderWidth = 1
             contentView.addSubview(cornerLabel1)
-            
-            cornerLabel2.text = "abc";
+
+            cornerLabel2.text = "abc"
             cornerLabel2.frame = CGRect(x: 200, y: 10, width: 30, height: 20)
             cornerLabel2.textColor = UIColor.black
             cornerLabel2.textAlignment = .center
@@ -94,7 +94,7 @@ class OffScreenTableViewControllerCell: UITableViewCell {
             shadowView1.layer.shadowRadius = 5
             shadowView1.layer.shadowOffset = CGSize(width: 5, height: 5)
             contentView.addSubview(shadowView1)
-            
+
             shadowView2.frame = CGRect(x: 200, y: 10, width: 30, height: 20)
             shadowView2.layer.backgroundColor = UIColor.green.cgColor
             shadowView2.layer.shadowColor = UIColor.black.cgColor
@@ -111,7 +111,7 @@ class OffScreenTableViewControllerCell: UITableViewCell {
             shadowView1.layer.shadowOffset = CGSize(width: 5, height: 5)
             shadowView1.layer.shadowPath = UIBezierPath(rect: shadowView1.bounds).cgPath
             contentView.addSubview(shadowView1)
-            
+
             shadowView2.frame = CGRect(x: 200, y: 10, width: 30, height: 20)
             shadowView2.layer.backgroundColor = UIColor.green.cgColor
             shadowView2.layer.shadowColor = UIColor.black.cgColor

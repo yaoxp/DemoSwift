@@ -34,7 +34,7 @@ private extension CountdownViewController {
         view.backgroundColor = .white
        setupCountdownButton()
     }
-    
+
     func setupCountdownButton() {
         countdownButton.countdownTimeInterval = 50
         countdownButton.promptText = "再来一次呀"

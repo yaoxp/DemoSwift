@@ -6,6 +6,8 @@ target 'DemoSwift' do
   use_frameworks!
   pod 'SnapKit', '~> 5.0.0'
   pod 'SwiftyJSON', '~> 5.0.0'  # JSON解析库
+    # Swift Code Quality
+  pod 'SwiftLint' # https://github.com/realm/SwiftLint
   # Pods for DemoSwift
 
   target 'DemoSwiftTests' do

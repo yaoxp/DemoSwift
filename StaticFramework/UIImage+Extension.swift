@@ -9,19 +9,16 @@
 import Foundation
 
 extension UIImage {
-    
+
      class func loadImageFromLocalBundle(name: String?) -> UIImage? {
         // 静态framework
         guard let bundlePath = Bundle.main.path(forResource: "Frameworks/StaticFramework.framework/StaticFramework", ofType: "bundle"), let imageBundle = Bundle(path: bundlePath) else { return nil }
 
         if let imagePath = imageBundle.path(forResource: name, ofType: "png") {
-            
             return UIImage(contentsOfFile: imagePath)
-
         }
-        
         return nil
 
     }
-    
+
 }

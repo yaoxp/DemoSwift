@@ -13,7 +13,7 @@ extension UIDevice {
         if UIScreen.main.bounds.height == 812 {
             return true
         }
-        
+
         return false
     }
 }

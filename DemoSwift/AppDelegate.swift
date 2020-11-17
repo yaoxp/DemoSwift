@@ -10,29 +10,28 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+
     enum ShortcutIdentifier: String {
         case first
         case second
         case third
         case fourth
-        
+
         init?(fullType: String) {
             guard let last = fullType.components(separatedBy: ".").last else {
                 return nil
             }
-            
+
             self.init(rawValue: last)
         }
-        
+
         var type: String {
             return Bundle.main.bundleIdentifier! + ".\(self.rawValue)"
         }
-        
+
     }
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -53,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                       localizedSubtitle: nil,
                                                       icon: UIApplicationShortcutIcon(type: .audio),
                                                       userInfo: nil)
-            application.shortcutItems = [shortcut2, shortcut3, shortCut4];
+            application.shortcutItems = [shortcut2, shortcut3, shortCut4]
         }
 
         return true
@@ -83,45 +82,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "animation"), object: nil)
-        
+
         guard ShortcutIdentifier(fullType: shortcutItem.type) != nil else {
             completionHandler(false)
             return
         }
-        
+
         guard let shortcutType = shortcutItem.type as String? else {
             completionHandler(false)
             return
         }
-        
-        if let nc = window!.rootViewController as? UINavigationController {
+
+        if let navigationController = window!.rootViewController as? UINavigationController {
             switch shortcutType {
             case ShortcutIdentifier.first.type:
                 completionHandler(true)
                 let vc = AnimationViewController()
-                nc.pushViewController(vc, animated: true)
-            
+                navigationController.pushViewController(vc, animated: true)
+
             case ShortcutIdentifier.second.type:
                 completionHandler(true)
                 let vc = PayTheBillViewController()
-                nc.pushViewController(vc, animated: true)
-                
+                navigationController.pushViewController(vc, animated: true)
+
             case ShortcutIdentifier.third.type:
                 completionHandler(true)
                 let vc = MarqueeViewController()
-                nc.pushViewController(vc, animated: true)
+                navigationController.pushViewController(vc, animated: true)
             case ShortcutIdentifier.fourth.type:
                 let vc = DatePickerDemoViewController()
-                nc.pushViewController(vc, animated: true)
+                navigationController.pushViewController(vc, animated: true)
             default:
                 completionHandler(false)
                 return
             }
-            
-            
+
         }
-        
+
         completionHandler(false)
     }
 }
-

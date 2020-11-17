@@ -45,19 +45,19 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
                       class: NetworkDependDemovc.self),
                  Demo(title: "锁性能测试", subtitle: "Swift and Objective-C", class: LockBenchmarkViewController.self),
                  Demo(title: "倒计时按钮", subtitle: nil, class: CountdownViewController.self)]
-    
+
     // MARK: - View Life Cycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
          self.clearsSelectionOnViewWillAppear = true
-        
+
         if traitCollection.forceTouchCapability == .available {
             registerForPreviewing(with: self, sourceView: view)
         }
-        
+
         NotificationCenter.default.addObserver(self, selector: #selector(headerNotification), name: Notification.Name("animation"), object: nil)
 
     }
@@ -86,7 +86,7 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
         cell.detailTextLabel!.text = demo.subtitle
         return cell
     }
-    
+
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
@@ -95,22 +95,22 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let demo = demos[indexPath.row]
-        
+
         if let vcClass = demo.class as? UIViewController.Type {
             let vc = vcClass.init()
             navigationController!.pushViewController(vc, animated: true)
         }
 
     }
-    
+
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0.01;
+        return 0.01
     }
-    
+
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0.01;
+        return 0.01
     }
-    
+
     @objc func headerNotification(notification: Notification) {
 //        let vc = AnimationViewController()
 //        show(vc, sender: self)
@@ -123,18 +123,18 @@ extension MainTableViewController {
         // 跳转到预览的viewController
         show(viewControllerToCommit, sender: self)
     }
-    
+
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         // previewingContext.sourceView 注册preview的view。本demo中是self.view
         // registerForPreviewing(with: self, sourceView: view)
         let cellPoint = tableView.convert(location, from: previewingContext.sourceView)
-        
+
         guard let indexPath = tableView.indexPathForRow(at: cellPoint),
                 let cell = tableView.cellForRow(at: indexPath) else { return nil }
-        
+
         // 不模糊的区域，其它区域会模糊处理。微信QQ都有此功能
         previewingContext.sourceRect = cell.frame
-        
+
         let demo = demos[indexPath.row]
         if let vcClass = demo.class as? PeekViewController.Type {
             let vc = vcClass.init()
@@ -142,24 +142,24 @@ extension MainTableViewController {
             vc.indexPath = indexPath
             return vc
         }
-        
+
         return nil
     }
-    
+
 }
 
 // MARK: - ThreeTouchPreviewActionDelegate
 extension MainTableViewController {
     func previewAction(setTop index: IndexPath?) {
         guard index != nil && index!.row < demos.count else { return }
-        
+
         demos.insert(demos.remove(at: index!.row), at: 0)
         tableView.reloadData()
     }
-    
+
     func previewAction(delete index: IndexPath?) {
         guard index != nil && index!.row < demos.count else { return }
-        
+
         demos.remove(at: index!.row)
         tableView.reloadData()
     }

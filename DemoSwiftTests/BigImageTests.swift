@@ -10,22 +10,22 @@ import XCTest
 @testable import DemoSwift
 
 class BigImageTests: XCTestCase {
-    
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-    
+
     func testPerformanceOrigin() {
         // This is an example of a performance test case.
         let path = Bundle.main.bundlePath + "/IMG_001.png"
@@ -36,7 +36,7 @@ class BigImageTests: XCTestCase {
         }
         print(imageView.frame.size)
     }
-    
+
     func testPerformanceUI() {
         // This is an example of a performance test case.
         let path = Bundle.main.bundlePath + "/IMG_001.png"
@@ -47,9 +47,9 @@ class BigImageTests: XCTestCase {
         }
         print(newImage!.size)
     }
-    
+
     func testPerformanceCG() {
-        
+
         // This is an example of a performance test case.
         let path = Bundle.main.bundlePath + "/IMG_001.png"
         let image = UIImage(contentsOfFile: path)
@@ -59,7 +59,7 @@ class BigImageTests: XCTestCase {
         }
         print(newImage!.size)
     }
-    
+
     func testPerformanceCI() {
         // This is an example of a performance test case.
         let path = Bundle.main.bundlePath + "/IMG_001.png"
@@ -70,7 +70,7 @@ class BigImageTests: XCTestCase {
         }
         print(newImage!.size)
     }
-    
+
     func testPerformanceIO() {
         // This is an example of a performance test case.
         let path = Bundle.main.bundlePath + "/IMG_001.png"

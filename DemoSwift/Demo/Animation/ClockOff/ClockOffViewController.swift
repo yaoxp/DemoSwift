@@ -25,13 +25,11 @@ class ClockOffViewController: UIViewController {
             make.width.height.equalTo(150)
             make.center.equalTo(view)
         }
-        
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
 }

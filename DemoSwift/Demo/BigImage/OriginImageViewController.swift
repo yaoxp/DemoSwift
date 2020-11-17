@@ -11,15 +11,15 @@ import UIKit
 class OriginImageViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let path = Bundle.main.bundlePath + "/IMG_001.png"
         let image = UIImage(contentsOfFile: path)
-        
+
         imageView.image = image
-        
+
         print("origin size: \(image!.size)")
     }
 
@@ -27,7 +27,6 @@ class OriginImageViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

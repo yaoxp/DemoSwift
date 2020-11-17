@@ -10,10 +10,8 @@ import UIKit
 
 class PayTheBillTitleView: UIView, NibLoadable {
     @IBOutlet weak var headerImgView: UIImageView!
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    @IBOutlet weak var iconViewHeightAndWidth: NSLayoutConstraint!
-    
 
+    @IBOutlet weak var titleLabel: UILabel!
+
+    @IBOutlet weak var iconViewHeightAndWidth: NSLayoutConstraint!
 }

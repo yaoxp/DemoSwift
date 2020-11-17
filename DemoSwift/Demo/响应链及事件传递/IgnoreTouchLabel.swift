@@ -16,9 +16,9 @@ class IgnoreTouchLabel: UILabel {
     override func draw(_ rect: CGRect) {
         // Drawing code
     }
-    */    
+    */
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        /// 忽略点击事件
+        // 忽略点击事件
         return nil
     }
 

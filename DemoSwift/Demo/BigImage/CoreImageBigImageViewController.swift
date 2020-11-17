@@ -10,14 +10,14 @@ import UIKit
 
 class CoreImageBigImageViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         let path = Bundle.main.bundlePath + "/IMG_001.png"
         let image = UIImage(contentsOfFile: path)
-        
+
         let newImage = image!.resizeCI(imageView.bounds.size)
         imageView.image = newImage
         print("CoreImage: \(newImage!.size)")
@@ -27,7 +27,6 @@ class CoreImageBigImageViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

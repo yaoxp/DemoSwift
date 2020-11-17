@@ -21,7 +21,7 @@ class LockBenchmarkViewController: UIViewController {
             button.setTitle("run (\(button.tag))", for: .normal)
             button.addTarget(self, action: #selector(tap(sender:)), for: .touchUpInside)
             view.addSubview(button)
-            
+
             button.snp.makeConstraints {
                 $0.centerX.equalToSuperview()
                 $0.width.equalTo(200)
@@ -30,16 +30,16 @@ class LockBenchmarkViewController: UIViewController {
             }
         }
     }
-    
+
     @objc func tap(sender: UIButton) {
         test(count: 1, log: false)
         test(count: sender.tag, log: true)
     }
-    
+
     private func test(count: Int, log: Bool) {
         var begin: TimeInterval
         var end: TimeInterval
-        
+
         do {
             var mutex = pthread_mutex_t()
             begin = CACurrentMediaTime()
@@ -54,7 +54,7 @@ class LockBenchmarkViewController: UIViewController {
                 print(String(format: "Swift pthread_mutex_t:    %8.2f ms", time))
             }
         }
-        
+
         do {
             // DispatchSemaphore
             let lock = DispatchSemaphore(value: 1)
@@ -69,7 +69,7 @@ class LockBenchmarkViewController: UIViewController {
                 print(String(format: "Swift DispatchSemaphore:  %8.2f ms", time))
             }
         }
-        
+
         do {
             let lock = NSCondition()
             begin = CACurrentMediaTime()
@@ -83,7 +83,7 @@ class LockBenchmarkViewController: UIViewController {
                 print(String(format: "Swift NSCondition:        %8.2f ms", time))
             }
         }
-        
+
         do {
             let lock = NSLock()
             begin = CACurrentMediaTime()
@@ -97,7 +97,7 @@ class LockBenchmarkViewController: UIViewController {
                 print(String(format: "Swift NSLock:             %8.2f ms", time))
             }
         }
-        
+
         do {
             let lock = NSRecursiveLock()
             begin = CACurrentMediaTime()
@@ -111,7 +111,7 @@ class LockBenchmarkViewController: UIViewController {
                 print(String(format: "Swift NSRecursiveLock:    %8.2f ms", time))
             }
         }
-        
+
         do {
             let lock = NSConditionLock(condition: 1)
             begin = CACurrentMediaTime()
@@ -125,7 +125,7 @@ class LockBenchmarkViewController: UIViewController {
                 print(String(format: "Swift NSConditionLock:    %8.2f ms", time))
             }
         }
-        
+
         do {
             let lock = NSObject()
             begin = CACurrentMediaTime()
@@ -139,12 +139,12 @@ class LockBenchmarkViewController: UIViewController {
                 print(String(format: "Swift @synchronized:      %8.2f ms", time))
             }
         }
-        
+
         OCLockBenchmark.shared().startTestLock(count, enableLog: log)
-        
+
         if log {
             print("----- end \(count) -----\n\n")
         }
     }
-    
+
 }

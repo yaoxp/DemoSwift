@@ -25,14 +25,13 @@ class BigImageTableViewController: UITableViewController {
                         Demo(title: "Image IO",
                              subtitle: "CGImageSourceCreateThumbnailAtIndex",
                              class: ImageIOBigImageViewController.self)]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = true
-        
-        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,30 +49,28 @@ class BigImageTableViewController: UITableViewController {
         return bigImageDemo.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier")
         if cell == nil {
             cell = UITableViewCell(style: .subtitle, reuseIdentifier: "reuseIdentifier")
         }
-        
+
         let demo = bigImageDemo[indexPath.row]
-        
+
         cell!.textLabel?.text = demo.title
         cell!.detailTextLabel?.text = demo.subtitle
-        
+
         return cell!
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let demo = bigImageDemo[indexPath.row]
-        
+
         if let vcClass = demo.class as? UIViewController.Type {
             let vc = vcClass.init()
             navigationController!.pushViewController(vc, animated: true)
         }
     }
- 
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,7 +88,7 @@ class BigImageTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 

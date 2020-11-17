@@ -18,10 +18,10 @@ extension String {
     /// - Returns: 返回的宽度
     func width(height: CGFloat, font: UIFont) -> CGFloat {
         let textStr = self as NSString
-        let rect = textStr.boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: height), options: .usesLineFragmentOrigin, attributes: [.font : font], context: nil)
+        let rect = textStr.boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: height), options: .usesLineFragmentOrigin, attributes: [.font: font], context: nil)
         return rect.width
     }
-    
+
     /// 获取字符串的高度
     ///
     /// - Parameters:
@@ -30,7 +30,7 @@ extension String {
     /// - Returns: 返回的高度
     func height(width: CGFloat, font: UIFont) -> CGFloat {
         let textStr = self as NSString
-        let rect = textStr.boundingRect(with: CGSize(width:width , height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [.font : font], context: nil)
+        let rect = textStr.boundingRect(with: CGSize(width: width, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [.font: font], context: nil)
         return rect.height
     }
 }

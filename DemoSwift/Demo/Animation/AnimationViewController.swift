@@ -11,16 +11,16 @@ import UIKit
 class AnimationViewController: PeekViewController {
 
     @IBOutlet weak var animationView: UIView!
-    
+
     // 1.无动画；2.普通动画；3.从中间开始的动画；4.在2的基础上中间线变宽，最后恢复；
     @IBOutlet weak var animationStyle: UISegmentedControl!
     @IBOutlet weak var skipBtn: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "学习贝塞尔曲线"
         // Do any additional setup after loading the view.
-        
+
         customizedSkipButton()
     }
 
@@ -33,24 +33,24 @@ class AnimationViewController: PeekViewController {
     func customizedSkipButton() {
         let centerPoint = CGPoint.init(x: skipBtn.frame.size.width/2.0, y: skipBtn.frame.size.height/2.0)
         let radius = skipBtn.frame.size.width/2.0
-        
+
         let path = UIBezierPath.init(arcCenter: centerPoint, radius: radius, startAngle: CGFloat(-Double.pi*0.5), endAngle: CGFloat(Double.pi*1.5), clockwise: true)
-        
+
         let shapeLayer = CAShapeLayer()
         shapeLayer.fillColor = UIColor.lightGray.cgColor
         shapeLayer.strokeColor = UIColor.red.cgColor
         shapeLayer.lineWidth = 2
         shapeLayer.path = path.cgPath
-        
+
         let animation = CABasicAnimation.init(keyPath: "strokeEnd")
         animation.fromValue = 0
         animation.toValue = 1
         animation.duration = 3.0
         shapeLayer.add(animation, forKey: nil)
-        
-        skipBtn.layer.addSublayer(shapeLayer);
+
+        skipBtn.layer.addSublayer(shapeLayer)
     }
-    
+
     func resetAnimationView() {
         if let sublayers = animationView.layer.sublayers {
             for layer in sublayers {
@@ -60,54 +60,54 @@ class AnimationViewController: PeekViewController {
 
     }
 
-    //MARK: - 折线
+    // MARK: - 折线
     @IBAction func onBrokenLineButton(_ sender: Any) {
         // 折线
         resetAnimationView()
-        
+
         let linePath = UIBezierPath()
-        
+
         // 起点
         linePath.move(to: CGPoint.init(x: 20, y: 20))
-        
+
         // 拐点
-        linePath.addLine(to: CGPoint.init(x:160, y:160))
+        linePath.addLine(to: CGPoint.init(x: 160, y: 160))
 
         // 终点
         linePath.addLine(to: CGPoint.init(x: 180, y: 50))
-        
+
         // 画布
         let shapeLayer = CAShapeLayer()
-        
+
         // 画布大小
         shapeLayer.bounds = animationView.bounds
-        
+
         // 画布在画板上的位置。
         // 可以这么理解：用一个图钉将一张画布钉在画板上，
         // postion是图钉在画板上的位置，anchorPoint是图钉在画布上的位置
         shapeLayer.position = CGPoint.zero
         shapeLayer.anchorPoint = CGPoint.zero
-        
+
         // 线的宽度
         shapeLayer.lineWidth = 2.0
-        
+
         // 线终点式样
 //        shapeLayer.lineCap = kCALineCapSquare
 //        shapeLayer.lineCap = kCALineCapButt
         shapeLayer.lineCap = CAShapeLayerLineCap.round
-        
+
         // 线的颜色
         shapeLayer.strokeColor = UIColor.orange.cgColor
-        
+
         // 线的路径
         shapeLayer.path = linePath.cgPath
-        
+
         // 线围成区域的填充颜色
         shapeLayer.fillColor = nil
-        
+
         // 添加动画效果
         addAnimationTo(layer: shapeLayer)
-        
+
         animationView.layer.addSublayer(shapeLayer)
     }
 
@@ -115,60 +115,60 @@ class AnimationViewController: PeekViewController {
     @IBAction func onTriangleButton(_ sender: Any) {
         // 三角形
         resetAnimationView()
-        
+
         let linePath = UIBezierPath()
-        
+
         // 起点
         linePath.move(to: CGPoint.init(x: 20, y: 20))
-        
+
         // 拐点
-        linePath.addLine(to: CGPoint.init(x:160, y:160))
-        
+        linePath.addLine(to: CGPoint.init(x: 160, y: 160))
+
         // 终点
         linePath.addLine(to: CGPoint.init(x: 180, y: 50))
-        
+
         linePath.close()
-        
+
         // 画布
         let shapeLayer = CAShapeLayer()
-        
+
         // 画布大小
         shapeLayer.bounds = animationView.bounds
-        
+
         // 画布在画板上的位置。
         // 可以这么理解：用一个图钉将一张画布钉在画板上，
         // postion是图钉在画板上的位置，anchorPoint是图钉在画布上的位置
         shapeLayer.position = CGPoint.zero
         shapeLayer.anchorPoint = CGPoint.zero
-        
+
         // 线的宽度
         shapeLayer.lineWidth = 2.0
-        
+
         // 线的颜色
         shapeLayer.strokeColor = UIColor.orange.cgColor
-        
+
         // 线拐点式样
 //        shapeLayer.lineJoin = kCALineJoinBevel
 //        shapeLayer.lineJoin = kCALineJoinMiter
         shapeLayer.lineJoin = CAShapeLayerLineJoin.round
-        
+
         // 线的路径
         shapeLayer.path = linePath.cgPath
-        
+
         // 线围成区域的填充颜色
         shapeLayer.fillColor = nil
-        
+
         // 添加动画效果
         addAnimationTo(layer: shapeLayer)
-        
+
         animationView.layer.addSublayer(shapeLayer)
     }
-    
+
     // MARK: - 多边形
     @IBAction func onPolygonButton(_ sender: Any) {
         // 多边形
         resetAnimationView()
-        
+
         let polygonPath = UIBezierPath()
         polygonPath.move(to: CGPoint.init(x: 100, y: 0.0))
         polygonPath.addLine(to: CGPoint.init(x: 200, y: 40))
@@ -176,29 +176,29 @@ class AnimationViewController: PeekViewController {
         polygonPath.addLine(to: CGPoint.init(x: 40, y: 140))
         polygonPath.addLine(to: CGPoint.init(x: 0, y: 40))
         polygonPath.close()
-        
+
         let shapeLayer = CAShapeLayer()
         shapeLayer.bounds = animationView.bounds
         shapeLayer.position = CGPoint.init(x: 100, y: 100)
         shapeLayer.anchorPoint = CGPoint.zero
         shapeLayer.lineWidth = 2
         shapeLayer.strokeColor = UIColor.orange.cgColor
-        shapeLayer.fillColor = nil;
+        shapeLayer.fillColor = nil
         shapeLayer.path = polygonPath.cgPath
         addAnimationTo(layer: shapeLayer)
         animationView.layer.addSublayer(shapeLayer)
     }
-    
+
     // MARK: - 曲面
     @IBAction func onCurveButton(_ sender: Any) {
         // 曲面
         resetAnimationView()
-        
+
         let path = UIBezierPath()
         path.move(to: CGPoint.init(x: 100, y: 100))
         path.addLine(to: CGPoint.init(x: 200, y: 200))
         path.addArc(withCenter: CGPoint.init(x: 200, y: 200), radius: 50, startAngle: 0, endAngle: CGFloat(Double.pi), clockwise: true)
-        
+
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
         shapeLayer.strokeColor = UIColor.orange.cgColor
@@ -210,12 +210,12 @@ class AnimationViewController: PeekViewController {
         addAnimationTo(layer: shapeLayer)
         animationView.layer.addSublayer(shapeLayer)
     }
-    
+
     // MARK: - 空心矩形
     @IBAction func onHollowRectangleButton(_ sender: Any) {
         // 空心矩形
         resetAnimationView()
-        
+
         let path = UIBezierPath.init(rect: CGRect.init(x: 130, y: 10, width: 100, height: 80))
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
@@ -228,12 +228,12 @@ class AnimationViewController: PeekViewController {
         addAnimationTo(layer: shapeLayer)
         animationView.layer.addSublayer(shapeLayer)
     }
-    
+
     // MARK: - 实心矩形
     @IBAction func onSolidRectangleButton(_ sender: Any) {
         // 实心矩形
         resetAnimationView()
-        
+
         let path = UIBezierPath.init(rect: CGRect.init(x: 130, y: 10, width: 100, height: 80))
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
@@ -246,12 +246,12 @@ class AnimationViewController: PeekViewController {
         addAnimationTo(layer: shapeLayer)
         animationView.layer.addSublayer(shapeLayer)
     }
-    
+
     // MARK: - 圆角矩形
     @IBAction func onRoundRectangleButton(_ sender: Any) {
         // 圆角矩形
         resetAnimationView()
-        
+
         let path = UIBezierPath.init(roundedRect: CGRect.init(x: 130, y: 10, width: 100, height: 80), cornerRadius: 10)
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
@@ -264,13 +264,12 @@ class AnimationViewController: PeekViewController {
         addAnimationTo(layer: shapeLayer)
         animationView.layer.addSublayer(shapeLayer)
     }
-    
+
     // MARK: - 单圆角矩形
     @IBAction func onSingleRoundRectButton(_ sender: Any) {
         // 单圆角矩形
         resetAnimationView()
-        
-        
+
         let path = UIBezierPath.init(roundedRect: CGRect.init(x: 130, y: 10, width: 100, height: 80), byRoundingCorners: UIRectCorner.topLeft, cornerRadii: CGSize.init(width: 10, height: 10))
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
@@ -282,14 +281,14 @@ class AnimationViewController: PeekViewController {
         shapeLayer.anchorPoint = CGPoint.zero
         addAnimationTo(layer: shapeLayer)
         animationView.layer.addSublayer(shapeLayer)
-        
+
     }
-    
+
     // MARK: - 圆
     @IBAction func onCircularButton(_ sender: Any) {
         // 圆
         resetAnimationView()
-        
+
         let path = UIBezierPath.init(ovalIn: CGRect.init(x: 50, y: 50, width: 200, height: 200))
         let shapLayer = CAShapeLayer()
         shapLayer.path = path.cgPath
@@ -299,16 +298,16 @@ class AnimationViewController: PeekViewController {
         shapLayer.bounds = animationView.bounds
         shapLayer.position = CGPoint.zero
         shapLayer.anchorPoint = CGPoint.zero
-        
+
         addAnimationTo(layer: shapLayer)
         animationView.layer.addSublayer(shapLayer)
     }
-    
+
     // MARK: - 椭圆
     @IBAction func onEllipseButton(_ sender: Any) {
         // 椭圆
         resetAnimationView()
-        
+
         let path = UIBezierPath.init(ovalIn: CGRect.init(x: 50, y: 50, width: 300, height: 200))
         let shapLayer = CAShapeLayer()
         shapLayer.path = path.cgPath
@@ -318,11 +317,11 @@ class AnimationViewController: PeekViewController {
         shapLayer.bounds = animationView.bounds
         shapLayer.position = CGPoint.zero
         shapLayer.anchorPoint = CGPoint.zero
-        
+
         addAnimationTo(layer: shapLayer)
         animationView.layer.addSublayer(shapLayer)
     }
-    
+
     // MARK: - 圆弧
     @IBAction func onArcButton(_ sender: Any) {
         // 圆弧
@@ -337,20 +336,20 @@ class AnimationViewController: PeekViewController {
         shapLayer.bounds = animationView.bounds
         shapLayer.position = CGPoint.zero
         shapLayer.anchorPoint = CGPoint.zero
-        
+
         addAnimationTo(layer: shapLayer)
         animationView.layer.addSublayer(shapLayer)
     }
-    
+
     // MARK: - 二次贝塞尔曲线1
     @IBAction func onBezierOne(_ sender: Any) {
         // 二次贝塞尔曲线1
         resetAnimationView()
-        
+
         let path1 = UIBezierPath()
         path1.move(to: CGPoint.init(x: 10, y: 100))
         path1.addQuadCurve(to: CGPoint.init(x: 200, y: 50), controlPoint: CGPoint.init(x: 100, y: 200))
-        
+
         let shapeLayer1 = CAShapeLayer()
         shapeLayer1.position = CGPoint.zero
         shapeLayer1.anchorPoint = CGPoint.zero
@@ -361,7 +360,7 @@ class AnimationViewController: PeekViewController {
         shapeLayer1.bounds = animationView.bounds
         addAnimationTo(layer: shapeLayer1)
         animationView.layer.addSublayer(shapeLayer1)
-        
+
         let path2 = UIBezierPath()
         path2.move(to: CGPoint.init(x: 10, y: 100))
         path2.addQuadCurve(to: CGPoint.init(x: 100, y: 50), controlPoint: CGPoint.init(x: 100, y: 200))
@@ -376,16 +375,16 @@ class AnimationViewController: PeekViewController {
         addAnimationTo(layer: shapeLayer2)
         animationView.layer.addSublayer(shapeLayer2)
     }
-    
+
     // MARK: - 二次贝塞尔曲线2
     @IBAction func onBezierTwo(_ sender: Any) {
         // 二次贝塞尔曲线2
         resetAnimationView()
-        
+
         let path1 = UIBezierPath()
         path1.move(to: CGPoint.init(x: 10, y: 100))
         path1.addQuadCurve(to: CGPoint.init(x: 200, y: 50), controlPoint: CGPoint.init(x: 100, y: 200))
-        
+
         let shapeLayer1 = CAShapeLayer()
         shapeLayer1.position = CGPoint.zero
         shapeLayer1.anchorPoint = CGPoint.zero
@@ -396,7 +395,7 @@ class AnimationViewController: PeekViewController {
         shapeLayer1.bounds = animationView.bounds
         addAnimationTo(layer: shapeLayer1)
         animationView.layer.addSublayer(shapeLayer1)
-        
+
         let path2 = UIBezierPath()
         path2.move(to: CGPoint.init(x: 10, y: 100))
         path2.addQuadCurve(to: CGPoint.init(x: 200, y: 50), controlPoint: CGPoint.init(x: 100, y: 300))
@@ -411,19 +410,19 @@ class AnimationViewController: PeekViewController {
         addAnimationTo(layer: shapeLayer2)
         animationView.layer.addSublayer(shapeLayer2)
     }
-    
+
     // MARK: - 曲面
     @IBAction func onCamberButton(_ sender: Any) {
         // 曲面
         resetAnimationView()
-        
+
         let path = UIBezierPath()
         path.move(to: CGPoint.init(x: 50, y: 100))
         path.addLine(to: CGPoint.init(x: 50, y: 200))
         path.addLine(to: CGPoint.init(x: 200, y: 200))
         path.addLine(to: CGPoint.init(x: 200, y: 100))
         path.addQuadCurve(to: CGPoint.init(x: 50, y: 100), controlPoint: CGPoint.init(x: 125, y: 0))
-        
+
         let shapeLayer = CAShapeLayer()
         shapeLayer.position = CGPoint.zero
         shapeLayer.anchorPoint = CGPoint.zero
@@ -435,32 +434,32 @@ class AnimationViewController: PeekViewController {
         addAnimationTo(layer: shapeLayer)
         animationView.layer.addSublayer(shapeLayer)
     }
-    
+
     // MARK: - 单控制点曲线
     @IBAction func onSingleCurveButton(_ sender: Any) {
         // 单控制点曲线
         resetAnimationView()
-        
+
         let startPoint = CGPoint.init(x: 50, y: 100)
         let controlPoint = CGPoint.init(x: 175, y: 10)
         let endPoint = CGPoint.init(x: 300, y: 100)
-        
+
         let startLayer = CALayer()
         startLayer.frame = CGRect.init(origin: startPoint, size: CGSize.init(width: 3, height: 3))
         startLayer.backgroundColor = UIColor.red.cgColor
-        
+
         let controlLayer = CALayer()
         controlLayer.frame = CGRect.init(origin: controlPoint, size: CGSize.init(width: 3, height: 3))
         controlLayer.backgroundColor = UIColor.purple.cgColor
-        
+
         let endLayer = CALayer()
         endLayer.frame = CGRect.init(origin: endPoint, size: CGSize.init(width: 3, height: 3))
         endLayer.backgroundColor = UIColor.blue.cgColor
-        
+
         let path = UIBezierPath()
         path.move(to: startPoint)
         path.addQuadCurve(to: endPoint, controlPoint: controlPoint)
-        
+
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
         shapeLayer.lineWidth = 2
@@ -469,44 +468,44 @@ class AnimationViewController: PeekViewController {
         shapeLayer.position = CGPoint.zero
         shapeLayer.anchorPoint = CGPoint.zero
         shapeLayer.bounds = animationView.bounds
-        
+
         addAnimationTo(layer: shapeLayer)
         animationView.layer.addSublayer(shapeLayer)
         animationView.layer.addSublayer(startLayer)
         animationView.layer.addSublayer(controlLayer)
         animationView.layer.addSublayer(endLayer)
     }
-    
+
     // MARK: - 双控制点曲线
     @IBAction func onTwoCurveButton(_ sender: Any) {
         // 双控制点曲线
         resetAnimationView()
-        
+
         let startPoint = CGPoint.init(x: 50, y: 70)
         let controlPoint1 = CGPoint.init(x: 112.5, y: 10)
         let controlPoint2 = CGPoint.init(x: 237.5, y: 130)
         let endPoint = CGPoint.init(x: 300, y: 70)
-        
+
         let startLayer = CALayer()
         startLayer.frame = CGRect.init(origin: startPoint, size: CGSize.init(width: 3, height: 3))
         startLayer.backgroundColor = UIColor.red.cgColor
-        
+
         let controlLayer1 = CALayer()
         controlLayer1.frame = CGRect.init(origin: controlPoint1, size: CGSize.init(width: 3, height: 3))
         controlLayer1.backgroundColor = UIColor.purple.cgColor
-        
+
         let controlLayer2 = CALayer()
         controlLayer2.frame = CGRect.init(origin: controlPoint2, size: CGSize.init(width: 3, height: 3))
         controlLayer2.backgroundColor = UIColor.black.cgColor
-        
+
         let endLayer = CALayer()
         endLayer.frame = CGRect.init(origin: endPoint, size: CGSize.init(width: 3, height: 3))
         endLayer.backgroundColor = UIColor.blue.cgColor
-        
+
         let path = UIBezierPath()
         path.move(to: startPoint)
         path.addCurve(to: endPoint, controlPoint1: controlPoint1, controlPoint2: controlPoint2)
-        
+
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
         shapeLayer.lineWidth = 2
@@ -515,7 +514,7 @@ class AnimationViewController: PeekViewController {
         shapeLayer.position = CGPoint.zero
         shapeLayer.anchorPoint = CGPoint.zero
         shapeLayer.bounds = animationView.bounds
-        
+
         addAnimationTo(layer: shapeLayer)
         animationView.layer.addSublayer(shapeLayer)
         animationView.layer.addSublayer(startLayer)
@@ -523,16 +522,16 @@ class AnimationViewController: PeekViewController {
         animationView.layer.addSublayer(controlLayer2)
         animationView.layer.addSublayer(endLayer)
     }
-    
+
     // MARK: - 三次贝塞尔曲线
     @IBAction func onBeaierThree(_ sender: Any) {
         // 三次贝塞尔曲线
         resetAnimationView()
-        
+
         let path = UIBezierPath()
         path.move(to: CGPoint.init(x: 20, y: 100))
         path.addCurve(to: CGPoint.init(x: 220, y: 100), controlPoint1: CGPoint.init(x: 50, y: 75), controlPoint2: CGPoint.init(x: 150, y: 125))
-        
+
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
         shapeLayer.bounds = animationView.bounds
@@ -544,22 +543,22 @@ class AnimationViewController: PeekViewController {
         addAnimationTo(layer: shapeLayer)
         animationView.layer.addSublayer(shapeLayer)
     }
-    
+
     // MARK: - 优酷
     @IBAction func onYouKuButton(_ sender: Any) {
         // 优酷
         resetAnimationView()
-        
+
         let duration: CGFloat = 0.5  // 动画持续时间
-        
+
         // 添加基础layer
         let baseLayer = CALayer()
-        baseLayer.frame = CGRect.init(x: 50, y: 50, width: 200, height: 200);
+        baseLayer.frame = CGRect(x: 50, y: 50, width: 200, height: 200)
         baseLayer.backgroundColor = animationView.backgroundColor!.cgColor
         animationView.layer.addSublayer(baseLayer)
-        
+
         // 初始状态是暂停
-        
+
         // 左边竖线
         let leftLineEndPoint = CGPoint.init(x: 70, y: 60)
         let leftLineStartPoint = CGPoint.init(x: 70, y: 140)
@@ -573,7 +572,7 @@ class AnimationViewController: PeekViewController {
         leftLineShape.fillColor = nil
         leftLineShape.lineCap = CAShapeLayerLineCap.round
         leftLineShape.lineJoin = CAShapeLayerLineJoin.round
-        
+
         // 右边竖线
         let rightLineEndPoint = CGPoint.init(x: 130, y: 140)
         let rightLineStartPoint = CGPoint.init(x: 130, y: 60)
@@ -587,12 +586,11 @@ class AnimationViewController: PeekViewController {
         rightLineShape.fillColor = nil
         rightLineShape.lineCap = CAShapeLayerLineCap.round
         rightLineShape.lineJoin = CAShapeLayerLineJoin.round
-        
-        
+
         // 圆弧的圆点和半径
         let centerPoint = CGPoint.init(x: (leftLineStartPoint.x + rightLineEndPoint.x)/2, y: (leftLineStartPoint.y + leftLineEndPoint.y)/2)
         let radius = sqrt(pow(rightLineEndPoint.x - leftLineEndPoint.x, 2) + pow(rightLineEndPoint.y - rightLineStartPoint.y, 2)) / 2
-        
+
         // 下边的圆弧
         let undersideCirclePath = UIBezierPath()
         undersideCirclePath.move(to: leftLineStartPoint)
@@ -605,7 +603,7 @@ class AnimationViewController: PeekViewController {
         undersideCircleShape.lineCap = CAShapeLayerLineCap.round
         undersideCircleShape.lineJoin = CAShapeLayerLineJoin.round
         undersideCircleShape.strokeEnd = 0
-        
+
         // 上边的圆弧
         let aboveCirclePath = UIBezierPath()
         aboveCirclePath.move(to: rightLineStartPoint)
@@ -622,9 +620,9 @@ class AnimationViewController: PeekViewController {
 
         // 红色三角形
         let triangleLeftPoint = CGPoint.init(x: (rightLineStartPoint.x - leftLineStartPoint.x)/4 + leftLineStartPoint.x, y: (leftLineStartPoint.y - leftLineEndPoint.y)/3+leftLineEndPoint.y)
-        let triangleRightPoint = CGPoint.init(x:rightLineStartPoint.x - (rightLineStartPoint.x - leftLineStartPoint.x)/4 , y: (leftLineStartPoint.y - leftLineEndPoint.y)/3+leftLineEndPoint.y )
-        let triangleCenterPoint = CGPoint.init(x:(leftLineEndPoint.x + rightLineEndPoint.x) / 2 , y: rightLineEndPoint.y - (rightLineEndPoint.y - rightLineStartPoint.y)/3)
-        
+        let triangleRightPoint = CGPoint(x: rightLineStartPoint.x - (rightLineStartPoint.x - leftLineStartPoint.x)/4, y: (leftLineStartPoint.y - leftLineEndPoint.y)/3+leftLineEndPoint.y )
+        let triangleCenterPoint = CGPoint(x: (leftLineEndPoint.x + rightLineEndPoint.x) / 2, y: rightLineEndPoint.y - (rightLineEndPoint.y - rightLineStartPoint.y)/3)
+
         // 左边红线
         let triangleLeftLine = UIBezierPath()
         triangleLeftLine.move(to: triangleCenterPoint)
@@ -638,7 +636,7 @@ class AnimationViewController: PeekViewController {
         triangleLeftShape.lineJoin = CAShapeLayerLineJoin.round
         triangleLeftShape.opacity = 0
         baseLayer.addSublayer(triangleLeftShape)
-        
+
         // 右边红线
         let triangleRightLine = UIBezierPath()
         triangleRightLine.move(to: triangleCenterPoint)
@@ -652,12 +650,12 @@ class AnimationViewController: PeekViewController {
         triangleRightShape.lineJoin = CAShapeLayerLineJoin.round
         triangleRightShape.opacity = 0
         baseLayer.addSublayer(triangleRightShape)
-        
+
         baseLayer.addSublayer(undersideCircleShape)
         baseLayer.addSublayer(aboveCircleShape)
         baseLayer.addSublayer(leftLineShape)
         baseLayer.addSublayer(rightLineShape)
-        
+
         Timer.scheduledTimer(withTimeInterval: Double(duration), repeats: false, block: {(timer) in
             // 1s后重暂停到播放按钮
             self.strokeEndAnimation(fromValue: 1.0, toValue: 0.0, layer: leftLineShape, duration: duration/2)
@@ -665,13 +663,13 @@ class AnimationViewController: PeekViewController {
             self.strokeEndAnimation(fromValue: 0.0, toValue: 1.0, layer: undersideCircleShape, duration: duration)
             self.strokeEndAnimation(fromValue: 0.0, toValue: 1.0, layer: aboveCircleShape, duration: duration)
             self.actionRotateAnimationClockwise(layer: baseLayer, duration: duration, clockwise: false)
-            let time:TimeInterval = Double(duration/2)
+            let time: TimeInterval = Double(duration / 2)
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time, execute: {
                 self.actionTriangleOpacityAnimation(frome: 0, to: 0.8, layer: triangleLeftShape, duration: duration/2)
                 self.actionTriangleOpacityAnimation(frome: 0, to: 0.8, layer: triangleRightShape, duration: duration/2)
             })
         })
-        
+
         Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {(timer) in
             // 4s后重播放到暂停按钮
             self.strokeEndAnimation(fromValue: 1.0, toValue: 0.0, layer: undersideCircleShape, duration: duration)
@@ -679,7 +677,7 @@ class AnimationViewController: PeekViewController {
             self.actionTriangleOpacityAnimation(frome: 0.8, to: 0, layer: triangleLeftShape, duration: duration/2)
             self.actionTriangleOpacityAnimation(frome: 0.8, to: 0, layer: triangleRightShape, duration: duration/2)
             self.actionRotateAnimationClockwise(layer: baseLayer, duration: duration, clockwise: true)
-            let time:TimeInterval = Double(duration/2)
+            let time: TimeInterval = Double(duration / 2)
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time, execute: {
                 self.strokeEndAnimation(fromValue: 0.0, toValue: 1.0, layer: leftLineShape, duration: duration/2)
                 self.strokeEndAnimation(fromValue: 0.0, toValue: 1.0, layer: rightLineShape, duration: duration/2)
@@ -693,7 +691,7 @@ class AnimationViewController: PeekViewController {
         let vc = ClockOffViewController()
         navigationController!.pushViewController(vc, animated: true)
     }
-    
+
 }
 
 extension AnimationViewController {
@@ -710,8 +708,7 @@ extension AnimationViewController {
             print(" ")
         }
     }
-    
-    
+
     func addOneAnimation(layer: CAShapeLayer, duration: CFTimeInterval) {
         let animation = CABasicAnimation.init(keyPath: "strokeEnd")
         animation.fromValue = 0
@@ -719,7 +716,7 @@ extension AnimationViewController {
         animation.duration = duration
         layer.add(animation, forKey: nil)
     }
-    
+
     func addTwoAnimation(layer: CAShapeLayer, duration: CFTimeInterval) {
         let animationBegin = CABasicAnimation.init(keyPath: "strokeStart")
         animationBegin.fromValue = 0.5
@@ -732,7 +729,7 @@ extension AnimationViewController {
         layer.add(animationBegin, forKey: nil)
         layer.add(animationEnd, forKey: nil)
     }
-    
+
     func addThreeAnimation(layer: CAShapeLayer, duration: CFTimeInterval) {
         let animation = CABasicAnimation.init(keyPath: "strokeEnd")
         animation.fromValue = 0
@@ -745,30 +742,30 @@ extension AnimationViewController {
         layer.add(animation, forKey: nil)
         layer.add(animationWidth, forKey: nil)
     }
-    
+
     func strokeEndAnimation(fromValue: CGFloat, toValue: CGFloat, layer: CALayer, duration: CGFloat) {
         let animation = CABasicAnimation.init(keyPath: "strokeEnd")
         animation.duration = CFTimeInterval.init(duration)
         animation.fromValue = fromValue
         animation.toValue = toValue
-        
+
         //这两个属性设定保证在动画执行之后不自动还原
         animation.fillMode = CAMediaTimingFillMode.forwards
         animation.isRemovedOnCompletion = false
-        
+
         layer.add(animation, forKey: nil)
     }
-    
+
     func actionTriangleOpacityAnimation(frome: CGFloat, to: CGFloat, layer: CALayer, duration: CGFloat) {
         let animation = CABasicAnimation.init(keyPath: "opacity")
         animation.duration = CFTimeInterval.init(duration)
         animation.fromValue = frome
         animation.toValue = to
-        
+
         animation.fillMode = CAMediaTimingFillMode.forwards
         animation.isRemovedOnCompletion = false
         animation.setValue("animation", forKey: "animationName")
-        
+
         layer.add(animation, forKey: nil)
     }
 
@@ -779,13 +776,13 @@ extension AnimationViewController {
             start = -Double.pi / 2
             end = 0
         }
-        
+
         let roateAnimation = CABasicAnimation.init(keyPath: "transform.rotation")
         roateAnimation.fromValue = start
         roateAnimation.toValue = end
         roateAnimation.duration = CFTimeInterval.init(duration)
-        roateAnimation.fillMode = CAMediaTimingFillMode.forwards;
-        roateAnimation.isRemovedOnCompletion = false;
+        roateAnimation.fillMode = CAMediaTimingFillMode.forwards
+        roateAnimation.isRemovedOnCompletion = false
         roateAnimation.setValue("roateAnimation", forKey: "animationName")
         layer.add(roateAnimation, forKey: nil)
     }

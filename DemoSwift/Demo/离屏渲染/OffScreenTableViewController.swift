@@ -17,18 +17,17 @@ class OffScreenTableViewController: UIViewController {
             title = cellType.description
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         title = cellType.description
-        
+
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
 
     /*
     // MARK: - Navigation
@@ -47,11 +46,11 @@ extension OffScreenTableViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 300
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 40
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = OffScreenTableViewControllerCell(style: .default, reuseIdentifier: cellID)
         cell.selectionStyle = .none

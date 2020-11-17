@@ -1,20 +1,24 @@
 PODS:
   - SnapKit (5.0.1)
+  - SwiftLint (0.41.0)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - SnapKit (~> 5.0.0)
+  - SwiftLint
   - SwiftyJSON (~> 5.0.0)
 
 SPEC REPOS:
   trunk:
     - SnapKit
+    - SwiftLint
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftLint: c585ebd615d9520d7fbdbe151f527977b0534f1e
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: e387fe30bd8c740623c1c7de798fef64b7ab447e
+PODFILE CHECKSUM: b2557b2a37cb140d2470d0715e0b80f74b6ffc1d
 
 COCOAPODS: 1.10.0

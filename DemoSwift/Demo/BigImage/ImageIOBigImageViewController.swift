@@ -11,14 +11,14 @@ import UIKit
 class ImageIOBigImageViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         let path = Bundle.main.bundlePath + "/IMG_001.png"
         let image = UIImage(contentsOfFile: path)
-        
+
         let newImage = image!.resizeIO(imageView.bounds.size)
         imageView.image = newImage
         print("Image I/O: \(newImage!.size)")
@@ -28,7 +28,6 @@ class ImageIOBigImageViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

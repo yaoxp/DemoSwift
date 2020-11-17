@@ -17,22 +17,21 @@ class DynamicAndStaticViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor.white
-        
+
         // 动态framework
         let dynamicFrameworkView = DynamicFrameworkView(frame: CGRect(x: 15, y: 100, width: 160, height: 100))
         view.addSubview(dynamicFrameworkView)
-        
+
         // 静态framework
         let staticFrameworkView = StaticFrameworkView(frame: CGRect(x: 15, y: 250, width: 160, height: 100))
         view.addSubview(staticFrameworkView)
-        
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
