@@ -43,7 +43,8 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
                  Demo(title: "网络请求依赖",
                       subtitle: "当一个接口的请求需要依赖于另一个网络请求的结果,怎么解决",
                       class: NetworkDependDemovc.self),
-                 Demo(title: "锁性能测试", subtitle: "Swift and Objective-C", class: LockBenchmarkViewController.self)]
+                 Demo(title: "锁性能测试", subtitle: "Swift and Objective-C", class: LockBenchmarkViewController.self),
+                 Demo(title: "倒计时按钮", subtitle: nil, class: CountdownViewController.self)]
     
     // MARK: - View Life Cycle
     

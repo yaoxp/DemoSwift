@@ -10,6 +10,6 @@ import Foundation
 
 struct Demo {
     let title: String
-    let subtitle: String
+    let subtitle: String?
     let `class`: AnyClass
 }
