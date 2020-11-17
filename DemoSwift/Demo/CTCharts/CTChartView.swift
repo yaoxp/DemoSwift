@@ -424,7 +424,7 @@ extension CTChartView {
     private func addYLeftAxisLabel(point: CGPoint, text: String) {
         let width = (chartView.frame.width - chartEdgeInset.left - chartEdgeInset.right) / CGFloat(verticalLineNumber - 1)
         let rect = CGRect(x: point.x + 1, y: point.y - 15, width: width - 2, height: 14)
-        let textLayer = drawTextLayer(text: text, textColor: yLeftAxisTextColor, rect: rect, alignmentModel: convertFromCATextLayerAlignmentMode(CATextLayerAlignmentMode.left))
+        let textLayer = drawTextLayer(text: text, textColor: yLeftAxisTextColor, rect: rect, alignmentModel: .left)
 
         chartView.layer.addSublayer(textLayer)
         yLeftAxisScaleLayer.append(textLayer)
@@ -434,7 +434,7 @@ extension CTChartView {
     private func addYRightAxisLabel(point: CGPoint, text: String) {
         let width = (chartView.frame.width - chartEdgeInset.left - chartEdgeInset.right) / CGFloat(verticalLineNumber - 1)
         let rect = CGRect(x: point.x - width, y: point.y - 15, width: width - 1, height: 14)
-        let textLayer = drawTextLayer(text: text, textColor: yRightAxisTextColor, rect: rect, alignmentModel: convertFromCATextLayerAlignmentMode(CATextLayerAlignmentMode.right))
+        let textLayer = drawTextLayer(text: text, textColor: yRightAxisTextColor, rect: rect, alignmentModel: .right)
         chartView.layer.addSublayer(textLayer)
         yRightAxisScaleLayer.append(textLayer)
     }
@@ -450,7 +450,7 @@ extension CTChartView {
                 let width = widthFor(text: texts[0], height: height, font: textFont) + 1
                 let centerX = chartView.frame.width / 2.0
                 let rect = CGRect(x: centerX - (width / 2.0), y: originY, width: width, height: height)
-                let textLayer = drawTextLayer(text: texts[0], rect: rect, alignmentModel: convertFromCATextLayerAlignmentMode(CATextLayerAlignmentMode.center))
+                let textLayer = drawTextLayer(text: texts[0], rect: rect, alignmentModel: .center)
                 chartView.layer.addSublayer(textLayer)
                 xAxisScaleLayer.append(textLayer)
                 allLinesPoints.append([CGPoint(x: centerX, y: originY)])
@@ -461,13 +461,13 @@ extension CTChartView {
                     let width = widthFor(text: value, height: height, font: textFont) + 1
                     if index == 0 {
                         let rect = CGRect(x: chartEdgeInset.left, y: originY, width: width, height: height)
-                        textLayer = drawTextLayer(text: value, rect: rect, alignmentModel: convertFromCATextLayerAlignmentMode(CATextLayerAlignmentMode.left))
+                        textLayer = drawTextLayer(text: value, rect: rect, alignmentModel: .left)
                     } else if index == texts.count - 1 {
                         let rect = CGRect(x: chartView.frame.width - chartEdgeInset.right - width, y: originY, width: width, height: height)
-                        textLayer = drawTextLayer(text: value, rect: rect, alignmentModel: convertFromCATextLayerAlignmentMode(CATextLayerAlignmentMode.right))
+                        textLayer = drawTextLayer(text: value, rect: rect, alignmentModel: .right)
                     } else {
                         let rect = CGRect(x: spacing * CGFloat(index) - (width / 2.0), y: originY, width: width, height: height)
-                        textLayer = drawTextLayer(text: value, rect: rect, alignmentModel: convertFromCATextLayerAlignmentMode(CATextLayerAlignmentMode.center))
+                        textLayer = drawTextLayer(text: value, rect: rect, alignmentModel: .center)
                     }
                     chartView.layer.addSublayer(textLayer)
                     xAxisScaleLayer.append(textLayer)
@@ -478,7 +478,7 @@ extension CTChartView {
             for (index, value) in texts.enumerated() {
                 let width = widthFor(text: value, height: height, font: textFont) + 1
                 let rect = CGRect(x: spacing * CGFloat(index + 1) - (width / 2.0), y: originY, width: width, height: height)
-                let textLayer = drawTextLayer(text: value, rect: rect, alignmentModel: convertFromCATextLayerAlignmentMode(CATextLayerAlignmentMode.center))
+                let textLayer = drawTextLayer(text: value, rect: rect, alignmentModel: .center)
                 chartView.layer.addSublayer(textLayer)
                 xAxisScaleLayer.append(textLayer)
                 allLinesPoints.append([CGPoint(x: spacing * CGFloat(index + 1), y: originY)])
@@ -488,7 +488,7 @@ extension CTChartView {
 
     }
 
-    private func drawTextLayer(text: String, textColor: UIColor = UIColor.rgb(78, 78, 78, 1.0), rect: CGRect, alignmentModel: String) -> CATextLayer {
+    private func drawTextLayer(text: String, textColor: UIColor = UIColor.rgb(78, 78, 78, 1.0), rect: CGRect, alignmentModel: CATextLayerAlignmentMode) -> CATextLayer {
         let textLayer = CATextLayer()
         textLayer.string = text
         textLayer.backgroundColor = UIColor.clear.cgColor
@@ -496,7 +496,7 @@ extension CTChartView {
         textLayer.font = CGFont(textFont.fontName as CFString)
         textLayer.fontSize = textFont.pointSize
         textLayer.contentsScale = UIScreen.main.scale
-        textLayer.alignmentMode = convertToCATextLayerAlignmentMode(alignmentModel)
+        textLayer.alignmentMode = alignmentModel
         textLayer.frame = rect
         return textLayer
     }
@@ -1065,14 +1065,4 @@ extension CTChartView {
         let rect = textStr.boundingRect(with: CGSize(width: width, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [.font: font], context: nil)
         return rect.height
     }
-}
-
-// Helper function inserted by Swift 4.2 migrator.
-private func convertFromCATextLayerAlignmentMode(_ input: CATextLayerAlignmentMode) -> String {
-	return input.rawValue
-}
-
-// Helper function inserted by Swift 4.2 migrator.
-private func convertToCATextLayerAlignmentMode(_ input: String) -> CATextLayerAlignmentMode {
-	return CATextLayerAlignmentMode(rawValue: input)
 }
