@@ -14,6 +14,7 @@
 		5B75ABAF2564F33300DB70B7 /* ReflectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABAE2564F33300DB70B7 /* ReflectViewController.swift */; };
 		5B75ABB72564F35100DB70B7 /* ReflectBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABB62564F35100DB70B7 /* ReflectBaseModel.swift */; };
 		5B75ABDF2565113F00DB70B7 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABDE2565113F00DB70B7 /* LocationViewController.swift */; };
+		5BDFD407260876280026F059 /* UILabelMultipleTapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDFD406260876280026F059 /* UILabelMultipleTapController.swift */; };
 		7C96BE86BF4AA2163CE57712 /* Pods_DemoSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15DF14BAB5BD5307EA55039 /* Pods_DemoSwiftTests.framework */; };
 		9C715A2823672CE400F8DA36 /* ResponderDetailTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C715A2723672CE400F8DA36 /* ResponderDetailTwoViewController.swift */; };
 		FF044C1020C9112600EDE2B6 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF044C0F20C9112600EDE2B6 /* Date+Extension.swift */; };
@@ -142,6 +143,7 @@
 		5B75ABAE2564F33300DB70B7 /* ReflectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectViewController.swift; sourceTree = "<group>"; };
 		5B75ABB62564F35100DB70B7 /* ReflectBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectBaseModel.swift; sourceTree = "<group>"; };
 		5B75ABDE2565113F00DB70B7 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		5BDFD406260876280026F059 /* UILabelMultipleTapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelMultipleTapController.swift; sourceTree = "<group>"; };
 		6EF8CEF4C2E4AADE70875566 /* Pods-DemoSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSwiftTests/Pods-DemoSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		8980D18AD2141E62C2B41318 /* Pods-DemoSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSwift/Pods-DemoSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		9853D24A50FA9FF3CD008B8D /* Pods-DemoSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSwift/Pods-DemoSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -317,6 +319,14 @@
 				5B75ABDE2565113F00DB70B7 /* LocationViewController.swift */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		5BDFD37B260871CB0026F059 /* labelTouch */ = {
+			isa = PBXGroup;
+			children = (
+				5BDFD406260876280026F059 /* UILabelMultipleTapController.swift */,
+			);
+			path = labelTouch;
 			sourceTree = "<group>";
 		};
 		FF0271C120BAA5DD0070FEC6 /* DatePickerView */ = {
@@ -532,6 +542,7 @@
 		FFD056A82059128C00A6F5AE /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				5BDFD37B260871CB0026F059 /* labelTouch */,
 				5B75ABDD2565112C00DB70B7 /* Location */,
 				5B75ABAD2564F30500DB70B7 /* reflect */,
 				5B4DFC932563A5330033F272 /* CountdownButton */,
@@ -904,6 +915,7 @@
 				5B75ABB72564F35100DB70B7 /* ReflectBaseModel.swift in Sources */,
 				FF1A833920A96F40001A1DF1 /* MarqueeView.swift in Sources */,
 				FF044C1020C9112600EDE2B6 /* Date+Extension.swift in Sources */,
+				5BDFD407260876280026F059 /* UILabelMultipleTapController.swift in Sources */,
 				FF7A645520F88C1F002AFBC0 /* DynamicAndStaticViewController.swift in Sources */,
 				FF18589E2059102300ADC0BC /* Demo.swift in Sources */,
 				FF59B162212169E900BD693E /* CTChartDemoViewController.swift in Sources */,

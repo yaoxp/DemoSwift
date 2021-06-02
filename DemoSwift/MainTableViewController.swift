@@ -46,7 +46,8 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
                  Demo(title: "锁性能测试", subtitle: "Swift and Objective-C", class: LockBenchmarkViewController.self),
                  Demo(title: "倒计时按钮", subtitle: nil, class: CountdownViewController.self),
                  Demo(title: "反射", subtitle: nil, class: ReflectViewController.self),
-                 Demo(title: "定位", subtitle: nil, class: LocationViewController.self)]
+                 Demo(title: "定位", subtitle: nil, class: LocationViewController.self),
+                 Demo(title: "label富文本高亮点击未实现", subtitle: nil, class: UILabelMultipleTapController.self)]
 
     // MARK: - View Life Cycle
 
