@@ -15,6 +15,11 @@
 		5B75ABB72564F35100DB70B7 /* ReflectBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABB62564F35100DB70B7 /* ReflectBaseModel.swift */; };
 		5B75ABDF2565113F00DB70B7 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABDE2565113F00DB70B7 /* LocationViewController.swift */; };
 		5BDFD407260876280026F059 /* UILabelMultipleTapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDFD406260876280026F059 /* UILabelMultipleTapController.swift */; };
+		5BE9D2A4266790190099B8B4 /* TimerCycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9D2A3266790190099B8B4 /* TimerCycleViewController.swift */; };
+		5BE9D2A72667A3510099B8B4 /* OCTimerLeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9D2A62667A3510099B8B4 /* OCTimerLeakViewController.m */; };
+		5BE9D2D2266876850099B8B4 /* WeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9D2D0266876850099B8B4 /* WeakTimer.m */; };
+		5BE9D2D5266877ED0099B8B4 /* WeakTimerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9D2D3266877ED0099B8B4 /* WeakTimerSwift.swift */; };
+		5BE9D2D6266877ED0099B8B4 /* TimerCycleSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9D2D4266877ED0099B8B4 /* TimerCycleSwiftViewController.swift */; };
 		7C96BE86BF4AA2163CE57712 /* Pods_DemoSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15DF14BAB5BD5307EA55039 /* Pods_DemoSwiftTests.framework */; };
 		9C715A2823672CE400F8DA36 /* ResponderDetailTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C715A2723672CE400F8DA36 /* ResponderDetailTwoViewController.swift */; };
 		FF044C1020C9112600EDE2B6 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF044C0F20C9112600EDE2B6 /* Date+Extension.swift */; };
@@ -144,6 +149,13 @@
 		5B75ABB62564F35100DB70B7 /* ReflectBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectBaseModel.swift; sourceTree = "<group>"; };
 		5B75ABDE2565113F00DB70B7 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		5BDFD406260876280026F059 /* UILabelMultipleTapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelMultipleTapController.swift; sourceTree = "<group>"; };
+		5BE9D2A3266790190099B8B4 /* TimerCycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCycleViewController.swift; sourceTree = "<group>"; };
+		5BE9D2A52667A3510099B8B4 /* OCTimerLeakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCTimerLeakViewController.h; sourceTree = "<group>"; };
+		5BE9D2A62667A3510099B8B4 /* OCTimerLeakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCTimerLeakViewController.m; sourceTree = "<group>"; };
+		5BE9D2D0266876850099B8B4 /* WeakTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeakTimer.m; sourceTree = "<group>"; };
+		5BE9D2D1266876850099B8B4 /* WeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeakTimer.h; sourceTree = "<group>"; };
+		5BE9D2D3266877ED0099B8B4 /* WeakTimerSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakTimerSwift.swift; sourceTree = "<group>"; };
+		5BE9D2D4266877ED0099B8B4 /* TimerCycleSwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerCycleSwiftViewController.swift; sourceTree = "<group>"; };
 		6EF8CEF4C2E4AADE70875566 /* Pods-DemoSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSwiftTests/Pods-DemoSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		8980D18AD2141E62C2B41318 /* Pods-DemoSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSwift/Pods-DemoSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		9853D24A50FA9FF3CD008B8D /* Pods-DemoSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSwift/Pods-DemoSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -329,6 +341,20 @@
 			path = labelTouch;
 			sourceTree = "<group>";
 		};
+		5BE9D2A226678FD10099B8B4 /* TimerCycle */ = {
+			isa = PBXGroup;
+			children = (
+				5BE9D2A3266790190099B8B4 /* TimerCycleViewController.swift */,
+				5BE9D2A52667A3510099B8B4 /* OCTimerLeakViewController.h */,
+				5BE9D2A62667A3510099B8B4 /* OCTimerLeakViewController.m */,
+				5BE9D2D4266877ED0099B8B4 /* TimerCycleSwiftViewController.swift */,
+				5BE9D2D3266877ED0099B8B4 /* WeakTimerSwift.swift */,
+				5BE9D2D1266876850099B8B4 /* WeakTimer.h */,
+				5BE9D2D0266876850099B8B4 /* WeakTimer.m */,
+			);
+			path = TimerCycle;
+			sourceTree = "<group>";
+		};
 		FF0271C120BAA5DD0070FEC6 /* DatePickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,6 +404,7 @@
 				FF18587E2058CAC400ADC0BC /* Assets.xcassets */,
 				FF1858802058CAC400ADC0BC /* LaunchScreen.storyboard */,
 				FF1858832058CAC400ADC0BC /* Info.plist */,
+				FF9E86F821C8970600D87C69 /* DemoSwift-Bridging-Header.h */,
 				FF00784921C37E0A001F367D /* MyPlayground.playground */,
 			);
 			path = DemoSwift;
@@ -441,7 +468,6 @@
 				FF58A08021C39DB80051CE8F /* LockBenchmarkViewController.swift */,
 				FF9E86FC21C8979000D87C69 /* OCLockBenchmark.h */,
 				FF9E86FD21C8979000D87C69 /* OCLockBenchmark.m */,
-				FF9E86F821C8970600D87C69 /* DemoSwift-Bridging-Header.h */,
 			);
 			path = "iOS lock benchmark";
 			sourceTree = "<group>";
@@ -542,6 +568,7 @@
 		FFD056A82059128C00A6F5AE /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				5BE9D2A226678FD10099B8B4 /* TimerCycle */,
 				5BDFD37B260871CB0026F059 /* labelTouch */,
 				5B75ABDD2565112C00DB70B7 /* Location */,
 				5B75ABAD2564F30500DB70B7 /* reflect */,
@@ -892,13 +919,16 @@
 				5B75ABDF2565113F00DB70B7 /* LocationViewController.swift in Sources */,
 				FF05DE2A2148FDCB00E3D5EA /* ImageIOBigImageViewController.swift in Sources */,
 				FF32FA98205F9784006889A3 /* PayTheBillHeaderView.swift in Sources */,
+				5BE9D2A72667A3510099B8B4 /* OCTimerLeakViewController.m in Sources */,
 				FF82E7B921798A9E00646650 /* OffScreenViewController.swift in Sources */,
 				FF1858782058CAC400ADC0BC /* AppDelegate.swift in Sources */,
 				FF59B15D2121618D00BD693E /* CTChartView.swift in Sources */,
 				FF05DE242148C60F00E3D5EA /* OriginImageViewController.swift in Sources */,
+				5BE9D2D2266876850099B8B4 /* WeakTimer.m in Sources */,
 				FF7A5B132133A46A008D6DEC /* CTScrollBarChartView.swift in Sources */,
 				FF707218212EAC680024C22C /* CTScrollBarTimeChartView.swift in Sources */,
 				FF395D6A2144CA7F002D3C28 /* CoreGraphicsBigImageViewController.swift in Sources */,
+				5BE9D2D6266877ED0099B8B4 /* TimerCycleSwiftViewController.swift in Sources */,
 				FF32FA8D205F58BC006889A3 /* PayTheBillViewController.swift in Sources */,
 				FFA7004A20AC27C60073DBF5 /* PeekViewController.swift in Sources */,
 				FF1A833720A96F19001A1DF1 /* MarqueeViewController.swift in Sources */,
@@ -915,6 +945,7 @@
 				5B75ABB72564F35100DB70B7 /* ReflectBaseModel.swift in Sources */,
 				FF1A833920A96F40001A1DF1 /* MarqueeView.swift in Sources */,
 				FF044C1020C9112600EDE2B6 /* Date+Extension.swift in Sources */,
+				5BE9D2A4266790190099B8B4 /* TimerCycleViewController.swift in Sources */,
 				5BDFD407260876280026F059 /* UILabelMultipleTapController.swift in Sources */,
 				FF7A645520F88C1F002AFBC0 /* DynamicAndStaticViewController.swift in Sources */,
 				FF18589E2059102300ADC0BC /* Demo.swift in Sources */,
@@ -930,6 +961,7 @@
 				FFD056AE2059134200A6F5AE /* UIDevice+Extension.swift in Sources */,
 				9C715A2823672CE400F8DA36 /* ResponderDetailTwoViewController.swift in Sources */,
 				FF9E86FE21C8979000D87C69 /* OCLockBenchmark.m in Sources */,
+				5BE9D2D5266877ED0099B8B4 /* WeakTimerSwift.swift in Sources */,
 				FF32FA94205F8A91006889A3 /* UIKit+Extension.swift in Sources */,
 				FFD056B72059238A00A6F5AE /* ClockOffViewController.swift in Sources */,
 				FF824774217D6C9B00B2F334 /* OffScreenTableViewControllerCell.swift in Sources */,
@@ -1136,7 +1168,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "DemoSwift/Demo/iOS lock benchmark/DemoSwift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "DemoSwift/DemoSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1160,7 +1192,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "DemoSwift/Demo/iOS lock benchmark/DemoSwift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "DemoSwift/DemoSwift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
