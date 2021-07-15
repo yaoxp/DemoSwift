@@ -57,6 +57,19 @@ extension UIImage {
 
     }
 
+    class func downsample(data: Data, to pointSize: CGSize, scale: CGFloat) -> UIImage? {
+        let imageSourceOptions = [kCGImageSourceShouldCache: false] as CFDictionary
+        guard let imageSource = CGImageSourceCreateWithData(data as CFData, imageSourceOptions) else { return nil }
+
+        let maxDimensionInPixels = max(pointSize.width, pointSize.height) * scale
+        let downsampleOptions = [kCGImageSourceCreateThumbnailFromImageAlways: true,
+                                 kCGImageSourceShouldCacheImmediately: true,
+                                 kCGImageSourceCreateThumbnailWithTransform: true,
+                                 kCGImageSourceThumbnailMaxPixelSize: maxDimensionInPixels] as CFDictionary
+        guard let downsampleImage = CGImageSourceCreateThumbnailAtIndex(imageSource, 0, downsampleOptions) else { return nil }
+        return UIImage(cgImage: downsampleImage, scale: scale, orientation: .up)
+    }
+
     func resizeUI(_ size: CGSize) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, true, 0.0)
 
@@ -95,9 +108,8 @@ extension UIImage {
 
     func resizeIO(_ size: CGSize) -> UIImage? {
         guard let data = self.pngData() else { return nil }
-
-        let scale = UIScreen.main.scale
-        let maxPixelSize = max(size.width, size.height) * scale
+        
+        let maxPixelSize = max(size.width, size.height)
 
         guard let imageSource = CGImageSourceCreateWithData(data as CFData, nil) else { return nil }
 

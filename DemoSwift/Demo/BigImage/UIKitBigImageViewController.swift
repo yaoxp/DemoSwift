@@ -21,14 +21,23 @@ class UIKitBigImageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
 
-        let path = Bundle.main.bundlePath + "/IMG_001.png"
-        let image = UIImage(contentsOfFile: path)
+        let path = Bundle.main.path(forResource: ImageSource.bigImageName, ofType: nil)
+        assert(path != nil, "image path is nil: \(ImageSource.bigImageName)")
+        let image = UIImage(contentsOfFile: path!)
+        assert(image != nil, "image is nil")
 
         let newImage = image?.resizeUI(imageView.frame.size)
 
         imageView.image = newImage
-        print("UIKit: \(newImage!.size)")
+        print("original image size: \(image!.size), scale: \(image!.scale)")
+        print("UIKit: size: \(newImage!.size), scale: \(newImage!.scale)")
+    }
+
+    deinit {
+        imageView.image = nil
+        print("UI dealloc")
     }
 
     override func didReceiveMemoryWarning() {

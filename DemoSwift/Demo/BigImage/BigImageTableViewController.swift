@@ -8,11 +8,19 @@
 
 import UIKit
 
+struct ImageSource {
+    static let bigImageName = "IMG_001.png"
+    static let bigTransparentImageName = "transparent_001.png"
+}
+
 class BigImageTableViewController: UITableViewController {
 
     let bigImageDemo = [Demo(title: "不处理",
                              subtitle: "imageView.image = image",
                              class: OriginImageViewController.self),
+                        Demo(title: "SD original", subtitle: "SDWebImage 解码", class: SDOriginalViewController.self),
+                        Demo(title: "SD thumbnail", subtitle: "SDWebImage 缩放图片", class: SDThumbnailViewController.self),
+                        Demo(title: "Apple method", subtitle: "CGImageSourceCreateThumbnailAtIndex", class: AppleDownsampleViewController.self),
                         Demo(title: "UIKit",
                              subtitle: "UIGraphicsBeginImageContextWithOptions & UIImage -drawInRect:",
                              class: UIKitBigImageViewController.self),
