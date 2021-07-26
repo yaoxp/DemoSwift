@@ -57,6 +57,12 @@ extension UIImage {
 
     }
 
+    /// 缩小图片
+    /// - Parameters:
+    ///   - data: 图片data
+    ///   - pointSize: 缩小后的尺寸，要小于原图
+    ///   - scale: scale
+    /// - Returns: 缩小后的图片
     class func downsample(data: Data, to pointSize: CGSize, scale: CGFloat) -> UIImage? {
         let imageSourceOptions = [kCGImageSourceShouldCache: false] as CFDictionary
         guard let imageSource = CGImageSourceCreateWithData(data as CFData, imageSourceOptions) else { return nil }
@@ -68,6 +74,16 @@ extension UIImage {
                                  kCGImageSourceThumbnailMaxPixelSize: maxDimensionInPixels] as CFDictionary
         guard let downsampleImage = CGImageSourceCreateThumbnailAtIndex(imageSource, 0, downsampleOptions) else { return nil }
         return UIImage(cgImage: downsampleImage, scale: scale, orientation: .up)
+    }
+
+    /// 手动解码图片
+    /// - Parameter data: data
+    /// - Returns: 解码后的图片
+    class func imageIODecoder(data: Data) -> UIImage? {
+        guard let source = CGImageSourceCreateWithData(data as CFData, nil) else { return nil }
+        guard let imageRef = CGImageSourceCreateImageAtIndex(source, 0, nil) else { return nil }
+        let newImage = UIImage(cgImage: imageRef, scale: UIScreen.main.scale, orientation: .up)
+        return newImage
     }
 
     func resizeUI(_ size: CGSize) -> UIImage? {

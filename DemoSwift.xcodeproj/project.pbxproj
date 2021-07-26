@@ -9,10 +9,15 @@
 /* Begin PBXBuildFile section */
 		268EDB40F43779811DA69F67 /* Pods_DemoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B041FB317087741D521495CA /* Pods_DemoSwift.framework */; };
 		5B136160269C7A0A00A70DFF /* transparent_001.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B13615F269C7A0A00A70DFF /* transparent_001.png */; };
-		5B136162269D69B400A70DFF /* SDOriginalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B136161269D69B400A70DFF /* SDOriginalViewController.swift */; };
-		5B136164269D6FA400A70DFF /* SDThumbnailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B136163269D6FA400A70DFF /* SDThumbnailViewController.swift */; };
 		5B136166269D804200A70DFF /* AppleDownsampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B136165269D804200A70DFF /* AppleDownsampleViewController.swift */; };
 		5B136168269EE10C00A70DFF /* ant.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B136167269EE10C00A70DFF /* ant.png */; };
+		5B13616A269FC00F00A70DFF /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B136169269FC00F00A70DFF /* Data+Extension.swift */; };
+		5B2FD74526AE55B4004EC22E /* ImageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2FD74426AE55B4004EC22E /* ImageTableViewController.swift */; };
+		5B2FD74826AE5902004EC22E /* NinePatchImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2FD74726AE5902004EC22E /* NinePatchImageFactory.swift */; };
+		5B2FD74B26AE59A4004EC22E /* android.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B2FD74A26AE59A4004EC22E /* android.9.png */; };
+		5B2FD74D26AE8F0A004EC22E /* NinePatchImageViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2FD74C26AE8F0A004EC22E /* NinePatchImageViewController1.swift */; };
+		5B2FD75226AEB269004EC22E /* NinePatchImageViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2FD75126AEB269004EC22E /* NinePatchImageViewController2.swift */; };
+		5B2FD75426AED174004EC22E /* NinePatchImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2FD75326AED174004EC22E /* NinePatchImageTest.swift */; };
 		5B4DFC952563A5690033F272 /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DFC942563A5690033F272 /* CountdownViewController.swift */; };
 		5B4DFC9E2563AA680033F272 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DFC9D2563AA680033F272 /* CountdownTimer.swift */; };
 		5B4DFCA32563AD8F0033F272 /* CountdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DFCA22563AD8F0033F272 /* CountdownButton.swift */; };
@@ -148,10 +153,15 @@
 
 /* Begin PBXFileReference section */
 		5B13615F269C7A0A00A70DFF /* transparent_001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparent_001.png; sourceTree = "<group>"; };
-		5B136161269D69B400A70DFF /* SDOriginalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDOriginalViewController.swift; sourceTree = "<group>"; };
-		5B136163269D6FA400A70DFF /* SDThumbnailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDThumbnailViewController.swift; sourceTree = "<group>"; };
 		5B136165269D804200A70DFF /* AppleDownsampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleDownsampleViewController.swift; sourceTree = "<group>"; };
 		5B136167269EE10C00A70DFF /* ant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ant.png; sourceTree = "<group>"; };
+		5B136169269FC00F00A70DFF /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		5B2FD74426AE55B4004EC22E /* ImageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewController.swift; sourceTree = "<group>"; };
+		5B2FD74726AE5902004EC22E /* NinePatchImageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NinePatchImageFactory.swift; sourceTree = "<group>"; };
+		5B2FD74A26AE59A4004EC22E /* android.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = android.9.png; sourceTree = "<group>"; };
+		5B2FD74C26AE8F0A004EC22E /* NinePatchImageViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinePatchImageViewController1.swift; sourceTree = "<group>"; };
+		5B2FD75126AEB269004EC22E /* NinePatchImageViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinePatchImageViewController2.swift; sourceTree = "<group>"; };
+		5B2FD75326AED174004EC22E /* NinePatchImageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinePatchImageTest.swift; sourceTree = "<group>"; };
 		5B4DFC942563A5690033F272 /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
 		5B4DFC9D2563AA680033F272 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		5B4DFCA22563AD8F0033F272 /* CountdownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownButton.swift; sourceTree = "<group>"; };
@@ -316,6 +326,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5B2FD74326AE52F4004EC22E /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				5B2FD74426AE55B4004EC22E /* ImageTableViewController.swift */,
+				5B2FD74C26AE8F0A004EC22E /* NinePatchImageViewController1.swift */,
+				5B2FD75126AEB269004EC22E /* NinePatchImageViewController2.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		5B2FD74626AE58F3004EC22E /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				5B2FD74726AE5902004EC22E /* NinePatchImageFactory.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		5B2FD74926AE591E004EC22E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5B2FD74A26AE59A4004EC22E /* android.9.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		5B4DFC932563A5330033F272 /* CountdownButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,6 +439,8 @@
 		FF1858762058CAC400ADC0BC /* DemoSwift */ = {
 			isa = PBXGroup;
 			children = (
+				5B2FD74926AE591E004EC22E /* Assets */,
+				5B2FD74626AE58F3004EC22E /* Tool */,
 				FFA7004720AC276D0073DBF5 /* Base */,
 				FFD056A92059129200A6F5AE /* Extension */,
 				FFD056A82059128C00A6F5AE /* Demo */,
@@ -427,6 +465,7 @@
 				FF18588E2058CAC400ADC0BC /* Info.plist */,
 				FFF763CD20CA786700E479B7 /* DateExtensionTests.swift */,
 				FF05DE262148E35200E3D5EA /* BigImageTests.swift */,
+				5B2FD75326AED174004EC22E /* NinePatchImageTest.swift */,
 			);
 			path = DemoSwiftTests;
 			sourceTree = "<group>";
@@ -447,8 +486,6 @@
 				5B136167269EE10C00A70DFF /* ant.png */,
 				5B13615F269C7A0A00A70DFF /* transparent_001.png */,
 				FF395D612144C569002D3C28 /* BigImageTableViewController.swift */,
-				5B136161269D69B400A70DFF /* SDOriginalViewController.swift */,
-				5B136163269D6FA400A70DFF /* SDThumbnailViewController.swift */,
 				5B136165269D804200A70DFF /* AppleDownsampleViewController.swift */,
 				FF05DE222148C60F00E3D5EA /* OriginImageViewController.swift */,
 				FF05DE232148C60F00E3D5EA /* OriginImageViewController.xib */,
@@ -583,6 +620,7 @@
 		FFD056A82059128C00A6F5AE /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				5B2FD74326AE52F4004EC22E /* Image */,
 				5BE9D2A226678FD10099B8B4 /* TimerCycle */,
 				5BDFD37B260871CB0026F059 /* labelTouch */,
 				5B75ABDD2565112C00DB70B7 /* Location */,
@@ -614,6 +652,7 @@
 				FF044C0F20C9112600EDE2B6 /* Date+Extension.swift */,
 				FF1B312D212FEEF70030A5D0 /* String+Extension.swift */,
 				FF2FFE752187F34400B886FF /* Codable+Extension.swift */,
+				5B136169269FC00F00A70DFF /* Data+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -669,7 +708,6 @@
 				FF1858722058CAC400ADC0BC /* Resources */,
 				FE30DB1FADB9EF40D93C20FF /* [CP] Embed Pods Frameworks */,
 				FF7A646720F88D3E002AFBC0 /* Embed Frameworks */,
-				FF06B37F21C9E72B0020A327 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -816,6 +854,7 @@
 				5B136168269EE10C00A70DFF /* ant.png in Resources */,
 				FF32FA92205F6944006889A3 /* PayTheBillTitleView.xib in Resources */,
 				FF05DE2B2148FDCB00E3D5EA /* ImageIOBigImageViewController.xib in Resources */,
+				5B2FD74B26AE59A4004EC22E /* android.9.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,13 +927,11 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DemoSwift/Pods-DemoSwift-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -902,24 +939,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoSwift/Pods-DemoSwift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		FF06B37F21C9E72B0020A327 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which ${PODS_ROOT}/SwiftLint/swiftlint >/dev/null; then\n  ${PODS_ROOT}/SwiftLint/swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -933,6 +952,7 @@
 				FF1858982058D4E600ADC0BC /* MainTableViewController.swift in Sources */,
 				FF32FA9C205FB1D0006889A3 /* DispatchQueue+Extension.swift in Sources */,
 				FF6AA7E4214657B100BA1F51 /* CoreImageBigImageViewController.swift in Sources */,
+				5B13616A269FC00F00A70DFF /* Data+Extension.swift in Sources */,
 				FF824781217F099600B2F334 /* BigTouchLabel.swift in Sources */,
 				FF58A08121C39DB80051CE8F /* LockBenchmarkViewController.swift in Sources */,
 				5B75ABDF2565113F00DB70B7 /* LocationViewController.swift in Sources */,
@@ -950,13 +970,17 @@
 				5BE9D2D6266877ED0099B8B4 /* TimerCycleSwiftViewController.swift in Sources */,
 				FF32FA8D205F58BC006889A3 /* PayTheBillViewController.swift in Sources */,
 				FFA7004A20AC27C60073DBF5 /* PeekViewController.swift in Sources */,
+				5B2FD75226AEB269004EC22E /* NinePatchImageViewController2.swift in Sources */,
 				FF1A833720A96F19001A1DF1 /* MarqueeViewController.swift in Sources */,
 				FF824772217D6C7D00B2F334 /* OffScreenTableViewController.swift in Sources */,
 				FF32FA96205F90C9006889A3 /* UIImage+Extension.swift in Sources */,
 				FFE4A23720BB9B6300939E00 /* DatePickerView.swift in Sources */,
+				5B2FD74826AE5902004EC22E /* NinePatchImageFactory.swift in Sources */,
 				5B4DFC952563A5690033F272 /* CountdownViewController.swift in Sources */,
+				5B2FD74D26AE8F0A004EC22E /* NinePatchImageViewController1.swift in Sources */,
 				FF395D622144C569002D3C28 /* BigImageTableViewController.swift in Sources */,
 				5B136166269D804200A70DFF /* AppleDownsampleViewController.swift in Sources */,
+				5B2FD74526AE55B4004EC22E /* ImageTableViewController.swift in Sources */,
 				5B4DFCA32563AD8F0033F272 /* CountdownButton.swift in Sources */,
 				FF64280021AE8D82003DF725 /* NetworkDependDemoVC.swift in Sources */,
 				5B75ABAF2564F33300DB70B7 /* ReflectViewController.swift in Sources */,
@@ -965,7 +989,6 @@
 				5B75ABB72564F35100DB70B7 /* ReflectBaseModel.swift in Sources */,
 				FF1A833920A96F40001A1DF1 /* MarqueeView.swift in Sources */,
 				FF044C1020C9112600EDE2B6 /* Date+Extension.swift in Sources */,
-				5B136164269D6FA400A70DFF /* SDThumbnailViewController.swift in Sources */,
 				5BE9D2A4266790190099B8B4 /* TimerCycleViewController.swift in Sources */,
 				5BDFD407260876280026F059 /* UILabelMultipleTapController.swift in Sources */,
 				FF7A645520F88C1F002AFBC0 /* DynamicAndStaticViewController.swift in Sources */,
@@ -978,7 +1001,6 @@
 				FF1B312E212FEEF70030A5D0 /* String+Extension.swift in Sources */,
 				FFA7004620AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift in Sources */,
 				FF707215212EABF70024C22C /* CTScrollChartDemoViewController.swift in Sources */,
-				5B136162269D69B400A70DFF /* SDOriginalViewController.swift in Sources */,
 				FF395D662144C64A002D3C28 /* UIKitBigImageViewController.swift in Sources */,
 				FFD056AE2059134200A6F5AE /* UIDevice+Extension.swift in Sources */,
 				9C715A2823672CE400F8DA36 /* ResponderDetailTwoViewController.swift in Sources */,
@@ -996,6 +1018,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B2FD75426AED174004EC22E /* NinePatchImageTest.swift in Sources */,
 				FF05DE272148E35200E3D5EA /* BigImageTests.swift in Sources */,
 				FF18588D2058CAC400ADC0BC /* DemoSwiftTests.swift in Sources */,
 				FFF763CE20CA786700E479B7 /* DateExtensionTests.swift in Sources */,
@@ -1190,6 +1213,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OBJC_BRIDGING_HEADER = "DemoSwift/DemoSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1215,6 +1239,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DemoSwift/DemoSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -10,8 +10,6 @@ target 'DemoSwift' do
   pod 'SwiftLint' # https://github.com/realm/SwiftLint
   # Pods for DemoSwift
 
-  pod 'SDWebImage'
-
   target 'DemoSwiftTests' do
     inherit! :search_paths
     # Pods for testing

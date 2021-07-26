@@ -1,58 +1,33 @@
 //
-//  BigImageTableViewController.swift
+//  ImageTableViewController.swift
 //  DemoSwift
 //
-//  Created by yaoxinpan on 2018/9/9.
-//  Copyright © 2018年 yaoxp. All rights reserved.
+//  Created by yaoxp on 2021/7/26.
+//  Copyright © 2021 yaoxp. All rights reserved.
 //
 
 import UIKit
 
-struct ImageSource {
-    static let bigImageName = "IMG_001.png"
-    static let bigTransparentImageName = "transparent_001.png"
-}
+class ImageTableViewController: UITableViewController {
 
-class BigImageTableViewController: UITableViewController {
-
-    let bigImageDemo = [Demo(title: "不处理",
-                             subtitle: "imageView.image = image",
-                             class: OriginImageViewController.self),
-                        Demo(title: "Apple method", subtitle: "CGImageSourceCreateThumbnailAtIndex", class: AppleDownsampleViewController.self),
-                        Demo(title: "UIKit",
-                             subtitle: "UIGraphicsBeginImageContextWithOptions & UIImage -drawInRect:",
-                             class: UIKitBigImageViewController.self),
-                        Demo(title: "CoreGraphics",
-                             subtitle: "CGBitmapContextCreate & CGContextDrawImage",
-                             class: CoreGraphicsBigImageViewController.self),
-                        Demo(title: "Core Image",
-                             subtitle: "CIImage & CIFilter",
-                             class: CoreImageBigImageViewController.self),
-                        Demo(title: "Image IO",
-                             subtitle: "CGImageSourceCreateThumbnailAtIndex",
-                             class: ImageIOBigImageViewController.self)]
+    let imageDemo = [Demo(title: "android.9.png", subtitle: "CGImageGetDataProvider", class: NinePatchImageViewController1.self),
+                     Demo(title: "android.9.png", subtitle: "CGBitmapContextCreate", class: NinePatchImageViewController2.self)]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        self.clearsSelectionOnViewWillAppear = true
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bigImageDemo.count
+        // #warning Incomplete implementation, return the number of rows
+        return imageDemo.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -61,7 +36,7 @@ class BigImageTableViewController: UITableViewController {
             cell = UITableViewCell(style: .subtitle, reuseIdentifier: "reuseIdentifier")
         }
 
-        let demo = bigImageDemo[indexPath.row]
+        let demo = imageDemo[indexPath.row]
 
         cell!.textLabel?.text = demo.title
         cell!.detailTextLabel?.text = demo.subtitle
@@ -70,7 +45,7 @@ class BigImageTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let demo = bigImageDemo[indexPath.row]
+        let demo = imageDemo[indexPath.row]
 
         if let vcClass = demo.class as? UIViewController.Type {
             let vc = vcClass.init()
@@ -88,13 +63,13 @@ class BigImageTableViewController: UITableViewController {
 
     /*
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
+        }    
     }
     */
 
@@ -118,7 +93,7 @@ class BigImageTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
+        // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
     */

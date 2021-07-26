@@ -37,7 +37,6 @@ class AppleDownsampleViewController: UIViewController {
                 print("image view size: \(self.imageView.frame.size)")
             }
         }
-
     }
 
 }
@@ -55,5 +54,3 @@ extension AppleDownsampleViewController {
         view.backgroundColor = .white
     }
 }
-
-
