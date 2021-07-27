@@ -18,6 +18,8 @@
 		5B2FD74D26AE8F0A004EC22E /* NinePatchImageViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2FD74C26AE8F0A004EC22E /* NinePatchImageViewController1.swift */; };
 		5B2FD75226AEB269004EC22E /* NinePatchImageViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2FD75126AEB269004EC22E /* NinePatchImageViewController2.swift */; };
 		5B2FD75426AED174004EC22E /* NinePatchImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2FD75326AED174004EC22E /* NinePatchImageTest.swift */; };
+		5B2FD75626AED431004EC22E /* DownsampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2FD75526AED431004EC22E /* DownsampleViewController.swift */; };
+		5B2FD75826AEDB97004EC22E /* large_leaves_70mp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5B2FD75726AEDB97004EC22E /* large_leaves_70mp.jpg */; };
 		5B4DFC952563A5690033F272 /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DFC942563A5690033F272 /* CountdownViewController.swift */; };
 		5B4DFC9E2563AA680033F272 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DFC9D2563AA680033F272 /* CountdownTimer.swift */; };
 		5B4DFCA32563AD8F0033F272 /* CountdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DFCA22563AD8F0033F272 /* CountdownButton.swift */; };
@@ -25,6 +27,7 @@
 		5B75ABB72564F35100DB70B7 /* ReflectBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABB62564F35100DB70B7 /* ReflectBaseModel.swift */; };
 		5B75ABDF2565113F00DB70B7 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABDE2565113F00DB70B7 /* LocationViewController.swift */; };
 		5BDFD407260876280026F059 /* UILabelMultipleTapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDFD406260876280026F059 /* UILabelMultipleTapController.swift */; };
+		5BE21C0E26B02FA2006AD0E8 /* ManualDecodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE21C0D26B02FA2006AD0E8 /* ManualDecodeViewController.swift */; };
 		5BE9D2A4266790190099B8B4 /* TimerCycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9D2A3266790190099B8B4 /* TimerCycleViewController.swift */; };
 		5BE9D2A72667A3510099B8B4 /* OCTimerLeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9D2A62667A3510099B8B4 /* OCTimerLeakViewController.m */; };
 		5BE9D2D2266876850099B8B4 /* WeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9D2D0266876850099B8B4 /* WeakTimer.m */; };
@@ -162,6 +165,8 @@
 		5B2FD74C26AE8F0A004EC22E /* NinePatchImageViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinePatchImageViewController1.swift; sourceTree = "<group>"; };
 		5B2FD75126AEB269004EC22E /* NinePatchImageViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinePatchImageViewController2.swift; sourceTree = "<group>"; };
 		5B2FD75326AED174004EC22E /* NinePatchImageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinePatchImageTest.swift; sourceTree = "<group>"; };
+		5B2FD75526AED431004EC22E /* DownsampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownsampleViewController.swift; sourceTree = "<group>"; };
+		5B2FD75726AEDB97004EC22E /* large_leaves_70mp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = large_leaves_70mp.jpg; sourceTree = "<group>"; };
 		5B4DFC942563A5690033F272 /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
 		5B4DFC9D2563AA680033F272 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		5B4DFCA22563AD8F0033F272 /* CountdownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownButton.swift; sourceTree = "<group>"; };
@@ -169,6 +174,7 @@
 		5B75ABB62564F35100DB70B7 /* ReflectBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectBaseModel.swift; sourceTree = "<group>"; };
 		5B75ABDE2565113F00DB70B7 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		5BDFD406260876280026F059 /* UILabelMultipleTapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelMultipleTapController.swift; sourceTree = "<group>"; };
+		5BE21C0D26B02FA2006AD0E8 /* ManualDecodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualDecodeViewController.swift; sourceTree = "<group>"; };
 		5BE9D2A3266790190099B8B4 /* TimerCycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCycleViewController.swift; sourceTree = "<group>"; };
 		5BE9D2A52667A3510099B8B4 /* OCTimerLeakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCTimerLeakViewController.h; sourceTree = "<group>"; };
 		5BE9D2A62667A3510099B8B4 /* OCTimerLeakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCTimerLeakViewController.m; sourceTree = "<group>"; };
@@ -330,8 +336,10 @@
 			isa = PBXGroup;
 			children = (
 				5B2FD74426AE55B4004EC22E /* ImageTableViewController.swift */,
+				5BE21C0D26B02FA2006AD0E8 /* ManualDecodeViewController.swift */,
 				5B2FD74C26AE8F0A004EC22E /* NinePatchImageViewController1.swift */,
 				5B2FD75126AEB269004EC22E /* NinePatchImageViewController2.swift */,
+				5B2FD75526AED431004EC22E /* DownsampleViewController.swift */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -348,6 +356,10 @@
 			isa = PBXGroup;
 			children = (
 				5B2FD74A26AE59A4004EC22E /* android.9.png */,
+				FF395D5F2144C53E002D3C28 /* IMG_001.png */,
+				5B136167269EE10C00A70DFF /* ant.png */,
+				5B2FD75726AEDB97004EC22E /* large_leaves_70mp.jpg */,
+				5B13615F269C7A0A00A70DFF /* transparent_001.png */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -482,9 +494,6 @@
 		FF395D5E2144C50C002D3C28 /* BigImage */ = {
 			isa = PBXGroup;
 			children = (
-				FF395D5F2144C53E002D3C28 /* IMG_001.png */,
-				5B136167269EE10C00A70DFF /* ant.png */,
-				5B13615F269C7A0A00A70DFF /* transparent_001.png */,
 				FF395D612144C569002D3C28 /* BigImageTableViewController.swift */,
 				5B136165269D804200A70DFF /* AppleDownsampleViewController.swift */,
 				FF05DE222148C60F00E3D5EA /* OriginImageViewController.swift */,
@@ -843,6 +852,7 @@
 				5B136160269C7A0A00A70DFF /* transparent_001.png in Resources */,
 				FFE4A23920BBA71400939E00 /* DatePickerView.xib in Resources */,
 				FFD056B1205913CA00A6F5AE /* AnimationViewController.xib in Resources */,
+				5B2FD75826AEDB97004EC22E /* large_leaves_70mp.jpg in Resources */,
 				FF18587F2058CAC400ADC0BC /* Assets.xcassets in Resources */,
 				FF59B15F2121636A00BD693E /* CTChartView.xib in Resources */,
 				FF18587D2058CAC400ADC0BC /* Main.storyboard in Resources */,
@@ -957,6 +967,7 @@
 				FF58A08121C39DB80051CE8F /* LockBenchmarkViewController.swift in Sources */,
 				5B75ABDF2565113F00DB70B7 /* LocationViewController.swift in Sources */,
 				FF05DE2A2148FDCB00E3D5EA /* ImageIOBigImageViewController.swift in Sources */,
+				5B2FD75626AED431004EC22E /* DownsampleViewController.swift in Sources */,
 				FF32FA98205F9784006889A3 /* PayTheBillHeaderView.swift in Sources */,
 				5BE9D2A72667A3510099B8B4 /* OCTimerLeakViewController.m in Sources */,
 				FF82E7B921798A9E00646650 /* OffScreenViewController.swift in Sources */,
@@ -1002,6 +1013,7 @@
 				FFA7004620AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift in Sources */,
 				FF707215212EABF70024C22C /* CTScrollChartDemoViewController.swift in Sources */,
 				FF395D662144C64A002D3C28 /* UIKitBigImageViewController.swift in Sources */,
+				5BE21C0E26B02FA2006AD0E8 /* ManualDecodeViewController.swift in Sources */,
 				FFD056AE2059134200A6F5AE /* UIDevice+Extension.swift in Sources */,
 				9C715A2823672CE400F8DA36 /* ResponderDetailTwoViewController.swift in Sources */,
 				FF9E86FE21C8979000D87C69 /* OCLockBenchmark.m in Sources */,
