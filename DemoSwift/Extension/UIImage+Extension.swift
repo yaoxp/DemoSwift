@@ -10,7 +10,50 @@ import UIKit
 import ImageIO
 import QuartzCore
 
+// MARK: - new
 extension UIImage {
+    
+}
+
+// MARK: - Decode
+extension UIImage {
+    class func decodeImage1(_ image: UIImage, completion: ((UIImage?) -> Void)?) {
+        DispatchQueue.global().async {
+            var newImage: UIImage? = nil
+            defer {
+                DispatchQueue.main.async {
+                    completion?(newImage ?? image)
+                }
+            }
+            guard let imageRef = image.cgImage else { return }
+            UIGraphicsBeginImageContextWithOptions(image.size, false, image.scale)
+            guard let context = UIGraphicsGetCurrentContext() else { return }
+            defer { UIGraphicsEndImageContext() }
+            context.draw(imageRef, in: CGRect(origin: .zero, size: image.size))
+            guard let newImageRef = context.makeImage() else { return }
+            newImage = UIImage(cgImage: newImageRef, scale: image.scale, orientation: image.imageOrientation)
+            return
+        }
+    }
+
+    class func decodeImage2(_ image: UIImage, completion: ((UIImage?) -> Void)?) {
+        DispatchQueue.global().async {
+            var newImage: UIImage? = nil
+            defer {
+                DispatchQueue.main.async {
+                    completion?(newImage ?? image)
+                }
+            }
+            guard let imageRef = image.cgImage else { return }
+            UIGraphicsBeginImageContextWithOptions(image.size, false, image.scale)
+            guard let context = UIGraphicsGetCurrentContext() else { return }
+            defer { UIGraphicsEndImageContext() }
+            context.draw(imageRef, in: CGRect(origin: .zero, size: image.size))
+            newImage = UIGraphicsGetImageFromCurrentImageContext()
+            return
+        }
+    }
+
     class func createImage(color: UIColor, frame: CGRect) -> UIImage? {
         UIGraphicsBeginImageContext(frame.size)
 

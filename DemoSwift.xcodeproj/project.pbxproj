@@ -10,7 +10,7 @@
 		268EDB40F43779811DA69F67 /* Pods_DemoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B041FB317087741D521495CA /* Pods_DemoSwift.framework */; };
 		5B136160269C7A0A00A70DFF /* transparent_001.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B13615F269C7A0A00A70DFF /* transparent_001.png */; };
 		5B136166269D804200A70DFF /* AppleDownsampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B136165269D804200A70DFF /* AppleDownsampleViewController.swift */; };
-		5B136168269EE10C00A70DFF /* ant.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B136167269EE10C00A70DFF /* ant.png */; };
+		5B136168269EE10C00A70DFF /* ant@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B136167269EE10C00A70DFF /* ant@3x.png */; };
 		5B13616A269FC00F00A70DFF /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B136169269FC00F00A70DFF /* Data+Extension.swift */; };
 		5B2FD74526AE55B4004EC22E /* ImageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2FD74426AE55B4004EC22E /* ImageTableViewController.swift */; };
 		5B2FD74826AE5902004EC22E /* NinePatchImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2FD74726AE5902004EC22E /* NinePatchImageFactory.swift */; };
@@ -23,11 +23,14 @@
 		5B4DFC952563A5690033F272 /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DFC942563A5690033F272 /* CountdownViewController.swift */; };
 		5B4DFC9E2563AA680033F272 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DFC9D2563AA680033F272 /* CountdownTimer.swift */; };
 		5B4DFCA32563AD8F0033F272 /* CountdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DFCA22563AD8F0033F272 /* CountdownButton.swift */; };
+		5B5AE47326B2B15D0089D311 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5AE47226B2B15D0089D311 /* UIApplication+Extension.swift */; };
 		5B75ABAF2564F33300DB70B7 /* ReflectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABAE2564F33300DB70B7 /* ReflectViewController.swift */; };
 		5B75ABB72564F35100DB70B7 /* ReflectBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABB62564F35100DB70B7 /* ReflectBaseModel.swift */; };
 		5B75ABDF2565113F00DB70B7 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABDE2565113F00DB70B7 /* LocationViewController.swift */; };
+		5B83B37326B2CEDF001FE25D /* ManualDecodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B37126B2CEDF001FE25D /* ManualDecodeViewController.swift */; };
+		5B83B37426B2CEDF001FE25D /* ManualDecodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B83B37226B2CEDF001FE25D /* ManualDecodeViewController.xib */; };
+		5B83B37626B2D5F9001FE25D /* Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B37526B2D5F9001FE25D /* Number+Extension.swift */; };
 		5BDFD407260876280026F059 /* UILabelMultipleTapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDFD406260876280026F059 /* UILabelMultipleTapController.swift */; };
-		5BE21C0E26B02FA2006AD0E8 /* ManualDecodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE21C0D26B02FA2006AD0E8 /* ManualDecodeViewController.swift */; };
 		5BE9D2A4266790190099B8B4 /* TimerCycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9D2A3266790190099B8B4 /* TimerCycleViewController.swift */; };
 		5BE9D2A72667A3510099B8B4 /* OCTimerLeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9D2A62667A3510099B8B4 /* OCTimerLeakViewController.m */; };
 		5BE9D2D2266876850099B8B4 /* WeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9D2D0266876850099B8B4 /* WeakTimer.m */; };
@@ -157,7 +160,7 @@
 /* Begin PBXFileReference section */
 		5B13615F269C7A0A00A70DFF /* transparent_001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparent_001.png; sourceTree = "<group>"; };
 		5B136165269D804200A70DFF /* AppleDownsampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleDownsampleViewController.swift; sourceTree = "<group>"; };
-		5B136167269EE10C00A70DFF /* ant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ant.png; sourceTree = "<group>"; };
+		5B136167269EE10C00A70DFF /* ant@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ant@3x.png"; sourceTree = "<group>"; };
 		5B136169269FC00F00A70DFF /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		5B2FD74426AE55B4004EC22E /* ImageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewController.swift; sourceTree = "<group>"; };
 		5B2FD74726AE5902004EC22E /* NinePatchImageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NinePatchImageFactory.swift; sourceTree = "<group>"; };
@@ -170,11 +173,14 @@
 		5B4DFC942563A5690033F272 /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
 		5B4DFC9D2563AA680033F272 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		5B4DFCA22563AD8F0033F272 /* CountdownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownButton.swift; sourceTree = "<group>"; };
+		5B5AE47226B2B15D0089D311 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		5B75ABAE2564F33300DB70B7 /* ReflectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectViewController.swift; sourceTree = "<group>"; };
 		5B75ABB62564F35100DB70B7 /* ReflectBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectBaseModel.swift; sourceTree = "<group>"; };
 		5B75ABDE2565113F00DB70B7 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		5B83B37126B2CEDF001FE25D /* ManualDecodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualDecodeViewController.swift; sourceTree = "<group>"; };
+		5B83B37226B2CEDF001FE25D /* ManualDecodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManualDecodeViewController.xib; sourceTree = "<group>"; };
+		5B83B37526B2D5F9001FE25D /* Number+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Extension.swift"; sourceTree = "<group>"; };
 		5BDFD406260876280026F059 /* UILabelMultipleTapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelMultipleTapController.swift; sourceTree = "<group>"; };
-		5BE21C0D26B02FA2006AD0E8 /* ManualDecodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualDecodeViewController.swift; sourceTree = "<group>"; };
 		5BE9D2A3266790190099B8B4 /* TimerCycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCycleViewController.swift; sourceTree = "<group>"; };
 		5BE9D2A52667A3510099B8B4 /* OCTimerLeakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCTimerLeakViewController.h; sourceTree = "<group>"; };
 		5BE9D2A62667A3510099B8B4 /* OCTimerLeakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCTimerLeakViewController.m; sourceTree = "<group>"; };
@@ -336,7 +342,8 @@
 			isa = PBXGroup;
 			children = (
 				5B2FD74426AE55B4004EC22E /* ImageTableViewController.swift */,
-				5BE21C0D26B02FA2006AD0E8 /* ManualDecodeViewController.swift */,
+				5B83B37126B2CEDF001FE25D /* ManualDecodeViewController.swift */,
+				5B83B37226B2CEDF001FE25D /* ManualDecodeViewController.xib */,
 				5B2FD74C26AE8F0A004EC22E /* NinePatchImageViewController1.swift */,
 				5B2FD75126AEB269004EC22E /* NinePatchImageViewController2.swift */,
 				5B2FD75526AED431004EC22E /* DownsampleViewController.swift */,
@@ -357,7 +364,7 @@
 			children = (
 				5B2FD74A26AE59A4004EC22E /* android.9.png */,
 				FF395D5F2144C53E002D3C28 /* IMG_001.png */,
-				5B136167269EE10C00A70DFF /* ant.png */,
+				5B136167269EE10C00A70DFF /* ant@3x.png */,
 				5B2FD75726AEDB97004EC22E /* large_leaves_70mp.jpg */,
 				5B13615F269C7A0A00A70DFF /* transparent_001.png */,
 			);
@@ -662,6 +669,8 @@
 				FF1B312D212FEEF70030A5D0 /* String+Extension.swift */,
 				FF2FFE752187F34400B886FF /* Codable+Extension.swift */,
 				5B136169269FC00F00A70DFF /* Data+Extension.swift */,
+				5B5AE47226B2B15D0089D311 /* UIApplication+Extension.swift */,
+				5B83B37526B2D5F9001FE25D /* Number+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -843,6 +852,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B83B37426B2CEDF001FE25D /* ManualDecodeViewController.xib in Resources */,
 				FF1858822058CAC400ADC0BC /* LaunchScreen.storyboard in Resources */,
 				FF395D602144C53E002D3C28 /* IMG_001.png in Resources */,
 				FF36B58720BD011000ABF92C /* DatePickerDemoViewController.xib in Resources */,
@@ -861,7 +871,7 @@
 				FF59B163212169E900BD693E /* CTChartDemoViewController.xib in Resources */,
 				FF32FA9A205F9793006889A3 /* PayTheBillHeaderView.xib in Resources */,
 				FF395D6B2144CA7F002D3C28 /* CoreGraphicsBigImageViewController.xib in Resources */,
-				5B136168269EE10C00A70DFF /* ant.png in Resources */,
+				5B136168269EE10C00A70DFF /* ant@3x.png in Resources */,
 				FF32FA92205F6944006889A3 /* PayTheBillTitleView.xib in Resources */,
 				FF05DE2B2148FDCB00E3D5EA /* ImageIOBigImageViewController.xib in Resources */,
 				5B2FD74B26AE59A4004EC22E /* android.9.png in Resources */,
@@ -937,11 +947,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DemoSwift/Pods-DemoSwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -979,6 +993,7 @@
 				FF707218212EAC680024C22C /* CTScrollBarTimeChartView.swift in Sources */,
 				FF395D6A2144CA7F002D3C28 /* CoreGraphicsBigImageViewController.swift in Sources */,
 				5BE9D2D6266877ED0099B8B4 /* TimerCycleSwiftViewController.swift in Sources */,
+				5B83B37626B2D5F9001FE25D /* Number+Extension.swift in Sources */,
 				FF32FA8D205F58BC006889A3 /* PayTheBillViewController.swift in Sources */,
 				FFA7004A20AC27C60073DBF5 /* PeekViewController.swift in Sources */,
 				5B2FD75226AEB269004EC22E /* NinePatchImageViewController2.swift in Sources */,
@@ -988,6 +1003,7 @@
 				FFE4A23720BB9B6300939E00 /* DatePickerView.swift in Sources */,
 				5B2FD74826AE5902004EC22E /* NinePatchImageFactory.swift in Sources */,
 				5B4DFC952563A5690033F272 /* CountdownViewController.swift in Sources */,
+				5B5AE47326B2B15D0089D311 /* UIApplication+Extension.swift in Sources */,
 				5B2FD74D26AE8F0A004EC22E /* NinePatchImageViewController1.swift in Sources */,
 				FF395D622144C569002D3C28 /* BigImageTableViewController.swift in Sources */,
 				5B136166269D804200A70DFF /* AppleDownsampleViewController.swift in Sources */,
@@ -1011,9 +1027,9 @@
 				FF824779217ECA2400B2F334 /* ResponderViewController.swift in Sources */,
 				FF1B312E212FEEF70030A5D0 /* String+Extension.swift in Sources */,
 				FFA7004620AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift in Sources */,
+				5B83B37326B2CEDF001FE25D /* ManualDecodeViewController.swift in Sources */,
 				FF707215212EABF70024C22C /* CTScrollChartDemoViewController.swift in Sources */,
 				FF395D662144C64A002D3C28 /* UIKitBigImageViewController.swift in Sources */,
-				5BE21C0E26B02FA2006AD0E8 /* ManualDecodeViewController.swift in Sources */,
 				FFD056AE2059134200A6F5AE /* UIDevice+Extension.swift in Sources */,
 				9C715A2823672CE400F8DA36 /* ResponderDetailTwoViewController.swift in Sources */,
 				FF9E86FE21C8979000D87C69 /* OCLockBenchmark.m in Sources */,

@@ -14,7 +14,7 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
 
     // MARK: - properties
     var demos = [Demo(title: "图片处理",
-                      subtitle: nil,
+                      subtitle: "各种图片处理",
                       class: ImageTableViewController.self),
                  Demo(title: "动画",
                       subtitle: "贝塞尔曲线，优酷播放按钮，引导页跳过按钮，打卡按钮",

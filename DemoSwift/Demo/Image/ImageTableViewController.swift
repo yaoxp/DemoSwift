@@ -10,7 +10,8 @@ import UIKit
 
 class ImageTableViewController: UITableViewController {
 
-    let imageDemo = [Demo(title: "android.9.png", subtitle: "CGImageGetDataProvider", class: NinePatchImageViewController1.self),
+    let imageDemo = [Demo(title: "图片手动解码", subtitle: nil, class: ManualDecodeViewController.self),
+                     Demo(title: "android.9.png", subtitle: "CGImageGetDataProvider", class: NinePatchImageViewController1.self),
                      Demo(title: "android.9.png", subtitle: "CGBitmapContextCreate", class: NinePatchImageViewController2.self),
                      Demo(title: "大图解码成小图", subtitle: "官方推荐方法", class: DownsampleViewController.self)]
 

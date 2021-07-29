@@ -9,6 +9,18 @@
 import UIKit
 
 extension UIDevice {
+    /// 是否是iPhone
+    var isIPhone: Bool {
+        return UIDevice.current.model == "iPhone"
+    }
+
+    /// 是否是iPad
+    var isIPad: Bool {
+        return UIDevice.current.model == "iPad"
+    }
+
+    /// 是否是iphone X
+    /// - Returns: 是否是iphone X
     class func isX() -> Bool {
         if UIScreen.main.bounds.height == 812 {
             return true
