@@ -14,9 +14,12 @@ class OriginImageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
 
-        let path = Bundle.main.bundlePath + "/IMG_001.png"
-        let image = UIImage(contentsOfFile: path)
+        let path = Bundle.main.path(forResource: ImageSource.bigImageName, ofType: nil)
+        assert(path != nil, "image path is nil: \(ImageSource.bigImageName)")
+        let image = UIImage(contentsOfFile: path!)
+        assert(image != nil, "image is nil")
 
         imageView.image = image
 

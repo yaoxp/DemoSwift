@@ -10,7 +10,50 @@ import UIKit
 import ImageIO
 import QuartzCore
 
+// MARK: - new
 extension UIImage {
+    
+}
+
+// MARK: - Decode
+extension UIImage {
+    class func decodeImage1(_ image: UIImage, completion: ((UIImage?) -> Void)?) {
+        DispatchQueue.global().async {
+            var newImage: UIImage? = nil
+            defer {
+                DispatchQueue.main.async {
+                    completion?(newImage ?? image)
+                }
+            }
+            guard let imageRef = image.cgImage else { return }
+            UIGraphicsBeginImageContextWithOptions(image.size, false, image.scale)
+            guard let context = UIGraphicsGetCurrentContext() else { return }
+            defer { UIGraphicsEndImageContext() }
+            context.draw(imageRef, in: CGRect(origin: .zero, size: image.size))
+            guard let newImageRef = context.makeImage() else { return }
+            newImage = UIImage(cgImage: newImageRef, scale: image.scale, orientation: image.imageOrientation)
+            return
+        }
+    }
+
+    class func decodeImage2(_ image: UIImage, completion: ((UIImage?) -> Void)?) {
+        DispatchQueue.global().async {
+            var newImage: UIImage? = nil
+            defer {
+                DispatchQueue.main.async {
+                    completion?(newImage ?? image)
+                }
+            }
+            guard let imageRef = image.cgImage else { return }
+            UIGraphicsBeginImageContextWithOptions(image.size, false, image.scale)
+            guard let context = UIGraphicsGetCurrentContext() else { return }
+            defer { UIGraphicsEndImageContext() }
+            context.draw(imageRef, in: CGRect(origin: .zero, size: image.size))
+            newImage = UIGraphicsGetImageFromCurrentImageContext()
+            return
+        }
+    }
+
     class func createImage(color: UIColor, frame: CGRect) -> UIImage? {
         UIGraphicsBeginImageContext(frame.size)
 
@@ -57,6 +100,35 @@ extension UIImage {
 
     }
 
+    /// 缩小图片
+    /// - Parameters:
+    ///   - data: 图片data
+    ///   - pointSize: 缩小后的尺寸，要小于原图
+    ///   - scale: scale
+    /// - Returns: 缩小后的图片
+    class func downsample(data: Data, to pointSize: CGSize, scale: CGFloat) -> UIImage? {
+        let imageSourceOptions = [kCGImageSourceShouldCache: false] as CFDictionary
+        guard let imageSource = CGImageSourceCreateWithData(data as CFData, imageSourceOptions) else { return nil }
+
+        let maxDimensionInPixels = max(pointSize.width, pointSize.height) * scale
+        let downsampleOptions = [kCGImageSourceCreateThumbnailFromImageAlways: true,
+                                 kCGImageSourceShouldCacheImmediately: true,
+                                 kCGImageSourceCreateThumbnailWithTransform: true,
+                                 kCGImageSourceThumbnailMaxPixelSize: maxDimensionInPixels] as CFDictionary
+        guard let downsampleImage = CGImageSourceCreateThumbnailAtIndex(imageSource, 0, downsampleOptions) else { return nil }
+        return UIImage(cgImage: downsampleImage, scale: scale, orientation: .up)
+    }
+
+    /// 手动解码图片
+    /// - Parameter data: data
+    /// - Returns: 解码后的图片
+    class func imageIODecoder(data: Data) -> UIImage? {
+        guard let source = CGImageSourceCreateWithData(data as CFData, nil) else { return nil }
+        guard let imageRef = CGImageSourceCreateImageAtIndex(source, 0, nil) else { return nil }
+        let newImage = UIImage(cgImage: imageRef, scale: UIScreen.main.scale, orientation: .up)
+        return newImage
+    }
+
     func resizeUI(_ size: CGSize) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, true, 0.0)
 
@@ -95,9 +167,8 @@ extension UIImage {
 
     func resizeIO(_ size: CGSize) -> UIImage? {
         guard let data = self.pngData() else { return nil }
-
-        let scale = UIScreen.main.scale
-        let maxPixelSize = max(size.width, size.height) * scale
+        
+        let maxPixelSize = max(size.width, size.height)
 
         guard let imageSource = CGImageSourceCreateWithData(data as CFData, nil) else { return nil }
 

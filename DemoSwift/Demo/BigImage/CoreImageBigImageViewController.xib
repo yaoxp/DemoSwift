@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,17 +20,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LMl-UH-i7Y">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="167.5" y="313.5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="OFi-QP-aBm"/>
+                        <constraint firstAttribute="height" constant="40" id="ruh-RQ-wV1"/>
+                    </constraints>
                 </imageView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="LMl-UH-i7Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AgW-hn-XJQ"/>
-                <constraint firstItem="LMl-UH-i7Y" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Z0i-NG-yJ8"/>
-                <constraint firstItem="LMl-UH-i7Y" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="bLZ-KR-Mrq"/>
-                <constraint firstItem="LMl-UH-i7Y" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="cob-fI-155"/>
+                <constraint firstItem="LMl-UH-i7Y" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="Fou-PU-23a"/>
+                <constraint firstItem="LMl-UH-i7Y" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="IIB-kz-iwL"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138" y="116"/>
         </view>
     </objects>
 </document>

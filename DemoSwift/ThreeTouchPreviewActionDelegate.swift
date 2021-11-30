@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ThreeTouchPreviewActionDelegate: class {
+protocol ThreeTouchPreviewActionDelegate: AnyObject {
 
     func previewAction(setTop index: IndexPath?)
     func previewAction(delete index: IndexPath?)

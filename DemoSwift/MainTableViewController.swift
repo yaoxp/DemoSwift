@@ -13,7 +13,10 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
     static let tableViewCellIdentifier = "MainTableCell"
 
     // MARK: - properties
-    var demos = [Demo(title: "动画",
+    var demos = [Demo(title: "图片处理",
+                      subtitle: "各种图片处理",
+                      class: ImageTableViewController.self),
+                 Demo(title: "动画",
                       subtitle: "贝塞尔曲线，优酷播放按钮，引导页跳过按钮，打卡按钮",
                       class: AnimationViewController.self),
                  Demo(title: "买单吧",
@@ -56,7 +59,7 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
-         self.clearsSelectionOnViewWillAppear = true
+        self.clearsSelectionOnViewWillAppear = true
 
         if traitCollection.forceTouchCapability == .available {
             registerForPreviewing(with: self, sourceView: view)
@@ -116,8 +119,8 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
     }
 
     @objc func headerNotification(notification: Notification) {
-//        let vc = AnimationViewController()
-//        show(vc, sender: self)
+        //        let vc = AnimationViewController()
+        //        show(vc, sender: self)
     }
 }
 
@@ -134,7 +137,7 @@ extension MainTableViewController {
         let cellPoint = tableView.convert(location, from: previewingContext.sourceView)
 
         guard let indexPath = tableView.indexPathForRow(at: cellPoint),
-                let cell = tableView.cellForRow(at: indexPath) else { return nil }
+              let cell = tableView.cellForRow(at: indexPath) else { return nil }
 
         // 不模糊的区域，其它区域会模糊处理。微信QQ都有此功能
         previewingContext.sourceRect = cell.frame

@@ -28,8 +28,10 @@ class BigImageTests: XCTestCase {
 
     func testPerformanceOrigin() {
         // This is an example of a performance test case.
-        let path = Bundle.main.bundlePath + "/IMG_001.png"
-        let image = UIImage(contentsOfFile: path)
+        let path = Bundle.main.path(forResource: ImageSource.bigImageName, ofType: nil)
+        assert(path != nil, "image path is nil: \(ImageSource.bigImageName)")
+        let image = UIImage(contentsOfFile: path!)
+        assert(image != nil, "image is nil")
         let imageView = UIImageView(frame: CGRect(origin: .zero, size: UIScreen.main.bounds.size))
         self.measure {
             imageView.image = image
@@ -39,8 +41,10 @@ class BigImageTests: XCTestCase {
 
     func testPerformanceUI() {
         // This is an example of a performance test case.
-        let path = Bundle.main.bundlePath + "/IMG_001.png"
-        let image = UIImage(contentsOfFile: path)
+        let path = Bundle.main.path(forResource: ImageSource.bigImageName, ofType: nil)
+        assert(path != nil, "image path is nil: \(ImageSource.bigImageName)")
+        let image = UIImage(contentsOfFile: path!)
+        assert(image != nil, "image is nil")
         var newImage: UIImage?
         self.measure {
             newImage = image?.resizeUI(UIScreen.main.bounds.size)
@@ -51,8 +55,10 @@ class BigImageTests: XCTestCase {
     func testPerformanceCG() {
 
         // This is an example of a performance test case.
-        let path = Bundle.main.bundlePath + "/IMG_001.png"
-        let image = UIImage(contentsOfFile: path)
+        let path = Bundle.main.path(forResource: ImageSource.bigImageName, ofType: nil)
+        assert(path != nil, "image path is nil: \(ImageSource.bigImageName)")
+        let image = UIImage(contentsOfFile: path!)
+        assert(image != nil, "image is nil")
         var newImage: UIImage?
         self.measure {
             newImage = image?.resizeCG(UIScreen.main.bounds.size)
@@ -62,8 +68,10 @@ class BigImageTests: XCTestCase {
 
     func testPerformanceCI() {
         // This is an example of a performance test case.
-        let path = Bundle.main.bundlePath + "/IMG_001.png"
-        let image = UIImage(contentsOfFile: path)
+        let path = Bundle.main.path(forResource: ImageSource.bigImageName, ofType: nil)
+        assert(path != nil, "image path is nil: \(ImageSource.bigImageName)")
+        let image = UIImage(contentsOfFile: path!)
+        assert(image != nil, "image is nil")
         var newImage: UIImage?
         self.measure {
             newImage = image?.resizeCI(UIScreen.main.bounds.size)
@@ -73,8 +81,10 @@ class BigImageTests: XCTestCase {
 
     func testPerformanceIO() {
         // This is an example of a performance test case.
-        let path = Bundle.main.bundlePath + "/IMG_001.png"
-        let image = UIImage(contentsOfFile: path)
+        let path = Bundle.main.path(forResource: ImageSource.bigImageName, ofType: nil)
+        assert(path != nil, "image path is nil: \(ImageSource.bigImageName)")
+        let image = UIImage(contentsOfFile: path!)
+        assert(image != nil, "image is nil")
         var newImage: UIImage?
         self.measure {
             newImage = image?.resizeIO(UIScreen.main.bounds.size)

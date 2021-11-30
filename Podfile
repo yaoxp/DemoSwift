@@ -9,7 +9,8 @@ target 'DemoSwift' do
     # Swift Code Quality
   pod 'SwiftLint' # https://github.com/realm/SwiftLint
   # Pods for DemoSwift
-
+  pod 'SDWebImage', '~> 5.0'
+  pod 'Kingfisher'
   target 'DemoSwiftTests' do
     inherit! :search_paths
     # Pods for testing
