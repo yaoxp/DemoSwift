@@ -23,12 +23,24 @@
 		5B4DFC952563A5690033F272 /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DFC942563A5690033F272 /* CountdownViewController.swift */; };
 		5B4DFC9E2563AA680033F272 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DFC9D2563AA680033F272 /* CountdownTimer.swift */; };
 		5B4DFCA32563AD8F0033F272 /* CountdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DFCA22563AD8F0033F272 /* CountdownButton.swift */; };
-		5B62613627560F7F00681662 /* DesignPatternsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62613527560F7F00681662 /* DesignPatternsViewController.swift */; };
-		5B62613F275627EF00681662 /* SFOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62613E275627EF00681662 /* SFOperation.swift */; };
-		5B626141275628C300681662 /* SFOperationManTou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B626140275628C300681662 /* SFOperationManTou.swift */; };
-		5B6261432756299300681662 /* SFOperationYouTiao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6261422756299300681662 /* SFOperationYouTiao.swift */; };
-		5B626145275629DA00681662 /* SFFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B626144275629DA00681662 /* SFFactory.swift */; };
 		5B5AE47326B2B15D0089D311 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5AE47226B2B15D0089D311 /* UIApplication+Extension.swift */; };
+		5B62613627560F7F00681662 /* DesignPatternsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62613527560F7F00681662 /* DesignPatternsViewController.swift */; };
+		5B62613F275627EF00681662 /* SFShoesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62613E275627EF00681662 /* SFShoesProtocol.swift */; };
+		5B626141275628C300681662 /* SFAdiWang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B626140275628C300681662 /* SFAdiWang.swift */; };
+		5B6261432756299300681662 /* SFNike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6261422756299300681662 /* SFNike.swift */; };
+		5B626145275629DA00681662 /* SFFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B626144275629DA00681662 /* SFFactory.swift */; };
+		5B6261482756428D00681662 /* FFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6261472756428D00681662 /* FFactory.swift */; };
+		5B62614A2756436900681662 /* FShoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6261492756436900681662 /* FShoes.swift */; };
+		5B62614C275643EE00681662 /* FAdiWang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62614B275643EE00681662 /* FAdiWang.swift */; };
+		5B62614E2756442500681662 /* FNike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62614D2756442500681662 /* FNike.swift */; };
+		5B6261502756445C00681662 /* FFactoryAdiWang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62614F2756445C00681662 /* FFactoryAdiWang.swift */; };
+		5B6261522756448B00681662 /* FFactoryNike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6261512756448B00681662 /* FFactoryNike.swift */; };
+		5B626155275715DC00681662 /* AFShoesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B626154275715DC00681662 /* AFShoesProtocol.swift */; };
+		5B6261582757161B00681662 /* AFNike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6261562757161A00681662 /* AFNike.swift */; };
+		5B62615B2757164F00681662 /* AFAdiWang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62615A2757164F00681662 /* AFAdiWang.swift */; };
+		5B62615F2757169F00681662 /* AFFactoryNike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62615C2757169F00681662 /* AFFactoryNike.swift */; };
+		5B6261602757169F00681662 /* AFFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62615D2757169F00681662 /* AFFactory.swift */; };
+		5B6261612757169F00681662 /* AFFactoryAdiWang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62615E2757169F00681662 /* AFFactoryAdiWang.swift */; };
 		5B75ABAF2564F33300DB70B7 /* ReflectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABAE2564F33300DB70B7 /* ReflectViewController.swift */; };
 		5B75ABB72564F35100DB70B7 /* ReflectBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABB62564F35100DB70B7 /* ReflectBaseModel.swift */; };
 		5B75ABDF2565113F00DB70B7 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABDE2565113F00DB70B7 /* LocationViewController.swift */; };
@@ -178,12 +190,24 @@
 		5B4DFC942563A5690033F272 /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
 		5B4DFC9D2563AA680033F272 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		5B4DFCA22563AD8F0033F272 /* CountdownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownButton.swift; sourceTree = "<group>"; };
-		5B62613527560F7F00681662 /* DesignPatternsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternsViewController.swift; sourceTree = "<group>"; };
-		5B62613E275627EF00681662 /* SFOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFOperation.swift; sourceTree = "<group>"; };
-		5B626140275628C300681662 /* SFOperationManTou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFOperationManTou.swift; sourceTree = "<group>"; };
-		5B6261422756299300681662 /* SFOperationYouTiao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFOperationYouTiao.swift; sourceTree = "<group>"; };
-		5B626144275629DA00681662 /* SFFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFFactory.swift; sourceTree = "<group>"; };
 		5B5AE47226B2B15D0089D311 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		5B62613527560F7F00681662 /* DesignPatternsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternsViewController.swift; sourceTree = "<group>"; };
+		5B62613E275627EF00681662 /* SFShoesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFShoesProtocol.swift; sourceTree = "<group>"; };
+		5B626140275628C300681662 /* SFAdiWang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFAdiWang.swift; sourceTree = "<group>"; };
+		5B6261422756299300681662 /* SFNike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFNike.swift; sourceTree = "<group>"; };
+		5B626144275629DA00681662 /* SFFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFFactory.swift; sourceTree = "<group>"; };
+		5B6261472756428D00681662 /* FFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFactory.swift; sourceTree = "<group>"; };
+		5B6261492756436900681662 /* FShoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FShoes.swift; sourceTree = "<group>"; };
+		5B62614B275643EE00681662 /* FAdiWang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAdiWang.swift; sourceTree = "<group>"; };
+		5B62614D2756442500681662 /* FNike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNike.swift; sourceTree = "<group>"; };
+		5B62614F2756445C00681662 /* FFactoryAdiWang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFactoryAdiWang.swift; sourceTree = "<group>"; };
+		5B6261512756448B00681662 /* FFactoryNike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFactoryNike.swift; sourceTree = "<group>"; };
+		5B626154275715DC00681662 /* AFShoesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFShoesProtocol.swift; sourceTree = "<group>"; };
+		5B6261562757161A00681662 /* AFNike.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFNike.swift; sourceTree = "<group>"; };
+		5B62615A2757164F00681662 /* AFAdiWang.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFAdiWang.swift; sourceTree = "<group>"; };
+		5B62615C2757169F00681662 /* AFFactoryNike.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFFactoryNike.swift; sourceTree = "<group>"; };
+		5B62615D2757169F00681662 /* AFFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFFactory.swift; sourceTree = "<group>"; };
+		5B62615E2757169F00681662 /* AFFactoryAdiWang.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFFactoryAdiWang.swift; sourceTree = "<group>"; };
 		5B75ABAE2564F33300DB70B7 /* ReflectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectViewController.swift; sourceTree = "<group>"; };
 		5B75ABB62564F35100DB70B7 /* ReflectBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectBaseModel.swift; sourceTree = "<group>"; };
 		5B75ABDE2565113F00DB70B7 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -394,6 +418,8 @@
 		5B62613427560DEA00681662 /* DesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				5B6261532757152300681662 /* AbstractFactoryPattern */,
+				5B6261462756422700681662 /* FactoryPattern */,
 				5B626137275618DC00681662 /* SimpleFactoryPattern */,
 				5B62613527560F7F00681662 /* DesignPatternsViewController.swift */,
 			);
@@ -403,12 +429,38 @@
 		5B626137275618DC00681662 /* SimpleFactoryPattern */ = {
 			isa = PBXGroup;
 			children = (
-				5B62613E275627EF00681662 /* SFOperation.swift */,
-				5B626140275628C300681662 /* SFOperationManTou.swift */,
-				5B6261422756299300681662 /* SFOperationYouTiao.swift */,
+				5B62613E275627EF00681662 /* SFShoesProtocol.swift */,
+				5B626140275628C300681662 /* SFAdiWang.swift */,
+				5B6261422756299300681662 /* SFNike.swift */,
 				5B626144275629DA00681662 /* SFFactory.swift */,
 			);
 			path = SimpleFactoryPattern;
+			sourceTree = "<group>";
+		};
+		5B6261462756422700681662 /* FactoryPattern */ = {
+			isa = PBXGroup;
+			children = (
+				5B6261472756428D00681662 /* FFactory.swift */,
+				5B62614F2756445C00681662 /* FFactoryAdiWang.swift */,
+				5B6261512756448B00681662 /* FFactoryNike.swift */,
+				5B6261492756436900681662 /* FShoes.swift */,
+				5B62614B275643EE00681662 /* FAdiWang.swift */,
+				5B62614D2756442500681662 /* FNike.swift */,
+			);
+			path = FactoryPattern;
+			sourceTree = "<group>";
+		};
+		5B6261532757152300681662 /* AbstractFactoryPattern */ = {
+			isa = PBXGroup;
+			children = (
+				5B62615D2757169F00681662 /* AFFactory.swift */,
+				5B62615E2757169F00681662 /* AFFactoryAdiWang.swift */,
+				5B62615C2757169F00681662 /* AFFactoryNike.swift */,
+				5B626154275715DC00681662 /* AFShoesProtocol.swift */,
+				5B6261562757161A00681662 /* AFNike.swift */,
+				5B62615A2757164F00681662 /* AFAdiWang.swift */,
+			);
+			path = AbstractFactoryPattern;
 			sourceTree = "<group>";
 		};
 		5B75ABAD2564F30500DB70B7 /* reflect */ = {
@@ -1013,6 +1065,7 @@
 				5B75ABDF2565113F00DB70B7 /* LocationViewController.swift in Sources */,
 				FF05DE2A2148FDCB00E3D5EA /* ImageIOBigImageViewController.swift in Sources */,
 				5B2FD75626AED431004EC22E /* DownsampleViewController.swift in Sources */,
+				5B626155275715DC00681662 /* AFShoesProtocol.swift in Sources */,
 				FF32FA98205F9784006889A3 /* PayTheBillHeaderView.swift in Sources */,
 				5BE9D2A72667A3510099B8B4 /* OCTimerLeakViewController.m in Sources */,
 				FF82E7B921798A9E00646650 /* OffScreenViewController.swift in Sources */,
@@ -1027,21 +1080,25 @@
 				5B83B37626B2D5F9001FE25D /* Number+Extension.swift in Sources */,
 				FF32FA8D205F58BC006889A3 /* PayTheBillViewController.swift in Sources */,
 				FFA7004A20AC27C60073DBF5 /* PeekViewController.swift in Sources */,
-				5B626141275628C300681662 /* SFOperationManTou.swift in Sources */,
+				5B626141275628C300681662 /* SFAdiWang.swift in Sources */,
 				5B2FD75226AEB269004EC22E /* NinePatchImageViewController2.swift in Sources */,
 				FF1A833720A96F19001A1DF1 /* MarqueeViewController.swift in Sources */,
 				FF824772217D6C7D00B2F334 /* OffScreenTableViewController.swift in Sources */,
 				FF32FA96205F90C9006889A3 /* UIImage+Extension.swift in Sources */,
-				5B62613F275627EF00681662 /* SFOperation.swift in Sources */,
+				5B6261582757161B00681662 /* AFNike.swift in Sources */,
+				5B62613F275627EF00681662 /* SFShoesProtocol.swift in Sources */,
 				FFE4A23720BB9B6300939E00 /* DatePickerView.swift in Sources */,
+				5B62614C275643EE00681662 /* FAdiWang.swift in Sources */,
 				5B2FD74826AE5902004EC22E /* NinePatchImageFactory.swift in Sources */,
 				5B4DFC952563A5690033F272 /* CountdownViewController.swift in Sources */,
 				5B5AE47326B2B15D0089D311 /* UIApplication+Extension.swift in Sources */,
 				5B2FD74D26AE8F0A004EC22E /* NinePatchImageViewController1.swift in Sources */,
 				FF395D622144C569002D3C28 /* BigImageTableViewController.swift in Sources */,
 				5B136166269D804200A70DFF /* AppleDownsampleViewController.swift in Sources */,
+				5B6261602757169F00681662 /* AFFactory.swift in Sources */,
 				5B2FD74526AE55B4004EC22E /* ImageTableViewController.swift in Sources */,
 				5B4DFCA32563AD8F0033F272 /* CountdownButton.swift in Sources */,
+				5B62615F2757169F00681662 /* AFFactoryNike.swift in Sources */,
 				FF64280021AE8D82003DF725 /* NetworkDependDemoVC.swift in Sources */,
 				5B75ABAF2564F33300DB70B7 /* ReflectViewController.swift in Sources */,
 				FF824783217F09AE00B2F334 /* IgnoreTouchLabel.swift in Sources */,
@@ -1050,20 +1107,26 @@
 				FF1A833920A96F40001A1DF1 /* MarqueeView.swift in Sources */,
 				FF044C1020C9112600EDE2B6 /* Date+Extension.swift in Sources */,
 				5BE9D2A4266790190099B8B4 /* TimerCycleViewController.swift in Sources */,
-				5B6261432756299300681662 /* SFOperationYouTiao.swift in Sources */,
+				5B6261432756299300681662 /* SFNike.swift in Sources */,
 				5BDFD407260876280026F059 /* UILabelMultipleTapController.swift in Sources */,
 				FF7A645520F88C1F002AFBC0 /* DynamicAndStaticViewController.swift in Sources */,
 				FF18589E2059102300ADC0BC /* Demo.swift in Sources */,
 				FF59B162212169E900BD693E /* CTChartDemoViewController.swift in Sources */,
 				FF82477D217F009000B2F334 /* ResponderDetailViewController.swift in Sources */,
 				FFD056B2205913CA00A6F5AE /* AnimationViewController.swift in Sources */,
+				5B62614A2756436900681662 /* FShoes.swift in Sources */,
 				FF32FA90205F68E6006889A3 /* PayTheBillTitleView.swift in Sources */,
 				FF824779217ECA2400B2F334 /* ResponderViewController.swift in Sources */,
 				FF1B312E212FEEF70030A5D0 /* String+Extension.swift in Sources */,
+				5B62615B2757164F00681662 /* AFAdiWang.swift in Sources */,
 				FFA7004620AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift in Sources */,
+				5B6261482756428D00681662 /* FFactory.swift in Sources */,
 				5B83B37326B2CEDF001FE25D /* ManualDecodeViewController.swift in Sources */,
+				5B6261522756448B00681662 /* FFactoryNike.swift in Sources */,
 				FF707215212EABF70024C22C /* CTScrollChartDemoViewController.swift in Sources */,
 				FF395D662144C64A002D3C28 /* UIKitBigImageViewController.swift in Sources */,
+				5B6261612757169F00681662 /* AFFactoryAdiWang.swift in Sources */,
+				5B6261502756445C00681662 /* FFactoryAdiWang.swift in Sources */,
 				5B626145275629DA00681662 /* SFFactory.swift in Sources */,
 				FFD056AE2059134200A6F5AE /* UIDevice+Extension.swift in Sources */,
 				9C715A2823672CE400F8DA36 /* ResponderDetailTwoViewController.swift in Sources */,
@@ -1074,6 +1137,7 @@
 				5B62613627560F7F00681662 /* DesignPatternsViewController.swift in Sources */,
 				FF824774217D6C9B00B2F334 /* OffScreenTableViewControllerCell.swift in Sources */,
 				FFD056B62059238A00A6F5AE /* ClockOffButton.swift in Sources */,
+				5B62614E2756442500681662 /* FNike.swift in Sources */,
 				FFD056AB205912F300A6F5AE /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

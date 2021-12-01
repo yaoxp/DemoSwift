@@ -8,11 +8,12 @@
 
 import UIKit
 
-class SFOperationYouTiao: SFOperationProtocol {
-    var name: String = ""
+class SFNike: SFShoesProtocol {
+    var name: String {
+        return "Nike"
+    }
 
-    func productBreakfast() {
-        name = "YouTiao"
+    func printInfo() {
         print("### \(name)")
     }
 

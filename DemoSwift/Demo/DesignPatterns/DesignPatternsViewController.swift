@@ -13,6 +13,7 @@ import SnapKit
 enum DesignPatterns: Int, CaseIterable {
     case simpleFactory
     case factory
+    case abstractFactory
 }
 
 extension DesignPatterns {
@@ -22,16 +23,22 @@ extension DesignPatterns {
             return "简单工厂模式"
         case .factory:
             return "工厂模式"
+        case .abstractFactory:
+            return "抽象工厂模式"
         }
     }
 
-    func enaction() {
+    func enact() {
         switch self {
         case .simpleFactory:
-            let factory = SFFactory.operationBreakfast(.manTou)
-            factory.productBreakfast()
+            let shoes = SFFactory.makeShoes(.adiWang)
+            shoes.printInfo()
         case .factory:
-            print("")
+            let shoes = FFactoryNike.makeShoes()
+            shoes.printInfo()
+        case .abstractFactory:
+            let shoes = AFFactory.factory(with: .adiWang).makeShoes()
+            shoes.printInfo()
         }
     }
 }
@@ -73,7 +80,8 @@ extension DesignPatternsViewController: UITableViewDataSource {
 extension DesignPatternsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let pattern = DesignPatterns(rawValue: indexPath.row)
-        pattern?.enaction()
+        pattern?.enact()
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

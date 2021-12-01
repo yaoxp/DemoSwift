@@ -51,7 +51,8 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
                  Demo(title: "反射", subtitle: nil, class: ReflectViewController.self),
                  Demo(title: "定位", subtitle: nil, class: LocationViewController.self),
                  Demo(title: "label富文本高亮点击未实现", subtitle: nil, class: UILabelMultipleTapController.self),
-                 Demo(title: "定时器循环引用", subtitle: nil, class: TimerCycleViewController.self)]
+                 Demo(title: "定时器循环引用", subtitle: nil, class: TimerCycleViewController.self),
+                 Demo(title: "设计模式", subtitle: nil, class: DesignPatternsViewController.self)]
 
     // MARK: - View Life Cycle
 

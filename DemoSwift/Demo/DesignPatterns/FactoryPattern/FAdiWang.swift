@@ -1,5 +1,5 @@
 //
-//  SFOperationManTou.swift
+//  FOperationManTou.swift
 //  DemoSwift
 //
 //  Created by yaoxp on 2021/11/30.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class SFOperationManTou: SFOperationProtocol {
-    var name: String = ""
+class FAdiWang: FShoesProtocol {
+    var name: String {
+        return "AdiWang"
+    }
 
-    func productBreakfast() {
-        name = "ManTou"
+    func printInfo() {
         print("### \(name)")
     }
 

@@ -8,18 +8,18 @@
 
 import UIKit
 
-enum SFFactoryProductType {
-    case manTou
-    case youTiao
+enum SFShoesType {
+    case adiWang
+    case nike
 }
 
 class SFFactory {
-    static func operationBreakfast(_ type: SFFactoryProductType) -> SFOperationProtocol {
+    static func makeShoes(_ type: SFShoesType) -> SFShoesProtocol {
         switch type {
-        case .manTou:
-            return SFOperationManTou()
-        case .youTiao:
-            return SFOperationYouTiao()
+        case .adiWang:
+            return SFAdiWang()
+        case .nike:
+            return SFNike()
         }
     }
 }

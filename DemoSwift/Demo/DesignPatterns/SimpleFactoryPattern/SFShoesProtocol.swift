@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SFOperationProtocol {
+protocol SFShoesProtocol {
     var name: String { get }
-    func productBreakfast()
+    func printInfo()
 }
