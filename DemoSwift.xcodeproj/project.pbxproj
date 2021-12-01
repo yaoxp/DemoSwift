@@ -41,6 +41,7 @@
 		5B62615F2757169F00681662 /* AFFactoryNike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62615C2757169F00681662 /* AFFactoryNike.swift */; };
 		5B6261602757169F00681662 /* AFFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62615D2757169F00681662 /* AFFactory.swift */; };
 		5B6261612757169F00681662 /* AFFactoryAdiWang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62615E2757169F00681662 /* AFFactoryAdiWang.swift */; };
+		5B62616427576B7C00681662 /* Trottle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62616327576B7C00681662 /* Trottle.swift */; };
 		5B75ABAF2564F33300DB70B7 /* ReflectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABAE2564F33300DB70B7 /* ReflectViewController.swift */; };
 		5B75ABB72564F35100DB70B7 /* ReflectBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABB62564F35100DB70B7 /* ReflectBaseModel.swift */; };
 		5B75ABDF2565113F00DB70B7 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABDE2565113F00DB70B7 /* LocationViewController.swift */; };
@@ -208,6 +209,7 @@
 		5B62615C2757169F00681662 /* AFFactoryNike.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFFactoryNike.swift; sourceTree = "<group>"; };
 		5B62615D2757169F00681662 /* AFFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFFactory.swift; sourceTree = "<group>"; };
 		5B62615E2757169F00681662 /* AFFactoryAdiWang.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFFactoryAdiWang.swift; sourceTree = "<group>"; };
+		5B62616327576B7C00681662 /* Trottle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trottle.swift; sourceTree = "<group>"; };
 		5B75ABAE2564F33300DB70B7 /* ReflectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectViewController.swift; sourceTree = "<group>"; };
 		5B75ABB62564F35100DB70B7 /* ReflectBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectBaseModel.swift; sourceTree = "<group>"; };
 		5B75ABDE2565113F00DB70B7 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -463,6 +465,14 @@
 			path = AbstractFactoryPattern;
 			sourceTree = "<group>";
 		};
+		5B62616227576ADF00681662 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				5B62616327576B7C00681662 /* Trottle.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		5B75ABAD2564F30500DB70B7 /* reflect */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,6 +550,7 @@
 		FF1858762058CAC400ADC0BC /* DemoSwift */ = {
 			isa = PBXGroup;
 			children = (
+				5B62616227576ADF00681662 /* utils */,
 				5B2FD74926AE591E004EC22E /* Assets */,
 				5B2FD74626AE58F3004EC22E /* Tool */,
 				FFA7004720AC276D0073DBF5 /* Base */,
@@ -1134,6 +1145,7 @@
 				5BE9D2D5266877ED0099B8B4 /* WeakTimerSwift.swift in Sources */,
 				FF32FA94205F8A91006889A3 /* UIKit+Extension.swift in Sources */,
 				FFD056B72059238A00A6F5AE /* ClockOffViewController.swift in Sources */,
+				5B62616427576B7C00681662 /* Trottle.swift in Sources */,
 				5B62613627560F7F00681662 /* DesignPatternsViewController.swift in Sources */,
 				FF824774217D6C9B00B2F334 /* OffScreenTableViewControllerCell.swift in Sources */,
 				FFD056B62059238A00A6F5AE /* ClockOffButton.swift in Sources */,
