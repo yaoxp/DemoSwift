@@ -45,6 +45,7 @@
 		5B75ABAF2564F33300DB70B7 /* ReflectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABAE2564F33300DB70B7 /* ReflectViewController.swift */; };
 		5B75ABB72564F35100DB70B7 /* ReflectBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABB62564F35100DB70B7 /* ReflectBaseModel.swift */; };
 		5B75ABDF2565113F00DB70B7 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABDE2565113F00DB70B7 /* LocationViewController.swift */; };
+		5B8184C0278D9F4E00D22E9C /* MemoryLayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8184BF278D9F4E00D22E9C /* MemoryLayoutVC.swift */; };
 		5B83B37326B2CEDF001FE25D /* ManualDecodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B37126B2CEDF001FE25D /* ManualDecodeViewController.swift */; };
 		5B83B37426B2CEDF001FE25D /* ManualDecodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B83B37226B2CEDF001FE25D /* ManualDecodeViewController.xib */; };
 		5B83B37626B2D5F9001FE25D /* Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B37526B2D5F9001FE25D /* Number+Extension.swift */; };
@@ -213,6 +214,7 @@
 		5B75ABAE2564F33300DB70B7 /* ReflectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectViewController.swift; sourceTree = "<group>"; };
 		5B75ABB62564F35100DB70B7 /* ReflectBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectBaseModel.swift; sourceTree = "<group>"; };
 		5B75ABDE2565113F00DB70B7 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		5B8184BF278D9F4E00D22E9C /* MemoryLayoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryLayoutVC.swift; sourceTree = "<group>"; };
 		5B83B37126B2CEDF001FE25D /* ManualDecodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualDecodeViewController.swift; sourceTree = "<group>"; };
 		5B83B37226B2CEDF001FE25D /* ManualDecodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManualDecodeViewController.xib; sourceTree = "<group>"; };
 		5B83B37526B2D5F9001FE25D /* Number+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Extension.swift"; sourceTree = "<group>"; };
@@ -490,6 +492,14 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
+		5B8184BE278D9F0700D22E9C /* MemoryLayout */ = {
+			isa = PBXGroup;
+			children = (
+				5B8184BF278D9F4E00D22E9C /* MemoryLayoutVC.swift */,
+			);
+			path = MemoryLayout;
+			sourceTree = "<group>";
+		};
 		5BDFD37B260871CB0026F059 /* labelTouch */ = {
 			isa = PBXGroup;
 			children = (
@@ -729,6 +739,7 @@
 		FFD056A82059128C00A6F5AE /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				5B8184BE278D9F0700D22E9C /* MemoryLayout */,
 				5B62613427560DEA00681662 /* DesignPatterns */,
 				5B2FD74326AE52F4004EC22E /* Image */,
 				5BE9D2A226678FD10099B8B4 /* TimerCycle */,
@@ -1129,6 +1140,7 @@
 				FF32FA90205F68E6006889A3 /* PayTheBillTitleView.swift in Sources */,
 				FF824779217ECA2400B2F334 /* ResponderViewController.swift in Sources */,
 				FF1B312E212FEEF70030A5D0 /* String+Extension.swift in Sources */,
+				5B8184C0278D9F4E00D22E9C /* MemoryLayoutVC.swift in Sources */,
 				5B62615B2757164F00681662 /* AFAdiWang.swift in Sources */,
 				FFA7004620AC185D0073DBF5 /* ThreeTouchPreviewActionDelegate.swift in Sources */,
 				5B6261482756428D00681662 /* FFactory.swift in Sources */,
