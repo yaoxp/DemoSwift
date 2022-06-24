@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -45,6 +45,8 @@
 		5B75ABAF2564F33300DB70B7 /* ReflectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABAE2564F33300DB70B7 /* ReflectViewController.swift */; };
 		5B75ABB72564F35100DB70B7 /* ReflectBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABB62564F35100DB70B7 /* ReflectBaseModel.swift */; };
 		5B75ABDF2565113F00DB70B7 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75ABDE2565113F00DB70B7 /* LocationViewController.swift */; };
+		5B7A71822806FA3E005AB3ED /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 5B7A71812806FA3E005AB3ED /* CocoaLumberjack */; };
+		5B7A71842806FA3E005AB3ED /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5B7A71832806FA3E005AB3ED /* CocoaLumberjackSwift */; };
 		5B8184C0278D9F4E00D22E9C /* MemoryLayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8184BF278D9F4E00D22E9C /* MemoryLayoutVC.swift */; };
 		5B83B37326B2CEDF001FE25D /* ManualDecodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B37126B2CEDF001FE25D /* ManualDecodeViewController.swift */; };
 		5B83B37426B2CEDF001FE25D /* ManualDecodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B83B37226B2CEDF001FE25D /* ManualDecodeViewController.xib */; };
@@ -55,6 +57,9 @@
 		5BE9D2D2266876850099B8B4 /* WeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9D2D0266876850099B8B4 /* WeakTimer.m */; };
 		5BE9D2D5266877ED0099B8B4 /* WeakTimerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9D2D3266877ED0099B8B4 /* WeakTimerSwift.swift */; };
 		5BE9D2D6266877ED0099B8B4 /* TimerCycleSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9D2D4266877ED0099B8B4 /* TimerCycleSwiftViewController.swift */; };
+		5BEB600727FC414A002C920C /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 5BEB600627FC414A002C920C /* Logging */; };
+		5BF2DA0C28659E4A007166FF /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2DA0828659E4A007166FF /* BSBacktraceLogger.m */; };
+		5BF2DA0D28659E4A007166FF /* ObserverMainRunloop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2DA0A28659E4A007166FF /* ObserverMainRunloop.m */; };
 		7C96BE86BF4AA2163CE57712 /* Pods_DemoSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15DF14BAB5BD5307EA55039 /* Pods_DemoSwiftTests.framework */; };
 		9C715A2823672CE400F8DA36 /* ResponderDetailTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C715A2723672CE400F8DA36 /* ResponderDetailTwoViewController.swift */; };
 		FF044C1020C9112600EDE2B6 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF044C0F20C9112600EDE2B6 /* Date+Extension.swift */; };
@@ -226,6 +231,10 @@
 		5BE9D2D1266876850099B8B4 /* WeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeakTimer.h; sourceTree = "<group>"; };
 		5BE9D2D3266877ED0099B8B4 /* WeakTimerSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakTimerSwift.swift; sourceTree = "<group>"; };
 		5BE9D2D4266877ED0099B8B4 /* TimerCycleSwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerCycleSwiftViewController.swift; sourceTree = "<group>"; };
+		5BF2DA0828659E4A007166FF /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBacktraceLogger.m; sourceTree = "<group>"; };
+		5BF2DA0928659E4A007166FF /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBacktraceLogger.h; sourceTree = "<group>"; };
+		5BF2DA0A28659E4A007166FF /* ObserverMainRunloop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObserverMainRunloop.m; sourceTree = "<group>"; };
+		5BF2DA0B28659E4A007166FF /* ObserverMainRunloop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObserverMainRunloop.h; sourceTree = "<group>"; };
 		6EF8CEF4C2E4AADE70875566 /* Pods-DemoSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSwiftTests/Pods-DemoSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		8980D18AD2141E62C2B41318 /* Pods-DemoSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSwift/Pods-DemoSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		9853D24A50FA9FF3CD008B8D /* Pods-DemoSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSwift/Pods-DemoSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -327,6 +336,9 @@
 			files = (
 				268EDB40F43779811DA69F67 /* Pods_DemoSwift.framework in Frameworks */,
 				FF7A647A20F88D9D002AFBC0 /* StaticFramework.framework in Frameworks */,
+				5B7A71842806FA3E005AB3ED /* CocoaLumberjackSwift in Frameworks */,
+				5BEB600727FC414A002C920C /* Logging in Frameworks */,
+				5B7A71822806FA3E005AB3ED /* CocoaLumberjack in Frameworks */,
 				FF7A646220F88D3E002AFBC0 /* DynamicFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +532,17 @@
 				5BE9D2D0266876850099B8B4 /* WeakTimer.m */,
 			);
 			path = TimerCycle;
+			sourceTree = "<group>";
+		};
+		5BF2DA0728659E2A007166FF /* runloop */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2DA0928659E4A007166FF /* BSBacktraceLogger.h */,
+				5BF2DA0828659E4A007166FF /* BSBacktraceLogger.m */,
+				5BF2DA0B28659E4A007166FF /* ObserverMainRunloop.h */,
+				5BF2DA0A28659E4A007166FF /* ObserverMainRunloop.m */,
+			);
+			path = runloop;
 			sourceTree = "<group>";
 		};
 		FF0271C120BAA5DD0070FEC6 /* DatePickerView */ = {
@@ -739,6 +762,7 @@
 		FFD056A82059128C00A6F5AE /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				5BF2DA0728659E2A007166FF /* runloop */,
 				5B8184BE278D9F0700D22E9C /* MemoryLayout */,
 				5B62613427560DEA00681662 /* DesignPatterns */,
 				5B2FD74326AE52F4004EC22E /* Image */,
@@ -839,6 +863,11 @@
 				FF7A647920F88D9D002AFBC0 /* PBXTargetDependency */,
 			);
 			name = DemoSwift;
+			packageProductDependencies = (
+				5BEB600627FC414A002C920C /* Logging */,
+				5B7A71812806FA3E005AB3ED /* CocoaLumberjack */,
+				5B7A71832806FA3E005AB3ED /* CocoaLumberjackSwift */,
+			);
 			productName = DemoSwift;
 			productReference = FF1858742058CAC400ADC0BC /* DemoSwift.app */;
 			productType = "com.apple.product-type.application";
@@ -940,6 +969,10 @@
 				Base,
 			);
 			mainGroup = FF18586B2058CAC400ADC0BC;
+			packageReferences = (
+				5BEB600527FC414A002C920C /* XCRemoteSwiftPackageReference "swift-log" */,
+				5B7A71802806FA3E005AB3ED /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
+			);
 			productRefGroup = FF1858752058CAC400ADC0BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1081,12 +1114,14 @@
 				FF1858982058D4E600ADC0BC /* MainTableViewController.swift in Sources */,
 				FF32FA9C205FB1D0006889A3 /* DispatchQueue+Extension.swift in Sources */,
 				FF6AA7E4214657B100BA1F51 /* CoreImageBigImageViewController.swift in Sources */,
+				5BF2DA0D28659E4A007166FF /* ObserverMainRunloop.m in Sources */,
 				5B13616A269FC00F00A70DFF /* Data+Extension.swift in Sources */,
 				FF824781217F099600B2F334 /* BigTouchLabel.swift in Sources */,
 				FF58A08121C39DB80051CE8F /* LockBenchmarkViewController.swift in Sources */,
 				5B75ABDF2565113F00DB70B7 /* LocationViewController.swift in Sources */,
 				FF05DE2A2148FDCB00E3D5EA /* ImageIOBigImageViewController.swift in Sources */,
 				5B2FD75626AED431004EC22E /* DownsampleViewController.swift in Sources */,
+				5BF2DA0C28659E4A007166FF /* BSBacktraceLogger.m in Sources */,
 				5B626155275715DC00681662 /* AFShoesProtocol.swift in Sources */,
 				FF32FA98205F9784006889A3 /* PayTheBillHeaderView.swift in Sources */,
 				5BE9D2A72667A3510099B8B4 /* OCTimerLeakViewController.m in Sources */,
@@ -1343,7 +1378,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1360,7 +1396,10 @@
 				DEVELOPMENT_TEAM = G39XBUQ8NC;
 				INFOPLIST_FILE = DemoSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdd.DemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1385,7 +1424,10 @@
 				DEVELOPMENT_TEAM = G39XBUQ8NC;
 				INFOPLIST_FILE = DemoSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdd.DemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1408,7 +1450,11 @@
 				DEVELOPMENT_TEAM = 7U4X6K5PDJ;
 				INFOPLIST_FILE = DemoSwiftTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = yaoxp.DemoSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1430,7 +1476,11 @@
 				DEVELOPMENT_TEAM = 7U4X6K5PDJ;
 				INFOPLIST_FILE = DemoSwiftTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = yaoxp.DemoSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1459,10 +1509,15 @@
 				INFOPLIST_FILE = DynamicFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdd.DynamicFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1489,10 +1544,15 @@
 				INFOPLIST_FILE = DynamicFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdd.DynamicFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1518,11 +1578,16 @@
 				INFOPLIST_FILE = StaticFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdd.StaticFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1549,11 +1614,16 @@
 				INFOPLIST_FILE = StaticFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdd.StaticFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1610,6 +1680,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B7A71802806FA3E005AB3ED /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		5BEB600527FC414A002C920C /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5B7A71812806FA3E005AB3ED /* CocoaLumberjack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B7A71802806FA3E005AB3ED /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjack;
+		};
+		5B7A71832806FA3E005AB3ED /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B7A71802806FA3E005AB3ED /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
+		5BEB600627FC414A002C920C /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5BEB600527FC414A002C920C /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FF18586C2058CAC400ADC0BC /* Project object */;
 }
