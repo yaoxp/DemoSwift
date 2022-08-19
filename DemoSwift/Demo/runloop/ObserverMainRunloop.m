@@ -79,16 +79,16 @@ static void runLoopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopActi
     
     switch (activity) {
         case kCFRunLoopAfterWaiting:
-            XPLog(@"RunLoopAfterWaiting");
+//            XPLog(@"RunLoopAfterWaiting");
             break;
         case kCFRunLoopBeforeTimers:
-            XPLog(@"RunLoopBeforeTimers");
+//            XPLog(@"RunLoopBeforeTimers");
             break;
         case kCFRunLoopBeforeSources:
-            XPLog(@"RunLoopBeforeSources");
+//            XPLog(@"RunLoopBeforeSources");
             break;
         case kCFRunLoopBeforeWaiting:
-            XPLog(@"RunLoopBeforeWaiting");
+//            XPLog(@"RunLoopBeforeWaiting");
             break;
         default:
             break;
@@ -108,7 +108,7 @@ static void runLoopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopActi
                     self.runLoopActivity == kCFRunLoopBeforeSources) {
                     // 在执行time或者source时
                     if (self.timeCount == 0) {
-                        XPLog(@"timecount == 0");
+//                        XPLog(@"timecount == 0");
                         self.timeCount += 1;
                         // 防止重复采集
                         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
@@ -119,7 +119,7 @@ static void runLoopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopActi
                     }
                 }
             } else {
-                XPLog(@"timecount = 0");
+//                XPLog(@"timecount = 0");
                 self.timeCount = 0;
             }
         }

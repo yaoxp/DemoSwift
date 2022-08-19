@@ -9,6 +9,8 @@
 import UIKit
 import Logging
 
+var logger = Logger(label: "com.example.BestExampleApp.main")
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -55,11 +57,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                       userInfo: nil)
             application.shortcutItems = [shortcut2, shortcut3, shortCut4]
         }
-
-        // 2) we need to create a logger, the label works similarly to a DispatchQueue label
-        let logger = Logger(label: "com.example.BestExampleApp.main")
-
-        // 3) we're now ready to use it
+        
+        logger.logLevel = .debug
         logger.info("Hello World!")
 
         ObserverMainRunloop.instance().startMonitor();

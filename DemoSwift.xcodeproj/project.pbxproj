@@ -51,6 +51,8 @@
 		5B83B37326B2CEDF001FE25D /* ManualDecodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B37126B2CEDF001FE25D /* ManualDecodeViewController.swift */; };
 		5B83B37426B2CEDF001FE25D /* ManualDecodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B83B37226B2CEDF001FE25D /* ManualDecodeViewController.xib */; };
 		5B83B37626B2D5F9001FE25D /* Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B37526B2D5F9001FE25D /* Number+Extension.swift */; };
+		5BB7CB4828A23772009662A9 /* MetalDrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB7CB4728A23772009662A9 /* MetalDrawViewController.swift */; };
+		5BB7CB4A28A23950009662A9 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB7CB4928A23950009662A9 /* Renderer.swift */; };
 		5BDFD407260876280026F059 /* UILabelMultipleTapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDFD406260876280026F059 /* UILabelMultipleTapController.swift */; };
 		5BE9D2A4266790190099B8B4 /* TimerCycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9D2A3266790190099B8B4 /* TimerCycleViewController.swift */; };
 		5BE9D2A72667A3510099B8B4 /* OCTimerLeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9D2A62667A3510099B8B4 /* OCTimerLeakViewController.m */; };
@@ -58,6 +60,10 @@
 		5BE9D2D5266877ED0099B8B4 /* WeakTimerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9D2D3266877ED0099B8B4 /* WeakTimerSwift.swift */; };
 		5BE9D2D6266877ED0099B8B4 /* TimerCycleSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9D2D4266877ED0099B8B4 /* TimerCycleSwiftViewController.swift */; };
 		5BEB600727FC414A002C920C /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 5BEB600627FC414A002C920C /* Logging */; };
+		5BEF8B9528A0BFD100B476CD /* MetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF8B9328A0BFD100B476CD /* MetalViewController.swift */; };
+		5BEF8B9628A0BFD100B476CD /* MetalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BEF8B9428A0BFD100B476CD /* MetalViewController.xib */; };
+		5BEF8B9928A0C0B800B476CD /* adder.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF8B9828A0C0B800B476CD /* adder.metal */; };
+		5BEF8B9B28A0C0DD00B476CD /* MetalAdder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF8B9A28A0C0DD00B476CD /* MetalAdder.swift */; };
 		5BF2DA0C28659E4A007166FF /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2DA0828659E4A007166FF /* BSBacktraceLogger.m */; };
 		5BF2DA0D28659E4A007166FF /* ObserverMainRunloop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2DA0A28659E4A007166FF /* ObserverMainRunloop.m */; };
 		7C96BE86BF4AA2163CE57712 /* Pods_DemoSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15DF14BAB5BD5307EA55039 /* Pods_DemoSwiftTests.framework */; };
@@ -223,6 +229,8 @@
 		5B83B37126B2CEDF001FE25D /* ManualDecodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualDecodeViewController.swift; sourceTree = "<group>"; };
 		5B83B37226B2CEDF001FE25D /* ManualDecodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManualDecodeViewController.xib; sourceTree = "<group>"; };
 		5B83B37526B2D5F9001FE25D /* Number+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Extension.swift"; sourceTree = "<group>"; };
+		5BB7CB4728A23772009662A9 /* MetalDrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalDrawViewController.swift; sourceTree = "<group>"; };
+		5BB7CB4928A23950009662A9 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		5BDFD406260876280026F059 /* UILabelMultipleTapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelMultipleTapController.swift; sourceTree = "<group>"; };
 		5BE9D2A3266790190099B8B4 /* TimerCycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCycleViewController.swift; sourceTree = "<group>"; };
 		5BE9D2A52667A3510099B8B4 /* OCTimerLeakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCTimerLeakViewController.h; sourceTree = "<group>"; };
@@ -231,6 +239,10 @@
 		5BE9D2D1266876850099B8B4 /* WeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeakTimer.h; sourceTree = "<group>"; };
 		5BE9D2D3266877ED0099B8B4 /* WeakTimerSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakTimerSwift.swift; sourceTree = "<group>"; };
 		5BE9D2D4266877ED0099B8B4 /* TimerCycleSwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerCycleSwiftViewController.swift; sourceTree = "<group>"; };
+		5BEF8B9328A0BFD100B476CD /* MetalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalViewController.swift; sourceTree = "<group>"; };
+		5BEF8B9428A0BFD100B476CD /* MetalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetalViewController.xib; sourceTree = "<group>"; };
+		5BEF8B9828A0C0B800B476CD /* adder.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = adder.metal; sourceTree = "<group>"; };
+		5BEF8B9A28A0C0DD00B476CD /* MetalAdder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalAdder.swift; sourceTree = "<group>"; };
 		5BF2DA0828659E4A007166FF /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBacktraceLogger.m; sourceTree = "<group>"; };
 		5BF2DA0928659E4A007166FF /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBacktraceLogger.h; sourceTree = "<group>"; };
 		5BF2DA0A28659E4A007166FF /* ObserverMainRunloop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObserverMainRunloop.m; sourceTree = "<group>"; };
@@ -512,6 +524,15 @@
 			path = MemoryLayout;
 			sourceTree = "<group>";
 		};
+		5BB7CB4628A2371C009662A9 /* drawView */ = {
+			isa = PBXGroup;
+			children = (
+				5BB7CB4728A23772009662A9 /* MetalDrawViewController.swift */,
+				5BB7CB4928A23950009662A9 /* Renderer.swift */,
+			);
+			path = drawView;
+			sourceTree = "<group>";
+		};
 		5BDFD37B260871CB0026F059 /* labelTouch */ = {
 			isa = PBXGroup;
 			children = (
@@ -532,6 +553,26 @@
 				5BE9D2D0266876850099B8B4 /* WeakTimer.m */,
 			);
 			path = TimerCycle;
+			sourceTree = "<group>";
+		};
+		5BEF8B9228A0BFAC00B476CD /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				5BB7CB4628A2371C009662A9 /* drawView */,
+				5BEF8B9728A0C0A300B476CD /* compute */,
+				5BEF8B9328A0BFD100B476CD /* MetalViewController.swift */,
+				5BEF8B9428A0BFD100B476CD /* MetalViewController.xib */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
+		5BEF8B9728A0C0A300B476CD /* compute */ = {
+			isa = PBXGroup;
+			children = (
+				5BEF8B9828A0C0B800B476CD /* adder.metal */,
+				5BEF8B9A28A0C0DD00B476CD /* MetalAdder.swift */,
+			);
+			path = compute;
 			sourceTree = "<group>";
 		};
 		5BF2DA0728659E2A007166FF /* runloop */ = {
@@ -762,6 +803,7 @@
 		FFD056A82059128C00A6F5AE /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				5BEF8B9228A0BFAC00B476CD /* Metal */,
 				5BF2DA0728659E2A007166FF /* runloop */,
 				5B8184BE278D9F0700D22E9C /* MemoryLayout */,
 				5B62613427560DEA00681662 /* DesignPatterns */,
@@ -895,9 +937,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF7A646420F88D3E002AFBC0 /* Build configuration list for PBXNativeTarget "DynamicFramework" */;
 			buildPhases = (
+				FF7A645820F88D3E002AFBC0 /* Headers */,
 				FF7A645620F88D3E002AFBC0 /* Sources */,
 				FF7A645720F88D3E002AFBC0 /* Frameworks */,
-				FF7A645820F88D3E002AFBC0 /* Headers */,
 				FF7A645920F88D3E002AFBC0 /* Resources */,
 			);
 			buildRules = (
@@ -913,9 +955,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF7A647C20F88D9D002AFBC0 /* Build configuration list for PBXNativeTarget "StaticFramework" */;
 			buildPhases = (
+				FF7A647020F88D9D002AFBC0 /* Headers */,
 				FF7A646E20F88D9D002AFBC0 /* Sources */,
 				FF7A646F20F88D9D002AFBC0 /* Frameworks */,
-				FF7A647020F88D9D002AFBC0 /* Headers */,
 				FF7A647120F88D9D002AFBC0 /* Resources */,
 			);
 			buildRules = (
@@ -945,7 +987,6 @@
 					FF1858872058CAC400ADC0BC = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1020;
-						ProvisioningStyle = Manual;
 						TestTargetID = FF1858732058CAC400ADC0BC;
 					};
 					FF7A645A20F88D3E002AFBC0 = {
@@ -992,6 +1033,7 @@
 			files = (
 				5B83B37426B2CEDF001FE25D /* ManualDecodeViewController.xib in Resources */,
 				FF1858822058CAC400ADC0BC /* LaunchScreen.storyboard in Resources */,
+				5BEF8B9628A0BFD100B476CD /* MetalViewController.xib in Resources */,
 				FF395D602144C53E002D3C28 /* IMG_001.png in Resources */,
 				FF36B58720BD011000ABF92C /* DatePickerDemoViewController.xib in Resources */,
 				FF6AA7E5214657B100BA1F51 /* CoreImageBigImageViewController.xib in Resources */,
@@ -1112,6 +1154,7 @@
 				FF2FFE762187F34400B886FF /* Codable+Extension.swift in Sources */,
 				5B4DFC9E2563AA680033F272 /* CountdownTimer.swift in Sources */,
 				FF1858982058D4E600ADC0BC /* MainTableViewController.swift in Sources */,
+				5BEF8B9928A0C0B800B476CD /* adder.metal in Sources */,
 				FF32FA9C205FB1D0006889A3 /* DispatchQueue+Extension.swift in Sources */,
 				FF6AA7E4214657B100BA1F51 /* CoreImageBigImageViewController.swift in Sources */,
 				5BF2DA0D28659E4A007166FF /* ObserverMainRunloop.m in Sources */,
@@ -1138,6 +1181,7 @@
 				FF32FA8D205F58BC006889A3 /* PayTheBillViewController.swift in Sources */,
 				FFA7004A20AC27C60073DBF5 /* PeekViewController.swift in Sources */,
 				5B626141275628C300681662 /* SFAdiWang.swift in Sources */,
+				5BB7CB4A28A23950009662A9 /* Renderer.swift in Sources */,
 				5B2FD75226AEB269004EC22E /* NinePatchImageViewController2.swift in Sources */,
 				FF1A833720A96F19001A1DF1 /* MarqueeViewController.swift in Sources */,
 				FF824772217D6C7D00B2F334 /* OffScreenTableViewController.swift in Sources */,
@@ -1146,6 +1190,7 @@
 				5B62613F275627EF00681662 /* SFShoesProtocol.swift in Sources */,
 				FFE4A23720BB9B6300939E00 /* DatePickerView.swift in Sources */,
 				5B62614C275643EE00681662 /* FAdiWang.swift in Sources */,
+				5BEF8B9B28A0C0DD00B476CD /* MetalAdder.swift in Sources */,
 				5B2FD74826AE5902004EC22E /* NinePatchImageFactory.swift in Sources */,
 				5B4DFC952563A5690033F272 /* CountdownViewController.swift in Sources */,
 				5B5AE47326B2B15D0089D311 /* UIApplication+Extension.swift in Sources */,
@@ -1171,9 +1216,11 @@
 				FF59B162212169E900BD693E /* CTChartDemoViewController.swift in Sources */,
 				FF82477D217F009000B2F334 /* ResponderDetailViewController.swift in Sources */,
 				FFD056B2205913CA00A6F5AE /* AnimationViewController.swift in Sources */,
+				5BEF8B9528A0BFD100B476CD /* MetalViewController.swift in Sources */,
 				5B62614A2756436900681662 /* FShoes.swift in Sources */,
 				FF32FA90205F68E6006889A3 /* PayTheBillTitleView.swift in Sources */,
 				FF824779217ECA2400B2F334 /* ResponderViewController.swift in Sources */,
+				5BB7CB4828A23772009662A9 /* MetalDrawViewController.swift in Sources */,
 				FF1B312E212FEEF70030A5D0 /* String+Extension.swift in Sources */,
 				5B8184C0278D9F4E00D22E9C /* MemoryLayoutVC.swift in Sources */,
 				5B62615B2757164F00681662 /* AFAdiWang.swift in Sources */,
@@ -1400,6 +1447,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_CODE_SIGN_FLAGS = "";
+				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdd.DemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1428,6 +1477,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_CODE_SIGN_FLAGS = "";
+				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdd.DemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1445,9 +1496,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 7U4X6K5PDJ;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G39XBUQ8NC;
 				INFOPLIST_FILE = DemoSwiftTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1459,6 +1511,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoSwift.app/DemoSwift";
@@ -1471,9 +1524,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 7U4X6K5PDJ;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G39XBUQ8NC;
 				INFOPLIST_FILE = DemoSwiftTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1485,6 +1539,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoSwift.app/DemoSwift";
@@ -1502,7 +1557,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = QSH988Q3LB;
+				DEVELOPMENT_TEAM = G39XBUQ8NC;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1514,6 +1569,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_CODE_SIGN_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdd.DynamicFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1537,7 +1593,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = QSH988Q3LB;
+				DEVELOPMENT_TEAM = G39XBUQ8NC;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1549,6 +1605,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_CODE_SIGN_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdd.DynamicFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1571,7 +1628,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = QSH988Q3LB;
+				DEVELOPMENT_TEAM = G39XBUQ8NC;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1584,6 +1641,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
+				OTHER_CODE_SIGN_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdd.StaticFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1607,7 +1665,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = QSH988Q3LB;
+				DEVELOPMENT_TEAM = G39XBUQ8NC;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1620,6 +1678,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
+				OTHER_CODE_SIGN_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdd.StaticFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

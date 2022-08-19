@@ -13,7 +13,8 @@ class MainTableViewController: UITableViewController, UIViewControllerPreviewing
     static let tableViewCellIdentifier = "MainTableCell"
 
     // MARK: - properties
-    var demos = [Demo(title: "图片处理",
+    var demos = [Demo(title: "Metal", subtitle: nil, class: MetalViewController.self),
+                 Demo(title: "图片处理",
                       subtitle: "各种图片处理",
                       class: ImageTableViewController.self),
                  Demo(title: "动画",
