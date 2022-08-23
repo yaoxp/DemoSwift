@@ -4,6 +4,9 @@ PODS:
     - SDWebImage/Core (= 5.11.1)
   - SDWebImage/Core (5.11.1)
   - SnapKit (5.0.1)
+  - SQLite.swift (0.13.3):
+    - SQLite.swift/standard (= 0.13.3)
+  - SQLite.swift/standard (0.13.3)
   - SwiftLint (0.41.0)
   - SwiftyJSON (5.0.0)
 
@@ -11,6 +14,7 @@ DEPENDENCIES:
   - Kingfisher
   - SDWebImage (~> 5.0)
   - SnapKit (~> 5.0.0)
+  - SQLite.swift (~> 0.13.3)
   - SwiftLint
   - SwiftyJSON (~> 5.0.0)
 
@@ -19,6 +23,7 @@ SPEC REPOS:
     - Kingfisher
     - SDWebImage
     - SnapKit
+    - SQLite.swift
     - SwiftLint
     - SwiftyJSON
 
@@ -26,9 +31,10 @@ SPEC CHECKSUMS:
   Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SQLite.swift: 903bfa3bc9ab06345fdfbb578e34f47cfcf417da
   SwiftLint: c585ebd615d9520d7fbdbe151f527977b0534f1e
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 907605f4b0c97901ecc0a237d693946c2f384391
+PODFILE CHECKSUM: 5d1289c134e615b2ad75763f0c1a59d1956d5654
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

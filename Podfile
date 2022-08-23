@@ -11,6 +11,7 @@ target 'DemoSwift' do
   # Pods for DemoSwift
   pod 'SDWebImage', '~> 5.0'
   pod 'Kingfisher'
+  pod 'SQLite.swift', '~> 0.13.3'
   target 'DemoSwiftTests' do
     inherit! :search_paths
     # Pods for testing

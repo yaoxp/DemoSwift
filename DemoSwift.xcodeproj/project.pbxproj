@@ -48,6 +48,7 @@
 		5B7A71822806FA3E005AB3ED /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 5B7A71812806FA3E005AB3ED /* CocoaLumberjack */; };
 		5B7A71842806FA3E005AB3ED /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5B7A71832806FA3E005AB3ED /* CocoaLumberjackSwift */; };
 		5B8184C0278D9F4E00D22E9C /* MemoryLayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8184BF278D9F4E00D22E9C /* MemoryLayoutVC.swift */; };
+		5B827EA328B75EFE00396C87 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B827EA228B75EFE00396C87 /* libsqlite3.tbd */; };
 		5B83B37326B2CEDF001FE25D /* ManualDecodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B37126B2CEDF001FE25D /* ManualDecodeViewController.swift */; };
 		5B83B37426B2CEDF001FE25D /* ManualDecodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B83B37226B2CEDF001FE25D /* ManualDecodeViewController.xib */; };
 		5B83B37626B2D5F9001FE25D /* Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B37526B2D5F9001FE25D /* Number+Extension.swift */; };
@@ -226,12 +227,15 @@
 		5B75ABB62564F35100DB70B7 /* ReflectBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectBaseModel.swift; sourceTree = "<group>"; };
 		5B75ABDE2565113F00DB70B7 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		5B8184BF278D9F4E00D22E9C /* MemoryLayoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryLayoutVC.swift; sourceTree = "<group>"; };
+		5B827E6528B47BFF00396C87 /* sqlite.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = sqlite.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		5B827EA228B75EFE00396C87 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		5B83B37126B2CEDF001FE25D /* ManualDecodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualDecodeViewController.swift; sourceTree = "<group>"; };
 		5B83B37226B2CEDF001FE25D /* ManualDecodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManualDecodeViewController.xib; sourceTree = "<group>"; };
 		5B83B37526B2D5F9001FE25D /* Number+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Extension.swift"; sourceTree = "<group>"; };
 		5BB7CB4728A23772009662A9 /* MetalDrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalDrawViewController.swift; sourceTree = "<group>"; };
 		5BB7CB4928A23950009662A9 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		5BDFD406260876280026F059 /* UILabelMultipleTapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelMultipleTapController.swift; sourceTree = "<group>"; };
+		5BE7246F28BC6C9F006C90F3 /* sqliteFTS5.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = sqliteFTS5.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5BE9D2A3266790190099B8B4 /* TimerCycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCycleViewController.swift; sourceTree = "<group>"; };
 		5BE9D2A52667A3510099B8B4 /* OCTimerLeakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCTimerLeakViewController.h; sourceTree = "<group>"; };
 		5BE9D2A62667A3510099B8B4 /* OCTimerLeakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCTimerLeakViewController.m; sourceTree = "<group>"; };
@@ -254,7 +258,6 @@
 		B041FB317087741D521495CA /* Pods_DemoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3244A00694BA58B5798D424 /* Pods-DemoSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSwiftTests/Pods-DemoSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E15DF14BAB5BD5307EA55039 /* Pods_DemoSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF00784921C37E0A001F367D /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FF044C0F20C9112600EDE2B6 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		FF05DE222148C60F00E3D5EA /* OriginImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginImageViewController.swift; sourceTree = "<group>"; };
 		FF05DE232148C60F00E3D5EA /* OriginImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OriginImageViewController.xib; sourceTree = "<group>"; };
@@ -346,6 +349,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B827EA328B75EFE00396C87 /* libsqlite3.tbd in Frameworks */,
 				268EDB40F43779811DA69F67 /* Pods_DemoSwift.framework in Frameworks */,
 				FF7A647A20F88D9D002AFBC0 /* StaticFramework.framework in Frameworks */,
 				5B7A71842806FA3E005AB3ED /* CocoaLumberjackSwift in Frameworks */,
@@ -394,6 +398,7 @@
 		59216599C8FBAE2FED14B402 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5B827EA228B75EFE00396C87 /* libsqlite3.tbd */,
 				B041FB317087741D521495CA /* Pods_DemoSwift.framework */,
 				E15DF14BAB5BD5307EA55039 /* Pods_DemoSwiftTests.framework */,
 			);
@@ -524,6 +529,15 @@
 			path = MemoryLayout;
 			sourceTree = "<group>";
 		};
+		5B827E6428B47BE200396C87 /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				5B827E6528B47BFF00396C87 /* sqlite.playground */,
+				5BE7246F28BC6C9F006C90F3 /* sqliteFTS5.playground */,
+			);
+			path = Playground;
+			sourceTree = "<group>";
+		};
 		5BB7CB4628A2371C009662A9 /* drawView */ = {
 			isa = PBXGroup;
 			children = (
@@ -624,6 +638,7 @@
 		FF1858762058CAC400ADC0BC /* DemoSwift */ = {
 			isa = PBXGroup;
 			children = (
+				5B827E6428B47BE200396C87 /* Playground */,
 				5B62616227576ADF00681662 /* utils */,
 				5B2FD74926AE591E004EC22E /* Assets */,
 				5B2FD74626AE58F3004EC22E /* Tool */,
@@ -639,7 +654,6 @@
 				FF1858802058CAC400ADC0BC /* LaunchScreen.storyboard */,
 				FF1858832058CAC400ADC0BC /* Info.plist */,
 				FF9E86F821C8970600D87C69 /* DemoSwift-Bridging-Header.h */,
-				FF00784921C37E0A001F367D /* MyPlayground.playground */,
 			);
 			path = DemoSwift;
 			sourceTree = "<group>";
@@ -1129,6 +1143,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-DemoSwift/Pods-DemoSwift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -1136,6 +1151,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
